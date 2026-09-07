@@ -772,6 +772,16 @@ function recoverMissingSnapshotsFromGit(existingSnapshots, currentSnapshots) {
 
   for (const commit of commits) {
     try {
+      try {
+        execFileSync("git", ["cat-file", "-e", `${commit}:${sourceRelativePath}`], {
+          cwd: rootDir,
+          windowsHide: true,
+          stdio: "ignore",
+        });
+      } catch {
+        continue;
+      }
+
       const buffer = execFileSync("git", ["show", `${commit}:${sourceRelativePath}`], {
         cwd: rootDir,
         windowsHide: true,
@@ -815,7 +825,9 @@ function recoverMissingSnapshotsFromGit(existingSnapshots, currentSnapshots) {
         break;
       }
     } catch (error) {
-      console.warn(`Fon kaynağının ${commit.slice(0, 8)} sürümü okunamadı: ${error.message}`);
+      console.warn(
+        `Fon kaynağının ${commit.slice(0, 8)} sürümü atlandı: ${error.message}`
+      );
     }
   }
 

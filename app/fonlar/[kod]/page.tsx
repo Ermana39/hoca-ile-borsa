@@ -434,11 +434,6 @@ export default async function FonDetayPage({
           </dl>
         </section>
 
-        <AdsenseResponsiveUnit
-          className="mb-8"
-          slot={process.env.NEXT_PUBLIC_ADSENSE_FUND_SLOT}
-        />
-
         <section className="mb-8 space-y-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:p-6">
           <div>
             <h2 className="mb-3 text-lg font-bold text-slate-950">Getiri</h2>

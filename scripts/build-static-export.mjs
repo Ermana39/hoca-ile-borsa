@@ -19,7 +19,27 @@ const dynamicApiDirectories = [
 
 const moved = [];
 
+function restoreInterruptedBackup() {
+  if (!fs.existsSync(backupRoot)) return;
+
+  for (const directory of dynamicApiDirectories) {
+    const source = path.join(apiRoot, directory);
+    const target = path.join(backupRoot, directory);
+    if (fs.existsSync(target) && !fs.existsSync(source)) {
+      fs.renameSync(target, source);
+    }
+  }
+
+  const remaining = fs.existsSync(backupRoot)
+    ? fs.readdirSync(backupRoot)
+    : [];
+  if (remaining.length === 0) {
+    fs.rmSync(backupRoot, { recursive: true, force: true });
+  }
+}
+
 function moveDynamicRoutesOut() {
+  restoreInterruptedBackup();
   fs.rmSync(backupRoot, { recursive: true, force: true });
   fs.mkdirSync(backupRoot, { recursive: true });
 

@@ -965,10 +965,6 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
                 ))}
               </div>
 
-              <AdsenseResponsiveUnit
-                slot={process.env.NEXT_PUBLIC_ADSENSE_NEWS_SLOT}
-              />
-
               {kayit.kaynakOzeti.ozetKartlari.length > 0 && (
                 <section aria-label="Haber özeti" className="grid gap-4 sm:grid-cols-2">
                   {kayit.kaynakOzeti.ozetKartlari.map((kart, index) => (
