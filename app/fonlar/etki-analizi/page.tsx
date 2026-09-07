@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AdsenseResponsiveUnit from "@/components/AdsenseResponsiveUnit";
+import { FundLogo } from "@/components/MarketLogo";
 import Link from "@/components/NoPrefetchLink";
 import { newsItems } from "@/app/data/news";
 import {
@@ -325,18 +326,23 @@ export default function FonEtkiAnaliziPage() {
                     className={`${index % 2 === 0 ? "bg-white" : "bg-slate-50"} transition hover:bg-blue-50/60`}
                   >
                     <td className="border-t border-slate-200 px-4 py-4">
-                      <Link
-                        href={`/fonlar/etki-analizi/${fon.slug}`}
-                        prefetch={false}
-                        aria-label={`${fon.kod} fon sayfasını aç`}
-                        className="inline-flex min-w-16 items-center justify-center gap-1 rounded-md border border-blue-200 bg-blue-50 px-3 py-2 font-extrabold text-blue-800 shadow-sm transition hover:border-blue-600 hover:bg-blue-700 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
-                      >
-                        {fon.kod}
-                        <span aria-hidden="true">→</span>
-                      </Link>
-                      <p className="mt-1 max-w-sm text-xs leading-5 text-slate-500">
-                        {fon.fonAdi}
-                      </p>
+                      <div className="flex items-center gap-3">
+                        <FundLogo fundCode={fon.kod} size="md" />
+                        <div className="min-w-0">
+                          <Link
+                            href={`/fonlar/etki-analizi/${fon.slug}`}
+                            prefetch={false}
+                            aria-label={`${fon.kod} fon sayfasını aç`}
+                            className="inline-flex min-w-16 items-center justify-center gap-1 rounded-md border border-blue-200 bg-blue-50 px-3 py-2 font-extrabold text-blue-800 shadow-sm transition hover:border-blue-600 hover:bg-blue-700 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
+                          >
+                            {fon.kod}
+                            <span aria-hidden="true">→</span>
+                          </Link>
+                          <p className="mt-1 max-w-sm text-xs leading-5 text-slate-500">
+                            {fon.fonAdi}
+                          </p>
+                        </div>
+                      </div>
                     </td>
                     <td className="border-t border-slate-200 px-4 py-4 text-slate-600">
                       {fon.fonTuru}

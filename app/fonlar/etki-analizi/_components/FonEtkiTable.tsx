@@ -1,4 +1,5 @@
 import Link from "@/components/NoPrefetchLink";
+import { InstrumentLogo } from "@/components/MarketLogo";
 import { getHisseIcerikHedefi } from "@/lib/hisse-icerik-hedefi";
 
 export type FonEtkiRow = {
@@ -50,19 +51,22 @@ export default function FonEtkiTable({
                 className={index % 2 === 0 ? "bg-white" : "bg-sky-50"}
               >
                 <td className="border-t border-zinc-100 px-4 py-3 font-bold text-zinc-900">
-                  {hedef ? (
-                    <Link
-                      href={hedef.href}
-                      prefetch={false}
-                      aria-label={hedef.etiket}
-                      title={hedef.baslik}
-                      className="transition hover:text-blue-700 hover:underline"
-                    >
-                      {row.sembol}
-                    </Link>
-                  ) : (
-                    row.sembol
-                  )}
+                  <div className="flex items-center gap-2.5">
+                    <InstrumentLogo symbol={row.sembol} size="sm" />
+                    {hedef ? (
+                      <Link
+                        href={hedef.href}
+                        prefetch={false}
+                        aria-label={hedef.etiket}
+                        title={hedef.baslik}
+                        className="transition hover:text-blue-700 hover:underline"
+                      >
+                        {row.sembol}
+                      </Link>
+                    ) : (
+                      row.sembol
+                    )}
+                  </div>
                 </td>
                 <td className="border-t border-zinc-100 px-4 py-3 text-right text-zinc-700">
                   {fmt(row.fonOrani)}

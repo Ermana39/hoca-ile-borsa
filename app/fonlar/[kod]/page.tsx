@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import AdsenseResponsiveUnit from "@/components/AdsenseResponsiveUnit";
+import { FundLogo } from "@/components/MarketLogo";
 import Link from "@/components/NoPrefetchLink";
 import {
   DetailHistoryTable,
@@ -295,12 +296,21 @@ export default async function FonDetayPage({
               <p className="text-sm font-semibold text-blue-700">
                 Fon verileri, getiri ve para akışı
               </p>
-              <h1 className="mt-2 text-2xl font-bold text-slate-950 md:text-4xl">
-                {fund.kod} Fonu
-              </h1>
-              <p className="mt-2 max-w-4xl text-sm leading-7 text-slate-600 md:text-base">
-                {fund.ad}
-              </p>
+              <div className="mt-2 flex items-center gap-3 md:gap-4">
+                <FundLogo
+                  fundCode={fund.kod}
+                  managerSlug={fund.yoneticiSlug}
+                  size="xl"
+                />
+                <div className="min-w-0">
+                  <h1 className="text-2xl font-bold text-slate-950 md:text-4xl">
+                    {fund.kod} Fonu
+                  </h1>
+                  <p className="mt-1 max-w-4xl text-sm leading-6 text-slate-600 md:text-base">
+                    {fund.ad}
+                  </p>
+                </div>
+              </div>
               <p className="mt-3 max-w-4xl text-sm leading-7 text-slate-700 md:text-base">
                 {seoDescription}
               </p>

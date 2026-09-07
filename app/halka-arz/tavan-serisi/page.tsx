@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "@/components/NoPrefetchLink";
-import Script from "next/script";
+import AdsenseResponsiveUnit from "@/components/AdsenseResponsiveUnit";
 import {
   halkaArzSonuclari as baseHalkaArzVerileri,
   type HalkaArzSonucu,
@@ -722,25 +722,7 @@ export default function HalkaArzTavanSerisiPage() {
             </table>
           </div>
 
-          <div className="mt-4 w-full" aria-label="Reklam">
-            <Script
-              id="adsense-loader-tavan-serisi"
-              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9613627671991162"
-              strategy="afterInteractive"
-              crossOrigin="anonymous"
-            />
-            <ins
-              className="adsbygoogle"
-              style={{ display: "block" }}
-              data-ad-client="ca-pub-9613627671991162"
-              data-ad-slot="1666943021"
-              data-ad-format="auto"
-              data-full-width-responsive="true"
-            />
-            <Script id="adsense-tavan-serisi-tablo-alti" strategy="afterInteractive">
-              {`(adsbygoogle = window.adsbygoogle || []).push({});`}
-            </Script>
-          </div>
+          <AdsenseResponsiveUnit className="mt-4" slot="1666943021" />
 
           <p className="mt-4 text-xs leading-6 text-slate-500">
             Gün sonu kapanış fiyatları piyasa hareketlerine göre değişebilir. Marj,

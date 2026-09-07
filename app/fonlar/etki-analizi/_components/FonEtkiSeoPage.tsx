@@ -1,4 +1,5 @@
 import AdsenseResponsiveUnit from "@/components/AdsenseResponsiveUnit";
+import { FundLogo } from "@/components/MarketLogo";
 import Link from "@/components/NoPrefetchLink";
 import { getHisseIcerikHedefi } from "@/lib/hisse-icerik-hedefi";
 import {
@@ -475,12 +476,17 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
           <span className="font-medium text-slate-700">{kod}</span>
         </nav>
 
-        <p className="mb-2 text-sm font-semibold text-blue-700">
-          {sonGuncelleme} {kod} Günlük Tahmini
-        </p>
-        <h1 className="mb-2 text-2xl font-bold text-slate-900 md:text-3xl">
-          {kod} Fon Etki Analizi ve Günlük Tahmin
-        </h1>
+        <div className="mb-3 flex items-center gap-3 md:gap-4">
+          <FundLogo fundCode={kod} size="xl" />
+          <div className="min-w-0">
+            <p className="mb-1 text-sm font-semibold text-blue-700">
+              {sonGuncelleme} {kod} Günlük Tahmini
+            </p>
+            <h1 className="text-2xl font-bold text-slate-900 md:text-3xl">
+              {kod} Fon Etki Analizi ve Günlük Tahmin
+            </h1>
+          </div>
+        </div>
 
         <p className="mb-5 max-w-3xl text-base leading-7 text-slate-600">
           {kod} için mevcut portföy verileri ve varlıkların gün içi fiyat
