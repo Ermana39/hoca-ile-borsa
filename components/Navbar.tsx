@@ -16,12 +16,10 @@ const navLinks = [
   { label: "Rehberler", href: "/rehberler" },
   { label: "Hesaplayıcılar", href: "/hesaplayici" },
   { label: "Haberler", href: "/haberler" },
+  { label: "İletişim", href: "/reklam-isbirligi" },
 ];
 
-const mobileNavLinks = [
-  ...navLinks,
-  { label: "Reklam ve İş Birliği", href: "/reklam-isbirligi" },
-];
+const mobileNavLinks = navLinks;
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
