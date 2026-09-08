@@ -66,7 +66,7 @@ export default function HomeMarketSummary() {
           target="_blank"
           rel="noopener noreferrer"
           className="flex h-[72px] shrink-0 items-center justify-center gap-2 rounded-lg bg-red-600 px-5 text-sm font-bold text-white transition hover:bg-red-700 md:w-[170px]"
-          aria-label="Hoca ile Borsa canlı yayınlarını YouTube'da aç"
+          aria-label="Hoca İle Borsa canlı yayınlarını YouTube'da aç"
         >
           <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/15">
             ▶
