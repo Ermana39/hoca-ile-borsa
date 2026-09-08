@@ -376,6 +376,11 @@ for (const row of sourceSnapshots) {
   sourceSnapshotKeys.add(key);
 }
 const sourceLatestDate = sourceSnapshots.map((row) => row.tarih).sort().at(-1);
+const latestSourceByCode = new Map(
+  sourceSnapshots
+    .filter((row) => row.tarih === sourceLatestDate)
+    .map((row) => [row.fonKodu, row])
+);
 const historyLatestDate = history.snapshots.map((row) => row.tarih).sort().at(-1);
 const historyLatest = history.snapshots.filter((row) => row.tarih === historyLatestDate);
 assert(
@@ -534,6 +539,7 @@ const getiriColumns = {
 };
 const returnKeys = ["birAy", "ucAy", "altiAy", "yilbasi", "birYil", "ucYil", "besYil"];
 const returnCodes = new Set();
+const orphanReturnCodes = [];
 for (const row of getiriTable.rows) {
   const code = String(row[getiriColumns.kod] ?? "").trim().toUpperCase();
   if (!code) continue;
@@ -541,12 +547,15 @@ for (const row of getiriTable.rows) {
   returnCodes.add(code);
   const fund = currentByCode.get(code);
   if (!fund) {
-    assert(
-      hasDataWarning("getiri-kaynaginda-guncel-listede-yok", (warning) =>
-        warning.ornekFonKodlari?.includes(code)
-      ),
-      `${code} getiri kaynağında var, güncel fon listesinde yok ve uyarı kaydına alınmamış.`
-    );
+    const latestSourceRow = latestSourceByCode.get(code);
+    if (latestSourceRow && !hasValidFinancialSnapshot(latestSourceRow)) {
+      assert(
+        hasDataWarning("gunluk-kaynakta-eksik-finansal-veri"),
+        `${code} güncel kaynakta eksik finansal veriyle var ancak uyarı kaydına alınmamış.`
+      );
+    } else {
+      orphanReturnCodes.push(code);
+    }
     continue;
   }
   assert(fund.kategori === String(row[getiriColumns.kategori] ?? "").trim(), `${code} kategori bilgisi yanlış.`);
@@ -554,6 +563,24 @@ for (const row of getiriTable.rows) {
   for (const key of returnKeys) {
     assertSameNumber(fund.getiriler[key], parsePercent(row[getiriColumns[key]]), `${code} ${key} getirisi`, 1e-10);
   }
+}
+const orphanReturnWarning = updateLog.veriUyarilari?.find(
+  (warning) => warning?.tur === "getiri-kaynaginda-guncel-listede-yok"
+);
+assert(
+  orphanReturnCodes.length === 0 || orphanReturnWarning,
+  "Getiri kaynağında olup güncel fon listesinde bulunmayan fonlar uyarı kaydına alınmamış."
+);
+if (orphanReturnWarning) {
+  assert(
+    orphanReturnWarning.kodSayisi === orphanReturnCodes.length,
+    "Getiri kaynağında olup güncel fon listesinde bulunmayan fon sayısı uyarı kaydıyla uyuşmuyor."
+  );
+  assert(
+    JSON.stringify(orphanReturnWarning.ornekFonKodlari) ===
+      JSON.stringify(orphanReturnCodes.slice(0, 20)),
+    "Güncel fon listesinde bulunmayan fonların örnek uyarı kodları kaynakla uyuşmuyor."
+  );
 }
 assert(updateLog.islenenFonSayisi === returnCodes.size, "İşlenen getiri fonu sayısı kaynakla uyuşmuyor.");
 
@@ -745,7 +772,7 @@ assert(
 );
 
 const effectData = JSON.parse(fs.readFileSync(sourcePaths.etki, "utf8"));
-const expectedEffectFunds = ["DFI", "DOH", "KHA", "PHE", "THF", "TLY", "TMV"];
+const expectedEffectFunds = ["DFI", "DOH", "KHA", "THF", "TLY", "TMV"];
 assert(
   JSON.stringify(Object.keys(effectData.fonlar).sort()) === JSON.stringify(expectedEffectFunds),
   "Etki analizi fon listesi beklenen fonlardan oluşmuyor."

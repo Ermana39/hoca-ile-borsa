@@ -72,14 +72,6 @@ const fonProfilleri = [
       "TLY kodlu Tera Portföy Birinci Serbest Fonu, serbest fon türündedir. Bu sayfa, bildirilen portföy ağırlıkları ile varlıkların gün sonu hareketlerini birleştirerek fonun açıklanacak fiyatına yönelik tahmini etkiyi izler.",
   },
   {
-    kod: "PHE",
-    fonAdi: "Pusula Portföy Hisse Senedi Fonu",
-    fonTuru: "Hisse senedi yoğun fon",
-    slug: "phe",
-    profilOzeti:
-      "PHE kodlu Pusula Portföy Hisse Senedi Fonu, hisse senedi yoğun fon türündedir. Bu sayfa, portföydeki payların ağırlıklarını günlük kapanış hareketleriyle eşleştirerek açıklanacak fon fiyatına yönelik tahmini etkiyi izler.",
-  },
-  {
     kod: "DFI",
     fonAdi: "Atlas Portföy Serbest Fon",
     fonTuru: "Serbest fon",
