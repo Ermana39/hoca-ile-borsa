@@ -203,30 +203,6 @@ function KategoriKutusu({
 }
 
 
-function YoutubeTanitimBanner() {
-  return (
-    <section className="px-4 pb-6 md:px-6">
-      <a
-        href="https://www.youtube.com/@hocaileborsa"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Hoca İle Borsa YouTube kanalını aç"
-        className="group block overflow-hidden rounded-2xl shadow-[0_10px_35px_rgba(15,23,42,0.12)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_45px_rgba(15,23,42,0.18)] focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
-      >
-        <Image
-          src="/youtube-tanitim.webp"
-          alt="Hoca İle Borsa YouTube kanalında borsa eğitimleri, halka arz analizleri ve fon değerlendirmeleri"
-          width={2172}
-          height={724}
-          unoptimized
-          className="block h-auto w-full rounded-2xl"
-          priority={false}
-        />
-      </a>
-    </section>
-  );
-}
-
 function normalizePath(route: string) {
   if (!route || route === "/") return "/";
   return route.endsWith("/") ? route.slice(0, -1) : route;
@@ -715,7 +691,6 @@ export default function HomePage() {
           <FonlarKisaYollar />
         </section>
 
-        <YoutubeTanitimBanner />
 
         <SonGuncellemelerBar items={guncellemeler} />
 

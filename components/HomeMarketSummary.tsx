@@ -52,12 +52,27 @@ export default function HomeMarketSummary() {
 
   return (
     <section className="px-4 pb-3 md:px-6">
-      <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
-        <div
-          ref={containerRef}
-          className="tradingview-widget-container h-[72px] w-full"
-          aria-label="Dolar, euro, gram altın ve ons altın piyasa fiyatları"
-        />
+      <div className="flex flex-col gap-2 md:flex-row">
+        <div className="min-w-0 flex-1 overflow-hidden rounded-lg border border-slate-200 bg-white">
+          <div
+            ref={containerRef}
+            className="tradingview-widget-container h-[72px] w-full"
+            aria-label="Dolar, euro, gram altın ve ons altın piyasa fiyatları"
+          />
+        </div>
+
+        <a
+          href="https://www.youtube.com/@hocaileborsa/streams"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex h-[72px] shrink-0 items-center justify-center gap-2 rounded-lg bg-red-600 px-5 text-sm font-bold text-white transition hover:bg-red-700 md:w-[170px]"
+          aria-label="Hoca ile Borsa canlı yayınlarını YouTube'da aç"
+        >
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/15">
+            ▶
+          </span>
+          <span>Canlı Yayın</span>
+        </a>
       </div>
     </section>
   );
