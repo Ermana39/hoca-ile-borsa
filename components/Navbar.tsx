@@ -26,30 +26,30 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-800 bg-slate-950 shadow-[0_2px_16px_rgba(0,0,0,0.35)]">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-3 py-0 md:px-4 xl:px-5">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-3 md:px-4 xl:px-5">
         <Link
           href="/"
           prefetch={false}
-          className="flex shrink-0 items-center py-3.5 font-bold text-white"
+          className="flex shrink-0 items-center py-3 font-bold text-white"
           aria-label="Hoca İle Borsa - Ana Sayfa"
         >
           <span className="flex flex-col whitespace-nowrap leading-none">
-            <span className="text-sm font-bold tracking-tight text-blue-400 2xl:text-base">
+            <span className="text-[15px] font-bold tracking-tight text-blue-400 2xl:text-base">
               Hoca İle Borsa
             </span>
-            <span className="mt-1 text-[9px] font-medium text-slate-400 2xl:text-[10px]">
+            <span className="mt-1 text-[10px] font-medium tracking-[0.01em] text-slate-300 2xl:text-[11px]">
               Piyasayı Tek Ekranda Takip Et.
             </span>
           </span>
         </Link>
 
-        <nav className="hidden min-w-0 flex-1 items-center justify-center gap-1 xl:flex 2xl:gap-1.5" aria-label="Ana navigasyon">
+        <nav className="hidden min-w-0 flex-1 items-center justify-center gap-1 min-[1450px]:flex 2xl:gap-1.5" aria-label="Ana navigasyon">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               prefetch={false}
-              className="inline-flex h-9 shrink-0 items-center whitespace-nowrap rounded-lg border border-slate-600/60 bg-gradient-to-b from-slate-700 to-slate-800 px-2.5 text-[12px] font-semibold text-slate-100 shadow-[0_2px_6px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-150 hover:border-blue-500/70 hover:from-blue-600 hover:to-blue-700 hover:text-white hover:shadow-[0_2px_12px_rgba(59,130,246,0.35),inset_0_1px_0_rgba(255,255,255,0.12)] active:scale-95 active:shadow-none 2xl:px-3 2xl:text-sm"
+              className="inline-flex h-8 shrink-0 items-center whitespace-nowrap rounded-lg border border-slate-600/60 bg-gradient-to-b from-slate-700 to-slate-800 px-2 text-[11px] font-semibold text-slate-100 shadow-[0_2px_6px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-150 hover:border-blue-500/70 hover:from-blue-600 hover:to-blue-700 hover:text-white hover:shadow-[0_2px_12px_rgba(59,130,246,0.35),inset_0_1px_0_rgba(255,255,255,0.12)] active:scale-95 active:shadow-none 2xl:h-9 2xl:px-3 2xl:text-[13px]"
             >
               {link.label}
             </Link>
@@ -60,7 +60,7 @@ export default function Navbar() {
           <SiteSearch onOpen={() => setOpen(false)} />
           <ThemeToggle />
           <button
-            className="flex h-9 w-9 items-center justify-center rounded-md border border-slate-700 bg-slate-800 text-slate-300 transition hover:bg-slate-700 xl:hidden"
+            className="flex h-9 w-9 items-center justify-center rounded-md border border-slate-700 bg-slate-800 text-slate-300 transition hover:bg-slate-700 min-[1450px]:hidden"
             onClick={() => setOpen((v) => !v)}
             aria-label="Menüyü aç/kapat"
             aria-expanded={open}
@@ -79,7 +79,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <nav className="border-t border-slate-800 bg-slate-900 px-4 pb-4 pt-2 xl:hidden" aria-label="Mobil navigasyon">
+        <nav className="border-t border-slate-800 bg-slate-900 px-4 pb-4 pt-2 min-[1450px]:hidden" aria-label="Mobil navigasyon">
           {mobileNavLinks.map((link) => (
             <Link
               key={link.href}

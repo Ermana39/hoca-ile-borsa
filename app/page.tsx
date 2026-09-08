@@ -11,6 +11,7 @@ import type { CategoryIconName } from "@/components/icons/CategoryIcon";
 import HaberKart from "@/components/HaberKart";
 import PopulerAramalar from "@/components/PopulerAramalar";
 import { FundLogo } from "@/components/MarketLogo";
+import HomeMarketSummary from "@/components/HomeMarketSummary";
 import fonAcilisData from "@/app/fonlar/etki-analizi/_data/fon-acilis-tahminleri.json";
 import tlyFundData from "@/data/fonlar/fund-details/tly.json";
 import thfFundData from "@/data/fonlar/fund-details/thf.json";
@@ -649,19 +650,21 @@ export default function HomePage() {
       </h1>
 
       <div className="mx-auto max-w-7xl">
-        <section className="px-4 pt-5 pb-6 md:px-6 md:pt-6">
+        <section className="px-4 pt-4 pb-3 md:px-6 md:pt-5">
           <div className="overflow-hidden rounded-2xl">
             <Image
               src="/banner3.webp"
-              alt="Hoca İle Borsa banner görseli"
+              alt="Hoca İle Borsa - Piyasayı Tek Ekranda Takip Et"
               width={1228}
               height={414}
               priority
               unoptimized
-              className="block h-auto w-full rounded-2xl"
+              className="block h-auto w-full rounded-2xl md:h-[220px] md:object-cover md:object-center xl:h-[240px]"
             />
           </div>
         </section>
+
+        <HomeMarketSummary />
 
         <section className="px-4 pb-6 md:px-6">
           <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-6">
