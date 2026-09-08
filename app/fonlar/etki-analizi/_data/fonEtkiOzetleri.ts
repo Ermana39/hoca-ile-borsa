@@ -197,30 +197,25 @@ export function fonEtkiYuzdeMetni(value: number): string {
 export function fonEtkiMetadataOlustur(slug: string): Metadata {
   const fon = fonEtkiOzetiGetir(slug);
   const canonical = `${siteUrl}/fonlar/etki-analizi/${fon.slug}`;
-  const title = `${fon.kod} Fon Etki Analizi ve Günlük Tahmin`;
+  const title = `${fon.kod} Fonu: Günlük Etki Analizi ve Portföy Dağılımı`;
   const description = seoAciklamasi(
-    `${tarihEtiketi(fon.sonGuncellemeIso)} ${fon.kod} günlük tahmini ${fonEtkiYuzdeMetni(fon.toplamEtki)}. Bir sonraki fon fiyatına yönelik portföy etkisini inceleyin; kesin getiri değildir.`
+    `${fon.kod} fonunun güncel portföy dağılımını, hisse bazlı etkilerini, para akışını ve yatırımcı değişimini inceleyin. Günlük tahmin her işlem günü yenilenir.`,
+    "",
+    158
   );
 
   return {
     title: { absolute: title },
     description,
     alternates: { canonical },
-    keywords: [
-      `${fon.kod} tahmin`,
-      `${fon.kod} günlük tahmin`,
-      `${fon.kod} gün sonu tahmini`,
-      `${fon.kod} yarın ne olur`,
-    ],
     openGraph: {
       title,
       description,
       url: canonical,
-      type: "article",
-      modifiedTime: fon.sonGuncellemeZamaniIso,
+      type: "website",
     },
     twitter: {
-      card: "summary_large_image",
+      card: "summary",
       title,
       description,
     },

@@ -32,7 +32,10 @@ export default function FonEtkiTable({
   toplamEtki: number;
 }) {
   return (
-    <div className="overflow-x-auto rounded-2xl border border-zinc-200 bg-white">
+    <div
+      data-nosnippet="true"
+      className="overflow-x-auto rounded-2xl border border-zinc-200 bg-white"
+    >
       <table className="w-full min-w-[480px] border-collapse text-sm">
         <thead className="bg-zinc-100 text-zinc-800">
           <tr>

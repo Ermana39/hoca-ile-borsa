@@ -139,7 +139,6 @@ const sayfaBasliklari: Record<string, string> = {
   "/temettu/temettu-egitimi": "Temettü Eğitimi",
   "/temettu/mayis-ayi-temettu-verenler": "Mayıs Ayı Temettü Verenler",
   "/temettu/haziran-ayi-temettu-verenler": "Haziran Ayı Temettü Verenler",
-  "/temettu/agustos-ayi-temettu-verenler": "Ağustos Ayı Temettü Verenler",
   "/temettu/eylul-ayi-temettu-verenler": "Eylül Ayı Temettü Verenler",
 
   "/mevduat-kredi-faizleri/mevduat-faizi-oranlari":

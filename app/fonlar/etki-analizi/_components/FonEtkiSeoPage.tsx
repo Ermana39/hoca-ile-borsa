@@ -239,45 +239,34 @@ type EtkiFaqItem = {
 
 function etkiFaqItemsOlustur({
   kod,
-  toplamEtki,
-  sonGuncelleme,
 }: Pick<
   FonEtkiSeoPageProps,
-  "kod" | "toplamEtki" | "sonGuncelleme"
+  "kod"
 >): EtkiFaqItem[] {
-  const etki = signedPercent(toplamEtki);
-  const yon =
-    toplamEtki > 0
-      ? "yukarı yönlü"
-      : toplamEtki < 0
-        ? "aşağı yönlü"
-        : "nötr";
-  const tahminAciklamasi = `${sonGuncelleme} tarihli portföy verileri ve varlıkların gün içi fiyat değişimleriyle hesaplanan ${kod} tahmini ${etki} seviyesindedir. Bu değer kesin fon getirisi değildir.`;
-
   return [
     {
-      question: `${kod} tahmini bugün ne kadar?`,
-      answer: tahminAciklamasi,
+      question: `${kod} fon etki analizi neyi gösterir?`,
+      answer: `${kod} fon etki analizi, fonda izlenen varlıkların portföy ağırlıkları ile günlük fiyat hareketlerini birleştirerek her varlığın tahmini katkısını gösterir.`,
     },
     {
-      question: `${kod} günlük tahmin nedir?`,
-      answer: `${kod} günlük tahmini, açıklanacak bir sonraki fon fiyatına yönelik hesaplanan ${etki} portföy etkisidir. Hesap ${sonGuncelleme} verisine aittir ve kesinleşmiş fon fiyatı değildir.`,
+      question: `${kod} fonunun portföy dağılımı nasıl incelenir?`,
+      answer: `Portföy tablosunda her varlığın ${kod} fonundaki ağırlığı, günlük kapanış değişimi ve toplam tahmine yaptığı katkı birlikte incelenebilir.`,
     },
     {
-      question: `${kod} gün sonu tahmini kaç?`,
-      answer: `${sonGuncelleme} kapanış verilerine göre ${kod} gün sonu tahmini ${etki} seviyesindedir. Fon giderleri, nakit ve türev pozisyonlar nedeniyle açıklanan gerçek getiri farklı olabilir.`,
+      question: `${kod} fonunda hisse etkisi nasıl hesaplanır?`,
+      answer: `Her hissenin fon içindeki ağırlığı günlük kapanış değişimiyle çarpılır. Hisse bazında bulunan katkıların toplamı ${kod} fonu için tahmini portföy etkisini oluşturur.`,
     },
     {
-      question: `${kod} yarın ne olur?`,
-      answer: `Kesin olarak bilinemez. Mevcut hesaplamada ${kod} için bir sonraki açıklanacak fon fiyatına yönelik etki ${etki} ve yön ${yon} görünmektedir; bu bir getiri garantisi değildir.`,
+      question: `${kod} günlük tahmini kesin fon getirisi midir?`,
+      answer: `Hayır. Hesaba nakit, fon giderleri, türev pozisyonlar ve gün içindeki portföy değişiklikleri tam olarak yansımayabilir. Kesin getiri, fonun birim pay değeri açıklandığında belli olur.`,
     },
     {
-      question: `${kod} fonu bugün yükselir mi?`,
-      answer: `Kesin olarak söylenemez. İzlenen portföy bölümünün hesaplanan etkisi ${etki} ile ${yon} olsa da ${kod} fonunun kesin fiyatı TEFAS'ta ilan edildiğinde belli olur.`,
+      question: `${kod} fonunda para akışı ve yatırımcı değişimi ne anlatır?`,
+      answer: `Para akışı fondaki net günlük para hareketini, yatırımcı değişimi ise yatırımcı sayısındaki yönü gösterir. Bu iki veri fon büyüklüğüyle birlikte değerlendirilmelidir.`,
     },
     {
-      question: `${kod} tahmini nasıl hesaplanıyor?`,
-      answer: `${kod} tahmini, her varlığın fon içindeki ağırlığının günlük kapanış değişimiyle çarpılması ve bulunan etkilerin toplanmasıyla hesaplanır. Nakit, gider ve bildirilmeyen pozisyonlar tahmin ile gerçek getiri arasında fark oluşturabilir.`,
+      question: `${kod} fonunun güncel bilgilerine nereden ulaşılır?`,
+      answer: `${kod} fon detay sayfasında getiri dönemleri, risk değeri, fon büyüklüğü, yatırımcı sayısı, para akışı ve alım koşulları birlikte sunulur.`,
     },
   ];
 }
@@ -287,15 +276,11 @@ function buildJsonLd({
   fonAdi,
   slug,
   rows,
-  toplamEtki,
-  sonGuncelleme,
   sonGuncellemeZamaniIso,
 }: FonEtkiSeoPageProps) {
   const pageUrl = `${siteUrl}/fonlar/etki-analizi/${slug}`;
   const faqItems = etkiFaqItemsOlustur({
     kod,
-    toplamEtki,
-    sonGuncelleme,
   });
 
   return {
@@ -447,7 +432,7 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
   const yatirimciPozitif = degisimVerisi.yatirimciSayisi.degisim >= 0;
   const fonDegerPozitif = degisimVerisi.fonToplamDeger.degisim >= 0;
   const paraAkisiPozitif = degisimVerisi.paraGirisiCikisi >= 0;
-  const faqItems = etkiFaqItemsOlustur({ kod, toplamEtki, sonGuncelleme });
+  const faqItems = etkiFaqItemsOlustur({ kod });
 
   return (
     <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">
@@ -480,19 +465,18 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
           <FundLogo fundCode={kod} size="xl" />
           <div className="min-w-0">
             <p className="mb-1 text-sm font-semibold text-blue-700">
-              {sonGuncelleme} {kod} Günlük Tahmini
+              {fonAdi}
             </p>
             <h1 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              {kod} Fon Etki Analizi ve Günlük Tahmin
+              {kod} Fonu: Günlük Etki Analizi ve Portföy Dağılımı
             </h1>
           </div>
         </div>
 
         <p className="mb-5 max-w-3xl text-base leading-7 text-slate-600">
-          {kod} için mevcut portföy verileri ve varlıkların gün içi fiyat
-          değişimleri üzerinden hesaplanan tahmini etki {signedPercent(toplamEtki)}
-          {" "}seviyesindedir. Bu hesap, TEFAS&apos;ta açıklanacak bir sonraki fon
-          fiyatına yönelik göstergedir; kesinleşmiş fon getirisi değildir.
+          {kod} fonunun güncel portföy dağılımını, hisse bazlı etkilerini, para
+          akışını ve yatırımcı değişimini birlikte inceleyin. Günlük tahmin her
+          işlem günü yenilenir ve kesinleşmiş fon getirisi değildir.
         </p>
 
         <Link
@@ -536,7 +520,10 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
           </dl>
         </section>
 
-        <section className="mb-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <section
+          data-nosnippet="true"
+          className="mb-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
+        >
           <div className="mb-4 flex flex-col gap-1 border-b border-slate-100 pb-4">
             <h2 className="text-lg font-bold text-slate-900">
               {sonGuncelleme} {kod} Günlük Tahmini
@@ -609,7 +596,10 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
           }
         />
 
-        <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-5 md:p-7">
+        <section
+          data-nosnippet="true"
+          className="mt-8 rounded-2xl border border-slate-200 bg-white p-5 md:p-7"
+        >
           <h2 className="text-xl font-bold text-zinc-900 md:text-2xl">
             {kod} Portföy Dağılımı ve Yoğunlaşma Özeti
           </h2>
@@ -649,7 +639,10 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
           </p>
         </section>
 
-        <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-5 md:p-7">
+        <section
+          data-nosnippet="true"
+          className="mt-8 rounded-2xl border border-slate-200 bg-white p-5 md:p-7"
+        >
           <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="text-sm font-medium text-slate-500">

@@ -48,6 +48,7 @@ export default function FonEtkiKatkiGrafigi({
 
   return (
     <section
+      data-nosnippet="true"
       className={`mb-6 border-y border-slate-200 bg-white px-4 py-6 md:px-6 chart-expandable-card ${
         isExpanded ? "chart-expandable-card-expanded fon-etki-katki-expanded" : ""
       }`}
