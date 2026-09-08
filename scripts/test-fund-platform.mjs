@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import XLSX from "./lib/xlsx.mjs";
+import { sonrakiBistIslemGunu } from "./lib/bist-islem-takvimi.mjs";
 
 const rootDir = process.cwd();
 const dataDir = path.join(rootDir, "data", "fonlar");
@@ -28,6 +29,10 @@ const sourcePaths = {
   etki: path.join(
     rootDir,
     "app/fonlar/etki-analizi/_data/fon-etki-verileri.json"
+  ),
+  etkiTahmin: path.join(
+    rootDir,
+    "app/fonlar/etki-analizi/_data/fon-acilis-tahminleri.json"
   ),
   tercihExcel: path.join(
     rootDir,
@@ -371,7 +376,6 @@ for (const row of sourceSnapshots) {
   sourceSnapshotKeys.add(key);
 }
 const sourceLatestDate = sourceSnapshots.map((row) => row.tarih).sort().at(-1);
-const sourceLatest = sourceSnapshots.filter((row) => row.tarih === sourceLatestDate);
 const historyLatestDate = history.snapshots.map((row) => row.tarih).sort().at(-1);
 const historyLatest = history.snapshots.filter((row) => row.tarih === historyLatestDate);
 assert(
@@ -828,6 +832,60 @@ for (const code of expectedEffectFunds) {
   if (!latestEffectDate || lastDate > latestEffectDate) latestEffectDate = lastDate;
 }
 assert(effectData.sonGuncelleme === latestEffectDate, "Etki analizi son güncelleme tarihi yanlış.");
+
+const forecastData = JSON.parse(fs.readFileSync(sourcePaths.etkiTahmin, "utf8"));
+const expectedForecastFunds = ["DFI", "DOH", "KHA", "THF", "TLY", "TMV"];
+assert(
+  JSON.stringify(Object.keys(forecastData.fonlar).sort()) ===
+    JSON.stringify(expectedForecastFunds),
+  "Açılış tahmini yalnızca gösterilecek altı fondan oluşmalı."
+);
+assert(
+  forecastData.kaynakTarihi === effectData.sonGuncelleme,
+  "Açılış tahmini kaynak tarihi etki analiziyle uyuşmuyor."
+);
+assert(
+  forecastData.tahminTarihi === sonrakiBistIslemGunu(forecastData.kaynakTarihi),
+  "Açılış tahmini tarihi bir sonraki BIST işlem günü değil."
+);
+assert(
+  sonrakiBistIslemGunu("2026-09-11") === "2026-09-14",
+  "Cuma tahmini pazartesi gününe geçmeli."
+);
+assert(
+  sonrakiBistIslemGunu("2026-10-28") === "2026-10-30",
+  "Kapalı BIST günü tahmin tarihinde atlanmalı."
+);
+
+for (const code of expectedForecastFunds) {
+  const forecast = forecastData.fonlar[code];
+  assertSameNumber(
+    forecast.tahmin,
+    effectData.fonlar[code].toplamEtki,
+    `${code} açılış tahmini`,
+    0.000000001
+  );
+  assert(
+    forecast.gerceklesen === null || Number.isFinite(forecast.gerceklesen),
+    `${code} gerçekleşen değeri geçersiz.`
+  );
+
+  if (forecast.gerceklesen !== null) {
+    const detail = JSON.parse(
+      fs.readFileSync(path.join(detailDir, `${code.toLowerCase()}.json`), "utf8")
+    );
+    const actualRow = readPublicFundHistory(detail.fund).find(
+      (row) => row.tarih === forecastData.tahminTarihi
+    );
+    assert(Number.isFinite(actualRow?.gunlukGetiri), `${code} gerçekleşen günü bulunamadı.`);
+    assertSameNumber(
+      forecast.gerceklesen,
+      round(actualRow.gunlukGetiri * 100, 4),
+      `${code} gerçekleşen getiri`,
+      0.0001
+    );
+  }
+}
 
 const tercihHeaders = [
   "Sembol",

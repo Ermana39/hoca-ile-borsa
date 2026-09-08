@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import XLSX from "./lib/xlsx.mjs";
+import { sonrakiBistIslemGunu } from "./lib/bist-islem-takvimi.mjs";
 
 const KAYNAK_DOSYA = path.join(
   process.cwd(),
@@ -11,6 +12,10 @@ const KAYNAK_DOSYA = path.join(
   "fon-etki-verileri.xlsx"
 );
 const CIKTI_DOSYA = KAYNAK_DOSYA.replace(/\.xlsx$/i, ".json");
+const TAHMIN_DOSYA = path.join(
+  path.dirname(KAYNAK_DOSYA),
+  "fon-acilis-tahminleri.json"
+);
 const GENEL_FON_GECMIS_DIZINI = path.join(
   process.cwd(),
   "public",
@@ -19,6 +24,7 @@ const GENEL_FON_GECMIS_DIZINI = path.join(
   "history"
 );
 const BEKLENEN_FONLAR = ["TLY", "PHE", "DFI", "KHA", "THF", "TMV", "DOH"];
+const GOSTERILECEK_FONLAR = ["TLY", "THF", "TMV", "DOH", "KHA", "DFI"];
 const NORMAL_TOPLAM_TOLERANSI = 0.02;
 const ETKI_TOLERANSI = 0.0002;
 
@@ -92,6 +98,47 @@ async function dosyaYazTekrarli(dosya, icerik) {
   }
 
   throw sonHata;
+}
+
+async function jsonOku(dosya) {
+  try {
+    return JSON.parse(await fs.readFile(dosya, "utf8"));
+  } catch (error) {
+    if (error?.code === "ENOENT") return null;
+    throw error;
+  }
+}
+
+async function acilisTahminleriniGuncelle(cikti) {
+  const onceki = await jsonOku(TAHMIN_DOSYA);
+  const tahminTarihi = sonrakiBistIslemGunu(cikti.sonGuncelleme);
+  const ayniTahmin = onceki?.tahminTarihi === tahminTarihi;
+  const fonlar = {};
+
+  for (const kod of GOSTERILECEK_FONLAR) {
+    const etki = cikti.fonlar[kod]?.toplamEtki;
+    if (!Number.isFinite(etki)) {
+      throw new Error(`${kod}: açılış tahmini için toplam etki bulunamadı.`);
+    }
+
+    fonlar[kod] = {
+      tahmin: etki,
+      gerceklesen: ayniTahmin ? (onceki?.fonlar?.[kod]?.gerceklesen ?? null) : null,
+    };
+  }
+
+  const tahminler = {
+    version: 1,
+    kaynakTarihi: cikti.sonGuncelleme,
+    tahminTarihi,
+    generatedAt: new Date().toISOString(),
+    fonlar,
+  };
+
+  await dosyaYazTekrarli(TAHMIN_DOSYA, `${JSON.stringify(tahminler, null, 2)}\n`);
+  console.log(
+    `Fon açılış tahminleri hazırlandı: ${tahminTarihi} (${GOSTERILECEK_FONLAR.join(", ")})`
+  );
 }
 
 async function genelFonGecmisiniOku(kod) {
@@ -413,9 +460,13 @@ async function main() {
     kaynakDosya: path.basename(KAYNAK_DOSYA),
     sonGuncelleme,
     fonlar,
+    ...(oncekiCikti?.tarihselSenkron
+      ? { tarihselSenkron: oncekiCikti.tarihselSenkron }
+      : {}),
   };
 
   await dosyaYazTekrarli(CIKTI_DOSYA, `${JSON.stringify(cikti, null, 2)}\n`);
+  await acilisTahminleriniGuncelle(cikti);
   console.log(
     `Fon etki verileri hazırlandı: ${path.relative(process.cwd(), CIKTI_DOSYA)}`
   );

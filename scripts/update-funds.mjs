@@ -62,7 +62,15 @@ const effectDataPath = path.join(
   "_data",
   "fon-etki-verileri.json"
 );
-const effectAnalysisFundCodes = ["TLY", "PHE", "DFI", "KHA", "THF", "TMV"];
+const effectForecastPath = path.join(
+  rootDir,
+  "app",
+  "fonlar",
+  "etki-analizi",
+  "_data",
+  "fon-acilis-tahminleri.json"
+);
+const effectAnalysisFundCodes = ["TLY", "PHE", "DFI", "KHA", "THF", "TMV", "DOH"];
 
 const version = 1;
 const maxAbsoluteDailyReturn = 1;
@@ -1095,6 +1103,44 @@ async function syncEffectAnalysisHistory(details, generatedAt) {
   };
 }
 
+async function syncEffectForecastActuals(details, generatedAt) {
+  const forecastData = await readJson(effectForecastPath, null);
+  if (!forecastData?.tahminTarihi || !forecastData?.fonlar) {
+    return {
+      senkronizeEdildi: false,
+      neden: "Fon açılış tahmin dosyası bulunamadı.",
+    };
+  }
+
+  const detailByCode = new Map(details.map((detail) => [detail.fund.kod, detail]));
+  const guncellenenFonlar = [];
+
+  for (const [kod, tahmin] of Object.entries(forecastData.fonlar)) {
+    const detail = detailByCode.get(kod);
+    const gerceklesenSatir = detail?.history?.find(
+      (row) => row.tarih === forecastData.tahminTarihi
+    );
+    if (!Number.isFinite(gerceklesenSatir?.gunlukGetiri)) continue;
+
+    const gerceklesen = round(gerceklesenSatir.gunlukGetiri * 100, 4);
+    if (tahmin.gerceklesen !== gerceklesen) {
+      tahmin.gerceklesen = gerceklesen;
+      guncellenenFonlar.push(kod);
+    }
+  }
+
+  if (guncellenenFonlar.length > 0) {
+    forecastData.gerceklesenGuncellemeZamani = generatedAt;
+    await writeJson(effectForecastPath, forecastData);
+  }
+
+  return {
+    senkronizeEdildi: guncellenenFonlar.length > 0,
+    tahminTarihi: forecastData.tahminTarihi,
+    guncellenenFonlar,
+  };
+}
+
 function sumValues(values) {
   const valid = values.filter((value) => typeof value === "number" && Number.isFinite(value));
   if (valid.length === 0) return null;
@@ -1859,6 +1905,7 @@ async function main() {
   }
 
   const effectHistorySync = await syncEffectAnalysisHistory(fundData.details, generatedAt);
+  const effectForecastSync = await syncEffectForecastActuals(fundData.details, generatedAt);
 
   await writeJson(updateLogPath, {
     version,
@@ -1885,6 +1932,7 @@ async function main() {
       temizlenenGecersizSnapshotlar: summarizeInvalidSnapshots(invalidSnapshots),
     },
     etkiAnaliziTarihselSenkronu: effectHistorySync,
+    etkiAnaliziGerceklesenSenkronu: effectForecastSync,
     veriUyarisiSayisi: sourceWarnings.length + fundData.dataWarnings.length,
     veriUyarilari: [...sourceWarnings, ...fundData.dataWarnings],
   });

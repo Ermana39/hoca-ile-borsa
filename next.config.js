@@ -283,6 +283,11 @@ const nextConfig = {
         destination: "/hisse/:sembol",
         permanent: true,
       },
+      {
+        source: "/fonlar/etki-analizi/:kod",
+        destination: "/fonlar/etki-analizi",
+        permanent: true,
+      },
       // Halka arz slug'ları daha açıklayıcı/SEO-dostu adlara taşındı; eski
       // kısa URL'ler yeni slug'lara kalıcı olarak yönlendirilir.
       {

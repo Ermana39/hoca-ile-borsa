@@ -13,10 +13,7 @@ import {
   getSitemapTaslakIzahnameSluglari,
 } from "@/lib/halka-arz";
 import { rehberler } from "@/lib/rehberler";
-import {
-  fonEtkiOzetleri,
-  fonEtkiSonGuncelleme,
-} from "@/app/fonlar/etki-analizi/_data/fonEtkiOzetleri";
+import { fonEtkiSonGuncelleme } from "@/app/fonlar/etki-analizi/_data/fonEtkiOzetleri";
 import {
   getCurrentFundsData,
   getManagersData,
@@ -143,10 +140,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const fonEtkiEntries = [
     { route: "/fonlar/etki-analizi", lastModified: fonEtkiSonGuncelleme.iso },
-    ...fonEtkiOzetleri.map((fon) => ({
-      route: `/fonlar/etki-analizi/${fon.slug}`,
-      lastModified: fonEtkiSonGuncelleme.iso,
-    })),
   ];
   const fonData = getCurrentFundsData();
   const managerData = getManagersData();
