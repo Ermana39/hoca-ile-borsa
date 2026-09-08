@@ -23,7 +23,7 @@ const GENEL_FON_GECMIS_DIZINI = path.join(
   "fonlar",
   "history"
 );
-const BEKLENEN_FONLAR = ["TLY", "PHE", "DFI", "KHA", "THF", "TMV", "DOH"];
+const BEKLENEN_FONLAR = ["TLY", "DFI", "KHA", "THF", "TMV", "DOH"];
 const GOSTERILECEK_FONLAR = ["TLY", "THF", "TMV", "DOH", "KHA", "DFI"];
 const NORMAL_TOPLAM_TOLERANSI = 0.02;
 const ETKI_TOLERANSI = 0.0002;
