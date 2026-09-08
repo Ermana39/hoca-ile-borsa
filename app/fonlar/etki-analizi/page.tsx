@@ -7,8 +7,6 @@ import tahminVerisi from "./_data/fon-acilis-tahminleri.json";
 const siteUrl = "https://www.hocaileborsa.com";
 const canonical = `${siteUrl}/fonlar/etki-analizi`;
 const title = "Popüler Fonların Açılış Tahminleri";
-const description =
-  "TLY, THF, TMV, DOH, KHA ve DFI fonlarının günlük açılış tahminlerini açıklanan gerçek fon getirileriyle karşılaştırın.";
 
 const fonSirasi = ["TLY", "THF", "TMV", "DOH", "KHA", "DFI"] as const;
 type FonKodu = (typeof fonSirasi)[number];
@@ -25,20 +23,23 @@ type TahminVerisi = {
 };
 
 const veri = tahminVerisi as TahminVerisi;
+const tahminTarihiUzun = tarihYazUzun(veri.tahminTarihi);
+const seoTitle = "Fon Açılış Tahminleri: TLY, THF, TMV, DOH, KHA ve DFI";
+const description = `${tahminTarihiUzun} için TLY, THF, TMV, DOH, KHA ve DFI fon açılış tahminlerini açıklanan gerçek getirilerle karşılaştırın. Günlük güncellenen tablo.`;
 
 export const metadata: Metadata = {
-  title: { absolute: title },
+  title: { absolute: seoTitle },
   description,
   alternates: { canonical },
   openGraph: {
     type: "website",
     url: canonical,
-    title,
+    title: seoTitle,
     description,
   },
   twitter: {
     card: "summary",
-    title,
+    title: seoTitle,
     description,
   },
 };
@@ -46,6 +47,16 @@ export const metadata: Metadata = {
 function tarihYaz(isoTarih: string) {
   const [yil, ay, gun] = isoTarih.split("-");
   return `${gun}.${ay}.${yil}`;
+}
+
+function tarihYazUzun(isoTarih: string) {
+  const [yil, ay, gun] = isoTarih.split("-").map(Number);
+  return new Intl.DateTimeFormat("tr-TR", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(Date.UTC(yil, ay - 1, gun)));
 }
 
 function yuzdeYaz(deger: number) {
@@ -64,23 +75,68 @@ function degerRengi(deger: number | null) {
   return "text-slate-700";
 }
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Dataset",
-  "@id": `${canonical}#dataset`,
-  name: title,
-  description,
-  url: canonical,
-  inLanguage: "tr-TR",
-  dateModified: veri.kaynakTarihi,
-  creator: { "@id": `${siteUrl}/#organization` },
-  variableMeasured: ["Fon kodu", "Günlük tahmin", "Gerçekleşen fon getirisi"],
-  hasPart: fonSirasi.map((kod) => ({
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${canonical}#webpage`,
+    url: canonical,
+    name: seoTitle,
+    headline: title,
+    description,
+    inLanguage: "tr-TR",
+    dateModified: veri.kaynakTarihi,
+    isPartOf: { "@id": `${siteUrl}/#website` },
+    mainEntity: { "@id": `${canonical}#dataset` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": `${canonical}#breadcrumb`,
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Ana Sayfa",
+        item: `${siteUrl}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Fonlar",
+        item: `${siteUrl}/fonlar`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Fon Açılış Tahminleri",
+        item: canonical,
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "Dataset",
-    name: `${kod} açılış tahmini`,
-    url: `${siteUrl}/fonlar/${kod.toLowerCase()}`,
-  })),
-};
+    "@id": `${canonical}#dataset`,
+    name: `${tahminTarihiUzun} Popüler Fon Açılış Tahminleri`,
+    alternateName: [
+      "Günlük fon tahminleri",
+      "TLY THF TMV DOH KHA DFI fon tahminleri",
+    ],
+    description,
+    url: canonical,
+    inLanguage: "tr-TR",
+    dateModified: veri.kaynakTarihi,
+    temporalCoverage: `${veri.kaynakTarihi}/${veri.tahminTarihi}`,
+    creator: { "@id": `${siteUrl}/#organization` },
+    variableMeasured: ["Fon kodu", "Günlük tahmin", "Gerçekleşen fon getirisi"],
+    hasPart: fonSirasi.map((kod) => ({
+      "@type": "Dataset",
+      name: `${kod} fonunun ${tahminTarihiUzun} açılış tahmini`,
+      url: `${siteUrl}/fonlar/${kod.toLowerCase()}`,
+    })),
+  },
+];
 
 export default function FonEtkiAnaliziPage() {
   const tahminTarihi = tarihYaz(veri.tahminTarihi);
@@ -116,9 +172,14 @@ export default function FonEtkiAnaliziPage() {
             Popüler Fonların Açılış Tahminleri
           </h1>
           <p className="mt-4 text-sm leading-7 text-slate-600 md:text-base">
-            Takip edilen altı fonun bir sonraki işlem günü için hesaplanan tahmini
-            değişimi ile açıklanan gerçek getirisi aynı tabloda karşılaştırılır.
-            Tahminler kesin fon getirisi değildir.
+            {tahminTarihiUzun} için TLY, THF, TMV, DOH, KHA ve DFI fon
+            tahminlerini tek tabloda inceleyin. Tahmin sütunu bir sonraki işlem
+            gününe yönelik hesaplanan değişimi, gerçekleşen sütunu ise açıklanan
+            günlük fon getirisini gösterir.
+          </p>
+          <p className="mt-3 text-xs font-medium text-slate-500 md:text-sm">
+            Son veri tarihi: {" "}
+            <time dateTime={veri.kaynakTarihi}>{tarihYazUzun(veri.kaynakTarihi)}</time>
           </p>
         </header>
 
@@ -190,7 +251,98 @@ export default function FonEtkiAnaliziPage() {
           />
         </section>
 
-        <p className="mt-8 border-t border-slate-200 pt-5 text-xs leading-6 text-slate-500 md:text-sm">
+        <section className="mt-10 border-t border-slate-200 pt-7">
+          <h2 className="text-xl font-bold text-slate-950 md:text-2xl">
+            Fon açılış tahmini nedir?
+          </h2>
+          <div className="mt-3 space-y-3 text-sm leading-7 text-slate-600 md:text-base">
+            <p>
+              Fon açılış tahmini, fonun henüz açıklanmamış bir sonraki fiyatındaki
+              günlük değişime yönelik hesaplanan yaklaşık değerdir. Borsada işlem
+              gören bir hissenin anlık açılış fiyatı anlamına gelmez.
+            </p>
+            <p>
+              Tablodaki artı değerler tahmini yükselişi, eksi değerler tahmini
+              düşüşü ifade eder. “Gerçekleşen” alanındaki değer, ilgili güne ait fon
+              fiyatı açıklandıktan sonra eklenir; açıklama yapılmadıysa çizgi olarak
+              görünür.
+            </p>
+          </div>
+        </section>
+
+        <section className="mt-9 border-t border-slate-200 pt-7">
+          <h2 className="text-xl font-bold text-slate-950 md:text-2xl">
+            Günlük fon tahminleri ne zaman güncellenir?
+          </h2>
+          <div className="mt-3 space-y-3 text-sm leading-7 text-slate-600 md:text-base">
+            <p>
+              Yeni gün sonu verisi işlendiğinde TLY, THF, TMV, DOH, KHA ve DFI için
+              tahminler bir sonraki Borsa İstanbul işlem gününe geçirilir. Cuma
+              akşamı hazırlanan tablo normal koşullarda pazartesi gününü gösterir;
+              işlem yapılmayan resmî tatiller de tarih hesabında atlanır.
+            </p>
+            <p>
+              Ertesi gün fon fiyatları açıklandığında tahmin değeri korunur ve aynı
+              satırdaki gerçekleşen getiri tamamlanır. Böylece tahmin ile sonuç
+              doğrudan karşılaştırılabilir. Fonların fiyat, dönemsel getiri ve diğer
+              güncel bilgileri için tablodaki fon kodlarına tıklayabilirsiniz.
+            </p>
+          </div>
+        </section>
+
+        <section className="mt-9 border-t border-slate-200 pt-7">
+          <h2 className="text-xl font-bold text-slate-950 md:text-2xl">
+            Fon tahminleri hakkında kısa cevaplar
+          </h2>
+          <dl className="mt-4 divide-y divide-slate-200 border-y border-slate-200">
+            <div className="py-4">
+              <dt className="font-bold text-slate-900">Bugünkü tahmin hangi güne aittir?</dt>
+              <dd className="mt-2 text-sm leading-7 text-slate-600 md:text-base">
+                Güncel tablo {tahminTarihiUzun} tarihine aittir. Sütun başlığındaki
+                tarih, tahminin hedeflediği işlem gününü gösterir.
+              </dd>
+            </div>
+            <div className="py-4">
+              <dt className="font-bold text-slate-900">Gerçekleşen değer neden boş görünür?</dt>
+              <dd className="mt-2 text-sm leading-7 text-slate-600 md:text-base">
+                İlgili işlem gününün fon fiyatı henüz açıklanmadığında gerçekleşen
+                alanı çizgi olarak kalır. Fiyat verisi işlendiğinde otomatik olarak
+                doldurulur.
+              </dd>
+            </div>
+            <div className="py-4">
+              <dt className="font-bold text-slate-900">Tahmin kesin fon getirisi midir?</dt>
+              <dd className="mt-2 text-sm leading-7 text-slate-600 md:text-base">
+                Hayır. Tahmin yaklaşık bir günlük değişim göstergesidir. Kesin getiri,
+                fonun resmî olarak açıklanan birim pay fiyatıyla belirlenir.
+              </dd>
+            </div>
+          </dl>
+          <p className="mt-5 text-sm leading-7 text-slate-600 md:text-base">
+            Daha geniş bir değerlendirme yapmak için {" "}
+            <Link
+              href="/fonlar/fon-karsilastirma"
+              prefetch={false}
+              className="font-semibold text-blue-700 hover:underline"
+            >
+              fon karşılaştırma aracını
+            </Link>{" "}
+            kullanabilir veya {" "}
+            <Link
+              href="/fonlar"
+              prefetch={false}
+              className="font-semibold text-blue-700 hover:underline"
+            >
+              güncel fon verilerine
+            </Link>{" "}
+            dönebilirsiniz.
+          </p>
+        </section>
+
+        <p
+          className="mt-8 border-t border-slate-200 pt-5 text-xs leading-6 text-slate-500 md:text-sm"
+          data-nosnippet="true"
+        >
           Hesaplamalar bilgilendirme amacı taşır ve yatırım danışmanlığı kapsamında
           değildir. Kesin değer için fonun resmî fiyat açıklaması esas alınmalıdır.
         </p>

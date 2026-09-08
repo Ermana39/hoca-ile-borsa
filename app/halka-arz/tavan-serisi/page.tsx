@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "@/components/NoPrefetchLink";
-import AdsenseResponsiveUnit from "@/components/AdsenseResponsiveUnit";
+import Script from "next/script";
 import {
   halkaArzSonuclari as baseHalkaArzVerileri,
   type HalkaArzSonucu,
@@ -19,7 +19,7 @@ const title = "2026 Halka Arz Tavan Serisi: Güncel Performans Takibi";
 const description =
   "2026 halka arzlarının gerçekleşen tavan serisi ve performans tablosu: arz fiyatı, gün sonu kapanışı, getiri, marj ve BIST 100 karşılaştırması.";
 
-const tavanSerisiKapanisTarihi = "2026-09-07";
+const tavanSerisiKapanisTarihi = "2026-09-08";
 
 type TavanSerisiKaydi = HalkaArzSonucu & {
   kapanisTarihi?: string;
@@ -53,41 +53,41 @@ export const metadata: Metadata = {
 };
 
 const guncelHalkaArzKapanislari: Record<string, string> = {
-  BKRGY: "8.99",
-  INTET: "74.55",
-  KPEKS: "97.40",
-  TKNKA: "169.20",
-  VEYAS: "120.00",
-  CITAS: "154.40",
-  QUICK: "61.50",
-  KARCL: "176.80",
-  MASFN: "38.70",
-  ALBTN: "34.70",
-  METEN: "19.35",
-  SARAE: "81.30",
-  SSAAT: "32.68",
-  ISVEA: "82.80",
-  EKIM: "17.81",
-  GOLDA: "12.35",
+  BKRGY: "8.85",
+  INTET: "68.20",
+  KPEKS: "94.85",
+  TKNKA: "186.10",
+  VEYAS: "132.00",
+  CITAS: "163.40",
+  QUICK: "63.05",
+  KARCL: "185.00",
+  MASFN: "38.96",
+  ALBTN: "33.76",
+  METEN: "19.38",
+  SARAE: "81.75",
+  SSAAT: "32.50",
+  ISVEA: "87.00",
+  EKIM: "17.98",
+  GOLDA: "12.55",
   ORZAX: "88.15",
-  SOHOE: "10.45",
-  BETAE: "82.50",
-  EKDMR: "47.00",
-  AAGYO: "11.79",
-  MCARD: "167.70",
-  LXGYO: "9.08",
+  SOHOE: "10.40",
+  BETAE: "81.90",
+  EKDMR: "47.50",
+  AAGYO: "12.07",
+  MCARD: "170.90",
+  LXGYO: "9.42",
   GENKM: "10.93",
-  SVGYO: "15.04",
-  EMPAE: "66.95",
-  ATATR: "12.90",
-  BESTE: "33.46",
-  AKHAN: "38.80",
-  NETCD: "119.00",
-  UCAYM: "22.08",
-  ZGYO: "21.50",
-  FRMPL: "32.24",
-  MEYSU: "11.13",
-  ARFYE: "20.14",
+  SVGYO: "15.18",
+  EMPAE: "65.95",
+  ATATR: "13.01",
+  BESTE: "33.22",
+  AKHAN: "38.24",
+  NETCD: "120.50",
+  UCAYM: "22.56",
+  ZGYO: "23.64",
+  FRMPL: "32.50",
+  MEYSU: "11.14",
+  ARFYE: "20.30",
 };
 
 const bkrgyHalkaArzVerisi: TavanSerisiKaydi = {
@@ -96,9 +96,9 @@ const bkrgyHalkaArzVerisi: TavanSerisiKaydi = {
   katilimciSayisi: "502.090",
   dagitimSekli: "BİREYSELE %70",
   arzFiyati: "12.93",
-  guncelFiyat: "8.99",
+  guncelFiyat: "8.85",
   konsorsiyum: "İNTEGRAL",
-  kapanisTarihi: "2026-09-07",
+  kapanisTarihi: "2026-09-08",
 };
 
 const intetHalkaArzVerisi: TavanSerisiKaydi = {
@@ -107,9 +107,9 @@ const intetHalkaArzVerisi: TavanSerisiKaydi = {
   katilimciSayisi: "653.433",
   dagitimSekli: "TAMAMEN EŞİT",
   arzFiyati: "53.60",
-  guncelFiyat: "74.55",
+  guncelFiyat: "68.20",
   konsorsiyum: "BULLS",
-  kapanisTarihi: "2026-09-07",
+  kapanisTarihi: "2026-09-08",
 };
 
 const kpeksHalkaArzVerisi: TavanSerisiKaydi = {
@@ -118,9 +118,9 @@ const kpeksHalkaArzVerisi: TavanSerisiKaydi = {
   katilimciSayisi: "518.750",
   dagitimSekli: "BİREYSELE %50",
   arzFiyati: "94.00",
-  guncelFiyat: "97.40",
+  guncelFiyat: "94.85",
   konsorsiyum: "TSKB, YATIRIM FİNANSMAN, ZİRAAT",
-  kapanisTarihi: "2026-09-07",
+  kapanisTarihi: "2026-09-08",
 };
 
 const tknkaHalkaArzVerisi: TavanSerisiKaydi = {
@@ -129,9 +129,9 @@ const tknkaHalkaArzVerisi: TavanSerisiKaydi = {
   katilimciSayisi: "493.220",
   dagitimSekli: "BİREYSELE %40",
   arzFiyati: "85.40",
-  guncelFiyat: "169.20",
+  guncelFiyat: "186.10",
   konsorsiyum: "TERA",
-  kapanisTarihi: "2026-09-07",
+  kapanisTarihi: "2026-09-08",
 };
 
 const veyasHalkaArzVerisi: TavanSerisiKaydi = {
@@ -140,9 +140,9 @@ const veyasHalkaArzVerisi: TavanSerisiKaydi = {
   katilimciSayisi: "365.280",
   dagitimSekli: "BİREYSELE %45",
   arzFiyati: "136.00",
-  guncelFiyat: "120.00",
+  guncelFiyat: "132.00",
   konsorsiyum: "HALK, VAKIF, ZİRAAT",
-  kapanisTarihi: "2026-09-07",
+  kapanisTarihi: "2026-09-08",
 };
 
 const citasHalkaArzVerisi = {
@@ -151,7 +151,7 @@ const citasHalkaArzVerisi = {
   katilimciSayisi: "556.728",
   dagitimSekli: "BİREYSELE %40",
   arzFiyati: "73.70",
-  guncelFiyat: "154.40",
+  guncelFiyat: "163.40",
   konsorsiyum: "TERA",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -161,7 +161,7 @@ const quickHalkaArzVerisi = {
   katilimciSayisi: "961.387",
   dagitimSekli: "BİREYSELE %60",
   arzFiyati: "76.60",
-  guncelFiyat: "61.50",
+  guncelFiyat: "63.05",
   konsorsiyum: "GARANTİ",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -171,7 +171,7 @@ const karclHalkaArzVerisi = {
   katilimciSayisi: "814.853",
   dagitimSekli: "BİREYSELE %40",
   arzFiyati: "35.00",
-  guncelFiyat: "176.80",
+  guncelFiyat: "185.00",
   konsorsiyum: "A1 CAPİTAL, VAKIF, ZİRAAT",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -181,7 +181,7 @@ const masfnHalkaArzVerisi = {
   katilimciSayisi: "1.093.898",
   dagitimSekli: "BİREYSELE %80",
   arzFiyati: "45.68",
-  guncelFiyat: "38.70",
+  guncelFiyat: "38.96",
   konsorsiyum: "DENİZ",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -191,7 +191,7 @@ const albtnHalkaArzVerisi = {
   katilimciSayisi: "549.211",
   dagitimSekli: "TAMAMEN EŞİT",
   arzFiyati: "38.60",
-  guncelFiyat: "34.70",
+  guncelFiyat: "33.76",
   konsorsiyum: "TACİRLER",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -201,7 +201,7 @@ const metenHalkaArzVerisi = {
   katilimciSayisi: "961.387",
   dagitimSekli: "BİREYSELE %38",
   arzFiyati: "20.00",
-  guncelFiyat: "19.35",
+  guncelFiyat: "19.38",
   konsorsiyum: "İNFO",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -722,7 +722,25 @@ export default function HalkaArzTavanSerisiPage() {
             </table>
           </div>
 
-          <AdsenseResponsiveUnit className="mt-4" slot="1666943021" />
+          <div className="mt-4 w-full" aria-label="Reklam">
+            <Script
+              id="adsense-loader-tavan-serisi"
+              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9613627671991162"
+              strategy="afterInteractive"
+              crossOrigin="anonymous"
+            />
+            <ins
+              className="adsbygoogle"
+              style={{ display: "block" }}
+              data-ad-client="ca-pub-9613627671991162"
+              data-ad-slot="1666943021"
+              data-ad-format="auto"
+              data-full-width-responsive="true"
+            />
+            <Script id="adsense-tavan-serisi-tablo-alti" strategy="afterInteractive">
+              {`(adsbygoogle = window.adsbygoogle || []).push({});`}
+            </Script>
+          </div>
 
           <p className="mt-4 text-xs leading-6 text-slate-500">
             Gün sonu kapanış fiyatları piyasa hareketlerine göre değişebilir. Marj,

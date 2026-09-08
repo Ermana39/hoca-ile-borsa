@@ -33,8 +33,13 @@ export default function Navbar() {
           className="flex shrink-0 items-center py-3.5 font-bold text-white"
           aria-label="Hoca İle Borsa - Ana Sayfa"
         >
-          <span className="whitespace-nowrap text-sm font-bold tracking-tight text-blue-400 2xl:text-base">
-            Hoca İle Borsa
+          <span className="flex flex-col whitespace-nowrap leading-none">
+            <span className="text-sm font-bold tracking-tight text-blue-400 2xl:text-base">
+              Hoca İle Borsa
+            </span>
+            <span className="mt-1 text-[9px] font-medium text-slate-400 2xl:text-[10px]">
+              Piyasayı Tek Ekranda Takip Et.
+            </span>
           </span>
         </Link>
 

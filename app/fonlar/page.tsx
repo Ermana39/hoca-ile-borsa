@@ -145,8 +145,8 @@ export default function FonlarPage() {
         <section className="mt-8 grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
           <ModuleLink
             href="/fonlar/etki-analizi"
-            title="Popüler Fonların Günlük Etki Analizi"
-            desc="TLY, PHE, DFI, KHA ve THF portföy içerikleri ile ertesi gün açıklanacak fon fiyatına tahmini etki."
+            title="Popüler Fonların Açılış Tahminleri"
+            desc="TLY, THF, TMV, DOH, KHA ve DFI için günlük tahmin ve gerçekleşen getiri karşılaştırması."
           />
           <ModuleLink
             href="/fonlar/para-girisi"

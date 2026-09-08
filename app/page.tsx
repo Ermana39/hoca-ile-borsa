@@ -10,6 +10,14 @@ import { IconTile } from "@/components/icons/IconTile";
 import type { CategoryIconName } from "@/components/icons/CategoryIcon";
 import HaberKart from "@/components/HaberKart";
 import PopulerAramalar from "@/components/PopulerAramalar";
+import { FundLogo } from "@/components/MarketLogo";
+import fonAcilisData from "@/app/fonlar/etki-analizi/_data/fon-acilis-tahminleri.json";
+import tlyFundData from "@/data/fonlar/fund-details/tly.json";
+import thfFundData from "@/data/fonlar/fund-details/thf.json";
+import tmvFundData from "@/data/fonlar/fund-details/tmv.json";
+import dohFundData from "@/data/fonlar/fund-details/doh.json";
+import khaFundData from "@/data/fonlar/fund-details/kha.json";
+import dfiFundData from "@/data/fonlar/fund-details/dfi.json";
 import {
   getAllNews,
   ANA_SAYFA_HABER_LIMIT,
@@ -426,6 +434,202 @@ function SonGuncellemelerBar({ items }: { items: GuncellemeItem[] }) {
   );
 }
 
+type FonTahminItem = {
+  tahmin: number | null;
+  gerceklesen: number | null;
+};
+
+type FonTahminData = {
+  tahminTarihi?: string;
+  fonlar?: Record<string, FonTahminItem>;
+};
+
+const takipEdilenFonlar = [
+  tlyFundData.fund,
+  thfFundData.fund,
+  tmvFundData.fund,
+  dohFundData.fund,
+  khaFundData.fund,
+  dfiFundData.fund,
+];
+
+function formatYuzde(value: number | null | undefined) {
+  if (typeof value !== "number" || Number.isNaN(value)) return "—";
+  const sign = value > 0 ? "+" : "";
+  return `${sign}%${value.toLocaleString("tr-TR", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  })}`;
+}
+
+function formatOndalikYuzde(value: number | null | undefined) {
+  if (typeof value !== "number" || Number.isNaN(value)) return null;
+  return formatYuzde(value * 100);
+}
+
+function formatFonFiyati(value: number | null | undefined) {
+  if (typeof value !== "number" || Number.isNaN(value)) return null;
+  return `${value.toLocaleString("tr-TR", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 6,
+  })} TL`;
+}
+
+function formatTahminTarihi(value: string | undefined) {
+  if (!value) return "Güncel";
+  const [year, month, day] = value.split("-").map(Number);
+  if (!year || !month || !day) return "Güncel";
+
+  return new Intl.DateTimeFormat("tr-TR", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(Date.UTC(year, month - 1, day)));
+}
+
+function yuzdeClass(value: number | null | undefined) {
+  if (typeof value !== "number" || Number.isNaN(value)) return "text-slate-400";
+  if (value > 0) return "text-emerald-600";
+  if (value < 0) return "text-rose-600";
+  return "text-slate-600";
+}
+
+function FonAcilisTahminleri() {
+  const data = fonAcilisData as FonTahminData;
+  const tahminTarihi = formatTahminTarihi(data.tahminTarihi);
+
+  return (
+    <div className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
+      <div className="flex items-start justify-between gap-3 border-b border-slate-100 px-4 py-4 md:px-5">
+        <div>
+          <h2 className="text-base font-bold text-slate-900 md:text-lg">
+            Popüler Fonların Açılış Tahminleri
+          </h2>
+          <p className="mt-1 text-[11px] text-slate-500 md:text-xs">
+            Gün sonu hesaplamasına göre bir sonraki işlem günü tahmini.
+          </p>
+        </div>
+        <Link
+          href="/fonlar/etki-analizi"
+          prefetch={false}
+          className="shrink-0 text-xs font-semibold text-blue-600 hover:text-blue-800"
+        >
+          Tümünü Gör →
+        </Link>
+      </div>
+
+      <div className="px-3 py-2 md:px-4">
+        <table className="w-full table-fixed text-left text-sm">
+          <thead>
+            <tr className="border-b border-slate-200 text-[10px] font-semibold uppercase text-slate-500 md:text-[11px]">
+              <th className="w-[32%] px-1 py-2 md:px-2">Fon</th>
+              <th className="w-[36%] px-1 py-2 text-right md:px-2">
+                <span className="block normal-case">{tahminTarihi}</span>
+                Tahmin
+              </th>
+              <th className="w-[32%] px-1 py-2 text-right md:px-2">Gerçekleşen</th>
+            </tr>
+          </thead>
+          <tbody>
+            {takipEdilenFonlar.map((fund) => {
+              const item = data.fonlar?.[fund.kod];
+
+              return (
+                <tr key={fund.kod} className="border-b border-slate-100 last:border-0">
+                  <td className="px-1 py-2.5 md:px-2">
+                    <Link
+                      href={`/fonlar/${fund.slug}`}
+                      prefetch={false}
+                      className="inline-flex items-center gap-2 font-bold text-blue-600 hover:text-blue-800"
+                    >
+                      <FundLogo
+                        fundCode={fund.kod}
+                        managerSlug={fund.yoneticiSlug}
+                        size="sm"
+                      />
+                      {fund.kod}
+                    </Link>
+                  </td>
+                  <td className={`px-1 py-2.5 text-right font-bold md:px-2 ${yuzdeClass(item?.tahmin)}`}>
+                    {formatYuzde(item?.tahmin)}
+                  </td>
+                  <td className={`px-1 py-2.5 text-right font-semibold md:px-2 ${yuzdeClass(item?.gerceklesen)}`}>
+                    {formatYuzde(item?.gerceklesen)}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+function FonlarKisaYollar() {
+  return (
+    <div className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
+      <div className="flex items-start justify-between gap-3 border-b border-slate-100 px-4 py-4 md:px-5">
+        <div>
+          <h2 className="text-base font-bold text-slate-900 md:text-lg">Fonlar</h2>
+          <p className="mt-1 text-[11px] text-slate-500 md:text-xs">
+            Güncel fon fiyatları ve günlük değişimleri.
+          </p>
+        </div>
+        <Link
+          href="/fonlar"
+          prefetch={false}
+          className="shrink-0 text-xs font-semibold text-blue-600 hover:text-blue-800"
+        >
+          Tüm Fonlar →
+        </Link>
+      </div>
+
+      <div className="divide-y divide-slate-100 px-3 py-2 md:px-4">
+        {takipEdilenFonlar.map((fund) => {
+          const fiyat = formatFonFiyati(fund.fiyat);
+          const gunlukGetiri = formatOndalikYuzde(fund.gunlukGetiri);
+
+          return (
+            <Link
+              key={fund.kod}
+              href={`/fonlar/${fund.slug}`}
+              prefetch={false}
+              className="group flex min-h-14 items-center gap-3 px-1 py-2.5 transition hover:bg-slate-50 md:px-2"
+            >
+              <FundLogo
+                fundCode={fund.kod}
+                managerSlug={fund.yoneticiSlug}
+                size="sm"
+              />
+              <div className="min-w-0 flex-1">
+                <div className="font-bold text-slate-900 group-hover:text-blue-600">
+                  {fund.kod}
+                </div>
+                <div className="truncate text-[11px] text-slate-500" title={fund.ad}>
+                  {fund.ad}
+                </div>
+              </div>
+              <div className="shrink-0 text-right">
+                {fiyat ? <div className="text-xs font-semibold text-slate-800">{fiyat}</div> : null}
+                {gunlukGetiri ? (
+                  <div className={`mt-0.5 text-xs font-bold ${yuzdeClass(fund.gunlukGetiri)}`}>
+                    {gunlukGetiri}
+                  </div>
+                ) : null}
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+      <div className="border-t border-slate-100 px-4 py-2 text-right text-[10px] text-slate-400">
+        Son fiyat tarihi: {formatTahminTarihi(takipEdilenFonlar[0]?.tarih)}
+      </div>
+    </div>
+  );
+}
+
 export default function HomePage() {
   // Elle girilen haberler + günlük borsa özetleri (otomatik), tarihe göre sıralı.
   const newsItems = getAllNews();
@@ -433,15 +637,19 @@ export default function HomePage() {
   const guncellemeler = getSonGuncellemeler();
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-[#f8fafc]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(websiteJsonLd).replace(/</g, "\\u003c"),
         }}
       />
+      <h1 className="sr-only">
+        Hoca İle Borsa - Borsa, Halka Arz, Fonlar ve Finans Analizleri
+      </h1>
+
       <div className="mx-auto max-w-7xl">
-        <section className="px-4 pt-5 md:px-6 md:pt-6">
+        <section className="px-4 pt-5 pb-6 md:px-6 md:pt-6">
           <div className="overflow-hidden rounded-2xl">
             <Image
               src="/banner3.webp"
@@ -455,13 +663,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <header className="px-4 pb-1 pt-6 text-center md:px-6 md:pt-8">
-          <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-            Borsa, Halka Arz, Temettü, Fonlar ve Finans Analizleri
-          </h1>
-        </header>
-
-        <section className="px-4 py-6 md:px-6">
+        <section className="px-4 pb-6 md:px-6">
           <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-6">
             {kategoriKutulari.map((item) => (
               <KategoriKutusu key={item.href} {...item} />
@@ -473,23 +675,27 @@ export default function HomePage() {
           <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_12px_rgba(15,23,42,0.06)]">
             <div className="flex items-center justify-between border-b border-slate-100 px-5 py-4 md:px-6">
               <div className="flex items-center gap-3">
-                <div className="h-5 w-1 rounded-full bg-blue-600" />
-                <h2 className="text-base font-bold tracking-tight text-slate-900 md:text-lg">
-                  Güncel Haberler
+                <div className="h-5 w-1 rounded-full bg-amber-500" />
+                <h2 className="text-base font-bold text-slate-900 md:text-lg">
+                  Son Haberler
                 </h2>
               </div>
-              <span className="rounded bg-slate-100 px-2 py-1 text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
-                Piyasa Gündemi
-              </span>
+              <Link
+                href="/haberler"
+                prefetch={false}
+                className="text-xs font-semibold text-blue-600 hover:text-blue-800 md:text-sm"
+              >
+                Tüm Haberler →
+              </Link>
             </div>
 
             {gosterilenHaberler.length > 0 ? (
-              <div className="grid grid-cols-1 gap-3 p-4 lg:grid-cols-2 md:p-5">
+              <div className="grid grid-cols-1 gap-3 p-4 md:p-5 lg:grid-cols-2">
                 {gosterilenHaberler.map((item, index) => (
                   <HaberKart
                     key={item.id || item.href}
                     item={item}
-                    eager={index < ANA_SAYFA_HABER_LIMIT}
+                    eager={index < 4}
                   />
                 ))}
               </div>
@@ -498,23 +704,12 @@ export default function HomePage() {
                 Haber bulunamadı.
               </div>
             )}
-
-            <div className="flex flex-col items-center gap-2 border-t border-slate-100 px-5 py-4 text-center md:px-6">
-              {newsItems.length > ANA_SAYFA_HABER_LIMIT && (
-                <p className="text-sm text-slate-500">
-                  Ana sayfada en güncel {ANA_SAYFA_HABER_LIMIT} haber gösterilmektedir.
-                </p>
-              )}
-              <Link
-                href="/haberler"
-                prefetch={false}
-                className="inline-flex items-center gap-1 rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-700"
-              >
-                Tüm haberleri gör
-                <span aria-hidden>→</span>
-              </Link>
-            </div>
           </div>
+        </section>
+
+        <section className="grid grid-cols-1 gap-4 px-4 pb-6 md:px-6 lg:grid-cols-2">
+          <FonAcilisTahminleri />
+          <FonlarKisaYollar />
         </section>
 
         <YoutubeTanitimBanner />

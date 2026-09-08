@@ -329,10 +329,10 @@ export default async function FonDetayPage({
                 </Link>
                 {etkiAnaliziVar ? (
                   <Link
-                    href={`/fonlar/etki-analizi/${fund.slug}`}
+                    href="/fonlar/etki-analizi"
                     className="rounded-full bg-cyan-50 px-3 py-1 font-semibold text-cyan-800 hover:bg-cyan-100"
                   >
-                    {fund.kod} Günlük Tahmini ve Etki Analizi
+                    {fund.kod} Fon Açılış Tahmini
                   </Link>
                 ) : null}
               </div>

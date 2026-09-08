@@ -41,10 +41,20 @@ const youtubeFrame = [
   "https://www.youtube-nocookie.com",
 ];
 
+// Ana sayfadaki resmi TradingView ticker ve BIST hareketlileri widget'ları.
+const tradingViewScript = ["https://s3.tradingview.com"];
+const tradingViewFrame = [
+  "https://s.tradingview.com",
+  "https://www.tradingview.com",
+  "https://*.tradingview.com",
+  "https://www.tradingview-widget.com",
+  "https://*.tradingview-widget.com",
+];
+
 const contentSecurityPolicy = [
   "default-src 'self'",
   // Statik Next.js hydration satır içi script kullanır; eval yalnızca geliştirmede gerekir.
-  `script-src 'self' 'unsafe-inline'${isDevelopment ? " 'unsafe-eval'" : ""} ${adsenseScript.join(" ")} ${vercelAnalytics.join(" ")}`,
+  `script-src 'self' 'unsafe-inline'${isDevelopment ? " 'unsafe-eval'" : ""} ${adsenseScript.join(" ")} ${vercelAnalytics.join(" ")} ${tradingViewScript.join(" ")}`,
   // React olayları addEventListener ile bağlar; HTML olay özniteliklerini engelle.
   "script-src-attr 'none'",
   // Tailwind/Next satır içi stil enjekte eder.
@@ -52,8 +62,8 @@ const contentSecurityPolicy = [
   // Reklam görselleri çok sayıda alan adından gelir.
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
-  `connect-src 'self' ${adsenseScript.join(" ")} ${adsenseFrame.join(" ")} ${vercelAnalytics.join(" ")}`,
-  `frame-src 'self' ${adsenseFrame.join(" ")} ${youtubeFrame.join(" ")}`,
+  `connect-src 'self' ${adsenseScript.join(" ")} ${adsenseFrame.join(" ")} ${vercelAnalytics.join(" ")} ${tradingViewFrame.join(" ")}`,
+  `frame-src 'self' ${adsenseFrame.join(" ")} ${youtubeFrame.join(" ")} ${tradingViewFrame.join(" ")}`,
   // Aşağıdakiler reklamları etkilemez, saldırı yüzeyini daraltır.
   "object-src 'none'",
   "base-uri 'none'",
