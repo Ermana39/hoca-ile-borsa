@@ -1,14 +1,12 @@
 import assert from "node:assert/strict";
-import { createRequire } from "node:module";
 import test from "node:test";
-
-const require = createRequire(import.meta.url);
 
 test("deployed static pages receive production security headers", async () => {
   const previous = process.env.NODE_ENV;
   process.env.NODE_ENV = "production";
   try {
     const { config } = await import("../vercel.mjs");
+    const { default: nextConfig } = await import("../next.config.mjs");
     assert.equal(config.framework, null);
     assert.equal(config.outputDirectory, "out");
     const headers = Object.fromEntries(config.headers.find((rule) => rule.source === "/(.*)").headers.map(({ key, value }) => [key, value]));
@@ -20,7 +18,7 @@ test("deployed static pages receive production security headers", async () => {
     }
     assert.ok(csp.includes("https://pagead2.googlesyndication.com"));
     assert.ok(csp.includes("https://www.youtube-nocookie.com"));
-    assert.equal(require("../next.config.js").poweredByHeader, false);
+    assert.equal(nextConfig.poweredByHeader, false);
   } finally {
     if (previous === undefined) delete process.env.NODE_ENV; else process.env.NODE_ENV = previous;
   }

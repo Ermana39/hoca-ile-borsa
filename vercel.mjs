@@ -1,4 +1,4 @@
-import nextConfig from "./next.config.js";
+import nextConfig from "./next.config.mjs";
 
 const redirects = await nextConfig.redirects();
 const headers = await nextConfig.headers();

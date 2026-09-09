@@ -2,6 +2,7 @@
   "name": "hoca-ile-borsa",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "predev": "npm run fon-etki:import && npm run excel-to-json && npm run update-funds",
     "dev": "next dev",

@@ -85,7 +85,7 @@ const surecHaberiMetadata = fs.readFileSync(
 const sitemap = fs.readFileSync(path.join(root, "app", "sitemap.ts"), "utf8");
 const anaSayfa = fs.readFileSync(path.join(root, "app", "page.tsx"), "utf8");
 const kokLayout = fs.readFileSync(path.join(root, "app", "layout.tsx"), "utf8");
-const nextConfig = fs.readFileSync(path.join(root, "next.config.js"), "utf8");
+const nextConfig = fs.readFileSync(path.join(root, "next.config.mjs"), "utf8");
 
 function kaynakDosyalariniBul(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {

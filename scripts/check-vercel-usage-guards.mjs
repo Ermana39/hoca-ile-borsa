@@ -1,6 +1,5 @@
 import fs from "node:fs";
 import path from "node:path";
-import { createRequire } from "node:module";
 
 const root = process.cwd();
 const sourceRoots = ["app", "components"];
@@ -8,14 +7,13 @@ const allowedNextLinkFile = path.normalize(
   path.join(root, "components", "NoPrefetchLink.tsx"),
 );
 const violations = [];
-const require = createRequire(import.meta.url);
-const nextConfig = require(path.join(root, "next.config.js"));
+const { default: nextConfig } = await import("../next.config.mjs");
 
 if (nextConfig.output !== "export") {
-  violations.push("next.config.js: output='export' olmali");
+  violations.push("next.config.mjs: output='export' olmali");
 }
 if (nextConfig.images?.unoptimized !== true) {
-  violations.push("next.config.js: images.unoptimized=true olmali");
+  violations.push("next.config.mjs: images.unoptimized=true olmali");
 }
 const vercelConfigPath = path.join(root, "vercel.mjs");
 if (!fs.existsSync(vercelConfigPath)) {
