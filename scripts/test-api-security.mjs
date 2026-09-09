@@ -141,13 +141,16 @@ test("JSON body validation rejects oversize streams, wrong types and malformed i
 test("cross-origin requests and unauthenticated admin reads are rejected and never cached", async () => {
   await withEnv(localEnv, async () => {
     const load = app();
-    for (const endpoint of ["contact", "admin-login", "admin-logout"]) {
-      const handler = load(`api/${endpoint}.ts`).default;
+    for (const [endpoint, handler] of [
+      ["contact", load("api/misc.ts").contactHandler],
+      ["admin-login", load("api/admin.ts").adminLoginHandler],
+      ["admin-logout", load("api/admin.ts").adminLogoutHandler],
+    ]) {
       const result = await handler.fetch(request(endpoint, {}, { origin: "https://attacker.example" }));
       assert.equal(result.status, 403);
       assert.match(result.headers.get("cache-control"), /no-store/);
     }
-    const result = await load("api/admin-messages.ts").default.fetch(request("admin-messages", undefined, {}, "GET"));
+    const result = await load("api/admin.ts").adminMessagesHandler.fetch(request("admin-messages", undefined, {}, "GET"));
     assert.equal(result.status, 401);
     assert.match(result.headers.get("cache-control"), /no-store/);
     assert.equal(result.headers.get("x-content-type-options"), "nosniff");
@@ -159,7 +162,7 @@ test("parallel contact requests reserve at most five sends before SMTP completes
     const sent = [];
     let transport;
     const load = app({ sendMail: async (mail) => { await Promise.resolve(); sent.push(mail); }, transportOptions: (options) => { transport = options; } });
-    const handler = load("api/contact.ts").default;
+    const handler = load("api/misc.ts").contactHandler;
     const responses = await Promise.all(Array.from({ length: 15 }, () => handler.fetch(request("contact", {
       ...validContact, message: "<script>alert('xss')</script>",
     }))));
@@ -179,7 +182,7 @@ test("parallel contact requests reserve at most five sends before SMTP completes
 test("failed SMTP attempts count toward the limit without exposing internal errors", async () => {
   await withEnv(localEnv, async () => {
     const load = app({ sendMail: async () => { throw new Error("private-smtp-detail"); } });
-    const handler = load("api/contact.ts").default;
+    const handler = load("api/misc.ts").contactHandler;
     for (let index = 0; index < 5; index++) {
       const response = await handler.fetch(request("contact", validContact));
       assert.equal(response.status, 500);
@@ -197,7 +200,7 @@ test("mailbox/header injection and non-string contact fields cannot reach SMTP",
       { email: "a@example.com,b@example.com" }, { email: "a@example.com\r\nBcc: b@example.com" },
       { email: "Name <a@example.com>" }, { name: { toString: "bad" } }, { subject: "bad\0header" },
     ]) {
-      const handler = app({ sendMail: async () => { sends++; } })("api/contact.ts").default;
+      const handler = app({ sendMail: async () => { sends++; } })("api/misc.ts").contactHandler;
       assert.equal((await handler.fetch(request("contact", { ...validContact, ...fields }))).status, 400);
     }
     assert.equal(sends, 0);
@@ -206,7 +209,7 @@ test("mailbox/header injection and non-string contact fields cannot reach SMTP",
 
 test("parallel password guessing is bounded, including spoofed forwarding headers", async () => {
   await withEnv(localEnv, async () => {
-    const handler = app()("api/admin-login.ts").default;
+    const handler = app()("api/admin.ts").adminLoginHandler;
     const responses = await Promise.all(Array.from({ length: 25 }, (_, index) => handler.fetch(request(
       "admin-login", { password: "wrong-password" }, { "x-forwarded-for": `192.0.2.${index + 1}` },
     ))));
@@ -218,7 +221,7 @@ test("parallel password guessing is bounded, including spoofed forwarding header
 test("valid login sets protected cookies; tampered, expired and future tokens fail", async () => {
   await withEnv(localEnv, async () => {
     const load = app();
-    const response = await load("api/admin-login.ts").default.fetch(request("admin-login", { password: localEnv.STATS_ADMIN_PASSWORD }));
+    const response = await load("api/admin.ts").adminLoginHandler.fetch(request("admin-login", { password: localEnv.STATS_ADMIN_PASSWORD }));
     assert.equal(response.status, 200);
     for (const cookie of response.headers.getSetCookie()) {
       assert.match(cookie, /HttpOnly/); assert.match(cookie, /Secure/); assert.match(cookie, /SameSite=Strict/);
@@ -232,7 +235,7 @@ test("valid login sets protected cookies; tampered, expired and future tokens fa
       const signature = crypto.createHmac("sha256", localEnv.STATS_ADMIN_SECRET).update(payload).digest("hex");
       assert.equal(auth.isValidAdminToken(`${payload}.${signature}`), false);
     }
-    const messages = await load("api/admin-messages.ts").default.fetch(request("admin-messages", undefined, { cookie: `hib_admin_token=${token}` }, "GET"));
+    const messages = await load("api/admin.ts").adminMessagesHandler.fetch(request("admin-messages", undefined, { cookie: `hib_admin_token=${token}` }, "GET"));
     assert.equal(messages.status, 200);
   });
 });
@@ -250,7 +253,8 @@ test("shared limits use atomic Redis operations and fail closed on missing/faili
   await withEnv({ ...localEnv, VERCEL: "1" }, async () => {
     for (const redis of [null, { eval: async () => { throw new Error("redis-private-error"); } }]) {
       for (const endpoint of ["contact", "admin-login"]) {
-        const handler = app({ redis })(`api/${endpoint}.ts`).default;
+        const handlerModule = app({ redis })(endpoint === "contact" ? "api/misc.ts" : "api/admin.ts");
+        const handler = endpoint === "contact" ? handlerModule.contactHandler : handlerModule.adminLoginHandler;
         const result = await handler.fetch(request(endpoint, endpoint === "contact" ? validContact : { password: "guess" }));
         assert.equal(result.status, 503);
         assert.ok(!(await result.text()).includes("redis-private-error"));
@@ -274,7 +278,7 @@ test("Next development handlers delegate to the same secured production handlers
       const route = load(`app/api/${endpoint}/route.ts`);
       assert.equal((await route.POST(request(endpoint, {}, { origin: "https://attacker.example" }))).status, 403);
     }
-    const health = await load("api/health.ts").default.fetch(request("health", undefined, {}, "GET"));
+    const health = await load("api/misc.ts").healthHandler.fetch(request("health", undefined, {}, "GET"));
     assert.equal(health.status, 200);
   });
 });
@@ -307,7 +311,7 @@ test("member registration, verification, reset, session and deletion flows are s
     assert.equal(cookies.some((cookie) => cookie.startsWith("hib_member=1")), false);
     assert.deepEqual(await load("lib/member-auth.ts").getMemberCounts(), { active: 0, pending: 1 });
     const adminToken = load("lib/admin-auth.ts").makeAdminToken();
-    const adminMessages = load("api/admin-messages.ts").default;
+    const adminMessages = load("api/admin.ts").adminMessagesHandler;
     const pendingStats = await adminMessages.fetch(request("admin-messages", undefined, {
       cookie: `hib_admin_token=${adminToken}`,
     }, "GET"));

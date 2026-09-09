@@ -20,6 +20,14 @@ export const config = {
       excludeFiles: "{data,public/data,out,.next,.tmp,.codex-tmp}/**",
     },
   },
+  rewrites: [
+    { source: "/api/admin-login", destination: "/api/admin?hib_handler=login" },
+    { source: "/api/admin-logout", destination: "/api/admin?hib_handler=logout" },
+    { source: "/api/admin-messages", destination: "/api/admin?hib_handler=messages" },
+    { source: "/api/contact", destination: "/api/misc?hib_handler=contact" },
+    { source: "/api/health", destination: "/api/misc?hib_handler=health" },
+    { source: "/api/revalidate", destination: "/api/misc?hib_handler=revalidate" },
+  ],
   redirects,
   headers,
 };

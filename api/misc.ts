@@ -1,13 +1,11 @@
+import crypto from "node:crypto";
 import nodemailer from "nodemailer";
-import {
-  isValidEmail,
-  sanitizeText,
-} from "../lib/contact-security";
+import { isValidEmail, sanitizeText } from "../lib/contact-security";
 import { getClientIp, jsonResponse } from "../lib/http-api";
-import { isSameOriginRequest } from "../lib/request-security";
-import { addSecurityLog } from "../lib/security-log";
 import { consumeRateLimit, RateLimitUnavailableError } from "../lib/rate-limit";
 import { readJsonObject, RequestBodyError } from "../lib/request-body";
+import { isSameOriginRequest } from "../lib/request-security";
+import { addSecurityLog } from "../lib/security-log";
 
 function escapeHtml(value: string) {
   return value
@@ -18,7 +16,13 @@ function escapeHtml(value: string) {
     .replace(/'/g, "&#039;");
 }
 
-export default {
+function safeEqual(a: string, b: string) {
+  const first = Buffer.from(a);
+  const second = Buffer.from(b);
+  return first.length === second.length && crypto.timingSafeEqual(first, second);
+}
+
+export const contactHandler = {
   async fetch(request: Request) {
     if (request.method !== "POST") {
       return jsonResponse({ ok: false }, { status: 405 });
@@ -63,28 +67,16 @@ export default {
       const message = String(body?.message || "").trim().slice(0, 3000);
 
       if (name.length < 2) {
-        return jsonResponse(
-          { ok: false, message: "Ad Soyad alanı geçersiz." },
-          { status: 400 },
-        );
+        return jsonResponse({ ok: false, message: "Ad Soyad alanı geçersiz." }, { status: 400 });
       }
       if (!isValidEmail(email)) {
-        return jsonResponse(
-          { ok: false, message: "E-posta adresi geçersiz." },
-          { status: 400 },
-        );
+        return jsonResponse({ ok: false, message: "E-posta adresi geçersiz." }, { status: 400 });
       }
       if (subject.length < 3) {
-        return jsonResponse(
-          { ok: false, message: "Konu alanı geçersiz." },
-          { status: 400 },
-        );
+        return jsonResponse({ ok: false, message: "Konu alanı geçersiz." }, { status: 400 });
       }
       if (message.length < 10) {
-        return jsonResponse(
-          { ok: false, message: "Mesaj çok kısa." },
-          { status: 400 },
-        );
+        return jsonResponse({ ok: false, message: "Mesaj çok kısa." }, { status: 400 });
       }
 
       const smtpHost = process.env.SMTP_HOST || "";
@@ -94,10 +86,7 @@ export default {
       const contactToEmail = process.env.CONTACT_TO_EMAIL || smtpUser;
 
       if (!smtpHost || !smtpUser || !smtpPass || !contactToEmail) {
-        return jsonResponse(
-          { ok: false, message: "Mail ayarları eksik." },
-          { status: 500 },
-        );
+        return jsonResponse({ ok: false, message: "Mail ayarları eksik." }, { status: 500 });
       }
 
       const transporter = nodemailer.createTransport({
@@ -135,9 +124,78 @@ export default {
     } catch (error) {
       addSecurityLog("contact_error", ip, "Istek tamamlanamadi");
       return jsonResponse(
-        { ok: false, message: error instanceof RequestBodyError ? error.message : "Mesaj gönderilemedi." },
-        { status: error instanceof RequestBodyError ? error.status : error instanceof RateLimitUnavailableError ? 503 : 500 },
+        {
+          ok: false,
+          message: error instanceof RequestBodyError
+            ? error.message
+            : "Mesaj gönderilemedi.",
+        },
+        {
+          status: error instanceof RequestBodyError
+            ? error.status
+            : error instanceof RateLimitUnavailableError
+              ? 503
+              : 500,
+        },
       );
     }
   },
 };
+
+export const healthHandler = {
+  async fetch(request: Request) {
+    if (request.method !== "GET") {
+      return jsonResponse({ ok: false }, { status: 405 });
+    }
+
+    return jsonResponse(
+      {
+        ok: true,
+        service: "hoca-ile-borsa",
+        status: "healthy",
+        timestamp: new Date().toISOString(),
+      },
+      { headers: { "Cache-Control": "no-store" } },
+    );
+  },
+};
+
+export const revalidateHandler = {
+  async fetch(request: Request) {
+    if (request.method !== "POST") {
+      return jsonResponse({ ok: false }, { status: 405 });
+    }
+
+    const secret = request.headers.get("x-secret") || "";
+    const expected = process.env.REVALIDATE_SECRET || "";
+    if (!expected || !safeEqual(secret, expected)) {
+      return jsonResponse({ message: "Yetkisiz" }, { status: 401 });
+    }
+
+    return jsonResponse({
+      ok: true,
+      revalidated: false,
+      deploymentRequired: true,
+    });
+  },
+};
+
+const handlers = {
+  contact: contactHandler,
+  health: healthHandler,
+  revalidate: revalidateHandler,
+} as const;
+
+const miscRouter = {
+  async fetch(request: Request) {
+    const action = new URL(request.url).searchParams.get("hib_handler");
+    const handler = action && action in handlers
+      ? handlers[action as keyof typeof handlers]
+      : null;
+    return handler
+      ? handler.fetch(request)
+      : jsonResponse({ ok: false, message: "Geçersiz API isteği." }, { status: 404 });
+  },
+};
+
+export default miscRouter;

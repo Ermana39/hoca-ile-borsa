@@ -1,5 +1,5 @@
-import handler from "@/api/admin-logout";
+import { adminLogoutHandler } from "@/api/admin";
 
 export async function POST(request: Request) {
-  return handler.fetch(request);
+  return adminLogoutHandler.fetch(request);
 }

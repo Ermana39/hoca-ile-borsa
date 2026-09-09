@@ -12,6 +12,7 @@ const backupRoot = path.join(root, ".next-dynamic-api-backup");
 const dynamicApiDirectories = [
   "admin-login",
   "admin-logout",
+  "admin-messages",
   "contact",
   "health",
   "revalidate",

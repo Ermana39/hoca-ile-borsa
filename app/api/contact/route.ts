@@ -1,5 +1,5 @@
-import handler from "@/api/contact";
+import { contactHandler } from "@/api/misc";
 
 export async function POST(request: Request) {
-  return handler.fetch(request);
+  return contactHandler.fetch(request);
 }
