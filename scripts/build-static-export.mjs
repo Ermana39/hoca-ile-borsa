@@ -88,6 +88,43 @@ function restoreInterruptedBackup() {
   }
 }
 
+function isPublicTxtFile(outRoot, filePath) {
+  const relative = path.relative(outRoot, filePath);
+  const publicPath = path.join(root, "public", relative);
+  return fs.existsSync(publicPath);
+}
+
+function pruneNextTextPayloads(outRoot) {
+  let removedCount = 0;
+  let removedBytes = 0;
+
+  const walk = (directory) => {
+    for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+      const fullPath = path.join(directory, entry.name);
+      if (entry.isDirectory()) {
+        walk(fullPath);
+        continue;
+      }
+
+      if (!entry.name.endsWith(".txt")) continue;
+      if (isPublicTxtFile(outRoot, fullPath)) continue;
+
+      const size = fs.statSync(fullPath).size;
+      fs.rmSync(fullPath, { force: true });
+      removedCount += 1;
+      removedBytes += size;
+    }
+  };
+
+  walk(outRoot);
+
+  if (removedCount > 0) {
+    console.log(
+      `Next gecis payloadlari temizlendi: ${removedCount} .txt dosyasi, ${Math.round(removedBytes / 1024 / 1024)} MB.`
+    );
+  }
+}
+
 function moveDynamicRoutesOut() {
   restoreInterruptedBackup();
   fs.rmSync(backupRoot, { recursive: true, force: true });
@@ -149,6 +186,8 @@ try {
     if (!fs.existsSync(path.join(outRoot, "index.html"))) {
       throw new Error("Statik cikti dogrulanamadi: out/index.html bulunamadi.");
     }
+
+    pruneNextTextPayloads(outRoot);
 
     let htmlCount = 0;
     const countHtml = (directory) => {
