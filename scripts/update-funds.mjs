@@ -4,6 +4,7 @@ import path from "node:path";
 import { execFileSync } from "node:child_process";
 
 import XLSX from "./lib/xlsx.mjs";
+import { sonrakiBistIslemGunu } from "./lib/bist-islem-takvimi.mjs";
 
 const rootDir = process.cwd();
 
@@ -71,6 +72,7 @@ const effectForecastPath = path.join(
   "fon-acilis-tahminleri.json"
 );
 const effectAnalysisFundCodes = ["TLY", "PHE", "DFI", "KHA", "THF", "TMV", "DOH"];
+const forecastFundCodes = ["TLY", "THF", "TMV", "DOH", "KHA", "DFI"];
 
 const version = 1;
 const maxAbsoluteDailyReturn = 1;
@@ -1103,12 +1105,43 @@ async function syncEffectAnalysisHistory(details, generatedAt) {
   };
 }
 
-async function syncEffectForecastActuals(details, generatedAt) {
-  const forecastData = await readJson(effectForecastPath, null);
-  if (!forecastData?.tahminTarihi || !forecastData?.fonlar) {
+async function syncEffectForecast(details, generatedAt) {
+  const effectData = await readJson(effectDataPath, null);
+  if (!effectData?.sonGuncelleme || !effectData?.fonlar) {
     return {
       senkronizeEdildi: false,
-      neden: "Fon açılış tahmin dosyası bulunamadı.",
+      neden: "Fon etki analizi verisi bulunamadı.",
+    };
+  }
+
+  let forecastData = await readJson(effectForecastPath, null);
+  const forecastDate = sonrakiBistIslemGunu(effectData.sonGuncelleme);
+  const forecastNeedsRefresh =
+    forecastData?.kaynakTarihi !== effectData.sonGuncelleme ||
+    forecastData?.tahminTarihi !== forecastDate ||
+    !forecastData?.fonlar;
+
+  if (forecastNeedsRefresh) {
+    const fonlar = {};
+
+    for (const code of forecastFundCodes) {
+      const estimate = effectData.fonlar[code]?.toplamEtki;
+      if (!Number.isFinite(estimate)) {
+        throw new Error(`${code}: açılış tahmini için toplam etki bulunamadı.`);
+      }
+
+      fonlar[code] = {
+        tahmin: estimate,
+        gerceklesen: null,
+      };
+    }
+
+    forecastData = {
+      version: 1,
+      kaynakTarihi: effectData.sonGuncelleme,
+      tahminTarihi: forecastDate,
+      generatedAt,
+      fonlar,
     };
   }
 
@@ -1129,13 +1162,17 @@ async function syncEffectForecastActuals(details, generatedAt) {
     }
   }
 
-  if (guncellenenFonlar.length > 0) {
-    forecastData.gerceklesenGuncellemeZamani = generatedAt;
+  if (forecastNeedsRefresh || guncellenenFonlar.length > 0) {
+    if (guncellenenFonlar.length > 0) {
+      forecastData.gerceklesenGuncellemeZamani = generatedAt;
+    }
     await writeJson(effectForecastPath, forecastData);
   }
 
   return {
-    senkronizeEdildi: guncellenenFonlar.length > 0,
+    senkronizeEdildi: forecastNeedsRefresh || guncellenenFonlar.length > 0,
+    tahminYenilendi: forecastNeedsRefresh,
+    kaynakTarihi: forecastData.kaynakTarihi,
     tahminTarihi: forecastData.tahminTarihi,
     guncellenenFonlar,
   };
@@ -1905,7 +1942,7 @@ async function main() {
   }
 
   const effectHistorySync = await syncEffectAnalysisHistory(fundData.details, generatedAt);
-  const effectForecastSync = await syncEffectForecastActuals(fundData.details, generatedAt);
+  const effectForecastSync = await syncEffectForecast(fundData.details, generatedAt);
 
   await writeJson(updateLogPath, {
     version,
