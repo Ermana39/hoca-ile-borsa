@@ -29,6 +29,7 @@ import {
   getAllNews,
   ANA_SAYFA_HABER_LIMIT,
 } from "@/lib/haberler";
+import { dizinDisiYolMu } from "@/lib/indexleme-politikasi";
 
 const websiteJsonLd = {
   "@context": "https://schema.org",
@@ -322,7 +323,7 @@ function getSonGuncellemeler(): GuncellemeItem[] {
   pages.forEach((item) => {
     const route = normalizePath(item.route);
 
-    if (!route || route.includes("[") || !item.updatedAt) {
+    if (!route || route.includes("[") || !item.updatedAt || dizinDisiYolMu(route)) {
       return;
     }
 

@@ -38,4 +38,11 @@ test("private API responses bypass every CDN cache while static search remains c
   for (const key of ["Cache-Control", "CDN-Cache-Control", "Vercel-CDN-Cache-Control"]) {
     assert.match(headers[key], /no-store/);
   }
+
+  const authRule = config.headers.find((item) => item.source === "/api/auth/:path*");
+  assert.ok(authRule);
+  const authHeaders = Object.fromEntries(authRule.headers.map(({ key, value }) => [key, value]));
+  for (const key of ["Cache-Control", "CDN-Cache-Control", "Vercel-CDN-Cache-Control"]) {
+    assert.match(authHeaders[key], /no-store/);
+  }
 });

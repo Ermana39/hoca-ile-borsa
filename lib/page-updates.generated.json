@@ -1,11 +1,11 @@
 {
   "version": 10,
-  "generatedAt": "2026-09-08T16:51:59.661Z",
+  "generatedAt": "2026-09-09T14:48:53.199Z",
   "pages": [
     {
       "route": "/",
-      "updatedAt": "2026-09-08T16:51:46.135Z",
-      "signature": "06980e168525302cfa50034aae3b8a5c06d4def342b7f557765482cfc8992cbc",
+      "updatedAt": "2026-09-09T14:48:38.724Z",
+      "signature": "579b37bff593bb207d217bf95c99cd7dd62a130ca71e5fa68c9a1d5699ed8faf",
       "file": "app/page.tsx",
       "trackedFiles": [
         "app/page.tsx",
@@ -16,13 +16,16 @@
         "app/robots.ts",
         "app/sitemap.ts",
         "app/fonlar/etki-analizi/_data/fon-acilis-tahminleri.json",
+        "lib/fon-format.ts",
+        "lib/fon-platform.ts",
         "data/fonlar/fund-details/tly.json",
         "data/fonlar/fund-details/thf.json",
         "data/fonlar/fund-details/tmv.json",
         "data/fonlar/fund-details/doh.json",
         "data/fonlar/fund-details/kha.json",
         "data/fonlar/fund-details/dfi.json",
-        "lib/haberler.ts"
+        "lib/haberler.ts",
+        "lib/indexleme-politikasi.ts"
       ]
     },
     {
@@ -264,8 +267,8 @@
     },
     {
       "route": "/borsa/gunluk-borsa-ozeti/[tarih]",
-      "updatedAt": "2026-09-05T10:05:17.295Z",
-      "signature": "2d517e8ea5510a80586caef6d43a1ae08e0558933c13303c8e5ba6b0be61b4fd",
+      "updatedAt": "2026-09-09T09:05:52.432Z",
+      "signature": "f8730839aeb30e07024137a601dca2d48c0e37f49c53aecc5442997d1ec264c2",
       "file": "app/borsa/gunluk-borsa-ozeti/[tarih]/page.tsx",
       "trackedFiles": [
         "app/borsa/gunluk-borsa-ozeti/[tarih]/page.tsx",
@@ -417,8 +420,8 @@
     },
     {
       "route": "/fonlar",
-      "updatedAt": "2026-09-08T12:28:49.371Z",
-      "signature": "6ed4040316072fe5620ac06b48de98dd1cbb96b127199cf96a4c5b041b2d20cd",
+      "updatedAt": "2026-09-09T08:25:16.537Z",
+      "signature": "18b967075fdcc820744803d65507f6f866e093cc8e7e06e565f424c648523fe7",
       "file": "app/fonlar/page.tsx",
       "trackedFiles": [
         "app/fonlar/page.tsx",
@@ -445,8 +448,8 @@
     },
     {
       "route": "/fonlar/etki-analizi",
-      "updatedAt": "2026-09-08T16:50:48.204Z",
-      "signature": "9c04a2a577454c62ba56d5cd538cc3e3c8f77758ed816023d9a9d22f8fc93a08",
+      "updatedAt": "2026-09-09T14:47:36.003Z",
+      "signature": "49ec5498b998e3bc6850f5bc1531c8d8b907ca802b16917dcad0821a1f177d5d",
       "file": "app/fonlar/etki-analizi/page.tsx",
       "trackedFiles": [
         "app/fonlar/etki-analizi/page.tsx",
@@ -561,6 +564,15 @@
         "lib/fon-format.ts",
         "lib/fon-platform.ts",
         "lib/seo-metadata.ts"
+      ]
+    },
+    {
+      "route": "/giris",
+      "updatedAt": "2026-09-09T11:09:52.760Z",
+      "signature": "5cc4934a0d76fd8cf44c2cc767afc197b17946a813a372599adcd658bb151b0e",
+      "file": "app/giris/page.tsx",
+      "trackedFiles": [
+        "app/giris/page.tsx"
       ]
     },
     {
@@ -3328,6 +3340,15 @@
       ]
     },
     {
+      "route": "/hesabim",
+      "updatedAt": "2026-09-09T11:10:01.443Z",
+      "signature": "f4ce4003ecf0436986ef2a1218d0b3a5c714dbff53b6cc845091a25021cee2a8",
+      "file": "app/hesabim/page.tsx",
+      "trackedFiles": [
+        "app/hesabim/page.tsx"
+      ]
+    },
+    {
       "route": "/hesaplayici",
       "updatedAt": "2026-08-06T14:17:28.463Z",
       "signature": "513e23d64f81a6bc2ac607e4f66a0e3fadfb940ab87352d8622dfd16f0c9771c",
@@ -3466,6 +3487,15 @@
       ]
     },
     {
+      "route": "/kayit",
+      "updatedAt": "2026-09-09T12:03:40.082Z",
+      "signature": "1819a10a18af4049d6e2a47b88a24faf404210086bebb2bae5ac184b88ef3715",
+      "file": "app/kayit/page.tsx",
+      "trackedFiles": [
+        "app/kayit/page.tsx"
+      ]
+    },
+    {
       "route": "/kontrol-paneli-4827",
       "updatedAt": "2026-08-18T11:34:26.930Z",
       "signature": "c5c010b8ce7aa2b23f3efcecc623db389e7aff5fd505c684545214e802df6dec",
@@ -3494,9 +3524,18 @@
       ]
     },
     {
+      "route": "/kvkk-aydinlatma-metni",
+      "updatedAt": "2026-09-09T11:10:08.527Z",
+      "signature": "5cb30d3abfe82816504d581203ee79e2a4c45091f90cae3976af8939b8668ce4",
+      "file": "app/kvkk-aydinlatma-metni/page.tsx",
+      "trackedFiles": [
+        "app/kvkk-aydinlatma-metni/page.tsx"
+      ]
+    },
+    {
       "route": "/mevduat-kredi-faizleri",
-      "updatedAt": "2026-09-08T06:19:17.785Z",
-      "signature": "80ceeeb5d5292d171a6e29d1f601e80c4e05c50dce099a2f05702b7be7c2651b",
+      "updatedAt": "2026-09-09T06:18:49.723Z",
+      "signature": "a24e28e25fc475e062c29f9ce13fde3e755f573b36ece938032c9a4fb1ec9f62",
       "file": "app/mevduat-kredi-faizleri/page.tsx",
       "trackedFiles": [
         "app/mevduat-kredi-faizleri/page.tsx",
@@ -3505,8 +3544,8 @@
     },
     {
       "route": "/mevduat-kredi-faizleri/konut-kredisi-oranlari",
-      "updatedAt": "2026-09-08T06:19:17.785Z",
-      "signature": "b12c4240a9f913bdaa436d5c8bc38d402153946e43ac2c517575d2d9c1a8e02a",
+      "updatedAt": "2026-09-09T06:18:49.723Z",
+      "signature": "e607860704c5f84350ea80ee8808f97401e0777adb716cfed54db44dd62d6913",
       "file": "app/mevduat-kredi-faizleri/konut-kredisi-oranlari/page.tsx",
       "trackedFiles": [
         "app/mevduat-kredi-faizleri/konut-kredisi-oranlari/page.tsx",
@@ -3516,8 +3555,8 @@
     },
     {
       "route": "/mevduat-kredi-faizleri/mevduat-faizi-oranlari",
-      "updatedAt": "2026-09-08T06:19:17.785Z",
-      "signature": "8e3f7625a51073193413167b3f9f65e3ae01510ef43f0fe9f15b6a0f1aadfd68",
+      "updatedAt": "2026-09-09T06:18:49.723Z",
+      "signature": "409e38918b5026f0abc6a872089a26111d30c85537dcd43578d8eb921b9c27f2",
       "file": "app/mevduat-kredi-faizleri/mevduat-faizi-oranlari/page.tsx",
       "trackedFiles": [
         "app/mevduat-kredi-faizleri/mevduat-faizi-oranlari/page.tsx",
@@ -3527,8 +3566,8 @@
     },
     {
       "route": "/mevduat-kredi-faizleri/tasit-kredisi-oranlari",
-      "updatedAt": "2026-09-08T06:19:17.785Z",
-      "signature": "3c4c258011a56f4be6f64af6d5a0139871f2e91f222ec16a31f8bd6c2cbe98c7",
+      "updatedAt": "2026-09-09T06:18:49.723Z",
+      "signature": "7ea5ffb215f528d0f3e57ce481e0885ce468847d3aa8a661e8aff44e7b42e160",
       "file": "app/mevduat-kredi-faizleri/tasit-kredisi-oranlari/page.tsx",
       "trackedFiles": [
         "app/mevduat-kredi-faizleri/tasit-kredisi-oranlari/page.tsx",
@@ -3538,8 +3577,8 @@
     },
     {
       "route": "/mevduat-kredi-faizleri/tuketici-faizi-oranlari",
-      "updatedAt": "2026-09-08T06:19:17.785Z",
-      "signature": "2b90187dcd19289bb0f35fa1246130e40a7c2cbf6901e92fad13f2d4e286a8ba",
+      "updatedAt": "2026-09-09T06:18:49.723Z",
+      "signature": "29120cf0cacf006840784b36e939c3bebbb96f81f9ff390970bb9885e6e2ed2b",
       "file": "app/mevduat-kredi-faizleri/tuketici-faizi-oranlari/page.tsx",
       "trackedFiles": [
         "app/mevduat-kredi-faizleri/tuketici-faizi-oranlari/page.tsx",
@@ -3767,6 +3806,24 @@
       ]
     },
     {
+      "route": "/sifre-yenile",
+      "updatedAt": "2026-09-09T11:09:59.279Z",
+      "signature": "8884898cf3f1b4b5737be89714f5e0b7f783929be0a89682561e1433c5404edd",
+      "file": "app/sifre-yenile/page.tsx",
+      "trackedFiles": [
+        "app/sifre-yenile/page.tsx"
+      ]
+    },
+    {
+      "route": "/sifremi-unuttum",
+      "updatedAt": "2026-09-09T11:09:57.068Z",
+      "signature": "67a842603f6dbccabbea21373e5b73fade6df1c980ea843a903c44a96c39389c",
+      "file": "app/sifremi-unuttum/page.tsx",
+      "trackedFiles": [
+        "app/sifremi-unuttum/page.tsx"
+      ]
+    },
+    {
       "route": "/sozluk",
       "updatedAt": "2026-09-05T10:05:17.792Z",
       "signature": "ef7905bddee2d434251c6a81bf772c433646e69c8d825c234afebe153d7ce511",
@@ -3880,6 +3937,24 @@
       "file": "app/temettu/temettu-verimi-hesaplama/page.tsx",
       "trackedFiles": [
         "app/temettu/temettu-verimi-hesaplama/page.tsx"
+      ]
+    },
+    {
+      "route": "/uyelik-sozlesmesi",
+      "updatedAt": "2026-09-09T12:03:28.986Z",
+      "signature": "5d4e6f8087f05dbbb493492b610c8754e96a4a19f7077f79c7af628f1acf5262",
+      "file": "app/uyelik-sozlesmesi/page.tsx",
+      "trackedFiles": [
+        "app/uyelik-sozlesmesi/page.tsx"
+      ]
+    },
+    {
+      "route": "/uyelik/dogrula",
+      "updatedAt": "2026-09-09T11:10:03.915Z",
+      "signature": "2260068e68f65eb5ae7ffd42ea3f5a2e9009590d5f2c0da0bd0e513fcd56c7db",
+      "file": "app/uyelik/dogrula/page.tsx",
+      "trackedFiles": [
+        "app/uyelik/dogrula/page.tsx"
       ]
     },
     {

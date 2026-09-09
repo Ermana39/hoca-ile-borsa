@@ -15,9 +15,61 @@ const dynamicApiDirectories = [
   "contact",
   "health",
   "revalidate",
+  "auth",
 ];
 
 const moved = [];
+
+function renameDirectory(source, target) {
+  let lastError;
+  for (let attempt = 0; attempt < 12; attempt += 1) {
+    try {
+      fs.renameSync(source, target);
+      return;
+    } catch (error) {
+      lastError = error;
+      if (!error || !["EPERM", "EACCES", "EBUSY"].includes(error.code)) throw error;
+      // Windows/antivirus taramaları yeni oluşturulan rota klasörlerini kısa süreli
+      // kilitleyebiliyor. Statik derleme taşımasını sınırlı süreyle yeniden dene.
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 125);
+    }
+  }
+  throw lastError;
+}
+
+function moveDirectoryOut(source, target) {
+  try {
+    renameDirectory(source, target);
+    return "renamed";
+  } catch (error) {
+    if (!error || !["EPERM", "EACCES", "EBUSY"].includes(error.code)) throw error;
+  }
+
+  // Bir süreç klasörü açık tuttuğunda Windows klasörü yeniden adlandıramaz.
+  // Dosyaları yedekleyip kaynak klasörleri boş bırakmak Next rota keşfini aynı
+  // şekilde engeller; finally bloğu dosyaları geri koyar.
+  fs.cpSync(source, target, { recursive: true });
+  const removeFiles = (directory) => {
+    for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+      const fullPath = path.join(directory, entry.name);
+      if (entry.isDirectory()) removeFiles(fullPath);
+      else fs.rmSync(fullPath, { force: true });
+    }
+  };
+  removeFiles(source);
+  return "copied";
+}
+
+function restoreDirectory(source, target, mode = "renamed") {
+  if (!fs.existsSync(target)) return;
+  if (mode === "copied" || fs.existsSync(source)) {
+    fs.mkdirSync(source, { recursive: true });
+    fs.cpSync(target, source, { recursive: true });
+    fs.rmSync(target, { recursive: true, force: true });
+    return;
+  }
+  renameDirectory(target, source);
+}
 
 function restoreInterruptedBackup() {
   if (!fs.existsSync(backupRoot)) return;
@@ -25,9 +77,7 @@ function restoreInterruptedBackup() {
   for (const directory of dynamicApiDirectories) {
     const source = path.join(apiRoot, directory);
     const target = path.join(backupRoot, directory);
-    if (fs.existsSync(target) && !fs.existsSync(source)) {
-      fs.renameSync(target, source);
-    }
+    if (fs.existsSync(target)) restoreDirectory(source, target);
   }
 
   const remaining = fs.existsSync(backupRoot)
@@ -48,19 +98,22 @@ function moveDynamicRoutesOut() {
     if (!fs.existsSync(source)) continue;
 
     const target = path.join(backupRoot, directory);
-    fs.renameSync(source, target);
-    moved.push({ source, target });
+    const mode = moveDirectoryOut(source, target);
+    moved.push({ source, target, mode });
   }
 }
 
 function restoreDynamicRoutes() {
-  for (const { source, target } of moved.reverse()) {
-    if (fs.existsSync(target) && !fs.existsSync(source)) {
-      fs.renameSync(target, source);
-    }
+  for (const { source, target, mode } of moved.reverse()) {
+    restoreDirectory(source, target, mode);
   }
 
   fs.rmSync(backupRoot, { recursive: true, force: true });
+}
+
+if (process.argv.includes("--restore-only")) {
+  restoreInterruptedBackup();
+  process.exit(0);
 }
 
 moveDynamicRoutesOut();

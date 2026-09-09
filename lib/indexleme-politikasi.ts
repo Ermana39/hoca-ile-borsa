@@ -1,4 +1,12 @@
 const NOINDEX_STATIK_YOLLAR = new Set([
+  "/giris",
+  "/hesabim",
+  "/kayit",
+  "/kvkk-aydinlatma-metni",
+  "/sifre-yenile",
+  "/sifremi-unuttum",
+  "/uyelik-sozlesmesi",
+  "/uyelik/dogrula",
   "/borsa/dip-zirve-analizi",
   "/borsa/hacim-artisi-analizi/aylik-hacim-artisi-olanlar",
   "/borsa/hacim-artisi-analizi/haftalik-hacim-artisi-olanlar",
@@ -30,7 +38,7 @@ const YONETIM_YOLU_DESENLERI = [
   /\[/,
   /^\/yonetim(?:\/|$)/,
   /^\/kontrol-paneli-4827(?:\/|$)/,
-  /^\/(?:giris|uye|profil|mesajlar|istatistik|guvenlik-kayitlari)(?:\/|$)/,
+  /^\/(?:giris|hesabim|kayit|sifre-yenile|sifremi-unuttum|uye|uyelik|profil|mesajlar|istatistik|guvenlik-kayitlari)(?:\/|$)/,
 ];
 
 export function halkaArzSurecHaberiYoluMu(route: string): boolean {

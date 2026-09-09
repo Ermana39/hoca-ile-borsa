@@ -68,6 +68,64 @@ const localEnv = {
 };
 const validContact = { name: "Test Kişi", email: "visitor@example.com", subject: "Deneme", message: "Örnek iletişim mesajı." };
 
+function fakeAuthRedis() {
+  const values = new Map();
+  const sets = new Map();
+  const limits = new Map();
+  return {
+    values,
+    async get(key) { return values.get(key) ?? null; },
+    async set(key, value) { values.set(key, value); return "OK"; },
+    async del(...keys) { for (const key of keys) { values.delete(key); sets.delete(key); } return keys.length; },
+    async sadd(key, value) { const set = sets.get(key) ?? new Set(); set.add(value); sets.set(key, set); return 1; },
+    async srem(key, value) { return sets.get(key)?.delete(value) ? 1 : 0; },
+    async smembers(key) { return [...(sets.get(key) ?? [])]; },
+    async scard(key) { return sets.get(key)?.size ?? 0; },
+    async expire() { return 1; },
+    async eval(script, keys, args) {
+      if (script.includes('redis.call("INCR"')) {
+        const count = (limits.get(keys[0]) ?? 0) + 1;
+        limits.set(keys[0], count);
+        return count <= Number(args[0]) ? [1, Number(args[1])] : [0, Number(args[1])];
+      }
+      if (script.includes('redis.call("EXISTS"')) {
+        if (values.has(keys[0])) return 0;
+        values.set(keys[0], args[0]);
+        values.set(keys[1], args[1]);
+        const pending = sets.get(keys[2]) ?? new Set();
+        pending.add(args[0]);
+        sets.set(keys[2], pending);
+        return 1;
+      }
+      if (script.includes('redis.call("SREM", KEYS[2]')) {
+        values.set(keys[0], args[1]);
+        sets.get(keys[1])?.delete(args[0]);
+        const active = sets.get(keys[2]) ?? new Set();
+        active.add(args[0]);
+        sets.set(keys[2], active);
+        return 1;
+      }
+      if (script.includes('local value = redis.call("GET"')) {
+        const value = values.get(keys[0]);
+        if (!value) return null;
+        values.delete(keys[0]);
+        return value;
+      }
+      if (script.includes('local sessions = redis.call("SMEMBERS"')) {
+        for (const sessionHash of sets.get(keys[2]) ?? []) values.delete(`${args[1]}${sessionHash}`);
+        if (values.get(keys[0]) === args[0]) values.delete(keys[0]);
+        values.delete(keys[1]);
+        sets.delete(keys[2]);
+        sets.get(keys[3])?.delete(args[0]);
+        sets.get(keys[4])?.delete(args[0]);
+        for (const key of keys.slice(5)) values.delete(key);
+        return 1;
+      }
+      throw new Error("Unknown fake Redis script");
+    },
+  };
+}
+
 test("JSON body validation rejects oversize streams, wrong types and malformed input", async () => {
   const { readJsonObject } = app()("lib/request-body.ts");
   for (const [body, headers, status] of [
@@ -218,5 +276,120 @@ test("Next development handlers delegate to the same secured production handlers
     }
     const health = await load("api/health.ts").default.fetch(request("health", undefined, {}, "GET"));
     assert.equal(health.status, 200);
+  });
+});
+
+test("member registration, verification, reset, session and deletion flows are server-authorized", async () => {
+  await withEnv(localEnv, async () => {
+    const redis = fakeAuthRedis();
+    const sent = [];
+    const load = app({ redis, sendMail: async (mail) => sent.push(mail) });
+    const register = load("api/auth/register.ts").default;
+    const registration = await register.fetch(request("auth/register", {
+      displayName: "Deneme Üye",
+      email: "member@example.com",
+      password: "Guclu!Sifre2026",
+      acceptMembershipTerms: true,
+      acceptKvkkNotice: true,
+      acceptPrivacyPolicy: true,
+      role: "admin",
+      plan: "premium",
+    }));
+    assert.equal(registration.status, 201);
+    const registered = await registration.json();
+    assert.equal(registered.user.role, "user");
+    assert.equal(registered.user.plan, "free");
+    assert.equal(registered.user.status, "pending");
+    assert.equal(registered.user.email_verified, false);
+    assert.equal(load("lib/member-auth.ts").memberHasPlan(registered.user, "free"), false);
+    const cookies = registration.headers.getSetCookie();
+    assert.match(cookies.find((cookie) => cookie.startsWith("hib_session=")), /Max-Age=0/);
+    assert.equal(cookies.some((cookie) => cookie.startsWith("hib_member=1")), false);
+    assert.deepEqual(await load("lib/member-auth.ts").getMemberCounts(), { active: 0, pending: 1 });
+    const adminToken = load("lib/admin-auth.ts").makeAdminToken();
+    const adminMessages = load("api/admin-messages.ts").default;
+    const pendingStats = await adminMessages.fetch(request("admin-messages", undefined, {
+      cookie: `hib_admin_token=${adminToken}`,
+    }, "GET"));
+    assert.deepEqual((await pendingStats.json()).memberStats, { active: 0, pending: 1 });
+
+    const duplicate = await register.fetch(request("auth/register", {
+      displayName: "Başka Üye",
+      email: "MEMBER@example.com",
+      password: "Baska!Sifre2026",
+      acceptMembershipTerms: true,
+      acceptKvkkNotice: true,
+      acceptPrivacyPolicy: true,
+    }));
+    assert.equal(duplicate.status, 409);
+
+    const session = load("api/auth/session.ts").default;
+    const anonymousSession = await session.fetch(request("auth/session", undefined, {}, "GET"));
+    assert.equal((await anonymousSession.json()).authenticated, false);
+    const login = load("api/auth/login.ts").default;
+    const pendingLogin = await login.fetch(request("auth/login", {
+      email: "member@example.com", password: "Guclu!Sifre2026",
+    }));
+    assert.equal(pendingLogin.status, 403);
+
+    const resend = await load("api/auth/resend-verification.ts").default.fetch(request("auth/resend-verification", {
+      email: "member@example.com",
+    }));
+    assert.equal(resend.status, 200);
+
+    const verificationToken = /#token=([A-Za-z0-9_-]+)/.exec(sent.at(-1).text)?.[1];
+    assert.ok(verificationToken);
+    const verify = await load("api/auth/verify-email.ts").default.fetch(request("auth/verify-email", { token: verificationToken }));
+    assert.equal(verify.status, 200);
+    const reusedVerification = await load("api/auth/verify-email.ts").default.fetch(request("auth/verify-email", { token: verificationToken }));
+    assert.equal(reusedVerification.status, 400);
+    assert.deepEqual(await load("lib/member-auth.ts").getMemberCounts(), { active: 1, pending: 0 });
+    const activeStats = await adminMessages.fetch(request("admin-messages", undefined, {
+      cookie: `hib_admin_token=${adminToken}`,
+    }, "GET"));
+    assert.deepEqual((await activeStats.json()).memberStats, { active: 1, pending: 0 });
+    const verifiedLogin = await login.fetch(request("auth/login", {
+      email: "member@example.com", password: "Guclu!Sifre2026",
+    }));
+    assert.equal(verifiedLogin.status, 200);
+    assert.equal(load("lib/member-auth.ts").memberHasPlan((await verifiedLogin.clone().json()).user, "free"), true);
+    const sessionCookie = verifiedLogin.headers.getSetCookie().find((cookie) => cookie.startsWith("hib_session="));
+    assert.match(sessionCookie, /HttpOnly/);
+    assert.match(sessionCookie, /SameSite=Strict/);
+    assert.ok(verifiedLogin.headers.getSetCookie().find((cookie) => cookie.startsWith("hib_member=1")));
+    const cookieHeader = sessionCookie.split(";")[0];
+    const verifiedSession = await session.fetch(request("auth/session", undefined, { cookie: cookieHeader }, "GET"));
+    assert.equal((await verifiedSession.json()).user.email_verified, true);
+
+    const forgot = await load("api/auth/forgot-password.ts").default.fetch(request("auth/forgot-password", { email: "member@example.com" }));
+    assert.equal(forgot.status, 200);
+    const resetToken = /#token=([A-Za-z0-9_-]+)/.exec(sent.at(-1).text)?.[1];
+    assert.ok(resetToken);
+    const reset = await load("api/auth/reset-password.ts").default.fetch(request("auth/reset-password", {
+      token: resetToken,
+      password: "Yeni!GucluSifre2026",
+    }));
+    assert.equal(reset.status, 200);
+    const reusedReset = await load("api/auth/reset-password.ts").default.fetch(request("auth/reset-password", {
+      token: resetToken,
+      password: "Baska!GucluSifre2026",
+    }));
+    assert.equal(reusedReset.status, 400);
+    const revokedOldSession = await session.fetch(request("auth/session", undefined, { cookie: cookieHeader }, "GET"));
+    assert.equal((await revokedOldSession.json()).authenticated, false);
+    const newSessionCookie = reset.headers.getSetCookie().find((cookie) => cookie.startsWith("hib_session=")).split(";")[0];
+
+    const deletionHandler = load("api/auth/delete-account.ts").default;
+    const prematureDeletion = await deletionHandler.fetch(request("auth/delete-account", {
+      password: "Yeni!GucluSifre2026", confirmation: "sil",
+    }, { cookie: newSessionCookie }));
+    assert.equal(prematureDeletion.status, 400);
+    const deletion = await deletionHandler.fetch(request("auth/delete-account", {
+      password: "Yeni!GucluSifre2026", confirmation: "HESABIMI SİL",
+    }, { cookie: newSessionCookie }));
+    assert.equal(deletion.status, 200);
+    const deletedSession = await session.fetch(request("auth/session", undefined, { cookie: newSessionCookie }, "GET"));
+    assert.equal((await deletedSession.json()).authenticated, false);
+    assert.deepEqual(await load("lib/member-auth.ts").getMemberCounts(), { active: 0, pending: 0 });
   });
 });

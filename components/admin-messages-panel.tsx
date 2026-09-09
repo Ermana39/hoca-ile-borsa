@@ -12,6 +12,11 @@ type ContactMessage = {
   createdAt: string;
 };
 
+type MemberStats = {
+  active: number;
+  pending: number;
+};
+
 function formatDate(value: string) {
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return value;
@@ -26,6 +31,7 @@ export default function AdminMessagesPanel() {
   const [loading, setLoading] = useState(true);
   const [authorized, setAuthorized] = useState(false);
   const [messages, setMessages] = useState<ContactMessage[]>([]);
+  const [memberStats, setMemberStats] = useState<MemberStats | null>(null);
 
   const loadMessages = useCallback(async () => {
     setLoading(true);
@@ -37,9 +43,15 @@ export default function AdminMessagesPanel() {
       const payload = await response.json().catch(() => null);
       setAuthorized(response.ok && payload?.ok === true);
       setMessages(Array.isArray(payload?.messages) ? payload.messages : []);
+      setMemberStats(
+        Number.isFinite(payload?.memberStats?.active) && Number.isFinite(payload?.memberStats?.pending)
+          ? payload.memberStats
+          : null,
+      );
     } catch {
       setAuthorized(false);
       setMessages([]);
+      setMemberStats(null);
     } finally {
       setLoading(false);
     }
@@ -56,6 +68,7 @@ export default function AdminMessagesPanel() {
     });
     setAuthorized(false);
     setMessages([]);
+    setMemberStats(null);
   }
 
   if (loading) {
@@ -93,6 +106,19 @@ export default function AdminMessagesPanel() {
         </div>
 
         <h1 className="mb-6 text-3xl font-bold text-zinc-900">İletişim Mesajları</h1>
+
+        <section className="mb-6 grid gap-4 sm:grid-cols-2" aria-label="Üyelik özeti">
+          <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
+            <p className="text-sm font-semibold text-emerald-800">Toplam Üye</p>
+            <p className="mt-2 text-3xl font-black text-emerald-950">{memberStats?.active ?? "—"}</p>
+            <p className="mt-1 text-xs text-emerald-700">Yalnızca e-postası doğrulanmış aktif kullanıcılar</p>
+          </div>
+          <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5">
+            <p className="text-sm font-semibold text-amber-800">Doğrulama Bekleyenler</p>
+            <p className="mt-2 text-3xl font-black text-amber-950">{memberStats?.pending ?? "—"}</p>
+            <p className="mt-1 text-xs text-amber-700">Henüz aktif üye sayılmayan hesaplar</p>
+          </div>
+        </section>
 
         {messages.length === 0 ? (
           <div className="rounded-xl border border-zinc-200 p-5 text-zinc-600">

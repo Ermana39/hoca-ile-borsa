@@ -3,6 +3,20 @@ import { kv } from "./kv";
 
 type RateLimitResult = { allowed: boolean; retryAfterSeconds: number };
 type LocalEntry = { count: number; expiresAt: number };
+type RateLimitScope =
+  | "admin-login"
+  | "contact"
+  | "member-register-ip"
+  | "member-register-email"
+  | "member-login-ip"
+  | "member-login-email"
+  | "member-forgot-ip"
+  | "member-forgot-email"
+  | "member-reset-ip"
+  | "member-verify-ip"
+  | "member-resend-ip"
+  | "member-resend-user"
+  | "member-delete-ip";
 const localEntries = new Map<string, LocalEntry>();
 const MAX_LOCAL_ENTRIES = 10_000;
 let lastCleanup = 0;
@@ -22,7 +36,7 @@ return {1, redis.call("PTTL", KEYS[1])}
 export class RateLimitUnavailableError extends Error {}
 
 export async function consumeRateLimit(
-  scope: "admin-login" | "contact",
+  scope: RateLimitScope,
   identity: string,
   limit: number,
   windowMs: number,
