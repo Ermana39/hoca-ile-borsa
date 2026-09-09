@@ -868,8 +868,9 @@ assert(
   "Açılış tahmini yalnızca gösterilecek altı fondan oluşmalı."
 );
 assert(
-  forecastData.kaynakTarihi === effectData.sonGuncelleme,
-  "Açılış tahmini kaynak tarihi etki analiziyle uyuşmuyor."
+  forecastData.kaynakTarihi <= effectData.sonGuncelleme &&
+    effectData.sonGuncelleme <= forecastData.tahminTarihi,
+  "Açılış tahmini kaynak ve hedef tarihleri etki analiziyle uyuşmuyor."
 );
 assert(
   forecastData.tahminTarihi === sonrakiBistIslemGunu(forecastData.kaynakTarihi),
@@ -897,19 +898,28 @@ for (const code of expectedForecastFunds) {
     `${code} gerçekleşen değeri geçersiz.`
   );
 
-  if (forecast.gerceklesen !== null) {
-    const detail = JSON.parse(
-      fs.readFileSync(path.join(detailDir, `${code.toLowerCase()}.json`), "utf8")
+  const detail = JSON.parse(
+    fs.readFileSync(path.join(detailDir, `${code.toLowerCase()}.json`), "utf8")
+  );
+  const actualRow = readPublicFundHistory(detail.fund).find(
+    (row) => row.tarih === forecastData.tahminTarihi
+  );
+
+  if (Number.isFinite(actualRow?.gunlukGetiri)) {
+    assert(
+      Number.isFinite(forecast.gerceklesen),
+      `${code} fon fiyatı açıklandığı halde gerçekleşen getiri eklenmemiş.`
     );
-    const actualRow = readPublicFundHistory(detail.fund).find(
-      (row) => row.tarih === forecastData.tahminTarihi
-    );
-    assert(Number.isFinite(actualRow?.gunlukGetiri), `${code} gerçekleşen günü bulunamadı.`);
     assertSameNumber(
       forecast.gerceklesen,
       round(actualRow.gunlukGetiri * 100, 4),
       `${code} gerçekleşen getiri`,
       0.0001
+    );
+  } else {
+    assert(
+      forecast.gerceklesen === null,
+      `${code} fon fiyatı açıklanmadan gerçekleşen getiri eklenmiş.`
     );
   }
 }

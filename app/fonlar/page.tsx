@@ -28,14 +28,26 @@ export const metadata: Metadata = {
 export default function FonlarPage() {
   const dashboard = getDashboardData();
   const leaderboards = dashboard.liderTablolari;
-  const funds = getCurrentFundsData()
-    .fonlar.filter((fund) => fund.aktifMi)
-    .map((fund) => ({
+  const activeFunds = getCurrentFundsData().fonlar.filter((fund) => fund.aktifMi);
+  const funds = activeFunds.map((fund) => ({
       kod: fund.kod,
       ad: fund.ad,
       slug: fund.slug,
       yonetici: fund.yonetici,
-    }));
+  }));
+  const kategoriOzetleri = Array.from(
+    activeFunds.reduce((categories, fund) => {
+      if (fund.kategori && fund.kategori !== "Bilinmiyor") {
+        categories.set(fund.kategori, (categories.get(fund.kategori) ?? 0) + 1);
+      }
+      return categories;
+    }, new Map<string, number>())
+  )
+    .map(([kategori, fonSayisi]) => ({ kategori, fonSayisi }))
+    .sort(
+      (a, b) =>
+        b.fonSayisi - a.fonSayisi || a.kategori.localeCompare(b.kategori, "tr-TR")
+    );
   const haftalikTercihler = getHaftalikFonHisseTercihleri();
   const enCokTercihEdilenHisseler = [...haftalikTercihler.hisseler]
     .filter((hisse) => hisse.degisim > 0)
@@ -63,6 +75,50 @@ export default function FonlarPage() {
         </section>
 
         <FundQuickSearch funds={funds} />
+
+        <section className="mb-8" aria-labelledby="fon-kategorileri-baslik">
+          <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <h2
+                id="fon-kategorileri-baslik"
+                className="text-xl font-bold text-slate-950 md:text-2xl"
+              >
+                Fon Kategorileri
+              </h2>
+              <p className="mt-1 text-sm text-slate-600">
+                Fonları şemsiye türüne göre ayırarak aynı kategorideki seçenekleri inceleyin.
+              </p>
+            </div>
+            <Link
+              href="/fonlar/fon-tarayici"
+              className="text-sm font-semibold text-blue-700 hover:text-blue-900"
+            >
+              Tüm fonları listele →
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {kategoriOzetleri.map(({ kategori, fonSayisi }) => (
+              <Link
+                key={kategori}
+                href={`/fonlar/fon-tarayici?kategori=${encodeURIComponent(kategori)}&sort=fonToplamDeger&dir=desc`}
+                className="group flex items-center justify-between gap-4 rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm transition hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md"
+              >
+                <span className="min-w-0">
+                  <span className="block font-bold text-slate-900 group-hover:text-blue-700">
+                    {kategori.replace(/ Şemsiye Fonu$/, "")}
+                  </span>
+                  <span className="mt-0.5 block text-xs text-slate-500">
+                    {kategori}
+                  </span>
+                </span>
+                <span className="shrink-0 rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700">
+                  {formatNumber(fonSayisi)} fon
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
 
         <section className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
           <MetricCard

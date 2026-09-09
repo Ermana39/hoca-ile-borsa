@@ -13,6 +13,12 @@ import PopulerAramalar from "@/components/PopulerAramalar";
 import { FundLogo } from "@/components/MarketLogo";
 import HomeMarketSummary from "@/components/HomeMarketSummary";
 import fonAcilisData from "@/app/fonlar/etki-analizi/_data/fon-acilis-tahminleri.json";
+import {
+  formatNumber,
+  formatSignedPercent,
+  formatSignedTL,
+} from "@/lib/fon-format";
+import { getDashboardData, type FundListItem } from "@/lib/fon-platform";
 import tlyFundData from "@/data/fonlar/fund-details/tly.json";
 import thfFundData from "@/data/fonlar/fund-details/thf.json";
 import tmvFundData from "@/data/fonlar/fund-details/tmv.json";
@@ -439,19 +445,6 @@ function formatYuzde(value: number | null | undefined) {
   })}`;
 }
 
-function formatOndalikYuzde(value: number | null | undefined) {
-  if (typeof value !== "number" || Number.isNaN(value)) return null;
-  return formatYuzde(value * 100);
-}
-
-function formatFonFiyati(value: number | null | undefined) {
-  if (typeof value !== "number" || Number.isNaN(value)) return null;
-  return `${value.toLocaleString("tr-TR", {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 6,
-  })} TL`;
-}
-
 function formatTahminTarihi(value: string | undefined) {
   if (!value) return "Güncel";
   const [year, month, day] = value.split("-").map(Number);
@@ -545,13 +538,67 @@ function FonAcilisTahminleri() {
 }
 
 function FonlarKisaYollar() {
+  const dashboard = getDashboardData();
+  const leaderboards = dashboard.liderTablolari;
+  const liderler: {
+    label: string;
+    item: FundListItem | undefined;
+    kind: "percent" | "money" | "number";
+    tone: string;
+  }[] = [
+    {
+      label: "En Çok Yükselen",
+      item: leaderboards.bugunEnCokKazandiran?.[0],
+      kind: "percent",
+      tone: "bg-emerald-50 text-emerald-700",
+    },
+    {
+      label: "En Çok Düşen",
+      item: leaderboards.bugunEnCokKaybettiren?.[0],
+      kind: "percent",
+      tone: "bg-rose-50 text-rose-700",
+    },
+    {
+      label: "En Çok Para Girişi",
+      item: leaderboards.enCokParaGirisi?.[0],
+      kind: "money",
+      tone: "bg-emerald-50 text-emerald-700",
+    },
+    {
+      label: "En Çok Para Çıkışı",
+      item: leaderboards.enCokParaCikisi?.[0],
+      kind: "money",
+      tone: "bg-rose-50 text-rose-700",
+    },
+    {
+      label: "Yatırımcı Kazanan",
+      item: leaderboards.enCokYatirimciKazanan?.[0],
+      kind: "number",
+      tone: "bg-blue-50 text-blue-700",
+    },
+    {
+      label: "Yatırımcı Kaybeden",
+      item: leaderboards.enCokYatirimciKaybeden?.[0],
+      kind: "number",
+      tone: "bg-amber-50 text-amber-700",
+    },
+  ];
+
+  function formatLiderDegeri(item: FundListItem, kind: "percent" | "money" | "number") {
+    if (kind === "percent") return formatSignedPercent(item.value);
+    if (kind === "money") return formatSignedTL(item.value);
+    if (typeof item.value !== "number" || !Number.isFinite(item.value)) return "-";
+    const sign = item.value > 0 ? "+" : "";
+    return `${sign}${formatNumber(item.value)}`;
+  }
+
   return (
     <div className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
       <div className="flex items-start justify-between gap-3 border-b border-slate-100 px-4 py-4 md:px-5">
         <div>
           <h2 className="text-base font-bold text-slate-900 md:text-lg">Fonlar</h2>
           <p className="mt-1 text-[11px] text-slate-500 md:text-xs">
-            Güncel fon fiyatları ve günlük değişimleri.
+            Günün öne çıkan fonları ve yatırımcı hareketleri.
           </p>
         </div>
         <Link
@@ -564,44 +611,41 @@ function FonlarKisaYollar() {
       </div>
 
       <div className="divide-y divide-slate-100 px-3 py-2 md:px-4">
-        {takipEdilenFonlar.map((fund) => {
-          const fiyat = formatFonFiyati(fund.fiyat);
-          const gunlukGetiri = formatOndalikYuzde(fund.gunlukGetiri);
-
-          return (
+        {liderler.map(({ label, item, kind, tone }) =>
+          item ? (
             <Link
-              key={fund.kod}
-              href={`/fonlar/${fund.slug}`}
+              key={label}
+              href={`/fonlar/${item.slug}`}
               prefetch={false}
-              className="group flex min-h-14 items-center gap-3 px-1 py-2.5 transition hover:bg-slate-50 md:px-2"
+              className="group grid min-h-14 grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-1 py-2.5 transition hover:bg-slate-50 md:px-2"
             >
-              <FundLogo
-                fundCode={fund.kod}
-                managerSlug={fund.yoneticiSlug}
-                size="sm"
-              />
-              <div className="min-w-0 flex-1">
-                <div className="font-bold text-slate-900 group-hover:text-blue-600">
-                  {fund.kod}
-                </div>
-                <div className="truncate text-[11px] text-slate-500" title={fund.ad}>
-                  {fund.ad}
+              <div className="min-w-0">
+                <span className={`inline-flex rounded-md px-2 py-0.5 text-[10px] font-bold ${tone}`}>
+                  {label}
+                </span>
+                <div className="mt-1 flex min-w-0 items-center gap-2">
+                  <FundLogo
+                    fundCode={item.kod}
+                    managerSlug={item.yoneticiSlug}
+                    size="sm"
+                  />
+                  <span className="font-bold text-slate-900 group-hover:text-blue-600">
+                    {item.kod}
+                  </span>
+                  <span className="truncate text-[11px] text-slate-500" title={item.ad}>
+                    {item.ad}
+                  </span>
                 </div>
               </div>
-              <div className="shrink-0 text-right">
-                {fiyat ? <div className="text-xs font-semibold text-slate-800">{fiyat}</div> : null}
-                {gunlukGetiri ? (
-                  <div className={`mt-0.5 text-xs font-bold ${yuzdeClass(fund.gunlukGetiri)}`}>
-                    {gunlukGetiri}
-                  </div>
-                ) : null}
-              </div>
+              <span className={`shrink-0 text-right text-xs font-bold tabular-nums ${yuzdeClass(item.value)}`}>
+                {formatLiderDegeri(item, kind)}
+              </span>
             </Link>
-          );
-        })}
+          ) : null
+        )}
       </div>
       <div className="border-t border-slate-100 px-4 py-2 text-right text-[10px] text-slate-400">
-        Son fiyat tarihi: {formatTahminTarihi(takipEdilenFonlar[0]?.tarih)}
+        Son fiyat tarihi: {formatTahminTarihi(dashboard.sonIslemTarihi ?? undefined)}
       </div>
     </div>
   );

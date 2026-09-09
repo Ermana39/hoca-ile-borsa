@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "@/components/NoPrefetchLink";
+import Image from "next/image";
 import { useState } from "react";
 import SiteSearch from "@/components/SiteSearch";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -30,17 +31,17 @@ export default function Navbar() {
         <Link
           href="/"
           prefetch={false}
-          className="flex shrink-0 items-center py-3 font-bold text-white"
+          className="flex shrink-0 items-center py-1"
           aria-label="Hoca İle Borsa - Ana Sayfa"
         >
-          <span className="flex flex-col whitespace-nowrap leading-none">
-            <span className="text-[15px] font-bold tracking-tight text-blue-400 2xl:text-base">
-              Hoca İle Borsa
-            </span>
-            <span className="mt-1 text-[10px] font-medium tracking-[0.01em] text-slate-300 2xl:text-[11px]">
-              Piyasayı Tek Ekranda Takip Et.
-            </span>
-          </span>
+          <Image
+            src="/brand/logo-wordmark.png"
+            alt="Hoca İle Borsa"
+            width={800}
+            height={612}
+            priority
+            className="h-14 w-auto object-contain sm:h-16"
+          />
         </Link>
 
         <nav className="hidden min-w-0 flex-1 items-center justify-center gap-1 min-[1450px]:flex 2xl:gap-1.5" aria-label="Ana navigasyon">
