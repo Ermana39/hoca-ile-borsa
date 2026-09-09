@@ -265,6 +265,10 @@ const nextConfig = {
   // statik dosya olarak cikarmak, Vercel'in her HTML/RSC yanitini ISR deposunda
   // tutmasini ve 8 KB'lik ISR okuma birimleriyle ucretlendirmesini engeller.
   output: "export",
+  // Binlerce statik sayfayi `sayfa.html` yerine `sayfa/index.html` olarak
+  // cikarmak, Vercel'in temiz URL dagitim asamasinda rota listesini sisirmesini
+  // onler. Mevcut URL'ler tarayicida ayni kalir; dosya yapisi sadeleşir.
+  trailingSlash: true,
   images: {
     // Tum haber gorselleri build ile birlikte yayinlaniyor. Vercel'in istek
     // basina Image Optimization fonksiyonuna ve donusum kotasina gerek yok.
