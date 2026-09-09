@@ -28,7 +28,10 @@ function app({ redis = null, sendMail = async () => {}, transportOptions = () =>
       if (name === "nodemailer") return {
         createTransport(options) { transportOptions(options); return { sendMail }; },
       };
-      if (name.startsWith(".")) return load(path.resolve(path.dirname(file), `${name}.ts`));
+      if (name.startsWith(".")) {
+        const sourceName = name.endsWith(".js") ? `${name.slice(0, -3)}.ts` : `${name}.ts`;
+        return load(path.resolve(path.dirname(file), sourceName));
+      }
       if (name.startsWith("@/")) return load(`${name.slice(2)}.ts`);
       return require(name);
     };

@@ -1,11 +1,11 @@
 import crypto from "node:crypto";
 import nodemailer from "nodemailer";
-import { isValidEmail, sanitizeText } from "../lib/contact-security";
-import { getClientIp, jsonResponse } from "../lib/http-api";
-import { consumeRateLimit, RateLimitUnavailableError } from "../lib/rate-limit";
-import { readJsonObject, RequestBodyError } from "../lib/request-body";
-import { isSameOriginRequest } from "../lib/request-security";
-import { addSecurityLog } from "../lib/security-log";
+import { isValidEmail, sanitizeText } from "../lib/contact-security.js";
+import { getClientIp, jsonResponse } from "../lib/http-api.js";
+import { consumeRateLimit, RateLimitUnavailableError } from "../lib/rate-limit.js";
+import { readJsonObject, RequestBodyError } from "../lib/request-body.js";
+import { isSameOriginRequest } from "../lib/request-security.js";
+import { addSecurityLog } from "../lib/security-log.js";
 
 function escapeHtml(value: string) {
   return value
