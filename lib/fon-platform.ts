@@ -10,6 +10,7 @@ const PUBLIC_HISTORY_DIR = path.join(
   "fonlar",
   "history"
 );
+const FUND_HISTORY_BUNDLE_COUNT = 64;
 
 export type PeriodKey = "gunluk" | "besGun" | "birAy" | "ucAy";
 export type ReturnKey =
@@ -193,6 +194,16 @@ function safeFundSlug(slug: string) {
 function safeManagerSlug(slug: string) {
   const normalized = String(slug || "").toLowerCase().replace(/[^a-z0-9-]/g, "");
   return normalized || "";
+}
+
+export function getFundHistoryBundleUrl(slug: string) {
+  const safeSlug = safeFundSlug(slug);
+  let hash = 0;
+  for (const character of safeSlug) {
+    hash = (Math.imul(hash, 31) + character.charCodeAt(0)) >>> 0;
+  }
+  const bucket = String(hash % FUND_HISTORY_BUNDLE_COUNT).padStart(2, "0");
+  return `/data/fonlar/history-bundles/${bucket}.json`;
 }
 
 export function getCurrentFundsData() {

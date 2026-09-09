@@ -125,6 +125,53 @@ function pruneNextTextPayloads(outRoot) {
   }
 }
 
+const FUND_HISTORY_BUNDLE_COUNT = 64;
+
+function fundHistoryBucket(slug) {
+  let hash = 0;
+  for (const character of slug) {
+    hash = (Math.imul(hash, 31) + character.charCodeAt(0)) >>> 0;
+  }
+  return String(hash % FUND_HISTORY_BUNDLE_COUNT).padStart(2, "0");
+}
+
+function bundleFundHistory(outRoot) {
+  const historyRoot = path.join(outRoot, "data", "fonlar", "history");
+  if (!fs.existsSync(historyRoot)) return;
+
+  const bundleRoot = path.join(outRoot, "data", "fonlar", "history-bundles");
+  fs.rmSync(bundleRoot, { recursive: true, force: true });
+  fs.mkdirSync(bundleRoot, { recursive: true });
+
+  const bundles = new Map();
+  let removedCount = 0;
+  let removedBytes = 0;
+  for (const entry of fs.readdirSync(historyRoot, { withFileTypes: true })) {
+    if (!entry.isFile() || !entry.name.endsWith(".json")) continue;
+    const filePath = path.join(historyRoot, entry.name);
+    const slug = entry.name.slice(0, -5);
+    const payload = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    const bucket = fundHistoryBucket(slug);
+    const funds = bundles.get(bucket) ?? {};
+    funds[slug] = Array.isArray(payload.rows) ? payload.rows : [];
+    bundles.set(bucket, funds);
+    removedBytes += fs.statSync(filePath).size;
+    fs.rmSync(filePath, { force: true });
+    removedCount += 1;
+  }
+
+  fs.rmSync(historyRoot, { recursive: true, force: true });
+  let bundleBytes = 0;
+  for (const [bucket, funds] of bundles) {
+    const bundlePath = path.join(bundleRoot, `${bucket}.json`);
+    fs.writeFileSync(bundlePath, JSON.stringify({ version: 1, funds }));
+    bundleBytes += fs.statSync(bundlePath).size;
+  }
+  console.log(
+    `Fon grafik verileri paketlendi: ${removedCount} dosya -> ${bundles.size} dosya, ${Math.round(removedBytes / 1024 / 1024)} MB -> ${Math.round(bundleBytes / 1024 / 1024)} MB.`
+  );
+}
+
 function moveDynamicRoutesOut() {
   restoreInterruptedBackup();
   fs.rmSync(backupRoot, { recursive: true, force: true });
@@ -188,6 +235,7 @@ try {
     }
 
     pruneNextTextPayloads(outRoot);
+    bundleFundHistory(outRoot);
 
     let htmlCount = 0;
     const countHtml = (directory) => {

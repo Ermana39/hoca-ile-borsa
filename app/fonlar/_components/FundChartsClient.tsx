@@ -17,7 +17,6 @@ type FundHistoryTuple = [
   number | null,
   number | null,
 ];
-
 const periods: Period[] = ["1H", "1A", "3A", "6A", "YBB", "1Y", "Maks"];
 
 function addDays(isoDate: string, days: number) {
@@ -79,26 +78,31 @@ function decodeHistory(rows: FundHistoryTuple[]): FundHistoryRow[] {
 export default function FundChartsClient({
   initialHistory,
   historyUrl,
+  historyKey,
 }: {
   initialHistory: FundHistoryRow[];
   historyUrl?: string;
+  historyKey?: string;
 }) {
   const [period, setPeriod] = useState<Period>("Maks");
   const [history, setHistory] = useState(initialHistory);
 
   useEffect(() => {
-    setHistory(initialHistory);
     if (!historyUrl) return;
 
     const controller = new AbortController();
     fetch(historyUrl, { cache: "force-cache", signal: controller.signal })
       .then((response) => {
         if (!response.ok) throw new Error(`Fon geçmişi yüklenemedi: ${response.status}`);
-        return response.json() as Promise<{ rows?: FundHistoryTuple[] }>;
+        return response.json() as Promise<{
+          rows?: FundHistoryTuple[];
+          funds?: Record<string, FundHistoryTuple[]>;
+        }>;
       })
       .then((payload) => {
-        if (Array.isArray(payload.rows) && payload.rows.length > 0) {
-          setHistory(decodeHistory(payload.rows));
+        const rows = historyKey ? payload.funds?.[historyKey] : payload.rows;
+        if (Array.isArray(rows) && rows.length > 0) {
+          setHistory(decodeHistory(rows));
         }
       })
       .catch((error: unknown) => {
@@ -106,7 +110,7 @@ export default function FundChartsClient({
       });
 
     return () => controller.abort();
-  }, [historyUrl, initialHistory]);
+  }, [historyKey, historyUrl, initialHistory]);
 
   const charts = useMemo(() => {
     const sorted = [...history].sort((a, b) => a.tarih.localeCompare(b.tarih));

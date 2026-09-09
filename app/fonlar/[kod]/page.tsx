@@ -23,6 +23,7 @@ import {
 import {
   getAllFundSlugs,
   getFundDetail,
+  getFundHistoryBundleUrl,
   type Fund,
 } from "@/lib/fon-platform";
 import { getNewsByFundCode } from "@/lib/haberler";
@@ -508,7 +509,14 @@ export default async function FonDetayPage({
         <section className="mb-8">
           <FundChartsClient
             initialHistory={detail.sonOtuzIslemGunu}
-            historyUrl={`/data/fonlar/history/${fund.slug}.json`}
+            historyUrl={
+              process.env.HIB_STATIC_EXPORT_BUILD === "1"
+                ? getFundHistoryBundleUrl(fund.slug)
+                : `/data/fonlar/history/${fund.slug}.json`
+            }
+            historyKey={
+              process.env.HIB_STATIC_EXPORT_BUILD === "1" ? fund.slug : undefined
+            }
           />
         </section>
 
