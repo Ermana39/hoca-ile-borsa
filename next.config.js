@@ -264,7 +264,7 @@ const nextConfig = {
   // Site verileri her deploy oncesinde dosyalardan uretiliyor. Sayfalari gercek
   // statik dosya olarak cikarmak, Vercel'in her HTML/RSC yanitini ISR deposunda
   // tutmasini ve 8 KB'lik ISR okuma birimleriyle ucretlendirmesini engeller.
-  output: "export",
+  ...(isDevelopment ? {} : { output: "export" }),
   // Binlerce statik sayfayi `sayfa.html` yerine `sayfa/index.html` olarak
   // cikarmak, Vercel'in temiz URL dagitim asamasinda rota listesini sisirmesini
   // onler. Mevcut URL'ler tarayicida ayni kalir; dosya yapisi sadeleşir.

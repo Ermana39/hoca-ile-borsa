@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function KayitPage() {
-  return <AuthShell eyebrow="Üyelik" title="Kayıt Ol" description="Ücretsiz hesabınızı oluşturun. Hesabınız, e-posta doğrulamasından sonra aktifleşir; ödeme veya premium satış sistemi şu anda etkin değildir."><RegisterForm /></AuthShell>;
+  return <AuthShell eyebrow="Üyelik" title="Kayıt Ol" description="Ücretsiz hesabınızı oluşturun. Hesabınız, e-posta doğrulamasından sonra aktifleşir."><RegisterForm /></AuthShell>;
 }
