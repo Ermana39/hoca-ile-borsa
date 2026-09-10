@@ -6,7 +6,7 @@ import {
   getCookie,
   jsonResponse,
 } from "../lib/http-api.js";
-import { getMemberCounts } from "../lib/member-auth.js";
+import { getAdminMemberList, getMemberCounts } from "../lib/member-auth.js";
 import { consumeRateLimit, RateLimitUnavailableError } from "../lib/rate-limit.js";
 import { readJsonObject, RequestBodyError } from "../lib/request-body.js";
 import { isSameOriginRequest } from "../lib/request-security.js";
@@ -133,14 +133,18 @@ export const adminMessagesHandler = {
     }
 
     let memberStats: { active: number; pending: number } | null = null;
+    let members: Awaited<ReturnType<typeof getAdminMemberList>> = [];
     try {
-      memberStats = await getMemberCounts();
+      [memberStats, members] = await Promise.all([
+        getMemberCounts(),
+        getAdminMemberList(),
+      ]);
     } catch {
       // Redis gecici olarak erisilemese de yonetim ekrani acilabilsin.
     }
 
     return jsonResponse(
-      { ok: true, messages: [], memberStats },
+      { ok: true, messages: [], memberStats, members },
       { headers: { "Cache-Control": "private, no-store" } },
     );
   },

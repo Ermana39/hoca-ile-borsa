@@ -17,6 +17,15 @@ type MemberStats = {
   pending: number;
 };
 
+type MemberRow = {
+  user_id: string;
+  display_name: string;
+  email: string;
+  created_at: string;
+  status: "pending" | "active";
+  plan: "free" | "premium";
+};
+
 function formatDate(value: string) {
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return value;
@@ -32,6 +41,7 @@ export default function AdminMessagesPanel() {
   const [authorized, setAuthorized] = useState(false);
   const [messages, setMessages] = useState<ContactMessage[]>([]);
   const [memberStats, setMemberStats] = useState<MemberStats | null>(null);
+  const [members, setMembers] = useState<MemberRow[]>([]);
 
   const loadMessages = useCallback(async () => {
     setLoading(true);
@@ -48,10 +58,12 @@ export default function AdminMessagesPanel() {
           ? payload.memberStats
           : null,
       );
+      setMembers(Array.isArray(payload?.members) ? payload.members : []);
     } catch {
       setAuthorized(false);
       setMessages([]);
       setMemberStats(null);
+      setMembers([]);
     } finally {
       setLoading(false);
     }
@@ -69,6 +81,7 @@ export default function AdminMessagesPanel() {
     setAuthorized(false);
     setMessages([]);
     setMemberStats(null);
+    setMembers([]);
   }
 
   if (loading) {
@@ -105,7 +118,7 @@ export default function AdminMessagesPanel() {
           </button>
         </div>
 
-        <h1 className="mb-6 text-3xl font-bold text-zinc-900">İletişim Mesajları</h1>
+        <h1 className="mb-6 text-3xl font-bold text-zinc-900">Yönetim Paneli</h1>
 
         <section className="mb-6 grid gap-4 sm:grid-cols-2" aria-label="Üyelik özeti">
           <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
@@ -119,6 +132,57 @@ export default function AdminMessagesPanel() {
             <p className="mt-1 text-xs text-amber-700">Henüz aktif üye sayılmayan hesaplar</p>
           </div>
         </section>
+
+        <section className="mb-8" aria-labelledby="uyeler-baslik">
+          <div className="mb-3 flex flex-wrap items-end justify-between gap-2">
+            <div>
+              <h2 id="uyeler-baslik" className="text-2xl font-bold text-zinc-900">Üyeler</h2>
+              <p className="mt-1 text-sm text-zinc-500">Aktif ve doğrulama bekleyen kayıtlar</p>
+            </div>
+            <span className="text-sm font-semibold text-zinc-600">{members.length} kayıt</span>
+          </div>
+
+          <div className="overflow-x-auto rounded-2xl border border-zinc-200">
+            <table className="min-w-[820px] w-full border-collapse text-left text-sm">
+              <thead className="bg-zinc-50 text-zinc-700">
+                <tr>
+                  <th className="px-4 py-3 font-bold">Ad Soyad</th>
+                  <th className="px-4 py-3 font-bold">E-posta</th>
+                  <th className="px-4 py-3 font-bold">Üyelik Tarihi</th>
+                  <th className="px-4 py-3 font-bold">Durum</th>
+                  <th className="px-4 py-3 font-bold">Plan</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-zinc-200 bg-white">
+                {members.length === 0 ? (
+                  <tr>
+                    <td colSpan={5} className="px-4 py-6 text-center text-zinc-500">Henüz üye kaydı bulunmuyor.</td>
+                  </tr>
+                ) : (
+                  members.map((member) => (
+                    <tr key={member.user_id} className="align-top">
+                      <td className="px-4 py-3 font-semibold text-zinc-900">{member.display_name}</td>
+                      <td className="px-4 py-3">
+                        <a className="text-blue-700 hover:underline" href={`mailto:${member.email}`}>{member.email}</a>
+                      </td>
+                      <td className="whitespace-nowrap px-4 py-3 text-zinc-600">{formatDate(member.created_at)}</td>
+                      <td className="px-4 py-3">
+                        <span className={member.status === "active"
+                          ? "inline-flex rounded-full bg-emerald-100 px-2.5 py-1 text-xs font-bold text-emerald-800"
+                          : "inline-flex rounded-full bg-amber-100 px-2.5 py-1 text-xs font-bold text-amber-800"}>
+                          {member.status === "active" ? "Aktif" : "Doğrulama Bekliyor"}
+                        </span>
+                      </td>
+                      <td className="px-4 py-3 font-semibold text-zinc-700">{member.plan === "premium" ? "Premium" : "Ücretsiz"}</td>
+                    </tr>
+                  ))
+                )}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <h2 className="mb-4 text-2xl font-bold text-zinc-900">İletişim Mesajları</h2>
 
         {messages.length === 0 ? (
           <div className="rounded-xl border border-zinc-200 p-5 text-zinc-600">

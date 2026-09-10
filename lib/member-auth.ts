@@ -12,12 +12,18 @@ export type MemberRole = "user" | "admin";
 export type MemberPlan = "free" | "premium";
 export type MemberStatus = "pending" | "active";
 
+export type MarketingEmailConsent = {
+  granted: boolean;
+  recorded_at: string;
+};
+
 export type MemberConsent = {
   accepted_at: string;
   membership_terms_version: string;
   kvkk_notice_version: string;
   privacy_policy_version: string;
   user_agent_hash: string;
+  marketing_email?: MarketingEmailConsent;
 };
 
 export type MemberRecord = {
@@ -39,6 +45,14 @@ export type PublicMember = Pick<
   "user_id" | "email" | "display_name" | "role" | "plan" | "status" | "created_at" | "updated_at"
 > & {
   email_verified: boolean;
+};
+
+export type AdminMemberSummary = Pick<
+  MemberRecord,
+  "user_id" | "email" | "display_name" | "role" | "plan" | "status" | "created_at"
+> & {
+  email_verified: boolean;
+  marketing_email_consent: boolean;
 };
 
 type SessionRecord = {
@@ -281,6 +295,7 @@ export async function createMember(input: {
   displayName: string;
   password: string;
   userAgent: string;
+  marketingEmailConsent?: boolean;
 }) {
   const redis = requireStore();
   const email = normalizeEmail(input.email);
@@ -306,6 +321,10 @@ export async function createMember(input: {
       kvkk_notice_version: KVKK_NOTICE_VERSION,
       privacy_policy_version: PRIVACY_POLICY_VERSION,
       user_agent_hash: sha256(input.userAgent.slice(0, 512)),
+      marketing_email: {
+        granted: input.marketingEmailConsent === true,
+        recorded_at: now,
+      },
     },
   };
 
@@ -343,6 +362,44 @@ export async function getMemberCounts() {
     redis.scard(PENDING_MEMBERS_KEY),
   ]);
   return { active: Number(active) || 0, pending: Number(pending) || 0 };
+}
+
+export async function getAdminMemberList(): Promise<AdminMemberSummary[]> {
+  const redis = requireStore();
+  const [activeIds, pendingIds] = await Promise.all([
+    redis.smembers(ACTIVE_MEMBERS_KEY),
+    redis.smembers(PENDING_MEMBERS_KEY),
+  ]);
+
+  const userIds = Array.from(
+    new Set(
+      [...activeIds, ...pendingIds].filter(
+        (value): value is string => typeof value === "string" && value.length > 0,
+      ),
+    ),
+  );
+  if (userIds.length === 0) return [];
+
+  const mget = (redis as unknown as {
+    mget: (...keys: string[]) => Promise<unknown[]>;
+  }).mget.bind(redis);
+  const storedMembers = await mget(...userIds.map(memberKey));
+
+  return storedMembers
+    .map((value) => parseStored<MemberRecord>(value))
+    .filter((member): member is MemberRecord => Boolean(member))
+    .map((member) => ({
+      user_id: member.user_id,
+      email: member.email,
+      display_name: member.display_name,
+      role: member.role,
+      plan: member.plan,
+      status: member.status,
+      created_at: member.created_at,
+      email_verified: Boolean(member.email_verified_at),
+      marketing_email_consent: member.consents?.marketing_email?.granted === true,
+    }))
+    .sort((a, b) => b.created_at.localeCompare(a.created_at));
 }
 
 export async function createOneTimeToken(

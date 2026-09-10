@@ -129,6 +129,7 @@ export async function registerMember(request: Request) {
     const email = normalizeEmail(stringField(body, "email", 254));
     const displayName = stringField(body, "displayName", 60);
     const password = stringField(body, "password", 128);
+    const marketingEmailConsent = body.marketingEmailConsent === true;
     if (!validateEmail(email)) throw new MemberAuthError("Geçerli bir e-posta adresi girin.");
     await reserve(request, "member-register-email", email, 3, 60 * 60 * 1000);
     if (
@@ -144,6 +145,7 @@ export async function registerMember(request: Request) {
       displayName,
       password,
       userAgent: request.headers.get("user-agent") || "",
+      marketingEmailConsent,
     });
     let verificationSent = false;
     try {

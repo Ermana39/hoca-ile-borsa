@@ -12,6 +12,7 @@ export default function RegisterForm() {
   const [acceptMembershipTerms, setAcceptMembershipTerms] = useState(false);
   const [acceptKvkkNotice, setAcceptKvkkNotice] = useState(false);
   const [acceptPrivacyPolicy, setAcceptPrivacyPolicy] = useState(false);
+  const [marketingEmailConsent, setMarketingEmailConsent] = useState(false);
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
   const [registeredEmail, setRegisteredEmail] = useState("");
@@ -33,6 +34,7 @@ export default function RegisterForm() {
         acceptMembershipTerms,
         acceptKvkkNotice,
         acceptPrivacyPolicy,
+        marketingEmailConsent,
       });
       setRegisteredEmail(email.trim());
       setMessage(result.message || "Doğrulama bağlantısı e-posta adresinize gönderildi.");
@@ -77,7 +79,7 @@ export default function RegisterForm() {
   return (
     <form onSubmit={submit} className="min-w-0 space-y-5">
       {error ? <AuthMessage type="error">{error}</AuthMessage> : null}
-      <AuthField label="Ad veya görünen ad" name="displayName" autoComplete="name" required minLength={2} maxLength={60} value={displayName} onChange={(event) => setDisplayName(event.target.value)} disabled={loading} />
+      <AuthField label="Ad Soyad" name="displayName" autoComplete="name" required minLength={2} maxLength={60} value={displayName} onChange={(event) => setDisplayName(event.target.value)} disabled={loading} />
       <AuthField label="E-posta" name="email" type="email" autoComplete="email" required maxLength={254} value={email} onChange={(event) => setEmail(event.target.value)} disabled={loading} />
       <AuthField label="Şifre" name="password" type="password" autoComplete="new-password" required minLength={12} maxLength={128} value={password} onChange={(event) => setPassword(event.target.value)} disabled={loading} hint="En az 12 karakter; büyük harf, küçük harf, rakam ve sembol gruplarından en az üçünü kullanın." />
       <AuthField label="Şifre tekrar" name="passwordAgain" type="password" autoComplete="new-password" required minLength={12} maxLength={128} value={passwordAgain} onChange={(event) => setPasswordAgain(event.target.value)} disabled={loading} />
@@ -96,6 +98,23 @@ export default function RegisterForm() {
           <input className={checkboxClass} type="checkbox" required checked={acceptPrivacyPolicy} onChange={(event) => setAcceptPrivacyPolicy(event.target.checked)} disabled={loading} />
           <span className="min-w-0 break-words"><Link href="/gizlilik-politikasi" prefetch={false} target="_blank" className="font-semibold text-blue-700 underline">Gizlilik Politikası</Link>&apos;nı okudum.</span>
         </label>
+      </fieldset>
+
+      <fieldset className="min-w-0 space-y-3 rounded-xl border border-blue-200 bg-blue-50/60 p-4">
+        <legend className="px-1 text-sm font-bold text-slate-800">İsteğe bağlı ileti izni</legend>
+        <label className="flex min-w-0 gap-3 text-sm leading-6 text-slate-700">
+          <input
+            className={checkboxClass}
+            type="checkbox"
+            checked={marketingEmailConsent}
+            onChange={(event) => setMarketingEmailConsent(event.target.checked)}
+            disabled={loading}
+          />
+          <span className="min-w-0 break-words">
+            Hoca ile Borsa&apos;dan reklam, kampanya, duyuru ve pazarlama amaçlı e-posta almak istiyorum.
+          </span>
+        </label>
+        <p className="text-xs leading-5 text-slate-600">Bu izin üyelik için zorunlu değildir.</p>
       </fieldset>
 
       <PrimaryButton disabled={loading}>{loading ? "Hesap oluşturuluyor…" : "Kayıt Ol"}</PrimaryButton>

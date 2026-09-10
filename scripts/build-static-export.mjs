@@ -7,8 +7,8 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const apiRoot = path.join(root, "app", "api");
 const backupRoot = path.join(root, ".next-dynamic-api-backup");
 
-// Static export GET route'larini build icinde tutuyoruz. POST ve canli saglik
-// route'lari Vercel Functions olarak /api klasorunden yayinlaniyor.
+// Statik export ile birlikte derlenmemesi gereken canli API route'larini
+// gecici olarak disari aliyoruz. Bunlar Vercel Functions olarak yayinlanir.
 const dynamicApiDirectories = [
   "admin-login",
   "admin-logout",
@@ -17,6 +17,7 @@ const dynamicApiDirectories = [
   "health",
   "revalidate",
   "auth",
+  "portfolio",
 ];
 
 const moved = [];
