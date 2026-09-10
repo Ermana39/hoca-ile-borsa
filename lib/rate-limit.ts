@@ -35,6 +35,13 @@ return {1, redis.call("PTTL", KEYS[1])}
 
 export class RateLimitUnavailableError extends Error {}
 
+function logSharedLimiterFailure(error: unknown) {
+  const details = error instanceof Error
+    ? { name: error.name, message: error.message.slice(0, 240) }
+    : { name: "UnknownError", message: "Unknown Redis failure" };
+  console.error("[rate-limit] Shared limiter request failed", details);
+}
+
 export async function consumeRateLimit(
   scope: RateLimitScope,
   identity: string,
@@ -54,7 +61,8 @@ export async function consumeRateLimit(
         allowed: result[0] === 1,
         retryAfterSeconds: result[0] === 1 ? 0 : Math.max(1, Math.ceil(result[1] / 1000)),
       };
-    } catch {
+    } catch (error) {
+      logSharedLimiterFailure(error);
       // A configured shared limiter must never silently fail open.
       throw new RateLimitUnavailableError("İstek sınırı denetlenemedi.");
     }
