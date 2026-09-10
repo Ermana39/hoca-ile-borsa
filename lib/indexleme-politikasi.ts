@@ -1,6 +1,7 @@
 const NOINDEX_STATIK_YOLLAR = new Set([
   "/giris",
   "/hesabim",
+  "/portfoyum",
   "/kayit",
   "/kvkk-aydinlatma-metni",
   "/sifre-yenile",
@@ -38,7 +39,7 @@ const YONETIM_YOLU_DESENLERI = [
   /\[/,
   /^\/yonetim(?:\/|$)/,
   /^\/kontrol-paneli-4827(?:\/|$)/,
-  /^\/(?:giris|hesabim|kayit|sifre-yenile|sifremi-unuttum|uye|uyelik|profil|mesajlar|istatistik|guvenlik-kayitlari)(?:\/|$)/,
+  /^\/(?:giris|hesabim|portfoyum|kayit|sifre-yenile|sifremi-unuttum|uye|uyelik|profil|mesajlar|istatistik|guvenlik-kayitlari)(?:\/|$)/,
 ];
 
 export function halkaArzSurecHaberiYoluMu(route: string): boolean {

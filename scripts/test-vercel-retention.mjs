@@ -1,10 +1,23 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { checkSite, createClient, createPlan, listAll, POLICY, runRetention } from "./vercel-retention.mjs";
+import { checkSite, createClient, createPlan, expectedShaFromEvent, listAll, POLICY, runRetention } from "./vercel-retention.mjs";
 
 const day = 86_400_000;
 const now = Date.UTC(2026, 8, 10, 20);
 const sha = "a".repeat(40);
+
+test("accepts both Vercel commit statuses and production deployment events", () => {
+  assert.equal(expectedShaFromEvent("status", { context: "Vercel", state: "success", sha }), sha);
+  assert.equal(expectedShaFromEvent("deployment_status", { deployment_status: { state: "success" }, deployment: { environment: "Production", sha } }), sha);
+  assert.equal(expectedShaFromEvent("workflow_dispatch", {}), undefined);
+});
+
+test("rejects failed, unrelated and malformed automatic notifications", () => {
+  assert.throws(() => expectedShaFromEvent("status", { context: "Vercel", state: "failure", sha }), /Vercel bildirimi/);
+  assert.throws(() => expectedShaFromEvent("status", { context: "Other", state: "success", sha }), /Vercel bildirimi/);
+  assert.throws(() => expectedShaFromEvent("status", { context: "Vercel", state: "success", sha: "invalid" }), /commit kimligi/);
+  assert.throws(() => expectedShaFromEvent("deployment_status", { deployment_status: { state: "success" }, deployment: { environment: "Preview", sha } }), /production/);
+});
 
 function deployment(id, age, extra = {}) {
   return {

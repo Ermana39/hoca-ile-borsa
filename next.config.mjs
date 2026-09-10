@@ -261,6 +261,19 @@ const eskiUrlRedirects = [
 
 const nextConfig = {
   poweredByHeader: false,
+  // Vercel Hobby derleme makinesi iki cekirdek sagliyor, ancak Next.js varsayilan
+  // olarak bir cekirdegi ayirip binlerce statik sayfayi tek worker ile uretiyor.
+  // Bu ayar yalniz Vercel build'inde iki cekirdegi de kullanir; yerel gelistirme
+  // ve yerel build davranisi degismez.
+  ...(process.env.VERCEL === "1"
+    ? {
+        experimental: {
+          cpus: 2,
+          staticGenerationMaxConcurrency: 16,
+          staticGenerationMinPagesPerWorker: 50,
+        },
+      }
+    : {}),
   // Site verileri her deploy oncesinde dosyalardan uretiliyor. Sayfalari gercek
   // statik dosya olarak cikarmak, Vercel'in her HTML/RSC yanitini ISR deposunda
   // tutmasini ve 8 KB'lik ISR okuma birimleriyle ucretlendirmesini engeller.

@@ -1,6 +1,7 @@
 name: Vercel yayin depolama temizligi
 
 on:
+  status:
   deployment_status:
   workflow_dispatch:
     inputs:
@@ -21,6 +22,8 @@ jobs:
     if: >-
       github.repository == 'Ermana39/hoca-ile-borsa' &&
       (github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'status' && github.event.context == 'Vercel' &&
+      github.event.state == 'success') ||
       (github.event.deployment_status.state == 'success' &&
       github.event.deployment.environment == 'Production'))
     runs-on: ubuntu-latest
@@ -42,7 +45,7 @@ jobs:
       - name: Canli yayini dogrula ve eski yayinlari temizle
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          APPLY: ${{ github.event_name == 'deployment_status' || inputs.apply }}
+          APPLY: ${{ github.event_name != 'workflow_dispatch' || inputs.apply }}
         run: |
           if [ "$APPLY" = "true" ]; then
             node scripts/vercel-retention.mjs --apply

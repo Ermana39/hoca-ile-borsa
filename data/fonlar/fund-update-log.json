@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-10T09:31:05.231Z",
+  "generatedAt": "2026-09-10T15:35:57.333Z",
   "duplicateKontrolu": {
     "added": 0,
-    "updated": 0,
-    "skipped": 3876
+    "updated": 2,
+    "skipped": 4064
   },
   "islenenFonSayisi": 1064,
   "islenenSnapshotSayisi": 2044,
-  "kaliciSnapshotSayisi": 1694901,
-  "temizlenenGecersizSnapshotSayisi": 106,
-  "yoneticiyleEslesenFonSayisi": 1926,
-  "bilinmeyenYoneticiSayisi": 12,
+  "kaliciSnapshotSayisi": 1694996,
+  "temizlenenGecersizSnapshotSayisi": 11,
+  "yoneticiyleEslesenFonSayisi": 2016,
+  "bilinmeyenYoneticiSayisi": 17,
   "bilinmeyenYoneticiFonlari": [
     {
       "fonKodu": "OPU",
@@ -20,6 +20,10 @@
     {
       "fonKodu": "DK8",
       "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN SEKİZİNCİ SERBEST (DÖVİZ) FON"
+    },
+    {
+      "fonKodu": "KPS",
+      "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN ONİKİNCİ SERBEST (DÖVİZ) FON"
     },
     {
       "fonKodu": "OAO",
@@ -60,12 +64,28 @@
     {
       "fonKodu": "GOK",
       "fonAdi": "GOLDEN GLOBAL PORTFÖY KISA VADELİ KİRA SERTİFİKALARI KATILIM FONU"
+    },
+    {
+      "fonKodu": "VHK",
+      "fonAdi": "V PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)"
+    },
+    {
+      "fonKodu": "VPH",
+      "fonAdi": "V PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)"
+    },
+    {
+      "fonKodu": "VPD",
+      "fonAdi": "V PORTFÖY BİRİNCİ DEĞİŞKEN FON"
+    },
+    {
+      "fonKodu": "VPE",
+      "fonAdi": "V PORTFÖY İKİNCİ DEĞİŞKEN FON"
     }
   ],
   "kaynakDogrulama": {
     "sonKaynakTarihi": "2026-09-10",
     "sonKaynakKayitSayisi": 2044,
-    "sonKaynakGecerliKayitSayisi": 1938,
+    "sonKaynakGecerliKayitSayisi": 2033,
     "gitGecmisindeIncelenenSurumSayisi": 108,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
@@ -87,28 +107,19 @@
       }
     ],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 106,
+      "sayi": 11,
       "ornekler": [
-        "AES:2026-09-10",
-        "APJ:2026-09-10",
-        "ARL:2026-09-10",
-        "ARM:2026-09-10",
-        "AVC:2026-09-10",
-        "EJG:2026-09-10",
         "FNN:2026-09-10",
-        "FSU:2026-09-10",
-        "GAH:2026-09-10",
-        "GAV:2026-09-10",
-        "GBP:2026-09-10",
-        "GBV:2026-09-10",
-        "GCC:2026-09-10",
-        "GCZ:2026-09-10",
-        "GDJ:2026-09-10",
-        "GFL:2026-09-10",
-        "GFY:2026-09-10",
-        "GGP:2026-09-10",
-        "GGR:2026-09-10",
-        "GJA:2026-09-10"
+        "GKE:2026-09-10",
+        "GKO:2026-09-10",
+        "GMV:2026-09-10",
+        "GSU:2026-09-10",
+        "PCS:2026-09-10",
+        "PHN:2026-09-10",
+        "PKZ:2026-09-10",
+        "RPE:2026-09-10",
+        "TMH:2026-09-10",
+        "TPL:2026-09-10"
       ]
     }
   },
@@ -143,9 +154,9 @@
       },
       {
         "fonKodu": "TMV",
-        "tarihSayisi": 1053,
+        "tarihSayisi": 1054,
         "ilkTarih": "2022-06-30",
-        "sonTarih": "2026-09-09"
+        "sonTarih": "2026-09-10"
       },
       {
         "fonKodu": "DOH",
@@ -157,41 +168,11 @@
   },
   "etkiAnaliziGerceklesenSenkronu": {
     "senkronizeEdildi": false,
-    "tahminTarihi": "2026-09-10",
+    "tahminTarihi": "2026-09-11",
     "guncellenenFonlar": []
   },
-  "veriUyarisiSayisi": 78,
+  "veriUyarisiSayisi": 77,
   "veriUyarilari": [
-    {
-      "tur": "gunluk-kaynakta-eksik-finansal-veri",
-      "tarih": "2026-09-10",
-      "toplamKayitSayisi": 2044,
-      "gecerliKayitSayisi": 1938,
-      "gecersizKayitSayisi": 106,
-      "gecerliOran": 0.9481409,
-      "ornekFonKodlari": [
-        "AES",
-        "APJ",
-        "ARL",
-        "ARM",
-        "AVC",
-        "EJG",
-        "FNN",
-        "FSU",
-        "GAH",
-        "GAV",
-        "GBP",
-        "GBV",
-        "GCC",
-        "GCZ",
-        "GDJ",
-        "GFL",
-        "GFY",
-        "GGP",
-        "GGR",
-        "GJA"
-      ]
-    },
     {
       "tur": "getiri-kaynaginda-guncel-listede-yok",
       "tarih": "2026-09-10",
@@ -649,7 +630,7 @@
       "tarih": "2026-09-10",
       "tur": "fon-toplam-degeri-duzeltildi",
       "kaynakFonToplamDeger": 79381.03,
-      "hesaplananFonToplamDeger": 8372226.62,
+      "hesaplananFonToplamDeger": 79381.03,
       "farkOrani": 104.46885849
     },
     {

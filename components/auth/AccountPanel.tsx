@@ -84,14 +84,31 @@ export default function AccountPanel() {
     <div className="space-y-6">
       {error ? <AuthMessage type="error">{error}</AuthMessage> : null}
 
-      <dl className="divide-y divide-slate-200 rounded-xl border border-slate-200">
-        {rows.map(([label, value]) => (
-          <div key={label} className="grid gap-1 px-4 py-3 sm:grid-cols-[150px_1fr]">
-            <dt className="text-sm font-semibold text-slate-500">{label}</dt>
-            <dd className="break-words text-sm font-bold text-slate-900">{value}</dd>
-          </div>
-        ))}
-      </dl>
+      <section aria-labelledby="hesap-bilgilerim-baslik" className="space-y-3">
+        <h2 id="hesap-bilgilerim-baslik" className="text-base font-bold text-slate-900">Hesap Bilgilerim</h2>
+        <dl className="divide-y divide-slate-200 rounded-xl border border-slate-200">
+          {rows.map(([label, value]) => (
+            <div key={label} className="grid gap-1 px-4 py-3 sm:grid-cols-[150px_1fr]">
+              <dt className="text-sm font-semibold text-slate-500">{label}</dt>
+              <dd className="break-words text-sm font-bold text-slate-900">{value}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+
+      <Link
+        href="/portfoyum"
+        prefetch={false}
+        className="group flex w-full items-center justify-between rounded-xl border border-blue-200 bg-blue-50 px-4 py-4 transition hover:border-blue-300 hover:bg-blue-100"
+      >
+        <span>
+          <span className="block text-sm font-extrabold text-blue-900">Portföyüm</span>
+          <span className="mt-1 block text-xs leading-5 text-blue-700">Fon portföyünüzü görüntüleyin ve yönetin.</span>
+        </span>
+        <svg className="h-5 w-5 shrink-0 text-blue-700 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+          <path d="m9 18 6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </Link>
 
       <button type="button" onClick={logout} className="inline-flex w-full items-center justify-center rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm font-bold text-slate-800 hover:bg-slate-50">Çıkış Yap</button>
 

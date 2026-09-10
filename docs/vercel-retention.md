@@ -2,8 +2,9 @@
 
 Guncelleme komutu degismez: `npm run yayinla`.
 
-GitHub Actions, Vercel'in basarili production bildiriminden sonra temizligi
-calistirir. Bu islem build'in parcasi degildir; build yapmaz, commit veya deploy
+GitHub Actions, Vercel'in basarili commit durumu veya production bildiriminden
+sonra temizligi calistirir; bildirimin commit'i mevcut production ile eslesmelidir.
+Bu islem build'in parcasi degildir; build yapmaz, commit veya deploy
 baslatmaz. Bilgisayarin acik kalmasi gerekmez.
 
 ## Bir defalik etkinlestirme
@@ -15,7 +16,7 @@ baslatmaz. Bilgisayarin acik kalmasi gerekmez.
    Token'i kaynak dosyalara veya sohbetlere yazma.
 3. Bu dosyalari normal yayin komutuyla gonder. Sonraki basarili production
    yayinlari otomatik temizlik baslatir. Vercel Git entegrasyonunun GitHub'a
-   deployment status bildirimleri gondermesi gerekir.
+   commit status veya deployment status bildirimleri gondermesi gerekir.
 4. Ilk kontrol icin GitHub Actions > Vercel yayin depolama temizligi > Run workflow
    secenegini silme kutusu kapali olarak calistir; raporu incele. Mevcut birikimi
    yeni deploy yapmadan temizlemek icin ayni is akisinda silme kutusunu ac.

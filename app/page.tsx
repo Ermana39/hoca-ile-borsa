@@ -674,7 +674,7 @@ export default function HomePage() {
         <section className="px-4 pt-4 pb-3 md:px-6 md:pt-5">
           <div className="overflow-hidden rounded-2xl">
             <Image
-              src="/banner3.webp"
+              src="/banner.webp"
               alt="Hoca İle Borsa - Piyasayı Tek Ekranda Takip Et"
               width={1228}
               height={414}

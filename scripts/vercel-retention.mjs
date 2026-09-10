@@ -183,6 +183,20 @@ export async function runRetention({ api, apply = false, expectedSha, check = ch
   return { ...plan, deleted };
 }
 
+export function expectedShaFromEvent(eventName, event) {
+  if (eventName === "workflow_dispatch") return undefined;
+  let sha;
+  if (eventName === "deployment_status") {
+    requireValue(event.deployment_status?.state === "success" && event.deployment?.environment?.toLowerCase() === "production", "Basarili production bildirimi bekleniyor.");
+    sha = event.deployment.sha;
+  } else {
+    requireValue(eventName === "status" && event.context === "Vercel" && event.state === "success", "Basarili Vercel bildirimi bekleniyor.");
+    sha = event.sha;
+  }
+  requireValue(typeof sha === "string" && /^[a-f0-9]{40}$/i.test(sha), "Yayin commit kimligi eksik.");
+  return sha;
+}
+
 async function main() {
   const args = process.argv.slice(2);
   requireValue(args.every((arg) => ["--apply", "--dry-run"].includes(arg)) && !(args.includes("--apply") && args.includes("--dry-run")), "Gecersiz temizlik secenegi.");
@@ -190,13 +204,7 @@ async function main() {
   if (process.env.GITHUB_ACTIONS === "true") {
     requireValue(process.env.GITHUB_REPOSITORY === POLICY.repository, "GitHub deposu eslesmiyor.");
     const event = JSON.parse(readFileSync(process.env.GITHUB_EVENT_PATH, "utf8"));
-    if (process.env.GITHUB_EVENT_NAME === "deployment_status") {
-      requireValue(event.deployment_status?.state === "success" && event.deployment?.environment?.toLowerCase() === "production", "Basarili production bildirimi bekleniyor.");
-      expectedSha = event.deployment.sha;
-      requireValue(typeof expectedSha === "string" && /^[a-f0-9]{40}$/i.test(expectedSha), "Yayin commit kimligi eksik.");
-    } else {
-      requireValue(process.env.GITHUB_EVENT_NAME === "workflow_dispatch", "Desteklenmeyen GitHub olayi.");
-    }
+    expectedSha = expectedShaFromEvent(process.env.GITHUB_EVENT_NAME, event);
   }
   await runRetention({ api: createClient(process.env.VERCEL_TOKEN), apply: args.includes("--apply"), expectedSha });
 }
