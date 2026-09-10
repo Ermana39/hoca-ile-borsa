@@ -96,7 +96,9 @@ function classify(files, forceFull = false) {
   );
   const full = forceFull || buildInfrastructureChanged;
   const excel = full || excelFiles.some((file) => file !== effectExcel);
-  const effect = full || changed.includes(effectExcel);
+  // Tahmin Excel'i yalnızca kullanıcı o dosyayı gerçekten değiştirdiğinde
+  // işlenir. Genel bir tam hazırlık, mevcut tahmini ertesi güne taşımamalı.
+  const effect = changed.includes(effectExcel);
   const funds = full || effect || fundExcel.some((file) => changed.includes(file));
   const companySync = full || has((file) =>
     /\.(xlsx|xls|xlsm)$/i.test(file) &&
@@ -175,8 +177,12 @@ function prepare(groups) {
   if (groups.ipo) run(process.execPath, ["scripts/archive-ipo-draft.mjs", "--check-approved"], "Halka arz arsivini dogrula");
 }
 
-function fullGroups(changedCount = 0) {
-  return classify([], true, changedCount);
+function fullGroups(changedCount = 0, preserve = {}) {
+  return {
+    ...classify([], true),
+    effect: Boolean(preserve.effect),
+    changedCount,
+  };
 }
 
 function writePlan(groups) {
@@ -211,7 +217,7 @@ if (prepareOnly || showPlanOnly) {
     if (groups.full) throw error;
     console.warn(`[build] Hizli hazirlik basarisiz: ${error.message}`);
     console.warn("[build] Guvenli tam hazirliga geciliyor.");
-    groups = fullGroups(files.length);
+    groups = fullGroups(files.length, groups);
     prepare(groups);
   }
   writePlan(groups);
@@ -239,7 +245,7 @@ if (!alreadyPrepared) {
     if (groups.full) throw error;
     console.warn(`[build] Hizli hazirlik basarisiz: ${error.message}`);
     console.warn("[build] Guvenli tam hazirliga geciliyor.");
-    groups = fullGroups(detectedFiles?.length ?? 0);
+    groups = fullGroups(detectedFiles?.length ?? 0, groups);
     prepare(groups);
   }
 }
@@ -247,7 +253,7 @@ if (!alreadyPrepared) {
 let status = run(process.execPath, ["scripts/build-static-export.mjs"], "Statik siteyi olustur", { allowFailure: true });
 if (status !== 0 && !groups.full) {
   console.warn("[build] Hizli build basarisiz. Tam hazirlikla bir kez daha deneniyor.");
-  groups = fullGroups(detectedFiles?.length ?? 0);
+  groups = fullGroups(detectedFiles?.length ?? 0, groups);
   prepare(groups);
   status = run(process.execPath, ["scripts/build-static-export.mjs"], "Tam statik siteyi olustur", { allowFailure: true });
 }

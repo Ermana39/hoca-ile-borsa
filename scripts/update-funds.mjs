@@ -1086,7 +1086,7 @@ async function syncEffectAnalysisHistory(details, generatedAt) {
   }
 
   if (syncedFunds.length > 0) {
-    effectData.sonGuncelleme = latestDate;
+    effectData.tarihselSonGuncelleme = latestDate;
     effectData.tarihselSenkron = {
       generatedAt,
       kaynak: "data/fonlar/fund-details",

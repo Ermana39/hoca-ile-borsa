@@ -858,7 +858,10 @@ for (const code of expectedEffectFunds) {
   const lastDate = effectFund.tarihsel.at(-1).tarih;
   if (!latestEffectDate || lastDate > latestEffectDate) latestEffectDate = lastDate;
 }
-assert(effectData.sonGuncelleme === latestEffectDate, "Etki analizi son güncelleme tarihi yanlış.");
+assert(
+  effectData.tarihselSonGuncelleme === latestEffectDate,
+  "Etki analizi tarihsel veri güncelleme tarihi yanlış."
+);
 
 const forecastData = JSON.parse(fs.readFileSync(sourcePaths.etkiTahmin, "utf8"));
 const expectedForecastFunds = ["DFI", "DOH", "KHA", "THF", "TLY", "TMV"];
@@ -868,9 +871,14 @@ assert(
   "Açılış tahmini yalnızca gösterilecek altı fondan oluşmalı."
 );
 assert(
-  forecastData.kaynakTarihi <= effectData.sonGuncelleme &&
-    effectData.sonGuncelleme <= forecastData.tahminTarihi,
+  forecastData.kaynakTarihi === effectData.sonGuncelleme &&
+    effectData.sonGuncelleme < forecastData.tahminTarihi,
   "Açılış tahmini kaynak ve hedef tarihleri etki analiziyle uyuşmuyor."
+);
+assert(
+  /^[a-f0-9]{64}$/.test(forecastData.kaynakVeriSha256) &&
+    forecastData.kaynakVeriSha256 === effectData.kaynakVeriSha256,
+  "Açılış tahmininin kaynak Excel özeti eksik veya etki analiziyle uyuşmuyor."
 );
 assert(
   forecastData.tahminTarihi === sonrakiBistIslemGunu(forecastData.kaynakTarihi),

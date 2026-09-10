@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import crypto from "node:crypto";
 import XLSX from "./lib/xlsx.mjs";
 import { sonrakiBistIslemGunu } from "./lib/bist-islem-takvimi.mjs";
 
@@ -109,10 +110,27 @@ async function jsonOku(dosya) {
   }
 }
 
-async function acilisTahminleriniGuncelle(cikti) {
+function tahminlerAyniMi(onceki, fonlar) {
+  return GOSTERILECEK_FONLAR.every((kod) => {
+    const oncekiTahmin = onceki?.fonlar?.[kod]?.tahmin;
+    const yeniTahmin = fonlar[kod]?.toplamEtki;
+    return Number.isFinite(oncekiTahmin) &&
+      Number.isFinite(yeniTahmin) &&
+      Math.abs(oncekiTahmin - yeniTahmin) <= ETKI_TOLERANSI;
+  });
+}
+
+async function acilisTahminleriniGuncelle(cikti, kaynakVeriSha256) {
   const onceki = await jsonOku(TAHMIN_DOSYA);
-  const tahminTarihi = sonrakiBistIslemGunu(cikti.sonGuncelleme);
-  const ayniTahmin = onceki?.tahminTarihi === tahminTarihi;
+  const ayniKaynak = onceki?.kaynakVeriSha256
+    ? onceki.kaynakVeriSha256 === kaynakVeriSha256
+    : tahminlerAyniMi(onceki, cikti.fonlar);
+  const kaynakTarihi = ayniKaynak && /^\d{4}-\d{2}-\d{2}$/.test(onceki?.kaynakTarihi ?? "")
+    ? onceki.kaynakTarihi
+    : cikti.sonGuncelleme;
+  const tahminTarihi = ayniKaynak && /^\d{4}-\d{2}-\d{2}$/.test(onceki?.tahminTarihi ?? "")
+    ? onceki.tahminTarihi
+    : sonrakiBistIslemGunu(kaynakTarihi);
   const fonlar = {};
 
   for (const kod of GOSTERILECEK_FONLAR) {
@@ -123,22 +141,30 @@ async function acilisTahminleriniGuncelle(cikti) {
 
     fonlar[kod] = {
       tahmin: etki,
-      gerceklesen: ayniTahmin ? (onceki?.fonlar?.[kod]?.gerceklesen ?? null) : null,
+      gerceklesen: ayniKaynak
+        ? (onceki?.fonlar?.[kod]?.gerceklesen ?? null)
+        : null,
     };
   }
 
   const tahminler = {
     version: 1,
-    kaynakTarihi: cikti.sonGuncelleme,
+    kaynakTarihi,
     tahminTarihi,
+    kaynakVeriSha256,
     generatedAt: new Date().toISOString(),
     fonlar,
+    ...(ayniKaynak && onceki?.gerceklesenGuncellemeZamani
+      ? { gerceklesenGuncellemeZamani: onceki.gerceklesenGuncellemeZamani }
+      : {}),
   };
 
   await dosyaYazTekrarli(TAHMIN_DOSYA, `${JSON.stringify(tahminler, null, 2)}\n`);
   console.log(
     `Fon açılış tahminleri hazırlandı: ${tahminTarihi} (${GOSTERILECEK_FONLAR.join(", ")})`
   );
+
+  return { kaynakTarihi, tahminTarihi, ayniKaynak };
 }
 
 async function genelFonGecmisiniOku(kod) {
@@ -451,22 +477,36 @@ async function main() {
     fonlar[kod] = fonSayfasiniDonustur(workbook.Sheets[kod], kod, yedekFon);
   }
 
+  const kaynakVeriSha256 = crypto
+    .createHash("sha256")
+    .update(JSON.stringify(Object.fromEntries(
+      GOSTERILECEK_FONLAR.map((kod) => [kod, {
+        toplamFonOrani: fonlar[kod].toplamFonOrani,
+        toplamEtki: fonlar[kod].toplamEtki,
+        portfoy: fonlar[kod].portfoy,
+      }])
+    )))
+    .digest("hex");
+
   const sonTarihler = Object.values(fonlar).map(
     (fon) => fon.tarihsel.at(-1).tarih
   );
-  const sonGuncelleme = [...sonTarihler].sort().at(-1);
+  const tarihselSonGuncelleme = [...sonTarihler].sort().at(-1);
 
   const cikti = {
     kaynakDosya: path.basename(KAYNAK_DOSYA),
-    sonGuncelleme,
+    kaynakVeriSha256,
+    sonGuncelleme: tarihselSonGuncelleme,
+    tarihselSonGuncelleme,
     fonlar,
     ...(oncekiCikti?.tarihselSenkron
       ? { tarihselSenkron: oncekiCikti.tarihselSenkron }
       : {}),
   };
 
+  const tahminDurumu = await acilisTahminleriniGuncelle(cikti, kaynakVeriSha256);
+  cikti.sonGuncelleme = tahminDurumu.kaynakTarihi;
   await dosyaYazTekrarli(CIKTI_DOSYA, `${JSON.stringify(cikti, null, 2)}\n`);
-  await acilisTahminleriniGuncelle(cikti);
   console.log(
     `Fon etki verileri hazırlandı: ${path.relative(process.cwd(), CIKTI_DOSYA)}`
   );
