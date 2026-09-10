@@ -5,8 +5,8 @@ import {
   scrypt,
   timingSafeEqual,
 } from "node:crypto";
-import { getCookie } from "./http-api";
-import { kv } from "./kv";
+import { getCookie } from "./http-api.js";
+import { kv } from "./kv.js";
 
 export type MemberRole = "user" | "admin";
 export type MemberPlan = "free" | "premium";
