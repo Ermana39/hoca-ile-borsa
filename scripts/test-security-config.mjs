@@ -1,5 +1,8 @@
 import assert from "node:assert/strict";
+import { createRequire } from "node:module";
 import test from "node:test";
+
+const { match } = createRequire(import.meta.url)("next/dist/compiled/path-to-regexp");
 
 test("deployed static pages receive production security headers", async () => {
   const previous = process.env.NODE_ENV;
@@ -42,5 +45,32 @@ test("private API responses bypass every CDN cache while static search remains c
   const authHeaders = Object.fromEntries(authRule.headers.map(({ key, value }) => [key, value]));
   for (const key of ["Cache-Control", "CDN-Cache-Control", "Vercel-CDN-Cache-Control"]) {
     assert.match(authHeaders[key], /no-store/);
+  }
+});
+
+test("versioned build assets use browser caching without freezing pages or fund data", async () => {
+  const { config } = await import("../vercel.mjs");
+  const cacheForPath = (pathname) => config.headers
+    .filter((rule) => match(rule.source)(pathname))
+    .flatMap((rule) => rule.headers)
+    .filter((header) => header.key.toLowerCase() === "cache-control")
+    .at(-1)?.value;
+
+  for (const pathname of [
+    "/_next/static/chunks/066_9qs-fr7km.js",
+    "/_next/static/chunks/3fxicq_o_lj2t.css",
+    "/_next/static/media/font.5c73eaf1.woff2",
+  ]) {
+    assert.equal(cacheForPath(pathname), "public, max-age=31536000, immutable", pathname);
+  }
+  for (const pathname of [
+    "/", "/haberler", "/haber/ornek-haber", "/fonlar/tly",
+    "/data/fonlar/history-bundles/00.json", "/api/arama",
+    "/sitemap.xml", "/news-sitemap.xml", "/_next/static-like/file.js",
+  ]) {
+    assert.equal(cacheForPath(pathname), undefined, pathname);
+  }
+  for (const pathname of ["/api/auth/session", "/api/contact"]) {
+    assert.equal(cacheForPath(pathname), "private, no-store", pathname);
   }
 });

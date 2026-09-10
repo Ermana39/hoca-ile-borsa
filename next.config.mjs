@@ -451,6 +451,13 @@ const nextConfig = {
   },
 
   async headers() {
+    // Vercel statik export'u Next sunucusu olmadan sunar; surumlu dosyalarin
+    // tarayici cache basligini burada acikca tanimlamak gerekir.
+    const buildAssetHeaders = [{
+      source: "/_next/static/:path*",
+      headers: [{ key: "Cache-Control", value: ONE_YEAR_CACHE }],
+    }];
+
     // Tüm görsellere 30 günlük tarayıcı+CDN cache. "immutable" değil; çünkü bir
     // görseli aynı adla değiştirebilirsin — bu durumda en geç 30 günde tazelenir.
     // Bu kural ÖNCE; aşağıdaki özel liste SONRA geldiği için (son kural kazanır)
@@ -500,7 +507,7 @@ const nextConfig = {
       ],
     }];
 
-    return [...generalImageHeaders, ...imageHeaders, ...globalSecurityHeaders, ...privateApiHeaders];
+    return [...generalImageHeaders, ...imageHeaders, ...buildAssetHeaders, ...globalSecurityHeaders, ...privateApiHeaders];
   },
   }),
 };

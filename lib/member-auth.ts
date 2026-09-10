@@ -448,7 +448,7 @@ export async function deleteMember(member: MemberRecord) {
   const redis = requireStore();
   const relatedKeys = [
     `hib:auth:consent:${member.user_id}`,
-    // Gelecekte portföy anahtarları burada merkezi olarak genişletilecek.
+    `hib:portfolio:user:${member.user_id}:holdings`,
   ];
   await redis.eval<[string, string], number>(
     DELETE_MEMBER_SCRIPT,

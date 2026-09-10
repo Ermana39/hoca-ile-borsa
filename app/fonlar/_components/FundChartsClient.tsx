@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import MarketChart, { type MarketChartPoint } from "@/components/charts/MarketChart";
 import { formatSignedTL } from "@/lib/fon-format";
 import type { FundHistoryRow } from "@/lib/fon-platform";
@@ -86,31 +86,58 @@ export default function FundChartsClient({
 }) {
   const [period, setPeriod] = useState<Period>("Maks");
   const [history, setHistory] = useState(initialHistory);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    if (!historyUrl) return;
+    const section = sectionRef.current;
+    if (!historyUrl || !section) return;
 
     const controller = new AbortController();
-    fetch(historyUrl, { cache: "force-cache", signal: controller.signal })
-      .then((response) => {
-        if (!response.ok) throw new Error(`Fon geçmişi yüklenemedi: ${response.status}`);
-        return response.json() as Promise<{
-          rows?: FundHistoryTuple[];
-          funds?: Record<string, FundHistoryTuple[]>;
-        }>;
-      })
-      .then((payload) => {
-        const rows = historyKey ? payload.funds?.[historyKey] : payload.rows;
-        if (Array.isArray(rows) && rows.length > 0) {
-          setHistory(decodeHistory(rows));
-        }
-      })
-      .catch((error: unknown) => {
-        if (error instanceof DOMException && error.name === "AbortError") return;
-      });
+    let started = false;
 
-    return () => controller.abort();
-  }, [historyKey, historyUrl, initialHistory]);
+    const loadHistory = () => {
+      if (started || controller.signal.aborted) return;
+      started = true;
+
+      fetch(historyUrl, { cache: "force-cache", signal: controller.signal })
+        .then((response) => {
+          if (!response.ok) throw new Error(`Fon geçmişi yüklenemedi: ${response.status}`);
+          return response.json() as Promise<{
+            rows?: FundHistoryTuple[];
+            funds?: Record<string, FundHistoryTuple[]>;
+          }>;
+        })
+        .then((payload) => {
+          const rows = historyKey ? payload.funds?.[historyKey] : payload.rows;
+          if (!controller.signal.aborted && Array.isArray(rows) && rows.length > 0) {
+            setHistory(decodeHistory(rows));
+          }
+        })
+        .catch((error: unknown) => {
+          if (error instanceof DOMException && error.name === "AbortError") return;
+        });
+    };
+
+    if (typeof IntersectionObserver === "undefined") {
+      const timer = window.setTimeout(loadHistory, 0);
+      return () => {
+        window.clearTimeout(timer);
+        controller.abort();
+      };
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      observer.disconnect();
+      loadHistory();
+    });
+    observer.observe(section);
+
+    return () => {
+      observer.disconnect();
+      controller.abort();
+    };
+  }, [historyKey, historyUrl]);
 
   const charts = useMemo(() => {
     const sorted = [...history].sort((a, b) => a.tarih.localeCompare(b.tarih));
@@ -129,7 +156,7 @@ export default function FundChartsClient({
   }, [history, period]);
 
   return (
-    <section className="space-y-4">
+    <section ref={sectionRef} className="space-y-4">
       <div
         className="grid w-full grid-cols-4 rounded-md border border-slate-700 bg-slate-900 p-1 sm:w-fit sm:grid-cols-7"
         aria-label="Grafik dönemi"
