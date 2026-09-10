@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { kv } from "./kv.js";
+import { kv } from "./kv";
 
 type RateLimitResult = { allowed: boolean; retryAfterSeconds: number };
 type LocalEntry = { count: number; expiresAt: number };

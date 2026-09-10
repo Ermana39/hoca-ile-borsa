@@ -1,6 +1,6 @@
 import { randomUUID } from "node:crypto";
-import { kv } from "./kv.js";
-import { MemberAuthError } from "./member-auth.js";
+import { kv } from "./kv";
+import { MemberAuthError } from "./member-auth";
 
 export type PortfolioAssetType = "fund" | "currency" | "gold";
 
