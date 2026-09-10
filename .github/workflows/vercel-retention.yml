@@ -1,0 +1,51 @@
+name: Vercel yayin depolama temizligi
+
+on:
+  deployment_status:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: Eski yayinlari sil (kapaliysa yalnizca rapor)
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vercel-retention-hoca-ile-borsa
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    if: >-
+      github.repository == 'Ermana39/hoca-ile-borsa' &&
+      (github.event_name == 'workflow_dispatch' ||
+      (github.event.deployment_status.state == 'success' &&
+      github.event.deployment.environment == 'Production'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+          sparse-checkout: |
+            scripts/vercel-retention.mjs
+            scripts/test-vercel-retention.mjs
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Koruma kurallarini test et
+        run: node --test scripts/test-vercel-retention.mjs
+      - name: Canli yayini dogrula ve eski yayinlari temizle
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          APPLY: ${{ github.event_name == 'deployment_status' || inputs.apply }}
+        run: |
+          if [ "$APPLY" = "true" ]; then
+            node scripts/vercel-retention.mjs --apply
+          else
+            node scripts/vercel-retention.mjs --dry-run
+          fi
