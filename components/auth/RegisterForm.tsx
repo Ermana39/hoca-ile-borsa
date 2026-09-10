@@ -111,7 +111,7 @@ export default function RegisterForm() {
             disabled={loading}
           />
           <span className="min-w-0 break-words">
-            Hoca ile Borsa&apos;dan reklam, kampanya, duyuru ve pazarlama amaçlı e-posta almak istiyorum.
+            Hoca İle Borsa&apos;dan reklam, kampanya, duyuru ve pazarlama amaçlı e-posta almak istiyorum.
           </span>
         </label>
         <p className="text-xs leading-5 text-slate-600">Bu izin üyelik için zorunlu değildir.</p>
