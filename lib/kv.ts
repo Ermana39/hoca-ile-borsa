@@ -2,14 +2,17 @@ import { Redis } from "@upstash/redis";
 
 function getRedisConfig() {
   const url =
+    process.env.AUTH_KV_KV_REST_API_URL ||
     process.env.AUTH_KV_REST_API_URL ||
     process.env.KV_REST_API_URL ||
     process.env.UPSTASH_REDIS_REST_URL ||
+    process.env.AUTH_KV_KV_URL ||
     process.env.AUTH_KV_URL ||
     process.env.KV_URL ||
     "";
 
   const token =
+    process.env.AUTH_KV_KV_REST_API_TOKEN ||
     process.env.AUTH_KV_REST_API_TOKEN ||
     process.env.KV_REST_API_TOKEN ||
     process.env.UPSTASH_REDIS_REST_TOKEN ||
