@@ -3,11 +3,26 @@ import path from "node:path";
 
 const root = process.cwd();
 const sourceRoots = ["app", "components"];
+const HOBBY_FUNCTION_LIMIT = 12;
 const allowedNextLinkFile = path.normalize(
   path.join(root, "components", "NoPrefetchLink.tsx"),
 );
 const violations = [];
 const { default: nextConfig } = await import("../next.config.mjs");
+
+function countVercelFunctions(directory) {
+  if (!fs.existsSync(directory)) return 0;
+  return fs.readdirSync(directory, { recursive: true, withFileTypes: true })
+    .filter((entry) => entry.isFile() && entry.name.endsWith(".ts"))
+    .length;
+}
+
+const functionCount = countVercelFunctions(path.join(root, "api"));
+if (functionCount > HOBBY_FUNCTION_LIMIT) {
+  violations.push(
+    `api: Vercel Hobby siniri asildi (${functionCount}/${HOBBY_FUNCTION_LIMIT} Function)`,
+  );
+}
 
 if (nextConfig.output !== "export") {
   violations.push("next.config.mjs: output='export' olmali");
@@ -90,5 +105,5 @@ if (fs.existsSync(proxyPath)) {
 }
 
 console.log(
-  "Vercel kullanim korumalari dogrulandi: sayfalar statik, gorsel donusumu ve otomatik prefetch kapali, genel HTML proxy'si yok.",
+  `Vercel kullanim korumalari dogrulandi: ${functionCount}/${HOBBY_FUNCTION_LIMIT} Function, sayfalar statik, gorsel donusumu ve otomatik prefetch kapali, genel HTML proxy'si yok.`,
 );

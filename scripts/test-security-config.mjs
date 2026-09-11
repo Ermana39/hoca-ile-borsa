@@ -1,8 +1,12 @@
 import assert from "node:assert/strict";
+import fs from "node:fs";
+import path from "node:path";
 import { createRequire } from "node:module";
 import test from "node:test";
+import { fileURLToPath } from "node:url";
 
 const { match } = createRequire(import.meta.url)("next/dist/compiled/path-to-regexp");
+const root = fileURLToPath(new URL("../", import.meta.url));
 
 test("deployed static pages receive production security headers", async () => {
   const previous = process.env.NODE_ENV;
@@ -73,4 +77,21 @@ test("versioned build assets use browser caching without freezing pages or fund 
   for (const pathname of ["/api/auth/session", "/api/contact"]) {
     assert.equal(cacheForPath(pathname), "private, no-store", pathname);
   }
+});
+
+test("Hobby function limit is respected and portfolio prices share one function", async () => {
+  const { config } = await import("../vercel.mjs");
+  const functionCount = fs.readdirSync(path.join(root, "api"), {
+    recursive: true,
+    withFileTypes: true,
+  }).filter((entry) => entry.isFile() && entry.name.endsWith(".ts")).length;
+  assert.equal(functionCount, 12);
+  assert.ok(!fs.existsSync(path.join(root, "api", "portfolio-market-prices.ts")));
+  assert.deepEqual(
+    config.rewrites.find((rule) => rule.source === "/api/portfolio-market-prices"),
+    {
+      source: "/api/portfolio-market-prices",
+      destination: "/api/portfolio?hib_handler=market-prices",
+    },
+  );
 });

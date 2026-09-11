@@ -126,4 +126,13 @@ export const portfolioMarketPricesHandler = {
   },
 };
 
-export default portfolioHandler;
+const portfolioRouter = {
+  async fetch(request: Request) {
+    const action = new URL(request.url).searchParams.get("hib_handler");
+    return action === "market-prices"
+      ? portfolioMarketPricesHandler.fetch(request)
+      : portfolioHandler.fetch(request);
+  },
+};
+
+export default portfolioRouter;

@@ -27,6 +27,10 @@ export const config = {
     { source: "/api/contact", destination: "/api/misc?hib_handler=contact" },
     { source: "/api/health", destination: "/api/misc?hib_handler=health" },
     { source: "/api/revalidate", destination: "/api/misc?hib_handler=revalidate" },
+    {
+      source: "/api/portfolio-market-prices",
+      destination: "/api/portfolio?hib_handler=market-prices",
+    },
   ],
   redirects,
   headers,
