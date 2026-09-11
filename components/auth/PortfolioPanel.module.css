@@ -13,7 +13,7 @@
 .owner strong { display: block; font-size: 14px; overflow-wrap: anywhere; }
 .owner small { display: block; margin-top: 4px; font-size: 12px; color: var(--text-muted); }
 .actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-.primary, .secondary { display: inline-flex; justify-content: center; align-items: center; gap: 8px; border-radius: 10px; font-size: 13px; font-weight: 650; min-height: 42px; padding: 10px 16px; cursor: pointer; transition: background .15s, border-color .15s; }
+.primary, .secondary { display: inline-flex; justify-content: center; align-items: center; gap: 8px; border-radius: 10px; font-size: 13px; font-weight: 650; min-height: 42px; padding: 10px 16px; cursor: pointer; white-space: nowrap; flex-shrink: 0; transition: background .15s, border-color .15s; }
 .primary { background: #2563eb; color: #fff; border: 1px solid #3b82f6; box-shadow: 0 4px 16px #2563eb20; }
 .primary:hover { background: #1d4ed8; }
 .secondary { background: var(--surface); color: var(--text-soft); border: 1px solid var(--border); }
@@ -79,6 +79,19 @@
 .tableSearch input { width: 130px; background: transparent; font-size: 12px; padding: 10px 0; outline: none; color: var(--text); }
 .tableSearch select { font-size: 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 10px 8px; color: var(--text-soft); max-width: 135px; }
 .tableScroll { max-width: 100%; overflow-x: auto; }
+.mobileHoldings { display: none; }
+.mobileHolding { padding: 20px; border-top: 1px solid var(--border); }
+.mobileHoldingHeader { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.mobileHoldingHeader .asset strong { font-size: 14px; }
+.mobileHoldingHeader .asset small { display: block; font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+.mobileValue { display: grid; gap: 6px; margin: 22px 0; }
+.mobileValue span { color: var(--text-muted); font-size: 12px; }
+.mobileValue strong { font-size: 24px; font-weight: 700; letter-spacing: -.035em; }
+.mobileDetails { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.mobileDetails dt { font-size: 11px; color: var(--text-muted); }
+.mobileDetails dd { font-size: 12px; font-weight: 650; margin-top: 5px; overflow-wrap: anywhere; }
+.mobileDate { font-size: 10px; color: var(--text-muted); line-height: 1.6; margin-top: 18px; }
+.mobileFundLink { display: inline-flex; gap: 6px; align-items: center; font-size: 12px; color: var(--chart-line); margin-top: 14px; }
 .table { width: 100%; border-collapse: collapse; text-align: left; font-size: 12px; white-space: nowrap; }
 .table th { background: var(--surface-subtle); color: var(--text-muted); font-size: 10px; text-transform: uppercase; letter-spacing: .05em; font-weight: 600; padding: 12px 16px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .table td { padding: 20px 16px; border-bottom: 1px solid var(--border); }
@@ -122,6 +135,8 @@
   .chartGrid .cardHeader { flex-wrap: wrap; }
 }
 @media (max-width: 760px) {
+  .tableScroll { display: none; }
+  .mobileHoldings { display: block; }
   .page { padding: 24px 16px 44px; }
   .chartGrid { grid-template-columns: 1fr; }
   .insights { grid-template-columns: 1fr; gap: 12px; }
@@ -144,4 +159,5 @@
   .stat > strong { font-size: 22px; }
   .stats { gap: 10px; }
 }
+@media (max-width: 400px) { .chartMeta { flex-wrap: wrap; } .stat > strong { font-size: 19px; } }
 @media (prefers-reduced-motion: reduce) { .panel * { transition: none !important; animation: none !important; } }

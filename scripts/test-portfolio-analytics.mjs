@@ -14,10 +14,10 @@ function loadModule(relative, redis = null) {
   const source = ts.transpileModule(fs.readFileSync(file, "utf8"), {
     compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
   }).outputText;
-  const module = { exports: {} };
+  const compiledModule = { exports: {} };
   new Function("require", "module", "exports", source)((name) => name.startsWith(".")
-    ? loadModule(path.resolve(path.dirname(file), name.replace(/\.js$/, ".ts")), redis) : require(name), module, module.exports);
-  return module.exports;
+    ? loadModule(path.resolve(path.dirname(file), name.replace(/\.js$/, ".ts")), redis) : require(name), compiledModule, compiledModule.exports);
+  return compiledModule.exports;
 }
 const { summarizePortfolio, parsePortfolioNumber, buildPortfolioHistory, mergePriceHistory } = loadModule("lib/portfolio-analytics.ts");
 const position = (props = {}) => ({ holding_id: "gold", asset_type: "gold", asset_code: "XAU_GR", quantity: 10, buy_price: 6858.74, buy_date: "2026-09-08", created_at: "2026-09-11T10:00:00Z", updated_at: "2026-09-11T10:00:00Z", ...props });

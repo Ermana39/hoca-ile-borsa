@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useMemo, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { ArrowDownToLine, ArrowUpRight, ChartNoAxesCombined, CircleHelp, Coins, Layers3, Pencil, Search, Trash2, Wallet } from "lucide-react";
 import Link from "@/components/NoPrefetchLink";
 import { buildPortfolioHistory, summarizePortfolio, type PortfolioPosition, type PortfolioQuotes, type PortfolioPriceHistory, type PortfolioHistoryPoint } from "@/lib/portfolio-analytics";
@@ -20,13 +20,23 @@ function ValueChart({ points }: { points: PortfolioHistoryPoint[] }) {
   const [period, setPeriod] = useState(90);
   const [metric, setMetric] = useState<"value" | "profit">("value");
   const [activeDate, setActiveDate] = useState<string | null>(null);
+  const svgRef = useRef<SVGSVGElement>(null);
+  const [chartWidth, setChartWidth] = useState(840);
+  const showChart = points.length > 0;
+  useEffect(() => {
+    const element = svgRef.current;
+    if (!element) return;
+    const observer = new ResizeObserver(([entry]) => setChartWidth(Math.max(300, Math.round(entry.contentRect.width))));
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [showChart, metric, period]);
   const filtered = useMemo(() => {
     if (!period || !points.length) return points;
     const cutoff = Date.parse(points.at(-1)!.date) - period * 86_400_000;
     return points.filter((point) => Date.parse(point.date) >= cutoff);
   }, [points, period]);
   const selected = filtered.find((point) => point.date === activeDate) ?? filtered.at(-1);
-  const width = 840, height = 290, left = 72, right = 20, top = 20, bottom = 40;
+  const width = chartWidth, height = chartWidth < 500 ? 250 : 290, left = chartWidth < 500 ? 55 : 72, right = 20, top = 20, bottom = 40;
   const values = filtered.flatMap((point) => metric === "value" ? [point.cost, ...(point.value === null ? [] : [point.value])] : point.profit === null ? [] : [point.profit]);
   const low = Math.min(...values, ...(metric === "profit" ? [0] : []));
   const high = Math.max(...values, ...(metric === "profit" ? [0] : []));
@@ -71,7 +81,7 @@ function ValueChart({ points }: { points: PortfolioHistoryPoint[] }) {
       </div>
       {filtered.length && (metric === "value" || hasMarketData) ? (
         <>
-          <svg className={styles.chart} viewBox={`0 0 ${width} ${height}`} role="img" aria-label="Tarihe göre portföy değeri. Alttaki tarih seçicisini ok tuşlarıyla kullanabilirsiniz."
+          <svg ref={svgRef} className={styles.chart} viewBox={`0 0 ${width} ${height}`} role="img" aria-label="Tarihe göre portföy değeri. Alttaki tarih seçicisini ok tuşlarıyla kullanabilirsiniz."
             onPointerMove={(event) => {
               const bounds = event.currentTarget.getBoundingClientRect();
               const position = (event.clientX - bounds.left) / bounds.width * width;
@@ -169,6 +179,13 @@ export default function PortfolioOverview({ holdings, quotes, histories, fundNam
         <td className={tone(row.profit)}><strong>{row.profit === null ? "—" : money(row.profit)}</strong><small className={tone(row.returnPct)}>{row.returnPct === null ? "Fiyat bekleniyor" : percent(row.returnPct)}</small></td>
         <td><div className={styles.rowActions}><button type="button" aria-label={`${nameFor(row.holding)} düzenle`} title="Düzenle" onClick={() => onEdit(row.holding)}><Pencil size={15} /></button><button type="button" aria-label={`${nameFor(row.holding)} kaldır`} title="Kaldır" onClick={() => onDelete(row.holding)}><Trash2 size={15} /></button></div></td>
       </tr>)}</tbody></table></div> : <div className={styles.empty}><Wallet size={36} /><h3>{holdings.length ? "Bu filtreye uygun varlık bulunamadı" : "Portföyünüzü oluşturmaya başlayın"}</h3><p>{holdings.length ? "Aramanızı veya varlık türünü değiştirebilirsiniz." : "Elinizdeki miktarı ve alış fiyatını girin. Fon, döviz ve altınınızı tek yerde takip edin."}</p>{!holdings.length ? <button type="button" className={styles.primary} onClick={onAdd}>İlk varlığımı ekle</button> : null}</div>}
+      {rows.length ? <div className={styles.mobileHoldings}>{rows.map((row) => <article key={row.holding.holding_id} className={styles.mobileHolding}>
+        <div className={styles.mobileHoldingHeader}><div className={styles.asset}><span className={styles.assetIcon} style={{ color: colors[row.holding.asset_type], background: `${colors[row.holding.asset_type]}14` }}><Wallet size={18} /></span><div><strong>{nameFor(row.holding)}</strong><small>{typeNames[row.holding.asset_type]}</small></div></div><div className={styles.rowActions}><button type="button" aria-label={`${nameFor(row.holding)} düzenle`} onClick={() => onEdit(row.holding)}><Pencil size={15} /></button><button type="button" aria-label={`${nameFor(row.holding)} kaldır`} onClick={() => onDelete(row.holding)}><Trash2 size={15} /></button></div></div>
+        <div className={styles.mobileValue}><span>Güncel değer</span><strong>{row.value === null ? "Fiyat bekleniyor" : money(row.value)}</strong><span className={tone(row.profit)}>{row.profit === null ? "Alış maliyetiniz kayıtlı" : `${money(row.profit)} · ${percent(row.returnPct!)}`}</span></div>
+        <dl className={styles.mobileDetails}><div><dt>Miktar</dt><dd>{number(row.holding.quantity)} {row.holding.asset_type === "gold" ? "gr" : row.holding.asset_type === "currency" ? row.holding.asset_code : "adet"}</dd></div><div><dt>Alış maliyeti</dt><dd>{money(row.cost)}</dd></div><div><dt>Birim alış fiyatı</dt><dd>{number(row.holding.buy_price)} TL</dd></div><div><dt>Son fiyat</dt><dd>{row.quote ? `${number(row.quote.price)} TL` : "—"}</dd></div></dl>
+        <p className={styles.mobileDate}>{row.quote ? `Fiyat tarihi: ${dateLabel(row.quote.date)}` : "Piyasa fiyatı geldiğinde değeriniz hesaplanır."}{row.holding.buy_date ? ` · Alış: ${dateLabel(row.holding.buy_date)}` : ""}</p>
+        {row.holding.asset_type === "fund" ? <Link className={styles.mobileFundLink} href={`/fonlar/${row.holding.asset_code.toLowerCase()}`}>Fon detaylarını incele<ArrowUpRight size={14} /></Link> : null}
+      </article>)}</div> : null}
     </section>
 
     <div className={styles.insights}>
