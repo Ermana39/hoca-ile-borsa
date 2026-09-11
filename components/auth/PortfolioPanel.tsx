@@ -3,7 +3,7 @@
 import { FormEvent, useCallback, useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "@/components/NoPrefetchLink";
-import { AuthMessage, type ApiResult } from "./AuthFormParts";
+import { AuthMessage, getAuthSession, type ApiResult } from "./AuthFormParts";
 
 type AccountUser = {
   user_id: string;
@@ -309,8 +309,7 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
 
   useEffect(() => {
     let active = true;
-    void fetch("/api/auth/session", { credentials: "same-origin", cache: "no-store" })
-      .then(async (response) => (await response.json()) as ApiResult<AccountUser>)
+    void getAuthSession<AccountUser>()
       .then(async (result) => {
         if (!active) return;
         if (!result.authenticated || !result.user || !result.user.email_verified) {
@@ -512,7 +511,13 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
   }
 
   if (loading) return <AuthMessage type="info">Portföyünüz yükleniyor…</AuthMessage>;
-  if (!user) return <AuthMessage type="info">Giriş sayfasına yönlendiriliyorsunuz…</AuthMessage>;
+  if (!user) {
+    return (
+      <AuthMessage type={error ? "error" : "info"}>
+        {error || "Giriş sayfasına yönlendiriliyorsunuz…"}
+      </AuthMessage>
+    );
+  }
 
   const selectedMarket = marketAssets.find((item) => item.code === form.assetCode && item.type === form.assetType);
   const formBuyPrice = parseNumberInput(form.buyPrice);

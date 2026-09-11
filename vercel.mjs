@@ -21,6 +21,7 @@ export const config = {
     },
   },
   rewrites: [
+    { source: "/api/auth/:action", destination: "/api/auth?hib_handler=:action" },
     { source: "/api/admin-login", destination: "/api/admin?hib_handler=login" },
     { source: "/api/admin-logout", destination: "/api/admin?hib_handler=logout" },
     { source: "/api/admin-messages", destination: "/api/admin?hib_handler=messages" },

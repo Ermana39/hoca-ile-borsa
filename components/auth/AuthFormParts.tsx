@@ -9,6 +9,21 @@ export type ApiResult<T = unknown> = {
   authenticated?: boolean;
 };
 
+export async function getAuthSession<T = unknown>() {
+  const response = await fetch("/api/auth/session", {
+    credentials: "same-origin",
+    cache: "no-store",
+  });
+  const result = (await response.json().catch(() => ({
+    ok: false,
+    message: "Sunucu yanıtı okunamadı.",
+  }))) as ApiResult<T>;
+  if (!response.ok || !result.ok) {
+    throw new Error(result.message || "Oturum bilgileri yüklenemedi.");
+  }
+  return result;
+}
+
 export async function postAuth<T = unknown>(endpoint: string, body: Record<string, unknown>) {
   const response = await fetch(`/api/auth/${endpoint}`, {
     method: "POST",

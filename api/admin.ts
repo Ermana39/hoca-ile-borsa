@@ -134,14 +134,12 @@ export const adminMessagesHandler = {
 
     let memberStats: { active: number; pending: number } | null = null;
     let members: Awaited<ReturnType<typeof getAdminMemberList>> = [];
-    try {
-      [memberStats, members] = await Promise.all([
-        getMemberCounts(),
-        getAdminMemberList(),
-      ]);
-    } catch {
-      // Redis gecici olarak erisilemese de yonetim ekrani acilabilsin.
-    }
+    const [memberStatsResult, membersResult] = await Promise.allSettled([
+      getMemberCounts(),
+      getAdminMemberList(),
+    ]);
+    if (memberStatsResult.status === "fulfilled") memberStats = memberStatsResult.value;
+    if (membersResult.status === "fulfilled") members = membersResult.value;
 
     return jsonResponse(
       { ok: true, messages: [], memberStats, members },

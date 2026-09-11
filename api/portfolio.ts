@@ -129,9 +129,14 @@ export const portfolioMarketPricesHandler = {
 const portfolioRouter = {
   async fetch(request: Request) {
     const action = new URL(request.url).searchParams.get("hib_handler");
-    return action === "market-prices"
-      ? portfolioMarketPricesHandler.fetch(request)
-      : portfolioHandler.fetch(request);
+    if (!action) return portfolioHandler.fetch(request);
+    if (action === "market-prices") {
+      return portfolioMarketPricesHandler.fetch(request);
+    }
+    return jsonResponse(
+      { ok: false, message: "Portföy işlemi bulunamadı." },
+      { status: 404 },
+    );
   },
 };
 

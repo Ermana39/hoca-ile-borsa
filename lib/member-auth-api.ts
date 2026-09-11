@@ -344,28 +344,36 @@ export async function removeMemberAccount(request: Request) {
   });
 }
 
-export function authActionHandler(
-  action:
-    | "register"
-    | "login"
-    | "logout"
-    | "session"
-    | "forgot-password"
-    | "reset-password"
-    | "verify-email"
-    | "resend-verification"
-    | "delete-account",
-) {
-  const handlers = {
-    register: registerMember,
-    login: loginMember,
-    logout: logoutMember,
-    session: getMemberSession,
-    "forgot-password": forgotMemberPassword,
-    "reset-password": resetMemberPassword,
-    "verify-email": verifyMemberEmail,
-    "resend-verification": resendMemberVerification,
-    "delete-account": removeMemberAccount,
-  } as const;
+export const MEMBER_AUTH_ACTIONS = [
+  "register",
+  "login",
+  "logout",
+  "session",
+  "forgot-password",
+  "reset-password",
+  "verify-email",
+  "resend-verification",
+  "delete-account",
+] as const;
+
+export type MemberAuthAction = (typeof MEMBER_AUTH_ACTIONS)[number];
+
+const handlers = {
+  register: registerMember,
+  login: loginMember,
+  logout: logoutMember,
+  session: getMemberSession,
+  "forgot-password": forgotMemberPassword,
+  "reset-password": resetMemberPassword,
+  "verify-email": verifyMemberEmail,
+  "resend-verification": resendMemberVerification,
+  "delete-account": removeMemberAccount,
+} as const satisfies Record<MemberAuthAction, (request: Request) => Promise<Response>>;
+
+export function isMemberAuthAction(value: string): value is MemberAuthAction {
+  return Object.hasOwn(handlers, value);
+}
+
+export function authActionHandler(action: MemberAuthAction) {
   return { fetch: handlers[action] };
 }

@@ -380,10 +380,13 @@ export async function getAdminMemberList(): Promise<AdminMemberSummary[]> {
   );
   if (userIds.length === 0) return [];
 
+  const keys = userIds.map(memberKey);
   const mget = (redis as unknown as {
-    mget: (...keys: string[]) => Promise<unknown[]>;
-  }).mget.bind(redis);
-  const storedMembers = await mget(...userIds.map(memberKey));
+    mget?: (...keys: string[]) => Promise<unknown[]>;
+  }).mget;
+  const storedMembers = typeof mget === "function"
+    ? await mget.call(redis, ...keys)
+    : await Promise.all(keys.map((key) => redis.get<unknown>(key)));
 
   return storedMembers
     .map((value) => parseStored<MemberRecord>(value))

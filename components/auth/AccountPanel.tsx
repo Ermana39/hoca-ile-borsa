@@ -3,7 +3,7 @@
 import { FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "@/components/NoPrefetchLink";
-import { AuthField, AuthMessage, postAuth, PrimaryButton, type ApiResult } from "./AuthFormParts";
+import { AuthField, AuthMessage, getAuthSession, postAuth, PrimaryButton } from "./AuthFormParts";
 
 type AccountUser = {
   user_id: string;
@@ -26,13 +26,22 @@ export default function AccountPanel() {
   const [confirmation, setConfirmation] = useState("");
 
   useEffect(() => {
-    void fetch("/api/auth/session", { credentials: "same-origin", cache: "no-store" })
-      .then(async (response) => (await response.json()) as ApiResult<AccountUser>)
+    let active = true;
+    void getAuthSession<AccountUser>()
       .then((result) => {
-        if (result.authenticated && result.user) setUser(result.user);
+        if (active && result.authenticated && result.user) setUser(result.user);
       })
-      .catch(() => setError("Hesap bilgileri yüklenemedi."))
-      .finally(() => setLoading(false));
+      .catch((sessionError) => {
+        if (active) {
+          setError(sessionError instanceof Error ? sessionError.message : "Hesap bilgileri yüklenemedi.");
+        }
+      })
+      .finally(() => {
+        if (active) setLoading(false);
+      });
+    return () => {
+      active = false;
+    };
   }, []);
 
   async function logout() {

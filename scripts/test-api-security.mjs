@@ -12,12 +12,20 @@ const require = createRequire(import.meta.url);
 
 // Exercise the real handlers with isolated module state and fake mail/Redis.
 // No real email, credentials, or network access is used by this suite.
-function app({ redis = null, sendMail = async () => {}, transportOptions = () => {} } = {}) {
+function app({
+  redis = null,
+  sendMail = async () => {},
+  transportOptions = () => {},
+  portfolioPrices = async () => ({ fetchedAt: "2026-09-11T09:00:00.000Z", prices: {}, warnings: [] }),
+} = {}) {
   const cache = new Map();
   function load(relative) {
     const file = path.resolve(root, relative);
     if (cache.has(file)) return cache.get(file).exports;
     if (file === path.join(root, "lib", "kv.ts")) return { kv: redis };
+    if (file === path.join(root, "lib", "portfolio-market-prices.ts")) {
+      return { getPortfolioMarketPrices: portfolioPrices };
+    }
     const output = ts.transpileModule(fs.readFileSync(file, "utf8"), {
       fileName: file,
       compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020, esModuleInterop: true },
@@ -74,16 +82,30 @@ const validContact = { name: "Test Kişi", email: "visitor@example.com", subject
 function fakeAuthRedis() {
   const values = new Map();
   const sets = new Map();
+  const hashes = new Map();
   const limits = new Map();
   return {
     values,
     async get(key) { return values.get(key) ?? null; },
     async set(key, value) { values.set(key, value); return "OK"; },
-    async del(...keys) { for (const key of keys) { values.delete(key); sets.delete(key); } return keys.length; },
+    async mget(...keys) { return keys.map((key) => values.get(key) ?? null); },
+    async del(...keys) { for (const key of keys) { values.delete(key); sets.delete(key); hashes.delete(key); } return keys.length; },
     async sadd(key, value) { const set = sets.get(key) ?? new Set(); set.add(value); sets.set(key, set); return 1; },
     async srem(key, value) { return sets.get(key)?.delete(value) ? 1 : 0; },
     async smembers(key) { return [...(sets.get(key) ?? [])]; },
     async scard(key) { return sets.get(key)?.size ?? 0; },
+    async hgetall(key) {
+      const hash = hashes.get(key);
+      return hash ? Object.fromEntries(hash) : null;
+    },
+    async hget(key, field) { return hashes.get(key)?.get(field) ?? null; },
+    async hset(key, entries) {
+      const hash = hashes.get(key) ?? new Map();
+      for (const [field, value] of Object.entries(entries)) hash.set(field, value);
+      hashes.set(key, hash);
+      return Object.keys(entries).length;
+    },
+    async hdel(key, field) { return hashes.get(key)?.delete(field) ? 1 : 0; },
     async expire() { return 1; },
     async eval(script, keys, args) {
       if (script.includes('redis.call("INCR"')) {
@@ -121,12 +143,16 @@ function fakeAuthRedis() {
         sets.delete(keys[2]);
         sets.get(keys[3])?.delete(args[0]);
         sets.get(keys[4])?.delete(args[0]);
-        for (const key of keys.slice(5)) values.delete(key);
+        for (const key of keys.slice(5)) { values.delete(key); hashes.delete(key); }
         return 1;
       }
       throw new Error("Unknown fake Redis script");
     },
   };
+}
+
+function authHandler(load, action) {
+  return load("lib/member-auth-api.ts").authActionHandler(action);
 }
 
 test("JSON body validation rejects oversize streams, wrong types and malformed input", async () => {
@@ -286,12 +312,25 @@ test("Next development handlers delegate to the same secured production handlers
   });
 });
 
+test("production membership router preserves every public membership URL", async () => {
+  await withEnv(localEnv, async () => {
+    const load = app({ redis: fakeAuthRedis() });
+    const router = load("api/auth.ts").default;
+    const session = await router.fetch(request("auth?hib_handler=session", undefined, {}, "GET"));
+    assert.equal(session.status, 200);
+    assert.equal((await session.json()).authenticated, false);
+    const missing = await router.fetch(request("auth?hib_handler=unknown", undefined, {}, "GET"));
+    assert.equal(missing.status, 404);
+    assert.match(missing.headers.get("cache-control"), /no-store/);
+  });
+});
+
 test("member registration, verification, reset, session and deletion flows are server-authorized", async () => {
   await withEnv(localEnv, async () => {
     const redis = fakeAuthRedis();
     const sent = [];
     const load = app({ redis, sendMail: async (mail) => sent.push(mail) });
-    const register = load("api/auth/register.ts").default;
+    const register = authHandler(load, "register");
     const registration = await register.fetch(request("auth/register", {
       displayName: "Deneme Üye",
       email: "member@example.com",
@@ -330,25 +369,25 @@ test("member registration, verification, reset, session and deletion flows are s
     }));
     assert.equal(duplicate.status, 409);
 
-    const session = load("api/auth/session.ts").default;
+    const session = authHandler(load, "session");
     const anonymousSession = await session.fetch(request("auth/session", undefined, {}, "GET"));
     assert.equal((await anonymousSession.json()).authenticated, false);
-    const login = load("api/auth/login.ts").default;
+    const login = authHandler(load, "login");
     const pendingLogin = await login.fetch(request("auth/login", {
       email: "member@example.com", password: "Guclu!Sifre2026",
     }));
     assert.equal(pendingLogin.status, 403);
 
-    const resend = await load("api/auth/resend-verification.ts").default.fetch(request("auth/resend-verification", {
+    const resend = await authHandler(load, "resend-verification").fetch(request("auth/resend-verification", {
       email: "member@example.com",
     }));
     assert.equal(resend.status, 200);
 
     const verificationToken = /#token=([A-Za-z0-9_-]+)/.exec(sent.at(-1).text)?.[1];
     assert.ok(verificationToken);
-    const verify = await load("api/auth/verify-email.ts").default.fetch(request("auth/verify-email", { token: verificationToken }));
+    const verify = await authHandler(load, "verify-email").fetch(request("auth/verify-email", { token: verificationToken }));
     assert.equal(verify.status, 200);
-    const reusedVerification = await load("api/auth/verify-email.ts").default.fetch(request("auth/verify-email", { token: verificationToken }));
+    const reusedVerification = await authHandler(load, "verify-email").fetch(request("auth/verify-email", { token: verificationToken }));
     assert.equal(reusedVerification.status, 400);
     assert.deepEqual(await load("lib/member-auth.ts").getMemberCounts(), { active: 1, pending: 0 });
     const activeStats = await adminMessages.fetch(request("admin-messages", undefined, {
@@ -368,16 +407,16 @@ test("member registration, verification, reset, session and deletion flows are s
     const verifiedSession = await session.fetch(request("auth/session", undefined, { cookie: cookieHeader }, "GET"));
     assert.equal((await verifiedSession.json()).user.email_verified, true);
 
-    const forgot = await load("api/auth/forgot-password.ts").default.fetch(request("auth/forgot-password", { email: "member@example.com" }));
+    const forgot = await authHandler(load, "forgot-password").fetch(request("auth/forgot-password", { email: "member@example.com" }));
     assert.equal(forgot.status, 200);
     const resetToken = /#token=([A-Za-z0-9_-]+)/.exec(sent.at(-1).text)?.[1];
     assert.ok(resetToken);
-    const reset = await load("api/auth/reset-password.ts").default.fetch(request("auth/reset-password", {
+    const reset = await authHandler(load, "reset-password").fetch(request("auth/reset-password", {
       token: resetToken,
       password: "Yeni!GucluSifre2026",
     }));
     assert.equal(reset.status, 200);
-    const reusedReset = await load("api/auth/reset-password.ts").default.fetch(request("auth/reset-password", {
+    const reusedReset = await authHandler(load, "reset-password").fetch(request("auth/reset-password", {
       token: resetToken,
       password: "Baska!GucluSifre2026",
     }));
@@ -386,7 +425,7 @@ test("member registration, verification, reset, session and deletion flows are s
     assert.equal((await revokedOldSession.json()).authenticated, false);
     const newSessionCookie = reset.headers.getSetCookie().find((cookie) => cookie.startsWith("hib_session=")).split(";")[0];
 
-    const deletionHandler = load("api/auth/delete-account.ts").default;
+    const deletionHandler = authHandler(load, "delete-account");
     const prematureDeletion = await deletionHandler.fetch(request("auth/delete-account", {
       password: "Yeni!GucluSifre2026", confirmation: "sil",
     }, { cookie: newSessionCookie }));
@@ -398,5 +437,111 @@ test("member registration, verification, reset, session and deletion flows are s
     const deletedSession = await session.fetch(request("auth/session", undefined, { cookie: newSessionCookie }, "GET"));
     assert.equal((await deletedSession.json()).authenticated, false);
     assert.deepEqual(await load("lib/member-auth.ts").getMemberCounts(), { active: 0, pending: 0 });
+  });
+});
+
+test("portfolio records and shared market prices require a verified member", async () => {
+  await withEnv(localEnv, async () => {
+    const redis = fakeAuthRedis();
+    const load = app({
+      redis,
+      portfolioPrices: async () => ({
+        fetchedAt: "2026-09-11T09:00:00.000Z",
+        prices: {
+          USD: {
+            code: "USD",
+            label: "Dolar",
+            price: 42.5,
+            date: "2026-09-11",
+            dailyReturn: 0.25,
+            source: "TCMB",
+            sourceDetail: "Test",
+            frequency: "workday",
+          },
+        },
+        warnings: [],
+      }),
+    });
+    const memberAuth = load("lib/member-auth.ts");
+    const member = await memberAuth.createMember({
+      email: "portfolio@example.com",
+      displayName: "Portföy Üyesi",
+      password: "Guclu!Sifre2026",
+      userAgent: "test",
+    });
+    await memberAuth.activateMember(member);
+    const sessionToken = await memberAuth.createMemberSession(member.user_id);
+    const cookie = `hib_session=${sessionToken}`;
+    const portfolio = load("api/portfolio.ts").default;
+
+    const unauthorized = await portfolio.fetch(request("portfolio", undefined, {}, "GET"));
+    assert.equal(unauthorized.status, 401);
+    assert.match(unauthorized.headers.get("cache-control"), /no-store/);
+
+    const crossOrigin = await portfolio.fetch(request("portfolio", {
+      assetType: "fund", assetCode: "TLY", quantity: 10, buyPrice: 2.5,
+    }, { cookie, origin: "https://attacker.example" }));
+    assert.equal(crossOrigin.status, 403);
+
+    const created = await portfolio.fetch(request("portfolio", {
+      assetType: "fund",
+      assetCode: "tly",
+      quantity: 10,
+      buyPrice: 2.5,
+      buyDate: "2020-01-01",
+    }, { cookie }));
+    assert.equal(created.status, 201);
+    const createdBody = await created.json();
+    assert.equal(createdBody.holding.asset_code, "TLY");
+    assert.equal(createdBody.holding.quantity, 10);
+
+    const duplicate = await portfolio.fetch(request("portfolio", {
+      assetType: "fund", assetCode: "TLY", quantity: 5, buyPrice: 3,
+    }, { cookie }));
+    assert.equal(duplicate.status, 409);
+
+    const listed = await portfolio.fetch(request("portfolio", undefined, { cookie }, "GET"));
+    assert.equal(listed.status, 200);
+    assert.equal((await listed.json()).holdings.length, 1);
+
+    const updated = await portfolio.fetch(request("portfolio", {
+      holdingId: createdBody.holding.holding_id,
+      assetType: "fund",
+      assetCode: "TLY",
+      quantity: 12.5,
+      buyPrice: 2.75,
+    }, { cookie }, "PUT"));
+    assert.equal(updated.status, 200);
+    assert.equal((await updated.json()).holding.quantity, 12.5);
+
+    const prices = await portfolio.fetch(request(
+      "portfolio?hib_handler=market-prices",
+      undefined,
+      { cookie },
+      "GET",
+    ));
+    assert.equal(prices.status, 200);
+    assert.equal((await prices.json()).prices.USD.price, 42.5);
+
+    const invalidRoute = await portfolio.fetch(request(
+      "portfolio?hib_handler=unknown",
+      undefined,
+      { cookie },
+      "GET",
+    ));
+    assert.equal(invalidRoute.status, 404);
+
+    const deleted = await portfolio.fetch(request("portfolio", {
+      holdingId: createdBody.holding.holding_id,
+    }, { cookie }, "DELETE"));
+    assert.equal(deleted.status, 200);
+    const empty = await portfolio.fetch(request("portfolio", undefined, { cookie }, "GET"));
+    assert.deepEqual((await empty.json()).holdings, []);
+
+    await memberAuth.deleteMember(member);
+    assert.equal(
+      await redis.hgetall(`hib:portfolio:user:${member.user_id}:holdings`),
+      null,
+    );
   });
 });

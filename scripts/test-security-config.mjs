@@ -79,14 +79,26 @@ test("versioned build assets use browser caching without freezing pages or fund 
   }
 });
 
-test("Hobby function limit is respected and portfolio prices share one function", async () => {
+test("Hobby function limit is respected by grouped API functions", async () => {
   const { config } = await import("../vercel.mjs");
   const functionCount = fs.readdirSync(path.join(root, "api"), {
     recursive: true,
     withFileTypes: true,
   }).filter((entry) => entry.isFile() && entry.name.endsWith(".ts")).length;
-  assert.equal(functionCount, 12);
+  assert.equal(functionCount, 4);
   assert.ok(!fs.existsSync(path.join(root, "api", "portfolio-market-prices.ts")));
+  const legacyAuthDirectory = path.join(root, "api", "auth");
+  assert.ok(
+    !fs.existsSync(legacyAuthDirectory) ||
+      fs.readdirSync(legacyAuthDirectory, { recursive: true }).every((entry) => !String(entry).endsWith(".ts")),
+  );
+  assert.deepEqual(
+    config.rewrites.find((rule) => rule.source === "/api/auth/:action"),
+    {
+      source: "/api/auth/:action",
+      destination: "/api/auth?hib_handler=:action",
+    },
+  );
   assert.deepEqual(
     config.rewrites.find((rule) => rule.source === "/api/portfolio-market-prices"),
     {
