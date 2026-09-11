@@ -59,8 +59,14 @@ type MarketResponse = ApiResult & {
   fetchedAt?: string;
 };
 
+type FundHistoryRow = [string, number | null, unknown, unknown, unknown, number | null, ...unknown[]];
+
 type HistoryPayload = {
-  rows?: Array<[string, number | null, unknown, unknown, unknown, number | null, ...unknown[]]>;
+  rows?: FundHistoryRow[];
+};
+
+type HistoryBundlePayload = {
+  funds?: Record<string, FundHistoryRow[]>;
 };
 
 type FormState = {
@@ -86,7 +92,23 @@ const marketAssets: Array<{ type: AssetType; code: MarketCode; label: string; sh
 ];
 
 function parseNumberInput(value: string) {
-  return Number(value.trim().replace(",", "."));
+  const raw = value.trim().replace(/\s/g, "");
+  if (!raw) return Number.NaN;
+  if (raw.includes(",") && raw.includes(".")) {
+    return Number(raw.replace(/\./g, "").replace(",", "."));
+  }
+  if (/^\d{1,3}(?:\.\d{3})+$/.test(raw)) {
+    return Number(raw.replace(/\./g, ""));
+  }
+  return Number(raw.replace(",", "."));
+}
+
+function fundHistoryBundleUrl(slug: string) {
+  let hash = 0;
+  for (const character of slug) {
+    hash = (Math.imul(hash, 31) + character.charCodeAt(0)) >>> 0;
+  }
+  return `/data/fonlar/history-bundles/${String(hash % 64).padStart(2, "0")}.json`;
 }
 
 function normalizeFundSearch(value: string) {
@@ -164,13 +186,25 @@ function quantitySuffix(holding: Pick<Holding, "asset_type" | "asset_code">) {
 }
 
 async function readLatestFundPrice(code: string): Promise<AssetPrice> {
-  const normalized = code.trim().toLowerCase();
-  const response = await fetch(`/data/fonlar/history/${encodeURIComponent(normalized)}.json`, {
-    cache: "no-store",
-  });
-  if (!response.ok) throw new Error("Fon kodu bulunamadı.");
-  const payload = (await response.json()) as HistoryPayload;
-  const rows = Array.isArray(payload.rows) ? payload.rows : [];
+  const normalized = code.trim().toLowerCase().replace(/[^a-z0-9]/g, "");
+  if (!normalized) throw new Error("Fon kodu bulunamadı.");
+
+  let rows: FundHistoryRow[] = [];
+  const bundleResponse = await fetch(fundHistoryBundleUrl(normalized), { cache: "force-cache" });
+  if (bundleResponse.ok) {
+    const bundle = (await bundleResponse.json()) as HistoryBundlePayload;
+    rows = Array.isArray(bundle.funds?.[normalized]) ? bundle.funds[normalized] : [];
+  } else {
+    // Yerel geliştirmede statik build henüz history dosyalarını paketlemediği için
+    // tekil dosyaya geri düş. Production'da history-bundles kullanılır.
+    const response = await fetch(`/data/fonlar/history/${encodeURIComponent(normalized)}.json`, {
+      cache: "no-store",
+    });
+    if (!response.ok) throw new Error("Fon kodu bulunamadı.");
+    const payload = (await response.json()) as HistoryPayload;
+    rows = Array.isArray(payload.rows) ? payload.rows : [];
+  }
+
   for (let index = rows.length - 1; index >= 0; index -= 1) {
     const row = rows[index];
     if (row && typeof row[1] === "number" && Number.isFinite(row[1])) {
@@ -216,6 +250,8 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
   const [previewPrice, setPreviewPrice] = useState<AssetPrice | null>(null);
   const [fundSearchOpen, setFundSearchOpen] = useState(false);
   const [fundActiveIndex, setFundActiveIndex] = useState(0);
+  const [fundEntryMode, setFundEntryMode] = useState<"quantity" | "amount">("quantity");
+  const [fundAmount, setFundAmount] = useState("");
 
   const normalizedFundQuery = normalizeFundSearch(form.assetCode);
   const fundResults = useMemo(() => {
@@ -231,7 +267,7 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
   const selectedFundIndex = Math.min(fundActiveIndex, Math.max(0, fundResults.length - 1));
 
   const loadMarketPrices = useCallback(async () => {
-    const response = await fetch("/api/portfolio/market-prices", {
+    const response = await fetch("/api/portfolio-market-prices", {
       credentials: "same-origin",
       cache: "no-store",
     });
@@ -388,6 +424,8 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
     setPreviewPrice(null);
     setFundSearchOpen(false);
     setFundActiveIndex(0);
+    setFundEntryMode("quantity");
+    setFundAmount("");
     setError("");
     setMessage("");
     setFormOpen(true);
@@ -405,6 +443,8 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
     setPreviewPrice(priceForHolding(holding));
     setFundSearchOpen(false);
     setFundActiveIndex(0);
+    setFundEntryMode("quantity");
+    setFundAmount("");
     setError("");
     setMessage("");
     setFormOpen(true);
@@ -426,10 +466,16 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
           throw new Error(code === "XAU_GR" ? "Gram altın resmi gün sonu fiyatı henüz alınamadı." : "Güncel resmi kur alınamadı.");
         }
       }
-      const quantity = parseNumberInput(form.quantity);
       const buyPrice = parseNumberInput(form.buyPrice);
-      if (!Number.isFinite(quantity) || quantity <= 0) throw new Error("Geçerli bir miktar girin.");
       if (!Number.isFinite(buyPrice) || buyPrice <= 0) throw new Error("Geçerli bir alış fiyatı girin.");
+
+      let quantity = parseNumberInput(form.quantity);
+      if (form.assetType === "fund" && fundEntryMode === "amount") {
+        const amount = parseNumberInput(fundAmount);
+        if (!Number.isFinite(amount) || amount <= 0) throw new Error("Geçerli bir yatırım tutarı girin.");
+        quantity = amount / buyPrice;
+      }
+      if (!Number.isFinite(quantity) || quantity <= 0) throw new Error("Geçerli bir miktar girin.");
       await portfolioRequest(editingId ? "PUT" : "POST", {
         ...(editingId ? { holdingId: editingId } : {}),
         assetType: form.assetType,
@@ -469,6 +515,17 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
   if (!user) return <AuthMessage type="info">Giriş sayfasına yönlendiriliyorsunuz…</AuthMessage>;
 
   const selectedMarket = marketAssets.find((item) => item.code === form.assetCode && item.type === form.assetType);
+  const formBuyPrice = parseNumberInput(form.buyPrice);
+  const formFundQuantity = parseNumberInput(form.quantity);
+  const formFundAmount = parseNumberInput(fundAmount);
+  const calculatedFundQuantity =
+    form.assetType === "fund" && fundEntryMode === "amount" && Number.isFinite(formFundAmount) && formFundAmount > 0 && Number.isFinite(formBuyPrice) && formBuyPrice > 0
+      ? formFundAmount / formBuyPrice
+      : null;
+  const calculatedFundCost =
+    form.assetType === "fund" && fundEntryMode === "quantity" && Number.isFinite(formFundQuantity) && formFundQuantity > 0 && Number.isFinite(formBuyPrice) && formBuyPrice > 0
+      ? formFundQuantity * formBuyPrice
+      : null;
 
   return (
     <div className="space-y-5">
@@ -632,30 +689,113 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
             </div>
           ) : null}
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            <label className="block text-sm font-semibold text-slate-800">
-              {quantityLabel(form.assetType, form.assetCode)}
-              <input
-                value={form.quantity}
-                onChange={(event) => setForm((current) => ({ ...current, quantity: event.target.value }))}
-                inputMode="decimal"
-                placeholder={form.assetType === "gold" ? "Örn. 25" : form.assetType === "currency" ? "Örn. 1000" : "Örn. 10000"}
-                required
-                className="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-3.5 py-3 text-base text-slate-950 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
-              />
-            </label>
-            <label className="block text-sm font-semibold text-slate-800">
-              Alış fiyatı (TL)
-              <input
-                value={form.buyPrice}
-                onChange={(event) => setForm((current) => ({ ...current, buyPrice: event.target.value }))}
-                inputMode="decimal"
-                placeholder={form.assetType === "fund" ? "Örn. 2,1536" : "Örn. 48,50"}
-                required
-                className="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-3.5 py-3 text-base text-slate-950 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
-              />
-            </label>
-          </div>
+          {form.assetType === "fund" ? (
+            <div className="space-y-3">
+              <div>
+                <p className="text-sm font-semibold text-slate-800">Giriş şekli</p>
+                <div className="mt-2 grid grid-cols-2 gap-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setFundEntryMode("quantity");
+                      if (Number.isFinite(formFundAmount) && formFundAmount > 0 && Number.isFinite(formBuyPrice) && formBuyPrice > 0) {
+                        setForm((current) => ({ ...current, quantity: String(formFundAmount / formBuyPrice) }));
+                      }
+                    }}
+                    className={`rounded-xl border px-3 py-2.5 text-sm font-bold transition ${fundEntryMode === "quantity" ? "border-blue-600 bg-blue-50 text-blue-800" : "border-slate-300 bg-white text-slate-700 hover:bg-slate-50"}`}
+                  >
+                    Fon adedi ile
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setFundEntryMode("amount");
+                      if (Number.isFinite(formFundQuantity) && formFundQuantity > 0 && Number.isFinite(formBuyPrice) && formBuyPrice > 0) {
+                        setFundAmount(String(formFundQuantity * formBuyPrice));
+                      }
+                    }}
+                    className={`rounded-xl border px-3 py-2.5 text-sm font-bold transition ${fundEntryMode === "amount" ? "border-blue-600 bg-blue-50 text-blue-800" : "border-slate-300 bg-white text-slate-700 hover:bg-slate-50"}`}
+                  >
+                    TL tutarı ile
+                  </button>
+                </div>
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                {fundEntryMode === "quantity" ? (
+                  <label className="block text-sm font-semibold text-slate-800">
+                    Fon adedi
+                    <input
+                      value={form.quantity}
+                      onChange={(event) => setForm((current) => ({ ...current, quantity: event.target.value }))}
+                      inputMode="decimal"
+                      placeholder="Örn. 39,25"
+                      required
+                      className="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-3.5 py-3 text-base text-slate-950 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
+                    />
+                  </label>
+                ) : (
+                  <label className="block text-sm font-semibold text-slate-800">
+                    Yatırılan tutar (TL)
+                    <input
+                      value={fundAmount}
+                      onChange={(event) => setFundAmount(event.target.value)}
+                      inputMode="decimal"
+                      placeholder="Örn. 10.000"
+                      required
+                      className="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-3.5 py-3 text-base text-slate-950 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
+                    />
+                  </label>
+                )}
+                <label className="block text-sm font-semibold text-slate-800">
+                  Alış fiyatı (TL)
+                  <input
+                    value={form.buyPrice}
+                    onChange={(event) => setForm((current) => ({ ...current, buyPrice: event.target.value }))}
+                    inputMode="decimal"
+                    placeholder="Örn. 2,1536"
+                    required
+                    className="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-3.5 py-3 text-base text-slate-950 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
+                  />
+                </label>
+              </div>
+
+              {fundEntryMode === "amount" && calculatedFundQuantity !== null ? (
+                <div className="rounded-xl border border-blue-200 bg-blue-50 px-4 py-3 text-sm text-blue-900">
+                  Hesaplanan fon adedi: <strong>{formatQuantity(calculatedFundQuantity)}</strong>
+                </div>
+              ) : fundEntryMode === "quantity" && calculatedFundCost !== null ? (
+                <div className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700">
+                  Hesaplanan maliyet: <strong>{formatMoney(calculatedFundCost)}</strong>
+                </div>
+              ) : null}
+            </div>
+          ) : (
+            <div className="grid gap-4 sm:grid-cols-2">
+              <label className="block text-sm font-semibold text-slate-800">
+                {quantityLabel(form.assetType, form.assetCode)}
+                <input
+                  value={form.quantity}
+                  onChange={(event) => setForm((current) => ({ ...current, quantity: event.target.value }))}
+                  inputMode="decimal"
+                  placeholder={form.assetType === "gold" ? "Örn. 25" : "Örn. 1000"}
+                  required
+                  className="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-3.5 py-3 text-base text-slate-950 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
+                />
+              </label>
+              <label className="block text-sm font-semibold text-slate-800">
+                Alış fiyatı (TL)
+                <input
+                  value={form.buyPrice}
+                  onChange={(event) => setForm((current) => ({ ...current, buyPrice: event.target.value }))}
+                  inputMode="decimal"
+                  placeholder="Örn. 48,50"
+                  required
+                  className="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-3.5 py-3 text-base text-slate-950 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
+                />
+              </label>
+            </div>
+          )}
 
           <label className="block text-sm font-semibold text-slate-800">
             Alış tarihi <span className="font-normal text-slate-500">(isteğe bağlı)</span>

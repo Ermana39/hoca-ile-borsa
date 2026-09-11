@@ -18,6 +18,7 @@ const dynamicApiDirectories = [
   "revalidate",
   "auth",
   "portfolio",
+  "portfolio-market-prices",
 ];
 
 const moved = [];
