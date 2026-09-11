@@ -2,7 +2,6 @@ import { serializeJsonLd } from "@/lib/json-ld";
 export const revalidate = false;
 import type { Metadata } from "next";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { THEME_INITIALIZATION_SCRIPT } from "@/lib/theme";
@@ -138,7 +137,6 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
-        <Analytics />
       </body>
     </html>
   );

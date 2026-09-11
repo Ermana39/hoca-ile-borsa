@@ -511,7 +511,9 @@ export default async function FonDetayPage({
             initialHistory={detail.sonOtuzIslemGunu}
             historyUrl={
               process.env.HIB_STATIC_EXPORT_BUILD === "1"
-                ? getFundHistoryBundleUrl(fund.slug)
+                ? `${getFundHistoryBundleUrl(fund.slug)}?v=${encodeURIComponent(
+                    detail.generatedAt || detail.sonIslemTarihi || String(detail.version),
+                  )}`
                 : `/data/fonlar/history/${fund.slug}.json`
             }
             historyKey={

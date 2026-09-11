@@ -64,12 +64,15 @@ test("versioned build assets use browser caching without freezing pages or fund 
     "/_next/static/chunks/066_9qs-fr7km.js",
     "/_next/static/chunks/3fxicq_o_lj2t.css",
     "/_next/static/media/font.5c73eaf1.woff2",
+    "/data/fonlar/history-bundles/00.json",
   ]) {
     assert.equal(cacheForPath(pathname), "public, max-age=31536000, immutable", pathname);
   }
+  assert.equal(cacheForPath("/manifest.webmanifest"), "public, max-age=86400");
+  assert.equal(cacheForPath("/fonlar/etki-analizi"), "public, max-age=60, must-revalidate");
   for (const pathname of [
     "/", "/haberler", "/haber/ornek-haber", "/fonlar/tly",
-    "/data/fonlar/history-bundles/00.json", "/api/arama",
+    "/api/arama",
     "/sitemap.xml", "/news-sitemap.xml", "/_next/static-like/file.js",
   ]) {
     assert.equal(cacheForPath(pathname), undefined, pathname);

@@ -9,7 +9,7 @@ const stableImageCacheFiles = [
 ];
 
 // İçerik Güvenliği Politikası (CSP).
-// Site Google AdSense, Vercel Analytics ve Next.js'in satır içi (inline)
+// Site Google AdSense ve Next.js'in satır içi (inline)
 // bootstrap script'lerini kullanır. Bu ekosistemleri kırmadan; reklamları
 // etkilemeyen yönleri (clickjacking, obje gömme, base-uri, form hedefi)
 // sıkılaştıran pragmatik bir politika uygulanır.
@@ -27,11 +27,6 @@ const adsenseFrame = [
   "https://*.doubleclick.net",
   "https://*.google.com",
   "https://*.adtrafficquality.google",
-];
-
-const vercelAnalytics = [
-  "https://va.vercel-scripts.com",
-  "https://*.vercel-insights.com",
 ];
 
 // Onaylı izahname sayfalarındaki YouTube video gömülerinin (iframe) CSP
@@ -54,7 +49,7 @@ const tradingViewFrame = [
 const contentSecurityPolicy = [
   "default-src 'self'",
   // Statik Next.js hydration satır içi script kullanır; eval yalnızca geliştirmede gerekir.
-  `script-src 'self' 'unsafe-inline'${isDevelopment ? " 'unsafe-eval'" : ""} ${adsenseScript.join(" ")} ${vercelAnalytics.join(" ")} ${tradingViewScript.join(" ")}`,
+  `script-src 'self' 'unsafe-inline'${isDevelopment ? " 'unsafe-eval'" : ""} ${adsenseScript.join(" ")} ${tradingViewScript.join(" ")}`,
   // React olayları addEventListener ile bağlar; HTML olay özniteliklerini engelle.
   "script-src-attr 'none'",
   // Tailwind/Next satır içi stil enjekte eder.
@@ -62,7 +57,7 @@ const contentSecurityPolicy = [
   // Reklam görselleri çok sayıda alan adından gelir.
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
-  `connect-src 'self' ${adsenseScript.join(" ")} ${adsenseFrame.join(" ")} ${vercelAnalytics.join(" ")} ${tradingViewFrame.join(" ")}`,
+  `connect-src 'self' ${adsenseScript.join(" ")} ${adsenseFrame.join(" ")} ${tradingViewFrame.join(" ")}`,
   `frame-src 'self' ${adsenseFrame.join(" ")} ${youtubeFrame.join(" ")} ${tradingViewFrame.join(" ")}`,
   // Aşağıdakiler reklamları etkilemez, saldırı yüzeyini daraltır.
   "object-src 'none'",
@@ -514,6 +509,18 @@ const nextConfig = {
       ...generalImageHeaders,
       ...imageHeaders,
       ...buildAssetHeaders,
+      {
+        source: "/data/fonlar/history-bundles/:path*",
+        headers: [{ key: "Cache-Control", value: ONE_YEAR_CACHE }],
+      },
+      {
+        source: "/manifest.webmanifest",
+        headers: [{ key: "Cache-Control", value: "public, max-age=86400" }],
+      },
+      {
+        source: "/fonlar/etki-analizi",
+        headers: [{ key: "Cache-Control", value: "public, max-age=60, must-revalidate" }],
+      },
       ...globalSecurityHeaders,
       ...privateApiHeaders,
     ];

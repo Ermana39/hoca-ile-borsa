@@ -74,6 +74,8 @@ type HistoryBundlePayload = {
   funds?: Record<string, FundHistoryRow[]>;
 };
 
+const fundHistoryBundleCache = new Map<string, Promise<HistoryBundlePayload | null>>();
+
 type FormState = {
   assetType: AssetType;
   assetCode: string;
@@ -98,12 +100,27 @@ const marketAssets: Array<{ type: AssetType; code: MarketCode; label: string; sh
 
 const parseNumberInput = parsePortfolioNumber;
 
-function fundHistoryBundleUrl(slug: string) {
+function fundHistoryBundleUrl(slug: string, dataVersion: string) {
   let hash = 0;
   for (const character of slug) {
     hash = (Math.imul(hash, 31) + character.charCodeAt(0)) >>> 0;
   }
-  return `/data/fonlar/history-bundles/${String(hash % 64).padStart(2, "0")}.json`;
+  const url = `/data/fonlar/history-bundles/${String(hash % 64).padStart(2, "0")}.json`;
+  return dataVersion ? `${url}?v=${encodeURIComponent(dataVersion)}` : url;
+}
+
+function readFundHistoryBundle(url: string) {
+  const cached = fundHistoryBundleCache.get(url);
+  if (cached) return cached;
+
+  const request = fetch(url, { cache: "force-cache" })
+    .then(async (response) => response.ok ? await response.json() as HistoryBundlePayload : null)
+    .catch((error) => {
+      fundHistoryBundleCache.delete(url);
+      throw error;
+    });
+  fundHistoryBundleCache.set(url, request);
+  return request;
 }
 
 function normalizeFundSearch(value: string) {
@@ -169,21 +186,21 @@ function quantityLabel(assetType: AssetType, assetCode: string) {
 }
 
 
-async function readFundPrices(code: string): Promise<{ latest: AssetPrice | null; history: PriceObservation[] }> {
+async function readFundPrices(code: string, dataVersion: string): Promise<{ latest: AssetPrice | null; history: PriceObservation[] }> {
   const normalized = code.trim().toLowerCase().replace(/[^a-z0-9]/g, "");
   if (!normalized) throw new Error("Fon kodu bulunamadı.");
 
   let rows: FundHistoryRow[] = [];
-  const bundleResponse = await fetch(fundHistoryBundleUrl(normalized), { cache: "no-store" });
-  if (bundleResponse.ok) {
-    const bundle = (await bundleResponse.json()) as HistoryBundlePayload;
+  const bundle = await readFundHistoryBundle(fundHistoryBundleUrl(normalized, dataVersion));
+  if (bundle) {
     rows = Array.isArray(bundle.funds?.[normalized]) ? bundle.funds[normalized] : [];
   }
   if (!rows.length) {
     // Yerel geliştirmede statik build henüz history dosyalarını paketlemediği için
     // tekil dosyaya geri düş. Production'da history-bundles kullanılır.
-    const response = await fetch(`/data/fonlar/history/${encodeURIComponent(normalized)}.json`, {
-      cache: "no-store",
+    const versionQuery = dataVersion ? `?v=${encodeURIComponent(dataVersion)}` : "";
+    const response = await fetch(`/data/fonlar/history/${encodeURIComponent(normalized)}.json${versionQuery}`, {
+      cache: "force-cache",
     });
     if (!response.ok) throw new Error("Fon kodu bulunamadı.");
     const payload = (await response.json()) as HistoryPayload;
@@ -209,8 +226,8 @@ async function readFundPrices(code: string): Promise<{ latest: AssetPrice | null
   return { latest: null, history };
 }
 
-async function readLatestFundPrice(code: string) {
-  return (await readFundPrices(code)).latest;
+async function readLatestFundPrice(code: string, dataVersion: string) {
+  return (await readFundPrices(code, dataVersion)).latest;
 }
 
 async function portfolioRequest(method: "POST" | "PUT" | "DELETE", body: Record<string, unknown>) {
@@ -225,7 +242,7 @@ async function portfolioRequest(method: "POST" | "PUT" | "DELETE", body: Record<
   return result;
 }
 
-export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
+export default function PortfolioPanel({ funds, dataVersion }: { funds: FundOption[]; dataVersion: string }) {
   const router = useRouter();
   const [user, setUser] = useState<AccountUser | null>(null);
   const [holdings, setHoldings] = useState<Holding[]>([]);
@@ -293,7 +310,7 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
     const entries = await Promise.all(
       codes.map(async (code) => {
         try {
-          return [code, await readFundPrices(code)] as const;
+          return [code, await readFundPrices(code, dataVersion)] as const;
         } catch {
           return [code, { latest: null, history: [] }] as const;
         }
@@ -301,7 +318,7 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
     );
     setFundPrices(Object.fromEntries(entries.map(([code, result]) => [code, result.latest])));
     setHistories((current) => ({ ...current, ...Object.fromEntries(entries.map(([code, result]) => [`fund:${code}`, [...result.history]])) }));
-  }, []);
+  }, [dataVersion]);
 
   const loadPortfolio = useCallback(async () => {
     const response = await fetch("/api/portfolio", {
@@ -341,20 +358,6 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
   }, [loadPortfolio, router]);
 
   useEffect(() => {
-    if (!user) return;
-    const refresh = async () => {
-      if (document.visibilityState !== "visible" || refreshLock.current) return;
-      refreshLock.current = true;
-      setRefreshing(true);
-      try { await loadPortfolio(); } catch { setError("Portföy yenilenemedi. Biraz sonra tekrar deneyebilirsiniz."); }
-      finally { refreshLock.current = false; setRefreshing(false); }
-    };
-    const timer = window.setInterval(() => void refresh(), 5 * 60 * 1000);
-    document.addEventListener("visibilitychange", refresh);
-    return () => { clearInterval(timer); document.removeEventListener("visibilitychange", refresh); };
-  }, [loadPortfolio, user]);
-
-  useEffect(() => {
     if (!formOpen) return;
     formRef.current?.scrollIntoView({ behavior: "instant", block: "start" });
     formRef.current?.querySelector<HTMLInputElement>("input")?.focus({ preventScroll: true });
@@ -379,7 +382,7 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
     setCheckingCode(true);
     setError("");
     try {
-      const latest = await readLatestFundPrice(code);
+      const latest = await readLatestFundPrice(code, dataVersion);
       if (selection !== selectionVersion.current) return;
       setPreviewPrice(latest);
       setForm((current) => ({ ...current, assetCode: code }));
@@ -401,7 +404,7 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
     setError("");
     setCheckingCode(true);
     try {
-      const price = await readLatestFundPrice(fund.kod);
+      const price = await readLatestFundPrice(fund.kod, dataVersion);
       if (selection === selectionVersion.current) setPreviewPrice(price);
     } catch {
       if (selection === selectionVersion.current) setPreviewPrice(null);

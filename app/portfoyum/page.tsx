@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 };
 
 export default function PortfoyumPage() {
-  const funds = getCurrentFundsData()
-    .fonlar
+  const currentFunds = getCurrentFundsData();
+  const funds = currentFunds.fonlar
     .filter((fund) => fund.aktifMi)
     .map((fund) => ({
       kod: fund.kod,
@@ -30,7 +30,10 @@ export default function PortfoyumPage() {
           <h1>Portföyüm</h1>
           <p>Fon, döviz ve altınınızın maliyetini, değerini ve getirisini tek bakışta takip edin.</p>
         </header>
-        <PortfolioPanel funds={funds} />
+        <PortfolioPanel
+          funds={funds}
+          dataVersion={currentFunds.generatedAt || currentFunds.sonIslemTarihi || String(currentFunds.version)}
+        />
       </div>
     </main>
   );
