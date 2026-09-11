@@ -1,4 +1,4 @@
-import { kv } from "./kv";
+import { kv } from "./kv.js";
 
 export type PortfolioMarketCode = "USD" | "EUR" | "XAU_GR";
 

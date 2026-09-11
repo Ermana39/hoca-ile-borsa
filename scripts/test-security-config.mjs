@@ -107,3 +107,21 @@ test("Hobby function limit is respected by grouped API functions", async () => {
     },
   );
 });
+
+test("standalone Vercel function dependencies use Node ESM import paths", () => {
+  const serverModules = [
+    "member-auth-api.ts",
+    "member-auth.ts",
+    "member-mail.ts",
+    "member-portfolio.ts",
+    "portfolio-market-prices.ts",
+    "rate-limit.ts",
+  ];
+
+  for (const fileName of serverModules) {
+    const source = fs.readFileSync(path.join(root, "lib", fileName), "utf8");
+    for (const match of source.matchAll(/from\s+["'](\.{1,2}\/[^"']+)["']/g)) {
+      assert.ok(match[1].endsWith(".js"), `${fileName}: ${match[1]}`);
+    }
+  }
+});
