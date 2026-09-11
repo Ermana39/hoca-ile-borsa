@@ -538,6 +538,17 @@ test("portfolio records and shared market prices require a verified member", asy
     const empty = await portfolio.fetch(request("portfolio", undefined, { cookie }, "GET"));
     assert.deepEqual((await empty.json()).holdings, []);
 
+    // No gold quote exists: recording purchase quantity/cost must still succeed.
+    const gold = await portfolio.fetch(request("portfolio", {
+      assetType: "gold", assetCode: "XAU_GR", quantity: 10, buyPrice: 6858.74,
+    }, { cookie }));
+    assert.equal(gold.status, 201);
+    const goldBody = await gold.json();
+    assert.equal(goldBody.holding.quantity, 10);
+    assert.equal(goldBody.holding.buy_price, 6858.74);
+    const goldListed = await portfolio.fetch(request("portfolio", undefined, { cookie }, "GET"));
+    assert.equal((await goldListed.json()).holdings[0].asset_code, "XAU_GR");
+
     await memberAuth.deleteMember(member);
     assert.equal(
       await redis.hgetall(`hib:portfolio:user:${member.user_id}:holdings`),

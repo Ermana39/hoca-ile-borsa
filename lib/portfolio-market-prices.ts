@@ -1,4 +1,5 @@
 import { kv } from "./kv.js";
+import { mergePriceHistory, type PriceObservation } from "./portfolio-analytics.js";
 
 export type PortfolioMarketCode = "USD" | "EUR" | "XAU_GR";
 
@@ -17,6 +18,7 @@ type MarketPriceBundle = {
   fetchedAt: string;
   prices: Partial<Record<PortfolioMarketCode, PortfolioMarketPrice>>;
   warnings: string[];
+  history?: Partial<Record<PortfolioMarketCode, PriceObservation[]>>;
 };
 
 type EvdsDiscovery = {
@@ -120,11 +122,11 @@ async function fetchPreviousTcmbRates(currentDate: string) {
   return null;
 }
 
-async function fetchTcmbCurrencyPrices(): Promise<PortfolioMarketPrice[]> {
+async function fetchTcmbCurrencyPrices() {
   const current = parseTcmbXml(await fetchText(TCMB_DAILY_URL));
   if (!current.USD || !current.EUR) throw new Error("TCMB döviz kurları okunamadı.");
   const previous = await fetchPreviousTcmbRates(current.date);
-  return [
+  const prices: PortfolioMarketPrice[] = [
     {
       code: "USD",
       label: "Dolar",
@@ -146,6 +148,14 @@ async function fetchTcmbCurrencyPrices(): Promise<PortfolioMarketPrice[]> {
       frequency: "workday",
     },
   ];
+  const history: Partial<Record<PortfolioMarketCode, PriceObservation[]>> = {};
+  for (const code of ["USD", "EUR"] as const) {
+    history[code] = mergePriceHistory(
+      previous?.[code] ? [{ date: previous.date, price: previous[code]! }] : [],
+      [{ date: current.date, price: current[code]! }],
+    );
+  }
+  return { prices, history };
 }
 
 function evdsApiKey() {
@@ -281,7 +291,7 @@ function extractEvdsSeriesValue(row: Record<string, unknown>, seriesCode: string
   return null;
 }
 
-async function fetchGoldPrice(): Promise<PortfolioMarketPrice> {
+async function fetchGoldPrice() {
   const discovery = await discoverGoldSeries();
   const today = new Date().toISOString().slice(0, 10);
   const start = previousIsoDate(today, 20);
@@ -298,7 +308,7 @@ async function fetchGoldPrice(): Promise<PortfolioMarketPrice> {
   const pricePerGram = latest.value / 1000;
   const previousPerGram = previous ? previous.value / 1000 : null;
   if (!Number.isFinite(pricePerGram) || pricePerGram <= 0) throw new Error("EVDS altın fiyatı geçersiz.");
-  return {
+  const price: PortfolioMarketPrice = {
     code: "XAU_GR",
     label: "Gram Altın",
     price: pricePerGram,
@@ -308,6 +318,7 @@ async function fetchGoldPrice(): Promise<PortfolioMarketPrice> {
     sourceDetail: "Borsa İstanbul Altın Piyasası TRY/KG kapanışından TL/gram",
     frequency: "workday",
   };
+  return { price, history: mergePriceHistory(observations.map((row) => ({ date: row.date, price: row.value / 1000 }))) };
 }
 
 function isFresh(bundle: MarketPriceBundle | null) {
@@ -319,14 +330,14 @@ function isFresh(bundle: MarketPriceBundle | null) {
 async function readCachedBundle() {
   if (isFresh(memoryCache)) return memoryCache;
   if (!kv) return memoryCache;
-  const cached = await kv.get<MarketPriceBundle>(PRICE_CACHE_KEY);
+  const cached = await kv.get<MarketPriceBundle>(PRICE_CACHE_KEY).catch(() => null);
   if (cached) memoryCache = cached;
   return cached;
 }
 
 async function writeCachedBundle(bundle: MarketPriceBundle) {
   memoryCache = bundle;
-  if (kv) await kv.set(PRICE_CACHE_KEY, bundle);
+  if (kv) await kv.set(PRICE_CACHE_KEY, bundle).catch(() => undefined);
 }
 
 export async function getPortfolioMarketPrices(): Promise<MarketPriceBundle> {
@@ -337,23 +348,29 @@ export async function getPortfolioMarketPrices(): Promise<MarketPriceBundle> {
   const nextPrices: Partial<Record<PortfolioMarketCode, PortfolioMarketPrice>> = {
     ...(cached?.prices ?? {}),
   };
+  const history = { ...(cached?.history ?? {}) };
 
   const [currencies, gold] = await Promise.allSettled([fetchTcmbCurrencyPrices(), fetchGoldPrice()]);
   if (currencies.status === "fulfilled") {
-    for (const item of currencies.value) nextPrices[item.code] = item;
+    for (const item of currencies.value.prices) {
+      nextPrices[item.code] = item;
+      history[item.code] = mergePriceHistory(history[item.code], currencies.value.history[item.code]);
+    }
   } else {
-    warnings.push(`Dolar/Euro: ${currencies.reason instanceof Error ? currencies.reason.message : "veri alınamadı"}`);
+    warnings.push("Dolar ve Euro fiyatları şu anda yenilenemiyor. Varsa son açıklanan fiyat gösterilir.");
   }
   if (gold.status === "fulfilled") {
-    nextPrices.XAU_GR = gold.value;
+    nextPrices.XAU_GR = gold.value.price;
+    history.XAU_GR = mergePriceHistory(history.XAU_GR, gold.value.history);
   } else {
-    warnings.push(`Gram Altın: ${gold.reason instanceof Error ? gold.reason.message : "veri alınamadı"}`);
+    warnings.push("Gram altın fiyatı şu anda yenilenemiyor. Miktar ve alış maliyetiyle portföyünüze ekleyebilirsiniz.");
   }
 
   const bundle: MarketPriceBundle = {
     fetchedAt: new Date().toISOString(),
     prices: nextPrices,
     warnings,
+    history,
   };
   await writeCachedBundle(bundle);
   return bundle;

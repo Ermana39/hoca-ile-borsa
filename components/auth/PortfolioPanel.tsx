@@ -1,9 +1,13 @@
 "use client";
 
-import { FormEvent, useCallback, useEffect, useMemo, useState } from "react";
+import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "@/components/NoPrefetchLink";
 import { AuthMessage, getAuthSession, type ApiResult } from "./AuthFormParts";
+import { ArrowLeft, Plus, RefreshCw } from "lucide-react";
+import PortfolioOverview from "./PortfolioOverview";
+import { assetKey, mergePriceHistory, parsePortfolioNumber, type PortfolioPriceHistory, type PortfolioQuotes, type PriceObservation } from "@/lib/portfolio-analytics";
+import styles from "./PortfolioPanel.module.css";
 
 type AccountUser = {
   user_id: string;
@@ -57,6 +61,7 @@ type MarketResponse = ApiResult & {
   prices?: Partial<Record<MarketCode, MarketPrice>>;
   warnings?: string[];
   fetchedAt?: string;
+  history?: Partial<Record<MarketCode, PriceObservation[]>>;
 };
 
 type FundHistoryRow = [string, number | null, unknown, unknown, unknown, number | null, ...unknown[]];
@@ -91,17 +96,7 @@ const marketAssets: Array<{ type: AssetType; code: MarketCode; label: string; sh
   { type: "gold", code: "XAU_GR", label: "Gram Altın", short: "ALTIN" },
 ];
 
-function parseNumberInput(value: string) {
-  const raw = value.trim().replace(/\s/g, "");
-  if (!raw) return Number.NaN;
-  if (raw.includes(",") && raw.includes(".")) {
-    return Number(raw.replace(/\./g, "").replace(",", "."));
-  }
-  if (/^\d{1,3}(?:\.\d{3})+$/.test(raw)) {
-    return Number(raw.replace(/\./g, ""));
-  }
-  return Number(raw.replace(",", "."));
-}
+const parseNumberInput = parsePortfolioNumber;
 
 function fundHistoryBundleUrl(slug: string) {
   let hash = 0;
@@ -160,12 +155,6 @@ function formatQuantity(value: number) {
   return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 6 }).format(value);
 }
 
-function formatPercent(value: number) {
-  return `${value >= 0 ? "+" : ""}${new Intl.NumberFormat("tr-TR", {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(value)}%`;
-}
 
 function assetLabel(holding: Pick<Holding, "asset_type" | "asset_code">) {
   if (holding.asset_type === "currency") return holding.asset_code === "USD" ? "Dolar" : "Euro";
@@ -179,22 +168,18 @@ function quantityLabel(assetType: AssetType, assetCode: string) {
   return "Fon adedi";
 }
 
-function quantitySuffix(holding: Pick<Holding, "asset_type" | "asset_code">) {
-  if (holding.asset_type === "gold") return " gr";
-  if (holding.asset_type === "currency") return ` ${holding.asset_code}`;
-  return "";
-}
 
-async function readLatestFundPrice(code: string): Promise<AssetPrice> {
+async function readFundPrices(code: string): Promise<{ latest: AssetPrice | null; history: PriceObservation[] }> {
   const normalized = code.trim().toLowerCase().replace(/[^a-z0-9]/g, "");
   if (!normalized) throw new Error("Fon kodu bulunamadı.");
 
   let rows: FundHistoryRow[] = [];
-  const bundleResponse = await fetch(fundHistoryBundleUrl(normalized), { cache: "force-cache" });
+  const bundleResponse = await fetch(fundHistoryBundleUrl(normalized), { cache: "no-store" });
   if (bundleResponse.ok) {
     const bundle = (await bundleResponse.json()) as HistoryBundlePayload;
     rows = Array.isArray(bundle.funds?.[normalized]) ? bundle.funds[normalized] : [];
-  } else {
+  }
+  if (!rows.length) {
     // Yerel geliştirmede statik build henüz history dosyalarını paketlemediği için
     // tekil dosyaya geri düş. Production'da history-bundles kullanılır.
     const response = await fetch(`/data/fonlar/history/${encodeURIComponent(normalized)}.json`, {
@@ -205,19 +190,27 @@ async function readLatestFundPrice(code: string): Promise<AssetPrice> {
     rows = Array.isArray(payload.rows) ? payload.rows : [];
   }
 
+  const history = mergePriceHistory(rows.flatMap((row) => typeof row[1] === "number" ? [{ date: row[0], price: row[1] }] : []));
   for (let index = rows.length - 1; index >= 0; index -= 1) {
     const row = rows[index];
-    if (row && typeof row[1] === "number" && Number.isFinite(row[1])) {
+    if (row && typeof row[1] === "number" && Number.isFinite(row[1]) && row[1] > 0) {
       return {
+        history,
+        latest: {
         date: row[0],
         price: row[1],
         dailyReturn: typeof row[5] === "number" && Number.isFinite(row[5]) ? row[5] * 100 : null,
         source: "TEFAS / resmi fon verisi",
         sourceDetail: "Son açıklanan fon birim fiyatı",
+        },
       };
     }
   }
-  throw new Error("Fonun güncel fiyatı bulunamadı.");
+  return { latest: null, history };
+}
+
+async function readLatestFundPrice(code: string) {
+  return (await readFundPrices(code)).latest;
 }
 
 async function portfolioRequest(method: "POST" | "PUT" | "DELETE", body: Record<string, unknown>) {
@@ -239,6 +232,12 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
   const [fundPrices, setFundPrices] = useState<Record<string, AssetPrice | null>>({});
   const [marketPrices, setMarketPrices] = useState<Partial<Record<MarketCode, MarketPrice>>>({});
   const [marketWarnings, setMarketWarnings] = useState<string[]>([]);
+  const [histories, setHistories] = useState<PortfolioPriceHistory>({});
+  const [refreshing, setRefreshing] = useState(false);
+  const [updatedAt, setUpdatedAt] = useState<string | null>(null);
+  const refreshLock = useRef(false);
+  const formRef = useRef<HTMLFormElement>(null);
+  const selectionVersion = useRef(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
@@ -276,6 +275,14 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
     const next = result.prices ?? {};
     setMarketPrices(next);
     setMarketWarnings(Array.isArray(result.warnings) ? result.warnings : []);
+    setHistories((current) => {
+      const merged = { ...current };
+      for (const asset of marketAssets) {
+        const key = `${asset.type}:${asset.code}`;
+        merged[key] = mergePriceHistory(current[key], result.history?.[asset.code], next[asset.code] ? [next[asset.code]!] : []);
+      }
+      return merged;
+    });
     return next;
   }, []);
 
@@ -286,13 +293,14 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
     const entries = await Promise.all(
       codes.map(async (code) => {
         try {
-          return [code, await readLatestFundPrice(code)] as const;
+          return [code, await readFundPrices(code)] as const;
         } catch {
-          return [code, null] as const;
+          return [code, { latest: null, history: [] }] as const;
         }
       }),
     );
-    setFundPrices(Object.fromEntries(entries));
+    setFundPrices(Object.fromEntries(entries.map(([code, result]) => [code, result.latest])));
+    setHistories((current) => ({ ...current, ...Object.fromEntries(entries.map(([code, result]) => [`fund:${code}`, [...result.history]])) }));
   }, []);
 
   const loadPortfolio = useCallback(async () => {
@@ -304,7 +312,9 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
     if (!response.ok || !result.ok) throw new Error(result.message || "Portföy bilgileri yüklenemedi.");
     const nextHoldings = Array.isArray(result.holdings) ? result.holdings : [];
     setHoldings(nextHoldings);
-    await Promise.all([loadFundPrices(nextHoldings), loadMarketPrices().catch(() => undefined)]);
+    setLoading(false);
+    await Promise.all([loadFundPrices(nextHoldings), loadMarketPrices().catch(() => setMarketWarnings(["Piyasa fiyatları şu anda yenilenemiyor. Varlıklarınız ve alış maliyetleriniz kayıtlı."]))]);
+    setUpdatedAt(new Date().toISOString());
   }, [loadFundPrices, loadMarketPrices]);
 
   useEffect(() => {
@@ -330,6 +340,29 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
     };
   }, [loadPortfolio, router]);
 
+  useEffect(() => {
+    if (!user) return;
+    const refresh = async () => {
+      if (document.visibilityState !== "visible" || refreshLock.current) return;
+      refreshLock.current = true;
+      setRefreshing(true);
+      try { await loadPortfolio(); } catch { setError("Portföy yenilenemedi. Biraz sonra tekrar deneyebilirsiniz."); }
+      finally { refreshLock.current = false; setRefreshing(false); }
+    };
+    const timer = window.setInterval(() => void refresh(), 5 * 60 * 1000);
+    document.addEventListener("visibilitychange", refresh);
+    return () => { clearInterval(timer); document.removeEventListener("visibilitychange", refresh); };
+  }, [loadPortfolio, user]);
+
+  useEffect(() => {
+    if (!formOpen) return;
+    formRef.current?.scrollIntoView({ behavior: "instant", block: "start" });
+    formRef.current?.querySelector<HTMLInputElement>("input")?.focus({ preventScroll: true });
+  }, [formOpen, editingId]);
+
+  const quotes = useMemo<PortfolioQuotes>(() => Object.fromEntries(holdings.map((holding) => [assetKey(holding), holding.asset_type === "fund" ? fundPrices[holding.asset_code] : marketPrices[holding.asset_code as MarketCode]])), [holdings, fundPrices, marketPrices]);
+  const fundNames = useMemo(() => Object.fromEntries(funds.map((fund) => [fund.kod, fund.ad])), [funds]);
+
   const priceForHolding = useCallback(
     (holding: Holding): AssetPrice | null => {
       if (holding.asset_type === "fund") return fundPrices[holding.asset_code] ?? null;
@@ -338,44 +371,29 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
     [fundPrices, marketPrices],
   );
 
-  const summary = useMemo(() => {
-    let cost = 0;
-    let current = 0;
-    let pricedCount = 0;
-    for (const holding of holdings) {
-      cost += holding.quantity * holding.buy_price;
-      const latest = holding.asset_type === "fund"
-        ? fundPrices[holding.asset_code]
-        : marketPrices[holding.asset_code as MarketCode];
-      if (latest) {
-        current += holding.quantity * latest.price;
-        pricedCount += 1;
-      }
-    }
-    const profit = pricedCount === holdings.length ? current - cost : null;
-    const returnPct = profit !== null && cost > 0 ? (profit / cost) * 100 : null;
-    return { cost, current, profit, returnPct, complete: pricedCount === holdings.length };
-  }, [holdings, fundPrices, marketPrices]);
-
   async function checkFundCode() {
     const code = form.assetCode.trim().toUpperCase();
     if (!code) return;
+    if (!fundNames[code]) { setError("Listeden geçerli bir yatırım fonu seçin."); return; }
+    const selection = ++selectionVersion.current;
     setCheckingCode(true);
     setError("");
     try {
       const latest = await readLatestFundPrice(code);
+      if (selection !== selectionVersion.current) return;
       setPreviewPrice(latest);
       setForm((current) => ({ ...current, assetCode: code }));
       setFundSearchOpen(false);
-    } catch (codeError) {
+    } catch {
+      if (selection !== selectionVersion.current) return;
       setPreviewPrice(null);
-      setError(codeError instanceof Error ? codeError.message : "Fon kodu kontrol edilemedi.");
     } finally {
-      setCheckingCode(false);
+      if (selection === selectionVersion.current) setCheckingCode(false);
     }
   }
 
   async function selectFund(fund: FundOption) {
+    const selection = ++selectionVersion.current;
     setForm((current) => ({ ...current, assetType: "fund", assetCode: fund.kod }));
     setFundSearchOpen(false);
     setFundActiveIndex(0);
@@ -383,15 +401,18 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
     setError("");
     setCheckingCode(true);
     try {
-      setPreviewPrice(await readLatestFundPrice(fund.kod));
-    } catch (selectError) {
-      setError(selectError instanceof Error ? selectError.message : "Fon fiyatı kontrol edilemedi.");
+      const price = await readLatestFundPrice(fund.kod);
+      if (selection === selectionVersion.current) setPreviewPrice(price);
+    } catch {
+      if (selection === selectionVersion.current) setPreviewPrice(null);
     } finally {
-      setCheckingCode(false);
+      if (selection === selectionVersion.current) setCheckingCode(false);
     }
   }
 
   async function selectMarketAsset(asset: (typeof marketAssets)[number]) {
+    const selection = ++selectionVersion.current;
+    setCheckingCode(false);
     setForm((current) => ({ ...current, assetType: asset.type, assetCode: asset.code }));
     setFundSearchOpen(false);
     setPreviewPrice(null);
@@ -400,16 +421,17 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
     if (!prices[asset.code]) {
       try {
         prices = await loadMarketPrices();
-      } catch (loadError) {
-        setError(loadError instanceof Error ? loadError.message : "Güncel fiyat alınamadı.");
+      } catch {
         return;
       }
     }
     const latest = prices[asset.code];
-    if (latest) setPreviewPrice(latest);
+    if (latest && selection === selectionVersion.current) setPreviewPrice(latest);
   }
 
   function selectFundType() {
+    selectionVersion.current++;
+    setCheckingCode(false);
     setForm((current) => ({ ...current, assetType: "fund", assetCode: "" }));
     setPreviewPrice(null);
     setFundSearchOpen(false);
@@ -418,6 +440,8 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
   }
 
   function openAddForm() {
+    selectionVersion.current++;
+    setCheckingCode(false);
     setEditingId(null);
     setForm(emptyForm);
     setPreviewPrice(null);
@@ -431,12 +455,14 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
   }
 
   function openEditForm(holding: Holding) {
+    selectionVersion.current++;
+    setCheckingCode(false);
     setEditingId(holding.holding_id);
     setForm({
       assetType: holding.asset_type,
       assetCode: holding.asset_code,
-      quantity: String(holding.quantity),
-      buyPrice: String(holding.buy_price),
+      quantity: String(holding.quantity).replace(".", ","),
+      buyPrice: String(holding.buy_price).replace(".", ","),
       buyDate: holding.buy_date || "",
     });
     setPreviewPrice(priceForHolding(holding));
@@ -456,15 +482,7 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
     setMessage("");
     try {
       const code = form.assetCode.trim().toUpperCase();
-      if (form.assetType === "fund") {
-        await readLatestFundPrice(code);
-      } else {
-        let prices = marketPrices;
-        if (!prices[code as MarketCode]) prices = await loadMarketPrices();
-        if (!prices[code as MarketCode]) {
-          throw new Error(code === "XAU_GR" ? "Gram altın resmi gün sonu fiyatı henüz alınamadı." : "Güncel resmi kur alınamadı.");
-        }
-      }
+      if (form.assetType === "fund" && !fundNames[code]) throw new Error("Listeden geçerli bir yatırım fonu seçin.");
       const buyPrice = parseNumberInput(form.buyPrice);
       if (!Number.isFinite(buyPrice) || buyPrice <= 0) throw new Error("Geçerli bir alış fiyatı girin.");
 
@@ -475,21 +493,24 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
         quantity = amount / buyPrice;
       }
       if (!Number.isFinite(quantity) || quantity <= 0) throw new Error("Geçerli bir miktar girin.");
-      await portfolioRequest(editingId ? "PUT" : "POST", {
+      const saved = await portfolioRequest(editingId ? "PUT" : "POST", {
         ...(editingId ? { holdingId: editingId } : {}),
         assetType: form.assetType,
         assetCode: code,
         quantity,
         buyPrice,
         buyDate: form.buyDate || null,
-      });
-      await loadPortfolio();
+      }) as ApiResult & { holding: Holding };
+      // Saving holdings does not depend on market availability or a second GET.
+      setHoldings((current) => [...current.filter((holding) => holding.holding_id !== saved.holding.holding_id), saved.holding]);
       const wasEditing = Boolean(editingId);
       setFormOpen(false);
       setForm(emptyForm);
       setEditingId(null);
       setPreviewPrice(null);
       setMessage(wasEditing ? "Varlık bilgileri güncellendi." : "Varlık portföyünüze eklendi.");
+      selectionVersion.current++;
+      void Promise.allSettled([loadFundPrices([...holdings.filter((holding) => holding.holding_id !== saved.holding.holding_id), saved.holding]), loadMarketPrices()]);
     } catch (saveError) {
       setError(saveError instanceof Error ? saveError.message : "Varlık kaydedilemedi.");
     } finally {
@@ -503,14 +524,23 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
     setMessage("");
     try {
       await portfolioRequest("DELETE", { holdingId: holding.holding_id });
-      await loadPortfolio();
+      setHoldings((current) => current.filter((item) => item.holding_id !== holding.holding_id));
       setMessage(`${assetLabel(holding)} portföyünüzden kaldırıldı.`);
     } catch (removeError) {
       setError(removeError instanceof Error ? removeError.message : "Varlık kaldırılamadı.");
     }
   }
 
-  if (loading) return <AuthMessage type="info">Portföyünüz yükleniyor…</AuthMessage>;
+  async function refreshPortfolio() {
+    if (refreshLock.current) return;
+    refreshLock.current = true;
+    setRefreshing(true);
+    setError("");
+    try { await loadPortfolio(); } catch { setError("Portföy yenilenemedi. Tekrar deneyebilirsiniz."); }
+    finally { refreshLock.current = false; setRefreshing(false); }
+  }
+
+  if (loading) return <div className={styles.loading} role="status">Portföyünüz hazırlanıyor…</div>;
   if (!user) {
     return (
       <AuthMessage type={error ? "error" : "info"}>
@@ -533,29 +563,22 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
       : null;
 
   return (
-    <div className="space-y-5">
+    <div className={styles.panel}>
       {error ? <AuthMessage type="error">{error}</AuthMessage> : null}
       {message ? <AuthMessage type="success">{message}</AuthMessage> : null}
 
-      <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-        <p className="text-sm font-semibold text-slate-500">Portföy sahibi</p>
-        <p className="mt-1 break-words text-base font-extrabold text-slate-900">{user.display_name}</p>
+      <div className={styles.toolbar}>
+        <div className={styles.owner}><span className={styles.avatar}>{user.display_name.slice(0, 1).toLocaleUpperCase("tr-TR")}</span><div><strong>{user.display_name} · Kişisel portföy</strong><small>{updatedAt ? `Son kontrol ${new Date(updatedAt).toLocaleTimeString("tr-TR", { hour: "2-digit", minute: "2-digit" })}` : "Hesabınıza kayıtlı varlıklar"} · Fiyatlar açıklanma tarihleriyle gösterilir</small></div></div>
+        <div className={styles.actions}><button type="button" onClick={() => void refreshPortfolio()} disabled={refreshing || saving} className={styles.secondary}><RefreshCw size={15} className={refreshing ? "animate-spin" : ""} />{refreshing ? "Yenileniyor" : "Yenile"}</button><button type="button" onClick={openAddForm} className={styles.primary}><Plus size={17} />Varlık ekle</button></div>
       </div>
 
-      <button
-        type="button"
-        onClick={openAddForm}
-        className="inline-flex w-full items-center justify-center rounded-xl bg-blue-700 px-4 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-blue-800"
-      >
-        + Varlık Ekle
-      </button>
-
       {formOpen ? (
-        <form onSubmit={saveHolding} className="space-y-4 rounded-xl border border-slate-200 bg-slate-50 p-4">
+        <form ref={formRef} onSubmit={saveHolding} aria-label={editingId ? "Varlığı düzenle" : "Portföye varlık ekle"} className={`${styles.form} space-y-4 rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:p-7`}>
           <div className="flex items-center justify-between gap-3">
             <h2 className="text-base font-extrabold text-slate-900">{editingId ? "Varlığı Düzenle" : "Portföye Varlık Ekle"}</h2>
             <button type="button" onClick={() => setFormOpen(false)} className="text-sm font-semibold text-slate-500 hover:text-slate-800">Kapat</button>
           </div>
+          <p className={styles.formIntro}>Elinizdeki miktarı ve birim alış fiyatını girin. Güncel fiyat henüz yoksa da varlığınız maliyetiyle kaydedilir.</p>
 
           <div>
             <p className="text-sm font-semibold text-slate-800">Varlık türü</p>
@@ -594,6 +617,8 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
                   <input
                     value={form.assetCode}
                     onChange={(event) => {
+                      selectionVersion.current++;
+                      setCheckingCode(false);
                       setForm((current) => ({ ...current, assetCode: event.target.value.slice(0, 80) }));
                       setPreviewPrice(null);
                       setFundActiveIndex(0);
@@ -666,7 +691,7 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
                       })
                     ) : (
                       <div className="px-4 py-5 text-center text-sm font-normal text-slate-500">
-                        Listede eşleşen fon bulunamadı. Fon kodunu doğrudan yazıp “Kontrol Et” ile deneyebilirsiniz.
+                        Eşleşen fon bulunamadı. Fonun kodunu veya adını kontrol edin.
                       </div>
                     )}
                   </div>
@@ -688,9 +713,9 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
               Son açıklanan fiyat: <strong>{formatPrice(previewPrice.price)} TL</strong> · {previewPrice.date}
               {previewPrice.source ? <span className="mt-1 block text-xs text-blue-800">Kaynak: {previewPrice.source}</span> : null}
             </div>
-          ) : form.assetType !== "fund" && form.assetCode ? (
+          ) : form.assetCode && !checkingCode ? (
             <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
-              Bu varlığın resmi fiyatı henüz alınamadı. {form.assetCode === "XAU_GR" ? "Gram altın için EVDS API anahtarının tanımlı olması gerekir." : "Biraz sonra tekrar deneyin."}
+              Güncel fiyat bekleniyor. Miktar ve alış fiyatınızla kaydedebilirsiniz; piyasa değeri ve kâr/zarar fiyat geldiğinde hesaplanır.
             </div>
           ) : null}
 
@@ -802,6 +827,8 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
             </div>
           )}
 
+          {form.assetType !== "fund" && Number.isFinite(formFundQuantity) && formFundQuantity > 0 && Number.isFinite(formBuyPrice) && formBuyPrice > 0 ? <div className="rounded-xl border border-blue-200 bg-blue-50 px-4 py-3 text-sm text-blue-900">Kaydedilecek alış maliyeti: <strong>{formatMoney(formFundQuantity * formBuyPrice)}</strong><span className="mt-1 block text-xs">{formatQuantity(formFundQuantity)} {form.assetType === "gold" ? "gram" : form.assetCode} × {formatPrice(formBuyPrice)} TL</span></div> : null}
+
           <label className="block text-sm font-semibold text-slate-800">
             Alış tarihi <span className="font-normal text-slate-500">(isteğe bağlı)</span>
             <input
@@ -819,91 +846,9 @@ export default function PortfolioPanel({ funds }: { funds: FundOption[] }) {
         </form>
       ) : null}
 
-      {marketWarnings.length > 0 && holdings.some((item) => item.asset_type !== "fund") ? (
-        <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs leading-5 text-amber-900">
-          {marketWarnings.join(" · ")}
-        </div>
-      ) : null}
-
-      {holdings.length === 0 ? (
-        <div className="rounded-xl border border-dashed border-slate-300 bg-white px-5 py-8 text-center">
-          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-50 text-blue-700" aria-hidden="true">
-            <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 19V9m6 10V5m6 14v-7m4 7H2" strokeLinecap="round" strokeLinejoin="round" /></svg>
-          </div>
-          <h2 className="mt-4 text-lg font-extrabold text-slate-900">Henüz portföyünüzde varlık bulunmuyor</h2>
-          <p className="mx-auto mt-2 max-w-sm text-sm leading-6 text-slate-600">“Varlık Ekle” ile yatırım fonu, Dolar, Euro veya Gram Altın ekleyebilirsiniz.</p>
-        </div>
-      ) : (
-        <>
-          <div className="grid gap-3 sm:grid-cols-2">
-            <div className="rounded-xl border border-slate-200 bg-white p-4">
-              <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Toplam maliyet</p>
-              <p className="mt-1 text-xl font-extrabold text-slate-900">{formatMoney(summary.cost)}</p>
-            </div>
-            <div className="rounded-xl border border-slate-200 bg-white p-4">
-              <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Güncel değer</p>
-              <p className="mt-1 text-xl font-extrabold text-slate-900">{summary.complete ? formatMoney(summary.current) : "Fiyat bekleniyor"}</p>
-            </div>
-            <div className="rounded-xl border border-slate-200 bg-white p-4 sm:col-span-2">
-              <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Toplam kâr / zarar</p>
-              {summary.profit !== null && summary.returnPct !== null ? (
-                <p className={`mt-1 text-xl font-extrabold ${summary.profit >= 0 ? "text-emerald-700" : "text-red-700"}`}>{formatMoney(summary.profit)} · {formatPercent(summary.returnPct)}</p>
-              ) : (
-                <p className="mt-1 text-sm font-semibold text-slate-600">Tüm varlıkların güncel fiyatı alınamadı.</p>
-              )}
-            </div>
-          </div>
-
-          <div className="space-y-3">
-            {holdings.map((holding) => {
-              const latest = priceForHolding(holding);
-              const cost = holding.quantity * holding.buy_price;
-              const current = latest ? holding.quantity * latest.price : null;
-              const profit = current !== null ? current - cost : null;
-              const returnPct = profit !== null && cost > 0 ? (profit / cost) * 100 : null;
-              return (
-                <article key={holding.holding_id} className="rounded-xl border border-slate-200 bg-white p-4">
-                  <div className="flex flex-wrap items-start justify-between gap-3">
-                    <div>
-                      <div className="text-xl font-black text-slate-900">{assetLabel(holding)}</div>
-                      <div className="mt-1 text-xs text-slate-500">
-                        {holding.asset_type === "fund" ? holding.asset_code : holding.asset_code === "XAU_GR" ? "ALTIN" : holding.asset_code}
-                        {holding.buy_date ? ` · Alış: ${holding.buy_date}` : " · Alış tarihi girilmedi"}
-                      </div>
-                    </div>
-                    <div className="flex gap-2">
-                      <button type="button" onClick={() => openEditForm(holding)} className="rounded-lg border border-slate-300 px-3 py-2 text-xs font-bold text-slate-700 hover:bg-slate-50">Düzenle</button>
-                      <button type="button" onClick={() => void removeHolding(holding)} className="rounded-lg border border-red-200 px-3 py-2 text-xs font-bold text-red-700 hover:bg-red-50">Sil</button>
-                    </div>
-                  </div>
-
-                  <dl className="mt-4 grid grid-cols-2 gap-x-4 gap-y-3 text-sm sm:grid-cols-4">
-                    <div><dt className="text-xs text-slate-500">Miktar</dt><dd className="mt-1 font-bold text-slate-900">{formatQuantity(holding.quantity)}{quantitySuffix(holding)}</dd></div>
-                    <div><dt className="text-xs text-slate-500">Alış fiyatı</dt><dd className="mt-1 font-bold text-slate-900">{formatPrice(holding.buy_price)} TL</dd></div>
-                    <div><dt className="text-xs text-slate-500">Son fiyat</dt><dd className="mt-1 font-bold text-slate-900">{latest ? `${formatPrice(latest.price)} TL` : "Alınamadı"}</dd></div>
-                    <div><dt className="text-xs text-slate-500">Günlük</dt><dd className={`mt-1 font-bold ${latest?.dailyReturn != null ? (latest.dailyReturn >= 0 ? "text-emerald-700" : "text-red-700") : "text-slate-500"}`}>{latest?.dailyReturn != null ? formatPercent(latest.dailyReturn) : "—"}</dd></div>
-                    <div><dt className="text-xs text-slate-500">Maliyet</dt><dd className="mt-1 font-bold text-slate-900">{formatMoney(cost)}</dd></div>
-                    <div><dt className="text-xs text-slate-500">Güncel değer</dt><dd className="mt-1 font-bold text-slate-900">{current !== null ? formatMoney(current) : "—"}</dd></div>
-                    <div className="col-span-2"><dt className="text-xs text-slate-500">Kâr / zarar</dt><dd className={`mt-1 font-extrabold ${profit == null ? "text-slate-500" : profit >= 0 ? "text-emerald-700" : "text-red-700"}`}>{profit !== null && returnPct !== null ? `${formatMoney(profit)} · ${formatPercent(returnPct)}` : "—"}</dd></div>
-                  </dl>
-                  {latest ? (
-                    <p className="mt-3 text-[11px] leading-5 text-slate-500">
-                      Son resmi fiyat tarihi: {latest.date}{latest.source ? ` · Kaynak: ${latest.source}` : ""}
-                      {latest.sourceDetail ? ` · ${latest.sourceDetail}` : ""}
-                    </p>
-                  ) : null}
-                </article>
-              );
-            })}
-          </div>
-        </>
-      )}
-
-      <p className="text-xs leading-5 text-slate-500">
-        Fonlar son açıklanan fon birim fiyatıyla; Dolar ve Euro TCMB resmi döviz alış kuru ile; Gram Altın TCMB EVDS üzerinden yayımlanan Borsa İstanbul Altın Piyasası gün sonu kapanışıyla hesaplanır. Fiyatlar otomatik yenilenir. Yatırım tavsiyesi değildir.
-      </p>
-
-      <Link href="/hesabim" prefetch={false} className="inline-flex w-full items-center justify-center rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm font-bold text-slate-800 hover:bg-slate-50">Hesabıma Dön</Link>
+      <PortfolioOverview holdings={holdings} quotes={quotes} histories={histories} fundNames={fundNames} onEdit={openEditForm} onDelete={(holding) => void removeHolding(holding)} onAdd={openAddForm} />
+      {marketWarnings.length > 0 && holdings.some((item) => item.asset_type !== "fund") ? <p className={styles.muted} role="status" style={{ fontSize: 12 }}>Bazı piyasa fiyatları şu anda yenilenemiyor. Varsa son açıklanan fiyat, yoksa alış maliyeti gösterilir.</p> : null}
+      <div className={styles.footer}><span>Sayfa açıkken fiyatlar 5 dakikada bir kontrol edilir. Yatırım tavsiyesi değildir.</span><Link href="/hesabim"><ArrowLeft size={14} />Hesabıma dön</Link></div>
     </div>
   );
 }

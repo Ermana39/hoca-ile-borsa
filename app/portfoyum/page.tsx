@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import PortfolioPanel from "@/components/auth/PortfolioPanel";
-import AuthShell from "@/components/auth/AuthShell";
+import Link from "@/components/NoPrefetchLink";
+import { ShieldCheck } from "lucide-react";
+import styles from "@/components/auth/PortfolioPanel.module.css";
 import { getCurrentFundsData } from "@/lib/fon-platform";
 
 export const metadata: Metadata = {
@@ -20,12 +22,16 @@ export default function PortfoyumPage() {
     .sort((a, b) => a.kod.localeCompare(b.kod, "tr-TR"));
 
   return (
-    <AuthShell
-      eyebrow="Üyelik"
-      title="Portföyüm"
-      description="Yatırım fonu, Dolar, Euro ve Gram Altın varlıklarınızı bu alandan takip edebilirsiniz."
-    >
-      <PortfolioPanel funds={funds} />
-    </AuthShell>
+    <main className={styles.page}>
+      <div className={styles.container}>
+        <nav className={styles.breadcrumb} aria-label="İçerik yolu"><Link href="/">Ana Sayfa</Link><span>/</span><span aria-current="page">Portföyüm</span></nav>
+        <header className={styles.pageHeader}>
+          <span className={styles.eyebrow}><ShieldCheck size={14} />Kişisel yatırım alanınız</span>
+          <h1>Portföyüm</h1>
+          <p>Fon, döviz ve altınınızın maliyetini, değerini ve getirisini tek bakışta takip edin.</p>
+        </header>
+        <PortfolioPanel funds={funds} />
+      </div>
+    </main>
   );
 }
