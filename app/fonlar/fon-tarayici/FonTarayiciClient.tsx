@@ -23,6 +23,7 @@ export type ScannerFund = {
   fonToplamDeger: number | null;
   kisiSayisi: number | null;
   gunlukGetiri: number | null;
+  haftalikGetiri: number | null;
   paraAkisi: FundPeriodValues;
   getiriler: FundReturns;
 };
@@ -43,6 +44,7 @@ const sortLabels: Record<string, string> = {
   birAyAkis: "1 Ay Akış",
   ucAyAkis: "3 Ay Akış",
   gunlukGetiri: "Günlük Getiri",
+  haftalikGetiri: "1H",
   birAyGetiri: "1A",
   ucAyGetiri: "3A",
   altiAyGetiri: "6A",
@@ -58,6 +60,7 @@ const numericInputs = [
   ["yatirimciMin", "Yatırımcı Min"], ["yatirimciMax", "Yatırımcı Max"],
   ["gunlukAkisMin", "Günlük Akış Min"], ["besGunAkisMin", "5 Gün Akış Min"],
   ["birAyAkisMin", "1 Ay Akış Min"], ["ucAyAkisMin", "3 Ay Akış Min"],
+  ["haftalikGetiriMin", "1H Getiri Min"],
   ["birAyGetiriMin", "1A Getiri Min"], ["ucAyGetiriMin", "3A Getiri Min"],
   ["altiAyGetiriMin", "6A Getiri Min"], ["yilbasiGetiriMin", "YBB Min"],
   ["birYilGetiriMin", "1Y Getiri Min"], ["ucYilGetiriMin", "3Y Getiri Min"],
@@ -106,6 +109,7 @@ function filterFunds(funds: ScannerFund[], params: Params) {
     ["besGunAkisMin", "besGunAkisMax", (fund) => fund.paraAkisi.besGun],
     ["birAyAkisMin", "birAyAkisMax", (fund) => fund.paraAkisi.birAy],
     ["ucAyAkisMin", "ucAyAkisMax", (fund) => fund.paraAkisi.ucAy],
+    ["haftalikGetiriMin", "haftalikGetiriMax", (fund) => fund.haftalikGetiri],
     ["birAyGetiriMin", "birAyGetiriMax", (fund) => fund.getiriler.birAy],
     ["ucAyGetiriMin", "ucAyGetiriMax", (fund) => fund.getiriler.ucAy],
     ["altiAyGetiriMin", "altiAyGetiriMax", (fund) => fund.getiriler.altiAy],
@@ -127,6 +131,7 @@ function sortValue(fund: ScannerFund, sort: string): string | number | null {
     kisiSayisi: fund.kisiSayisi, gunlukAkis: fund.paraAkisi.gunluk,
     besGunAkis: fund.paraAkisi.besGun, birAyAkis: fund.paraAkisi.birAy,
     ucAyAkis: fund.paraAkisi.ucAy, gunlukGetiri: fund.gunlukGetiri,
+    haftalikGetiri: fund.haftalikGetiri,
     birAyGetiri: fund.getiriler.birAy, ucAyGetiri: fund.getiriler.ucAy,
     altiAyGetiri: fund.getiriler.altiAy, yilbasiGetiri: fund.getiriler.yilbasi,
     birYilGetiri: fund.getiriler.birYil, ucYilGetiri: fund.getiriler.ucYil,
@@ -177,12 +182,17 @@ export default function FonTarayiciClient({
   const page = Math.min(requestedPage, totalPages);
   const rows = filtered.slice((page - 1) * pageSize, page * pageSize);
   const inputClass = "w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-blue-400";
+  const hideFlowColumns = params.view === "getiri" || sort === "gunlukGetiri";
 
   const headers = [
     ["kod", "Fon Kodu"], ["ad", "Fon Adı"], ["kategori", "Şemsiye Türü"],
     ["yonetici", "Yönetici"], ["riskDegeri", "Risk"], ["fonToplamDeger", "Fon Toplam Değeri"],
-    ["kisiSayisi", "Yatırımcı"], ["gunlukAkis", "Günlük Akış"], ["besGunAkis", "5 Gün Akış"],
-    ["birAyAkis", "1 Ay Akış"], ["ucAyAkis", "3 Ay Akış"], ["gunlukGetiri", "Günlük Getiri"],
+    ["kisiSayisi", "Yatırımcı"],
+    ...(hideFlowColumns ? [] : [
+      ["gunlukAkis", "Günlük Akış"], ["besGunAkis", "5 Gün Akış"],
+      ["birAyAkis", "1 Ay Akış"], ["ucAyAkis", "3 Ay Akış"],
+    ]),
+    ["gunlukGetiri", "Günlük Getiri"], ["haftalikGetiri", "1H"],
     ["birAyGetiri", "1A"], ["ucAyGetiri", "3A"], ["altiAyGetiri", "6A"],
     ["yilbasiGetiri", "YBB"], ["birYilGetiri", "1Y"], ["ucYilGetiri", "3Y"], ["besYilGetiri", "5Y"],
   ] as const;
@@ -215,7 +225,7 @@ export default function FonTarayiciClient({
       </div>
 
       <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
-        <table className="w-full min-w-[1680px] text-sm">
+        <table className={`w-full text-sm ${hideFlowColumns ? "min-w-[1360px]" : "min-w-[1760px]"}`}>
           <thead className="bg-slate-100 text-left text-slate-700"><tr>{headers.map(([key, label], index) => {
             const nextDir = sort === key && dir === "desc" ? "asc" : "desc";
             const arrow = sort === key ? (dir === "asc" ? "↑" : "↓") : "↕";
@@ -225,9 +235,15 @@ export default function FonTarayiciClient({
             {rows.map((fund) => {
               const cells: [string, number | null][] = [
                 [formatNumber(fund.riskDegeri), null], [formatCompactTL(fund.fonToplamDeger), null],
-                [formatNumber(fund.kisiSayisi), null], [formatSignedTL(fund.paraAkisi.gunluk), fund.paraAkisi.gunluk],
-                [formatSignedTL(fund.paraAkisi.besGun), fund.paraAkisi.besGun], [formatSignedTL(fund.paraAkisi.birAy), fund.paraAkisi.birAy],
-                [formatSignedTL(fund.paraAkisi.ucAy), fund.paraAkisi.ucAy], [formatSignedPercent(fund.gunlukGetiri), fund.gunlukGetiri],
+                [formatNumber(fund.kisiSayisi), null],
+                ...(hideFlowColumns ? [] : [
+                  [formatSignedTL(fund.paraAkisi.gunluk), fund.paraAkisi.gunluk],
+                  [formatSignedTL(fund.paraAkisi.besGun), fund.paraAkisi.besGun],
+                  [formatSignedTL(fund.paraAkisi.birAy), fund.paraAkisi.birAy],
+                  [formatSignedTL(fund.paraAkisi.ucAy), fund.paraAkisi.ucAy],
+                ] as [string, number | null][]),
+                [formatSignedPercent(fund.gunlukGetiri), fund.gunlukGetiri],
+                [formatSignedPercent(fund.haftalikGetiri), fund.haftalikGetiri],
                 [formatSignedPercent(fund.getiriler.birAy), fund.getiriler.birAy], [formatSignedPercent(fund.getiriler.ucAy), fund.getiriler.ucAy],
                 [formatSignedPercent(fund.getiriler.altiAy), fund.getiriler.altiAy], [formatSignedPercent(fund.getiriler.yilbasi), fund.getiriler.yilbasi],
                 [formatSignedPercent(fund.getiriler.birYil), fund.getiriler.birYil], [formatSignedPercent(fund.getiriler.ucYil), fund.getiriler.ucYil],

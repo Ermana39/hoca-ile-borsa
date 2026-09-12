@@ -19,6 +19,23 @@ export const metadata: Metadata = {
   },
 };
 
+function calculateWeeklyReturn(fund: ReturnType<typeof getCurrentFundsData>["fonlar"][number]) {
+  const latest = fund.sonOtuzIslemGunu[0]?.fiyat;
+  const previousWeek = fund.sonOtuzIslemGunu[5]?.fiyat;
+
+  if (
+    typeof latest !== "number" ||
+    typeof previousWeek !== "number" ||
+    !Number.isFinite(latest) ||
+    !Number.isFinite(previousWeek) ||
+    previousWeek <= 0
+  ) {
+    return null;
+  }
+
+  return latest / previousWeek - 1;
+}
+
 export default function FonTarayiciPage() {
   const data = getCurrentFundsData();
   const funds: ScannerFund[] = data.fonlar.map((fund) => ({
@@ -33,6 +50,7 @@ export default function FonTarayiciPage() {
     fonToplamDeger: fund.fonToplamDeger,
     kisiSayisi: fund.kisiSayisi,
     gunlukGetiri: fund.gunlukGetiri,
+    haftalikGetiri: calculateWeeklyReturn(fund),
     paraAkisi: fund.paraAkisi,
     getiriler: fund.getiriler,
   }));

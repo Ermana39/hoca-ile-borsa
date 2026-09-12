@@ -263,13 +263,13 @@ export default function FonlarPage() {
           <Leaderboard
             title="Bugün En Çok Kazandıran Fonlar"
             items={leaderboards.bugunEnCokKazandiran ?? []}
-            href="/fonlar/fon-tarayici?sort=gunlukGetiri&dir=desc"
+            href="/fonlar/fon-tarayici?sort=gunlukGetiri&dir=desc&view=getiri"
             kind="percent"
           />
           <Leaderboard
             title="Bugün En Çok Kaybettiren Fonlar"
             items={leaderboards.bugunEnCokKaybettiren ?? []}
-            href="/fonlar/fon-tarayici?sort=gunlukGetiri&dir=asc"
+            href="/fonlar/fon-tarayici?sort=gunlukGetiri&dir=asc&view=getiri"
             kind="percent"
           />
           <Leaderboard
