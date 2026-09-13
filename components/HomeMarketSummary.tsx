@@ -3,10 +3,28 @@
 import { useEffect, useRef } from "react";
 
 export default function HomeMarketSummary() {
+  const frameRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
+    const frame = frameRef.current;
     const container = containerRef.current;
     if (!container) return;
+
+    const applyFrameLayout = () => {
+      if (!frame) return;
+      if (window.matchMedia("(max-width: 767px)").matches) {
+        frame.style.width = "260%";
+        frame.style.transform = "scaleX(0.384615)";
+        frame.style.transformOrigin = "left top";
+      } else {
+        frame.style.width = "100%";
+        frame.style.transform = "none";
+        frame.style.transformOrigin = "left top";
+      }
+    };
+
+    applyFrameLayout();
+    window.addEventListener("resize", applyFrameLayout);
 
     container.replaceChildren();
 
@@ -46,6 +64,7 @@ export default function HomeMarketSummary() {
     container.appendChild(script);
 
     return () => {
+      window.removeEventListener("resize", applyFrameLayout);
       container.replaceChildren();
     };
   }, []);
@@ -55,10 +74,15 @@ export default function HomeMarketSummary() {
       <div className="flex flex-col gap-2 md:flex-row">
         <div className="min-w-0 flex-1 overflow-hidden rounded-lg border border-slate-200 bg-white">
           <div
-            ref={containerRef}
-            className="tradingview-widget-container h-[72px] w-full"
+            ref={frameRef}
+            className="home-market-widget-frame h-[72px]"
             aria-label="Dolar, euro, gram altın ve ons altın piyasa fiyatları"
-          />
+          >
+            <div
+              ref={containerRef}
+              className="tradingview-widget-container h-[72px] w-full"
+            />
+          </div>
         </div>
 
         <a
