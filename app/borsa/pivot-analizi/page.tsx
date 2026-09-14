@@ -1,5 +1,8 @@
+import type { Metadata } from "next";
+import Link from "@/components/NoPrefetchLink";
+import { seoAciklamasi } from "@/lib/seo-metadata";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "BIST Pivot Analizi ve Destek Direnç Seviyeleri",
   description:
     seoAciklamasi("Pivot, destek ve direnç seviyelerine göre hisselerin teknik görünümünü tablo halinde inceleyin.", "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
@@ -8,7 +11,6 @@ export const metadata = {
   },
 };
 
-import Link from "@/components/NoPrefetchLink";
 
 type PivotRow = {
   sembol: string;
