@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-14T05:52:21.215Z",
+  "generatedAt": "2026-09-14T07:26:47.392Z",
   "duplicateKontrolu": {
-    "added": 1680,
-    "updated": 0,
-    "skipped": 1680
+    "added": 329,
+    "updated": 103,
+    "skipped": 3586
   },
   "islenenFonSayisi": 1065,
   "islenenSnapshotSayisi": 2038,
-  "kaliciSnapshotSayisi": 1698548,
-  "temizlenenGecersizSnapshotSayisi": 358,
-  "yoneticiyleEslesenFonSayisi": 1668,
-  "bilinmeyenYoneticiSayisi": 12,
+  "kaliciSnapshotSayisi": 1698877,
+  "temizlenenGecersizSnapshotSayisi": 29,
+  "yoneticiyleEslesenFonSayisi": 1991,
+  "bilinmeyenYoneticiSayisi": 18,
   "bilinmeyenYoneticiFonlari": [
     {
       "fonKodu": "OPU",
@@ -38,6 +38,10 @@
       "fonAdi": "İŞ PORTFÖY DM HİSSE SENEDİ ÖZEL FON (HİSSE SENEDİ YOĞUN FON)"
     },
     {
+      "fonKodu": "GLL",
+      "fonAdi": "GOLDEN GLOBAL PORTFÖY ALTIN KATILIM FONU"
+    },
+    {
       "fonKodu": "ETN",
       "fonAdi": "EMAA BLUE PORTFÖY TEMKİNLİ DEĞİŞKEN FON"
     },
@@ -58,6 +62,26 @@
       "fonAdi": "ALBARAKA PORTFÖY İKİNCİ PARA PİYASASI KATILIM FONU"
     },
     {
+      "fonKodu": "GOK",
+      "fonAdi": "GOLDEN GLOBAL PORTFÖY KISA VADELİ KİRA SERTİFİKALARI KATILIM FONU"
+    },
+    {
+      "fonKodu": "VHK",
+      "fonAdi": "V PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)"
+    },
+    {
+      "fonKodu": "VPH",
+      "fonAdi": "V PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)"
+    },
+    {
+      "fonKodu": "VPD",
+      "fonAdi": "V PORTFÖY BİRİNCİ DEĞİŞKEN FON"
+    },
+    {
+      "fonKodu": "VPE",
+      "fonAdi": "V PORTFÖY İKİNCİ DEĞİŞKEN FON"
+    },
+    {
       "fonKodu": "ICM",
       "fonAdi": "İNCİR PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU"
     }
@@ -65,8 +89,8 @@
   "kaynakDogrulama": {
     "sonKaynakTarihi": "2026-09-14",
     "sonKaynakKayitSayisi": 2038,
-    "sonKaynakGecerliKayitSayisi": 1680,
-    "gitGecmisindeIncelenenSurumSayisi": 110,
+    "sonKaynakGecerliKayitSayisi": 2009,
+    "gitGecmisindeIncelenenSurumSayisi": 111,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
     "manuelGecmisIceAktarimlari": [],
@@ -87,28 +111,28 @@
       }
     ],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 358,
+      "sayi": 29,
       "ornekler": [
-        "ABG:2026-09-14",
         "AES:2026-09-14",
-        "AFO:2026-09-14",
-        "AP2:2026-09-14",
         "APJ:2026-09-14",
         "ARL:2026-09-14",
         "ARM:2026-09-14",
-        "AVC:2026-09-14",
-        "BCC:2026-09-14",
-        "BRZ:2026-09-14",
-        "CFO:2026-09-14",
-        "CPT:2026-09-14",
-        "DFI:2026-09-14",
-        "DFO:2026-09-14",
-        "DHI:2026-09-14",
-        "DK1:2026-09-14",
-        "DUH:2026-09-14",
-        "EKL:2026-09-14",
-        "EZM:2026-09-14",
-        "FNN:2026-09-14"
+        "FNN:2026-09-14",
+        "GKE:2026-09-14",
+        "GKO:2026-09-14",
+        "GMC:2026-09-14",
+        "GMV:2026-09-14",
+        "GNZ:2026-09-14",
+        "GPC:2026-09-14",
+        "GSU:2026-09-14",
+        "GUM:2026-09-14",
+        "IJH:2026-09-14",
+        "MP2:2026-09-14",
+        "MP4:2026-09-14",
+        "MTU:2026-09-14",
+        "NFF:2026-09-14",
+        "NHP:2026-09-14",
+        "ODV:2026-09-14"
       ]
     }
   },
@@ -125,9 +149,9 @@
       },
       {
         "fonKodu": "DFI",
-        "tarihSayisi": 1037,
+        "tarihSayisi": 1038,
         "ilkTarih": "2022-07-29",
-        "sonTarih": "2026-09-11"
+        "sonTarih": "2026-09-14"
       },
       {
         "fonKodu": "KHA",
@@ -159,45 +183,11 @@
     "senkronizeEdildi": true,
     "tahminTarihi": "2026-09-14",
     "guncellenenFonlar": [
-      "TLY",
-      "THF",
-      "TMV",
-      "DOH",
-      "KHA"
+      "DFI"
     ]
   },
-  "veriUyarisiSayisi": 78,
+  "veriUyarisiSayisi": 77,
   "veriUyarilari": [
-    {
-      "tur": "gunluk-kaynakta-eksik-finansal-veri",
-      "tarih": "2026-09-14",
-      "toplamKayitSayisi": 2038,
-      "gecerliKayitSayisi": 1680,
-      "gecersizKayitSayisi": 358,
-      "gecerliOran": 0.82433759,
-      "ornekFonKodlari": [
-        "ABG",
-        "AES",
-        "AFO",
-        "AP2",
-        "APJ",
-        "ARL",
-        "ARM",
-        "AVC",
-        "BCC",
-        "BRZ",
-        "CFO",
-        "CPT",
-        "DFI",
-        "DFO",
-        "DHI",
-        "DK1",
-        "DUH",
-        "EKL",
-        "EZM",
-        "FNN"
-      ]
-    },
     {
       "fonKodu": "KJK",
       "tarih": "2023-12-13",
