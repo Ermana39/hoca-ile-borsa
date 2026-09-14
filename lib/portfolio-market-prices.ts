@@ -34,6 +34,7 @@ const PRICE_CACHE_MS = 30 * 60 * 1000;
 const EVDS_DISCOVERY_TTL_SECONDS = 30 * 24 * 60 * 60;
 const TCMB_DAILY_URL = "https://www.tcmb.gov.tr/kurlar/today.xml";
 const EVDS_BASE = "https://evds3.tcmb.gov.tr/igmevdsms-dis";
+const BIST_BASE = "https://www.borsaistanbul.com";
 
 let memoryCache: MarketPriceBundle | null = null;
 let memoryEvdsDiscovery: EvdsDiscovery | null = null;
@@ -98,6 +99,20 @@ async function fetchText(url: string) {
   return response.text();
 }
 
+async function fetchJson(url: string) {
+  const response = await fetch(url, {
+    cache: "no-store",
+    headers: { "User-Agent": "HocaIleBorsa/1.0" },
+    signal: AbortSignal.timeout(15_000),
+  });
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  return response.json() as Promise<unknown>;
+}
+
+function istanbulIsoDate() {
+  return new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Istanbul" });
+}
+
 function archiveUrl(isoDate: string) {
   const [year, month, day] = isoDate.split("-");
   return `https://www.tcmb.gov.tr/kurlar/${year}${month}/${day}${month}${year}.xml`;
@@ -156,6 +171,47 @@ async function fetchTcmbCurrencyPrices() {
     );
   }
   return { prices, history };
+}
+
+async function fetchBistCurrencyPrices() {
+  const payload = await fetchJson(`${BIST_BASE}/daily-exchange-rates.php?op=fetchDovizKuru`);
+  if (!payload || typeof payload !== "object") throw new Error("Borsa İstanbul döviz verisi okunamadı.");
+  const data = (payload as { data?: unknown }).data;
+  if (!Array.isArray(data)) throw new Error("Borsa İstanbul döviz verisi bulunamadı.");
+  const rows = new Map<string, { rate: number; date: string }>();
+  for (const item of data) {
+    if (!item || typeof item !== "object") continue;
+    const row = item as Record<string, unknown>;
+    const code = String(row.rate_code ?? "").trim().toUpperCase();
+    const rate = parseFiniteNumber(row.rate);
+    const date = String(row.tarih ?? "").slice(0, 10);
+    if ((code === "USD" || code === "EUR") && rate && /^\d{4}-\d{2}-\d{2}$/.test(date)) {
+      rows.set(code, { rate, date });
+    }
+  }
+  if (!rows.has("USD") || !rows.has("EUR")) throw new Error("Borsa İstanbul döviz kurları eksik.");
+  const prices = (["USD", "EUR"] as const).map((code): PortfolioMarketPrice => ({
+    code,
+    label: code === "USD" ? "Dolar" : "Euro",
+    price: rows.get(code)!.rate,
+    date: rows.get(code)!.date,
+    dailyReturn: null,
+    source: "Borsa İstanbul",
+    sourceDetail: "Borsa İstanbul tarafından yayımlanan günlük döviz kuru",
+    frequency: "workday",
+  }));
+  return {
+    prices,
+    history: Object.fromEntries(prices.map((price) => [price.code, [{ date: price.date, price: price.price }]])) as Partial<Record<PortfolioMarketCode, PriceObservation[]>>,
+  };
+}
+
+async function fetchCurrencyPrices() {
+  try {
+    return await fetchTcmbCurrencyPrices();
+  } catch {
+    return fetchBistCurrencyPrices();
+  }
 }
 
 function evdsApiKey() {
@@ -291,9 +347,9 @@ function extractEvdsSeriesValue(row: Record<string, unknown>, seriesCode: string
   return null;
 }
 
-async function fetchGoldPrice() {
+async function fetchEvdsGoldPrice() {
   const discovery = await discoverGoldSeries();
-  const today = new Date().toISOString().slice(0, 10);
+  const today = istanbulIsoDate();
   const start = previousIsoDate(today, 20);
   const payload = await fetchEvds(
     `series=${encodeURIComponent(discovery.seriesCode)}&startDate=${ddMmYyyy(start)}&endDate=${ddMmYyyy(today)}&type=json`,
@@ -321,10 +377,63 @@ async function fetchGoldPrice() {
   return { price, history: mergePriceHistory(observations.map((row) => ({ date: row.date, price: row.value / 1000 }))) };
 }
 
+async function fetchBistGoldPrice() {
+  const today = istanbulIsoDate();
+  const start = previousIsoDate(today, 120);
+  const query = new URLSearchParams({
+    op: "fetchMetalFiyatlari",
+    startDate: start,
+    endDate: today,
+    priceType: "AU",
+  });
+  const payload = await fetchJson(`${BIST_BASE}/metal-fiyatlari.php?${query}`);
+  if (!payload || typeof payload !== "object") throw new Error("Borsa İstanbul altın verisi okunamadı.");
+  const data = (payload as { data?: unknown }).data;
+  if (!Array.isArray(data)) throw new Error("Borsa İstanbul altın verisi bulunamadı.");
+  const history = mergePriceHistory(data.flatMap((item) => {
+    if (!item || typeof item !== "object") return [];
+    const row = item as Record<string, unknown>;
+    const date = String(row.priceDate ?? "").slice(0, 10);
+    const value = parseFiniteNumber(row.priceValue);
+    if (
+      row.priceRef !== "MTL" || row.priceType !== "AU" ||
+      row.priceCurrency !== "TRY" || row.priceWeight !== "KG" ||
+      !/^\d{4}-\d{2}-\d{2}$/.test(date) || !value || value <= 0
+    ) return [];
+    return [{ date, price: value / 1000 }];
+  }));
+  if (!history.length) throw new Error("Borsa İstanbul gram altın fiyatı bulunamadı.");
+  const latest = history.at(-1)!;
+  const previous = history.length > 1 ? history.at(-2)! : null;
+  const price: PortfolioMarketPrice = {
+    code: "XAU_GR",
+    label: "Gram Altın",
+    price: latest.price,
+    date: latest.date,
+    dailyReturn: percentChange(latest.price, previous?.price ?? null),
+    source: "Borsa İstanbul",
+    sourceDetail: "Borsa İstanbul Kıymetli Madenler Piyasası TRY/KG metal fiyatından TL/gram",
+    frequency: "workday",
+  };
+  return { price, history };
+}
+
+async function fetchGoldPrice() {
+  try {
+    return await fetchBistGoldPrice();
+  } catch {
+    return fetchEvdsGoldPrice();
+  }
+}
+
 function isFresh(bundle: MarketPriceBundle | null) {
   if (!bundle?.fetchedAt) return false;
   const time = Date.parse(bundle.fetchedAt);
-  return Number.isFinite(time) && Date.now() - time < PRICE_CACHE_MS;
+  const complete = (["USD", "EUR", "XAU_GR"] as const).every((code) => {
+    const price = bundle.prices?.[code]?.price;
+    return typeof price === "number" && Number.isFinite(price) && price > 0;
+  });
+  return complete && Number.isFinite(time) && Date.now() - time < PRICE_CACHE_MS;
 }
 
 async function readCachedBundle() {
@@ -350,7 +459,7 @@ export async function getPortfolioMarketPrices(): Promise<MarketPriceBundle> {
   };
   const history = { ...(cached?.history ?? {}) };
 
-  const [currencies, gold] = await Promise.allSettled([fetchTcmbCurrencyPrices(), fetchGoldPrice()]);
+  const [currencies, gold] = await Promise.allSettled([fetchCurrencyPrices(), fetchGoldPrice()]);
   if (currencies.status === "fulfilled") {
     for (const item of currencies.value.prices) {
       nextPrices[item.code] = item;

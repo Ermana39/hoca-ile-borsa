@@ -94,7 +94,7 @@ test("price history merges by date and discards invalid or non-positive quotes",
   assert.deepEqual(mergePriceHistory([{ date: "2026-09-10", price: 1 }], [{ date: "2026-09-10", price: 2 }, { date: "2026-09-09", price: 0 }, { date: "bad", price: 1 }]), [{ date: "2026-09-10", price: 2 }]);
 });
 
-test("market cache preserves real historical dates and hides provider setup details", async () => {
+test("market cache includes official daily currency and gold values without provider setup", async () => {
   const previousFetch = globalThis.fetch;
   const original = [process.env.EVDS_API_KEY, process.env.TCMB_EVDS_API_KEY];
   delete process.env.EVDS_API_KEY;
@@ -105,6 +105,13 @@ test("market cache preserves real historical dates and hides provider setup deta
     async set(key, value) { stored = value; },
   };
   globalThis.fetch = async (url) => {
+    if (String(url).includes("borsaistanbul.com/metal-fiyatlari.php")) {
+      return Response.json({ data: [
+        { priceDate: "2026-09-10", priceRef: "MTL", priceType: "AU", priceCurrency: "TRY", priceWeight: "KG", priceValue: 6_900_000 },
+        { priceDate: "2026-09-11", priceRef: "MTL", priceType: "AU", priceCurrency: "TRY", priceWeight: "KG", priceValue: 7_000_000 },
+        { priceDate: "2026-09-11", priceRef: "REF", priceType: "AU", priceCurrency: "TRY", priceWeight: "KG", priceValue: 9_999_999 },
+      ] });
+    }
     assert.ok(String(url).startsWith("https://www.tcmb.gov.tr/kurlar/"));
     return new Response(`<Tarih_Date Tarih="${String(url).endsWith("today.xml") ? "11.09.2026" : "10.09.2026"}"><Currency CurrencyCode="USD"><ForexBuying>42.50</ForexBuying></Currency><Currency CurrencyCode="EUR"><ForexBuying>45.10</ForexBuying></Currency></Tarih_Date>`);
   };
@@ -112,10 +119,45 @@ test("market cache preserves real historical dates and hides provider setup deta
     const { getPortfolioMarketPrices } = loadModule("lib/portfolio-market-prices.ts", redis);
     const result = await getPortfolioMarketPrices();
     assert.equal(result.prices.USD.price, 42.5);
+    assert.equal(result.prices.XAU_GR.price, 7000);
+    assert.equal(result.prices.XAU_GR.dailyReturn.toFixed(2), "1.45");
+    assert.equal(result.prices.XAU_GR.source, "Borsa İstanbul");
     assert.deepEqual(result.history.USD.map((row) => row.date), ["2026-09-01", "2026-09-10", "2026-09-11"]);
-    assert.ok(!result.prices.XAU_GR);
+    assert.deepEqual(result.history.XAU_GR.map((row) => row.date), ["2026-09-10", "2026-09-11"]);
     assert.ok(result.warnings.every((message) => !/API|anahtar|EVDS/.test(message)));
     assert.deepEqual(stored.history, result.history);
+  } finally {
+    globalThis.fetch = previousFetch;
+    for (const [index, key] of ["EVDS_API_KEY", "TCMB_EVDS_API_KEY"].entries()) {
+      if (original[index] === undefined) delete process.env[key]; else process.env[key] = original[index];
+    }
+  }
+});
+
+test("Borsa İstanbul keeps currency values available when TCMB is temporarily unavailable", async () => {
+  const previousFetch = globalThis.fetch;
+  const original = [process.env.EVDS_API_KEY, process.env.TCMB_EVDS_API_KEY];
+  delete process.env.EVDS_API_KEY;
+  delete process.env.TCMB_EVDS_API_KEY;
+  globalThis.fetch = async (url) => {
+    const value = String(url);
+    if (value.includes("tcmb.gov.tr")) throw new Error("temporary outage");
+    if (value.includes("daily-exchange-rates.php")) return Response.json({ data: [
+      { rate_code: "USD", rate: 48.5, tarih: "2026-09-14" },
+      { rate_code: "EUR", rate: 56.2, tarih: "2026-09-14" },
+    ] });
+    if (value.includes("metal-fiyatlari.php")) return Response.json({ data: [
+      { priceDate: "2026-09-14", priceRef: "MTL", priceType: "AU", priceCurrency: "TRY", priceWeight: "KG", priceValue: 6_800_000 },
+    ] });
+    throw new Error(`unexpected URL: ${value}`);
+  };
+  try {
+    const { getPortfolioMarketPrices } = loadModule("lib/portfolio-market-prices.ts", null);
+    const result = await getPortfolioMarketPrices();
+    assert.equal(result.prices.USD.price, 48.5);
+    assert.equal(result.prices.EUR.price, 56.2);
+    assert.equal(result.prices.XAU_GR.price, 6800);
+    assert.deepEqual(result.warnings, []);
   } finally {
     globalThis.fetch = previousFetch;
     for (const [index, key] of ["EVDS_API_KEY", "TCMB_EVDS_API_KEY"].entries()) {

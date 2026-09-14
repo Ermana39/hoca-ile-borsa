@@ -90,6 +90,7 @@
 .mobileDetails { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .mobileDetails dt { font-size: 11px; color: var(--text-muted); }
 .mobileDetails dd { font-size: 12px; font-weight: 650; margin-top: 5px; overflow-wrap: anywhere; }
+.mobileDetails dd small { display: block; margin-top: 5px; font-size: 10px; }
 .mobileDate { font-size: 10px; color: var(--text-muted); line-height: 1.6; margin-top: 18px; }
 .mobileFundLink { display: inline-flex; gap: 6px; align-items: center; font-size: 12px; color: var(--chart-line); margin-top: 14px; }
 .table { width: 100%; border-collapse: collapse; text-align: left; font-size: 12px; white-space: nowrap; }
