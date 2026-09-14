@@ -10,6 +10,7 @@ test("accepts both Vercel commit statuses and production deployment events", () 
   assert.equal(expectedShaFromEvent("status", { context: "Vercel", state: "success", sha }), sha);
   assert.equal(expectedShaFromEvent("deployment_status", { deployment_status: { state: "success" }, deployment: { environment: "Production", sha } }), sha);
   assert.equal(expectedShaFromEvent("workflow_dispatch", {}), undefined);
+  assert.equal(expectedShaFromEvent("schedule", {}), undefined);
 });
 
 test("rejects failed, unrelated and malformed automatic notifications", () => {
@@ -207,7 +208,7 @@ test("API authentication stays on the official origin and errors cannot leak res
   });
   await assert.rejects(api("https://other.example/test"), /Gecersiz API/);
   assert.equal(called, false);
-  await assert.rejects(api("/v7/deployments"), (error) => error.message.includes("403") && !error.message.includes("test-secret"));
+  await assert.rejects(api("/v7/deployments"), (error) => error.message.includes("403") && error.message.includes("VERCEL_TOKEN") && !error.message.includes("test-secret"));
   assert.throws(() => createClient(""), /VERCEL_TOKEN eksik/);
 });
 

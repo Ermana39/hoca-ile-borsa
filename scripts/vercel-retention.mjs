@@ -84,7 +84,10 @@ export function createClient(token, fetchImpl = fetch) {
       signal: AbortSignal.timeout(30_000),
     });
     // API error bodies can contain private account or deployment details.
-    requireValue(response.ok, `Vercel API ${method} ${url.pathname}: HTTP ${response.status}. Temizlik durduruldu.`);
+    const authHint = [401, 403].includes(response.status)
+      ? " VERCEL_TOKEN gecersiz, suresi dolmus veya bu projeye erisimi yok."
+      : "";
+    requireValue(response.ok, `Vercel API ${method} ${url.pathname}: HTTP ${response.status}.${authHint} Temizlik durduruldu.`);
     return response.json();
   };
 }
@@ -184,7 +187,7 @@ export async function runRetention({ api, apply = false, expectedSha, check = ch
 }
 
 export function expectedShaFromEvent(eventName, event) {
-  if (eventName === "workflow_dispatch") return undefined;
+  if (eventName === "workflow_dispatch" || eventName === "schedule") return undefined;
   let sha;
   if (eventName === "deployment_status") {
     requireValue(event.deployment_status?.state === "success" && event.deployment?.environment?.toLowerCase() === "production", "Basarili production bildirimi bekleniyor.");
