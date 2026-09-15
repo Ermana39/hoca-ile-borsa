@@ -30,6 +30,10 @@ const sourcePaths = {
     rootDir,
     "app/fonlar/etki-analizi/_data/fon-etki-verileri.json"
   ),
+  etkiExcel: path.join(
+    rootDir,
+    "app/fonlar/etki-analizi/_data/fon-etki-verileri.xlsx"
+  ),
   etkiTahmin: path.join(
     rootDir,
     "app/fonlar/etki-analizi/_data/fon-acilis-tahminleri.json"
@@ -772,6 +776,10 @@ assert(
 );
 
 const effectData = JSON.parse(fs.readFileSync(sourcePaths.etki, "utf8"));
+const effectWorkbook = XLSX.read(fs.readFileSync(sourcePaths.etkiExcel), {
+  type: "buffer",
+  cellFormula: true,
+});
 const expectedEffectFunds = ["DFI", "DOH", "KHA", "THF", "TLY", "TMV"];
 assert(
   JSON.stringify(Object.keys(effectData.fonlar).sort()) === JSON.stringify(expectedEffectFunds),
@@ -783,16 +791,30 @@ for (const code of expectedEffectFunds) {
   assert(effectFund.tarihsel.length >= 2, `${code} etki analizi geçmişi yetersiz.`);
   const symbols = new Set();
   let weightTotal = 0;
-  let effectTotal = 0;
   for (const row of effectFund.portfoy) {
     assert(!symbols.has(row.sembol), `${code} portföyünde tekrarlanan sembol: ${row.sembol}`);
     symbols.add(row.sembol);
     assertSameNumber(row.etki, round((row.fonOrani * row.kapanisMarji) / 100, 10), `${code} ${row.sembol} etki`, 0.000000001);
     weightTotal += row.fonOrani;
-    effectTotal += row.etki;
   }
   assertSameNumber(effectFund.toplamFonOrani, round(weightTotal, 10), `${code} toplam portföy oranı`, 0.000000001);
-  assertSameNumber(effectFund.toplamEtki, round(effectTotal, 10), `${code} toplam etki`, 0.000000001);
+  const effectRows = XLSX.utils.sheet_to_json(effectWorkbook.Sheets[code], {
+    header: 1,
+    defval: null,
+    raw: true,
+  });
+  const totalRowIndex = effectRows.findIndex(
+    (row, index) => index > 0 && normalize(row[0]) === "toplam"
+  );
+  assert(totalRowIndex >= 2, `${code} Excel toplam satırı bulunamadı.`);
+  const excelTotalEffect = effectRows[totalRowIndex][3];
+  assert(Number.isFinite(excelTotalEffect), `${code} Excel toplam etki tahmini geçersiz.`);
+  assertSameNumber(
+    effectFund.toplamEtki,
+    round(excelTotalEffect, 10),
+    `${code} Excel toplam etki tahmini`,
+    0.000000001
+  );
 
   const dates = new Set();
   const detail = JSON.parse(fs.readFileSync(path.join(detailDir, `${code.toLowerCase()}.json`), "utf8"));

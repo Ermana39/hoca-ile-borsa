@@ -305,7 +305,14 @@ function fonSayfasiniDonustur(sheet, kod, oncekiFon) {
     }
   }
 
-  const toplamEtki = yuvarla(portfoy.reduce((sum, row) => sum + row.etki, 0));
+  // Açılış tahmini, Excel'deki manuel TOPLAM etki değeridir.
+  const toplamEtki = yuvarla(
+    sayi(
+      rows[toplamSatiri][3],
+      "Toplam etki",
+      `${kod}!D${toplamSatiri + 1}`
+    )
+  );
 
   if (Math.abs(excelToplamOran - toplamFonOrani) > NORMAL_TOPLAM_TOLERANSI) {
     throw new Error(
@@ -426,11 +433,6 @@ function fonSayfasiniDonustur(sheet, kod, oncekiFon) {
       throw new Error(`${kod}: ${row.tarih} tarihi birden fazla kez girilmiş.`);
     }
     tarihler.add(row.tarih);
-  }
-
-  const excelToplamEtki = rows[toplamSatiri][3];
-  if (excelToplamEtki !== null && excelToplamEtki !== "") {
-    sayi(excelToplamEtki, "Toplam etki", `${kod}!D${toplamSatiri + 1}`);
   }
 
   return {
