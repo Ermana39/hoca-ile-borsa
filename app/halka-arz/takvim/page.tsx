@@ -12,11 +12,11 @@ import { seoAciklamasi } from "@/lib/seo-metadata";
 
 const canonical = "https://www.hocaileborsa.com/halka-arz/takvim";
 const title =
-  "Halka Arz Takvimi 2026: NETGL 9-10-11 Eylül'de Talep Toplayacak";
+  "Halka Arz Takvimi 2026: NETGL 17 Eylül'de İşleme Başlayacak";
 const description =
-  "2026 halka arz takviminde NETGL 9-10-11 Eylül'de talep toplayacak. BKRGY ve İNTET işlemde olan halka arzlar arasında.";
-const sonGuncellemeIso = "2026-09-07";
-const sonGuncellemeMetni = "7 Eylül 2026";
+  "2026 halka arz takviminde NETGL 17 Eylül Perşembe günü işlem görmeye başlayacak. BKRGY ve İNTET işlemde olan halka arzlar arasında.";
+const sonGuncellemeIso = "2026-09-15";
+const sonGuncellemeMetni = "15 Eylül 2026";
 
 export const metadata: Metadata = {
   title: { absolute: title },
@@ -32,11 +32,9 @@ export const metadata: Metadata = {
     "halka arz talep toplama tarihleri",
     "halka arz işlem tarihleri",
     "NETGL halka arz",
-    "NETGL talep toplama",
+    "NETGL işlem tarihi",
     "Net Global halka arz",
-    "9 Eylül 2026 halka arz",
-    "10 Eylül 2026 halka arz",
-    "11 Eylül 2026 halka arz",
+    "17 Eylül 2026 halka arz",
     "BKRGY halka arz",
     "İNTET halka arz",
     "CITAS halka arz",
@@ -86,15 +84,15 @@ type IzahnameBekleyenSirket = {
 
 const dagitimSonucuBeklenenTakvimi: TakvimSirketi[] = [];
 
-const talepToplamaTakvimi: TakvimSirketi[] = [
+const talepToplamaTakvimi: TakvimSirketi[] = [];
+
+const islemeBaslayacakTakvimi: TakvimSirketi[] = [
   {
     slug: "net-global-endustriyel-yatirimlar",
-    tarih: "9-10-11 Eylül 2026",
-    durum: "Talep toplayacak",
+    tarih: "17 Eylül 2026 Perşembe",
+    durum: "İşleme başlayacak",
   },
 ];
-
-const islemeBaslayacakTakvimi: TakvimSirketi[] = [];
 
 const islemdekiHalkaArzTakvimi: TakvimSirketi[] = [
   {
@@ -213,17 +211,17 @@ export default function HalkaArzTakvimPage() {
     {
       soru: "Talep toplayacak halka arzlar hangileri?",
       cevap:
-        "7 Eylül 2026 itibarıyla Net Global Endüstriyel Yatırımlar NETGL 9-10-11 Eylül 2026 tarihlerinde talep toplayacak.",
+        "15 Eylül 2026 itibarıyla aktif takvimde talep toplayacak halka arz bulunmuyor.",
     },
     {
       soru: "Dağıtım sonuçları açıklanacak halka arzlar hangileri?",
       cevap:
-        "Aktif takvimde dağıtım sonucu beklenen halka arz bulunmuyor. NETGL talep toplama süreci tamamlandıktan sonra dağıtım sonuçları ayrıca takip edilecek.",
+        "Aktif takvimde dağıtım sonucu beklenen halka arz bulunmuyor. NETGL halka arzının dağıtım sonuçları açıklandı.",
     },
     {
       soru: "Bu hafta hangi halka arzlar işlemde veya işleme başlayacak?",
       cevap:
-        "NETGL 9-10-11 Eylül 2026 tarihlerinde talep toplayacak. İntetra Teknoloji İNTET ve Bakırcı GYO BKRGY artık işlemde olan halka arzlar arasında yer alıyor.",
+        "Net Global Endüstriyel Yatırımlar NETGL 17 Eylül 2026 Perşembe günü işlem görmeye başlayacak. İntetra Teknoloji İNTET ve Bakırcı GYO BKRGY işlemde olan halka arzlar arasında yer alıyor.",
     },
     {
       soru: "Onaylı izahnamesi beklenen halka arzlar hangileri?",
@@ -339,10 +337,10 @@ export default function HalkaArzTakvimPage() {
             {title}
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 md:text-base">
-            7 Eylül 2026 tarihli güncel halka arz takviminde Net Global
-            Endüstriyel Yatırımlar NETGL 9-10-11 Eylül 2026 tarihlerinde
-            talep toplayacak. İntetra Teknoloji İNTET ve Bakırcı GYO BKRGY
-            artık işlemde olan halka arzlar arasında yer alıyor.
+            15 Eylül 2026 tarihli güncel halka arz takviminde Net Global
+            Endüstriyel Yatırımlar NETGL 17 Eylül 2026 Perşembe günü işlem
+            görmeye başlayacak. İntetra Teknoloji İNTET ve Bakırcı GYO BKRGY
+            işlemde olan halka arzlar arasında yer alıyor.
           </p>
 
           <div className="mt-5 rounded-2xl border border-blue-200 bg-blue-50 p-4 md:p-5">
@@ -350,9 +348,9 @@ export default function HalkaArzTakvimPage() {
               Takvimin kısa özeti
             </h2>
             <p className="mt-2 text-sm leading-7 text-blue-950/80 md:text-base">
-              NETGL 9-10-11 Eylül 2026 tarihlerinde talep toplayacak. İNTET
-              ve BKRGY işlemde; aktif dağıtım sonucu bekleyen halka arz
-              bulunmuyor.
+              NETGL 17 Eylül 2026 Perşembe günü işlem görmeye başlayacak.
+              İNTET ve BKRGY işlemde; aktif talep toplama veya dağıtım sonucu
+              bekleyen halka arz bulunmuyor.
             </p>
             <Link
               href="/halka-arz/onayli-izahnameler"
