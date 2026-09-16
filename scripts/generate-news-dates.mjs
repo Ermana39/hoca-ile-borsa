@@ -1,12 +1,31 @@
-import { readFileSync, statSync, writeFileSync } from "node:fs";
+import { readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
 const root = process.cwd();
 const newsFile = path.join(root, "app", "data", "news.ts");
 const datesFile = path.join(root, "app", "data", "haber-tarihleri.generated.json");
+const jsonNewsDir = path.join(root, "data", "haberler");
 const timeZone = "Europe/Istanbul";
 const offset = "+03:00";
 const defaultNewsTime = "12:00:00";
+
+function validateJsonNewsFileNames() {
+  const files = readdirSync(jsonNewsDir)
+    .filter((file) => file.endsWith(".json") && !file.startsWith("_"))
+    .sort((a, b) => a.localeCompare(b, "tr"));
+
+  for (const file of files) {
+    const filePath = path.join(jsonNewsDir, file);
+    const record = JSON.parse(readFileSync(filePath, "utf8"));
+    const expectedFile = `${record?.slug ?? ""}.json`;
+
+    if (file !== expectedFile) {
+      throw new Error(
+        `Haber dosya adı ile slug aynı olmalı: ${file} -> ${expectedFile}`
+      );
+    }
+  }
+}
 
 function getParts(date) {
   const parts = new Intl.DateTimeFormat("tr-TR", {
@@ -52,6 +71,8 @@ function readDates() {
     return {};
   }
 }
+
+validateJsonNewsFileNames();
 
 const source = readFileSync(newsFile, "utf8");
 function getNewsBlocks(value) {
