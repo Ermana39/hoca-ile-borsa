@@ -563,18 +563,15 @@ function jsonDosyalari(): string[] {
   }
 }
 
-export function haberKaydiGetir(slug: string): HaberKaydi | null {
-  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) return null;
-
+function haberKaydiniDosyadanOku(dosya: string): HaberKaydi | null {
   try {
-    const dosya = path.join(HABER_KAYIT_DIZINI, `${slug}.json`);
-    const hamVeri = JSON.parse(fs.readFileSync(dosya, "utf8")) as unknown;
+    const dosyaYolu = path.join(HABER_KAYIT_DIZINI, dosya);
+    const hamVeri = JSON.parse(fs.readFileSync(dosyaYolu, "utf8")) as unknown;
     const veri = temelKayitGecerli(hamVeri)
       ? hamVeri
       : yeniHaberKaydiniNormalizeEt(hamVeri);
 
-    if (!veri || veri.slug !== slug) return null;
-    return veri;
+    return veri ?? null;
   } catch {
     return null;
   }
@@ -582,9 +579,14 @@ export function haberKaydiGetir(slug: string): HaberKaydi | null {
 
 const tumHaberKayitlariniOku = cache((): HaberKaydi[] =>
   jsonDosyalari()
-    .map((dosya) => haberKaydiGetir(dosya.replace(/\.json$/, "")))
+    .map(haberKaydiniDosyadanOku)
     .filter((kayit): kayit is HaberKaydi => Boolean(kayit))
 );
+
+export function haberKaydiGetir(slug: string): HaberKaydi | null {
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) return null;
+  return tumHaberKayitlariniOku().find((kayit) => kayit.slug === slug) ?? null;
+}
 
 export function getTumHaberKayitlari(): HaberKaydi[] {
   return [...tumHaberKayitlariniOku()];

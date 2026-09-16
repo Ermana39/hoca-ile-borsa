@@ -12,6 +12,7 @@ const KATEGORILER = new Set([
   "kap-bildirimleri",
   "sermaye-artirimi",
   "piyasa-gundemi",
+  "fon-haberleri",
   "sirket-haberleri",
 ]);
 const HISSE_ZORUNLU_KATEGORILER = new Set([
@@ -537,13 +538,12 @@ const kaynakUrlSahibi = new Map();
 const yeniBaslikSahibi = new Map();
 const yeniHrefSahibi = new Map();
 
-for (const { dosya, goreliDosya, veri } of kayitlar) {
+for (const { goreliDosya, veri } of kayitlar) {
   if (!veri || typeof veri !== "object" || Array.isArray(veri)) {
     hata(goreliDosya, "Kök JSON değeri bir nesne olmalı.");
     continue;
   }
 
-  const dosyaSlug = dosya.replace(/\.json$/, "");
   const hedefKayit = veri.slug === hedefSlug;
   if (sikiInceleme && !hedefKayit) continue;
   const yayinAdayi = (yayinaAl || sikiInceleme) && hedefKayit;
@@ -554,9 +554,6 @@ for (const { dosya, goreliDosya, veri } of kayitlar) {
   if (veri.surum !== 1) hata(goreliDosya, "surum alanı 1 olmalı.");
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(veri.slug || "")) {
     hata(goreliDosya, "slug yalnızca küçük harf, rakam ve tire içermeli.");
-  }
-  if (veri.slug !== dosyaSlug) {
-    hata(goreliDosya, `Dosya adı ile slug aynı olmalı (${dosyaSlug}).`);
   }
   if (veri.durum !== "taslak" && veri.durum !== "yayinda") {
     hata(goreliDosya, "durum yalnızca taslak veya yayinda olabilir.");
@@ -615,10 +612,6 @@ for (const { dosya, goreliDosya, veri } of kayitlar) {
   if (!veri.gorsel || typeof veri.gorsel !== "object") {
     hata(goreliDosya, "gorsel nesnesi zorunludur.");
   } else {
-    const beklenenGorsel = `/${veri.slug}.webp`;
-    if (veri.gorsel.src !== beklenenGorsel) {
-      hata(goreliDosya, `Görsel adı ${beklenenGorsel} olmalı.`);
-    }
     if (!bosOlmayanMetin(veri.gorsel.alt) || veri.gorsel.alt.length < 20) {
       hata(goreliDosya, "Görsel alt metni en az 20 karakter ve açıklayıcı olmalı.");
     }

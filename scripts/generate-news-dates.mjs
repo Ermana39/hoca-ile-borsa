@@ -9,21 +9,26 @@ const timeZone = "Europe/Istanbul";
 const offset = "+03:00";
 const defaultNewsTime = "12:00:00";
 
-function validateJsonNewsFileNames() {
+function validateJsonNewsRecords() {
   const files = readdirSync(jsonNewsDir)
     .filter((file) => file.endsWith(".json") && !file.startsWith("_"))
     .sort((a, b) => a.localeCompare(b, "tr"));
+  const slugOwners = new Map();
 
   for (const file of files) {
     const filePath = path.join(jsonNewsDir, file);
     const record = JSON.parse(readFileSync(filePath, "utf8"));
-    const expectedFile = `${record?.slug ?? ""}.json`;
+    const slug = record?.slug;
 
-    if (file !== expectedFile) {
-      throw new Error(
-        `Haber dosya adı ile slug aynı olmalı: ${file} -> ${expectedFile}`
-      );
+    if (typeof slug !== "string" || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) {
+      throw new Error(`Haber kaydında geçersiz slug: ${file}`);
     }
+
+    const existingOwner = slugOwners.get(slug);
+    if (existingOwner) {
+      throw new Error(`Aynı haber slug değeri birden fazla dosyada kullanılıyor: ${existingOwner}, ${file}`);
+    }
+    slugOwners.set(slug, file);
   }
 }
 
@@ -72,7 +77,7 @@ function readDates() {
   }
 }
 
-validateJsonNewsFileNames();
+validateJsonNewsRecords();
 
 const source = readFileSync(newsFile, "utf8");
 function getNewsBlocks(value) {
