@@ -1,4 +1,4 @@
-
+import type { Metadata } from "next";
 import Link from "@/components/NoPrefetchLink";
 import { seoAciklamasi } from "@/lib/seo-metadata";
 
