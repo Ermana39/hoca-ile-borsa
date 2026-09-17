@@ -28,7 +28,6 @@ import {
 } from "@/lib/fon-platform";
 import { getNewsByFundCode } from "@/lib/haberler";
 import {
-  etkiAnaliziFonKodlari,
   getFundInvestorInfo,
   katilimUygunluguEtiketi,
   nitelikliYatirimciEtiketi,
@@ -248,7 +247,6 @@ export default async function FonDetayPage({
     },
     ...yatirimciFaqItemsOlustur(fund, investorInfo),
   ];
-  const etkiAnaliziVar = etkiAnaliziFonKodlari.has(fund.kod);
   const structuredData = [
     {
       "@context": "https://schema.org",
@@ -328,14 +326,6 @@ export default async function FonDetayPage({
                 >
                   {fund.yonetici}
                 </Link>
-                {etkiAnaliziVar ? (
-                  <Link
-                    href="/fonlar/etki-analizi"
-                    className="rounded-full bg-cyan-50 px-3 py-1 font-semibold text-cyan-800 hover:bg-cyan-100"
-                  >
-                    {fund.kod} Fon Açılış Tahmini
-                  </Link>
-                ) : null}
               </div>
             </div>
             <div className="w-full rounded-2xl border border-slate-200 bg-slate-50 p-4 lg:mt-1 lg:w-auto lg:min-w-[230px] lg:text-right">

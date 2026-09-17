@@ -201,6 +201,10 @@ function haberLinkiniDuzelt(href: string, label?: string) {
     return `/fonlar/${etkiAnaliziEslesme[1].toLowerCase()}`;
   }
 
+  if (/^\/fonlar\/etki-analizi(?:[/?#]|$)/i.test(yerelHref)) {
+    return "/fonlar";
+  }
+
   return yerelHref;
 }
 

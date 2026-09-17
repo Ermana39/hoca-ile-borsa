@@ -15,7 +15,6 @@ export type CategoryIconName =
   | "gosterge-taramalari"
   | "hacim-artisi-analizi"
   | "yeni-is-anlasmalari"
-  | "pivot-analizi"
   | "oran-analizi"
   | "tedbirli-hisseler"
   // Halka Arz
@@ -40,7 +39,6 @@ export type CategoryIconName =
   | "fon-haftalik-tercih"
   | "fon-getiri"
   | "fon-tarihsel"
-  | "fon-etki-analizi"
   // Faiz Oranları
   | "mevduat-faizi"
   | "tuketici-faizi"
@@ -375,23 +373,6 @@ const icons: Record<CategoryIconName, React.ReactNode> = {
       <path d="M41 26l3.5 3.5 1.8-1.8a2.5 2.5 0 0 0-3.5-3.5L41 26z" fill={AMBER_DEEP} />
     </>
   ),
-  "pivot-analizi": (
-    <>
-      <rect x="5" y="6" width="38" height="36" rx="5" fill={NAVY} />
-      <path d="M9 14h30" stroke={RED} strokeWidth="2" strokeLinecap="round" strokeDasharray="4 4" />
-      <path d="M9 24h30" stroke={BLUE_PALE} strokeWidth="2" strokeLinecap="round" />
-      <path d="M9 34h30" stroke={GREEN} strokeWidth="2" strokeLinecap="round" strokeDasharray="4 4" />
-      <path
-        d="M10 24h7l3.5-6 4 12 3.5-6h10"
-        stroke={AMBER}
-        strokeWidth="2.2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        fill="none"
-      />
-      <circle cx="24.5" cy="24" r="2.6" fill={AMBER} />
-    </>
-  ),
   "tavan-serisi": (
     <>
       <rect x="5" y="6" width="38" height="36" rx="5" fill={NAVY} />
@@ -722,22 +703,6 @@ const icons: Record<CategoryIconName, React.ReactNode> = {
       />
     </>
   ),
-  "fon-etki-analizi": (
-    <>
-      <circle cx="24" cy="26" r="12" fill={AMBER} />
-      <circle cx="24" cy="26" r="8.5" fill={AMBER_DEEP} />
-      <path
-        d="M24 21.5v9M21.5 23.3h3.6a1.8 1.8 0 1 1 0 3.6h-2.2a1.8 1.8 0 1 0 0 3.6h4.1"
-        stroke={AMBER_DARK}
-        strokeWidth="1.7"
-        strokeLinecap="round"
-        fill="none"
-      />
-      <path d="M8 16l5-9M13 7l-5.5.8M13 7l.8 5.5" stroke={GREEN} strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-      <path d="M40 32l-5 9M35 41l5.5-.8M35 41l-.8-5.5" stroke={RED} strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-    </>
-  ),
-
   // --- Faiz Oranları ---
   "mevduat-faizi": (
     <>

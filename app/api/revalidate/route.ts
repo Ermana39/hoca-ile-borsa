@@ -34,7 +34,6 @@ const BORSA_PATHS = [
   "/borsa/gosterge-taramalari/yukselis-trendinde-olanlar",
   "/borsa/gosterge-taramalari/dusus-trendinde-olanlar",
   "/borsa/gosterge-taramalari/guclu-trend-momentum",
-  "/borsa/oran-analizi",
   "/borsa/hacim-artisi-analizi",
 ];
 

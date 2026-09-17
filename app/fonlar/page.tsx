@@ -200,11 +200,6 @@ export default function FonlarPage() {
 
         <section className="mt-8 grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
           <ModuleLink
-            href="/fonlar/etki-analizi"
-            title="Popüler Fonların Açılış Tahminleri"
-            desc="TLY, THF, TMV, DOH, KHA ve DFI için günlük tahmin ve gerçekleşen getiri karşılaştırması."
-          />
-          <ModuleLink
             href="/fonlar/para-girisi"
             title="En Çok Para Girişi Alan Fonlar"
             desc="Günlük, 5 günlük, 1 aylık ve 3 aylık net para akışı tabloları."

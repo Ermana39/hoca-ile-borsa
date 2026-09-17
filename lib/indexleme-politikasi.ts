@@ -9,6 +9,8 @@ const NOINDEX_STATIK_YOLLAR = new Set([
   "/uyelik-sozlesmesi",
   "/uyelik/dogrula",
   "/borsa/dip-zirve-analizi",
+  "/borsa/oran-analizi",
+  "/borsa/pivot-analizi",
   "/borsa/hacim-artisi-analizi/aylik-hacim-artisi-olanlar",
   "/borsa/hacim-artisi-analizi/haftalik-hacim-artisi-olanlar",
   "/borsa/hacim-artisi-analizi/yillik-hacim-artisi-olanlar",
@@ -16,6 +18,7 @@ const NOINDEX_STATIK_YOLLAR = new Set([
   "/kullanim-sartlari",
   "/reklam",
   "/yasal-uyari",
+  "/fonlar/etki-analizi",
 ]);
 
 const HALKA_ARZ_TASLAK_DETAY_DESENI =

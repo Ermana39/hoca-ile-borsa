@@ -616,13 +616,9 @@ function TemelOranlarBolumu({
       </SectionBaslik>
 
       <div className="mb-3 flex flex-wrap items-center gap-2 text-xs font-semibold">
-        <Link
-          href="/borsa/oran-analizi"
-          prefetch={false}
-          className="rounded-md bg-blue-50 px-2 py-1 text-blue-700 ring-1 ring-inset ring-blue-200 transition hover:bg-blue-100"
-        >
-          Kaynak: Oran Analizi
-        </Link>
+        <span className="rounded-md bg-blue-50 px-2 py-1 text-blue-700 ring-1 ring-inset ring-blue-200">
+          Kaynak: Finansal oran verileri
+        </span>
         <span className="rounded-md bg-slate-100 px-2 py-1 text-slate-700 ring-1 ring-inset ring-slate-200">
           Finansal dönem: {ceyrekAd}
         </span>

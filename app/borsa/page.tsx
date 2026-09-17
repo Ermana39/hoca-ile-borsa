@@ -1,7 +1,7 @@
 import { seoAciklamasi } from "@/lib/seo-metadata";
 export const metadata = {
   title: "Borsa Analizleri ve Hisse Tarama Araçları",
-  description: seoAciklamasi("BIST hisse analizleri, teknik analiz, gösterge taramaları, pivot analizi ve günlük borsa verileri.", "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
+  description: seoAciklamasi("BIST hisse analizleri, teknik analiz, gösterge taramaları ve günlük borsa verileri.", "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
   alternates: { canonical: "https://www.hocaileborsa.com/borsa" },
 };
 
@@ -58,20 +58,6 @@ const analizKutulari = [
     icon: "yeni-is-anlasmalari" as CategoryIconName,
     description:
       "Şirketlerin açıkladığı yeni iş ilişkileri ve sözleşmelerin hisseler üzerindeki etkisini takip etmeye yardımcı olur.",
-  },
-  {
-    title: "Pivot Analizi",
-    href: "/borsa/pivot-analizi",
-    icon: "pivot-analizi" as CategoryIconName,
-    description:
-      "Pivot, destek ve direnç seviyelerine göre hisselerin teknik görünümünü tablo halinde inceleyebilirsiniz.",
-  },
-  {
-    title: "Oran Analizi",
-    href: "/borsa/oran-analizi",
-    icon: "oran-analizi" as CategoryIconName,
-    description:
-      "Şirketlerin finansal oranlarını inceleyerek değerleme, kârlılık, borçluluk ve verimlilik açısından karşılaştırma yapabilirsiniz.",
   },
   {
     title: "Hisse Karşılaştırma",
@@ -166,7 +152,7 @@ export default function BorsaPage() {
           <p className="mt-3 max-w-4xl text-sm leading-7 text-slate-500 md:text-base">
             Borsa analiz içeriklerine bu sayfa üzerinden toplu şekilde
             ulaşabilirsiniz. Günlük borsa özeti, gösterge
-            taramaları, pivot analizi, dip zirve analizi, hacim artışı analizi,
+            taramaları, dip zirve analizi, hacim artışı analizi,
             geri alım programları ve diğer teknik başlıklar burada bir araya
             getirilmiştir.
           </p>

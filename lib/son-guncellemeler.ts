@@ -41,18 +41,8 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
     updatedAt: "24.04.2026 19:33",
   },
   {
-    title: "Pivot Analizi",
-    href: "/borsa/pivot-analizi",
-    updatedAt: "30.04.2026 18:30",
-  },
-  {
     title: "Tedbirli Hisseler",
     href: "/borsa/tedbirli-hisseler",
-    updatedAt: "30.04.2026 18:30",
-  },
-  {
-    title: "Oran Analizi",
-    href: "/borsa/oran-analizi",
     updatedAt: "30.04.2026 18:30",
   },
   {

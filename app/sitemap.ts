@@ -13,7 +13,6 @@ import {
   getSitemapTaslakIzahnameSluglari,
 } from "@/lib/halka-arz";
 import { rehberler } from "@/lib/rehberler";
-import { fonEtkiSonGuncelleme } from "@/app/fonlar/etki-analizi/_data/fonEtkiOzetleri";
 import {
   getCurrentFundsData,
   getManagersData,
@@ -76,10 +75,6 @@ function getRouteSettings(route: string): {
     return { priority: 0.8, changeFrequency: "weekly" };
   }
 
-  if (route.startsWith("/fonlar/etki-analizi")) {
-    return { priority: 0.9, changeFrequency: "daily" };
-  }
-
   if (route.startsWith("/haberler/kategori/")) {
     return { priority: 0.75, changeFrequency: "daily" };
   }
@@ -138,9 +133,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: item.updatedAt ?? item.publishedAt,
   }));
 
-  const fonEtkiEntries = [
-    { route: "/fonlar/etki-analizi", lastModified: fonEtkiSonGuncelleme.iso },
-  ];
   const fonData = getCurrentFundsData();
   const managerData = getManagersData();
   const fonPlatformRoutes = [
@@ -225,12 +217,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entry.route,
       entry.lastModified ?? getLastModified(entry.route)
     );
-  }
-
-  // Fon etki sayfalarının içerik tarihi günlük analiz verisinden gelir.
-  // Statik route kayıtlarındaki eski dosya tarihi güncelliği gölgelememeli.
-  for (const entry of fonEtkiEntries) {
-    routeEntries.set(entry.route, entry.lastModified);
   }
 
   for (const entry of [...fonPlatformRoutes, ...yoneticiEntries]) {

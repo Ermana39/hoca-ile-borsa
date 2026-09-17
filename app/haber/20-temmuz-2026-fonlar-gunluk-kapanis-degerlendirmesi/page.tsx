@@ -50,7 +50,7 @@ const fonlar = [
   {
     kod: "DFI",
     ad: "Atlas Portföy Serbest Fon",
-    href: "/fonlar/etki-analizi/dfi",
+    href: "/fonlar/dfi",
     tahminiEtki: "+%0,32",
     yatirimci: "+992",
     fonDeger: "+437,55 milyon TL",
@@ -64,7 +64,7 @@ const fonlar = [
   {
     kod: "PHE",
     ad: "Pusula Portföy Hisse Senedi Fonu",
-    href: "/fonlar/etki-analizi/phe",
+    href: "/fonlar/phe",
     tahminiEtki: "-%0,13",
     yatirimci: "+3.705",
     fonDeger: "+311,76 milyon TL",
@@ -78,7 +78,7 @@ const fonlar = [
   {
     kod: "PBR",
     ad: "Pusula Portföy Birinci Değişken Fon",
-    href: "/fonlar/etki-analizi/pbr",
+    href: "/fonlar/pbr",
     tahminiEtki: "-%0,41",
     yatirimci: "+2.615",
     fonDeger: "+626,51 milyon TL",
@@ -92,7 +92,7 @@ const fonlar = [
   {
     kod: "TLY",
     ad: "Tera Portföy Birinci Serbest Fonu",
-    href: "/fonlar/etki-analizi/tly",
+    href: "/fonlar/tly",
     tahminiEtki: "-%0,88",
     yatirimci: "+666",
     fonDeger: "-237,21 milyon TL",
@@ -290,7 +290,7 @@ export default function FonlarGunlukKapanisPage() {
                       prefetch={false}
                       className="mt-3 inline-block text-sm font-semibold text-blue-700 hover:underline"
                     >
-                      {fon.kod} fon etki analizi sayfası
+                      {fon.kod} fon detay sayfası
                     </Link>
                   </section>
                 ))}

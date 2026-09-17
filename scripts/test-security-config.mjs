@@ -52,6 +52,21 @@ test("private API responses bypass every CDN cache while static search remains c
   }
 });
 
+test("removed analysis routes redirect to their active sections", async () => {
+  const { config } = await import("../vercel.mjs");
+  for (const [source, destination] of [
+    ["/fonlar/etki-analizi", "/fonlar"],
+    ["/fonlar/etki-analizi/:path*", "/fonlar"],
+    ["/borsa/oran-analizi", "/hisseler"],
+    ["/borsa/pivot-analizi", "/hisseler"],
+  ]) {
+    assert.deepEqual(
+      config.redirects.find((rule) => rule.source === source),
+      { source, destination, permanent: true },
+    );
+  }
+});
+
 test("versioned build assets use browser caching without freezing pages or fund data", async () => {
   const { config } = await import("../vercel.mjs");
   const cacheForPath = (pathname) => config.headers
@@ -69,9 +84,9 @@ test("versioned build assets use browser caching without freezing pages or fund 
     assert.equal(cacheForPath(pathname), "public, max-age=31536000, immutable", pathname);
   }
   assert.equal(cacheForPath("/manifest.webmanifest"), "public, max-age=86400");
-  assert.equal(cacheForPath("/fonlar/etki-analizi"), "public, max-age=60, must-revalidate");
   for (const pathname of [
-    "/", "/haberler", "/haber/ornek-haber", "/fonlar/tly",
+    "/", "/haberler", "/haber/ornek-haber", "/fonlar/tly", "/fonlar/etki-analizi",
+    "/borsa/oran-analizi", "/borsa/pivot-analizi",
     "/api/arama",
     "/sitemap.xml", "/news-sitemap.xml", "/_next/static-like/file.js",
   ]) {

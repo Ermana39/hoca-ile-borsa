@@ -94,7 +94,7 @@ export default function HisseKarsilastirmaPage() {
               Sıfır veya negatif kâr nedeniyle ekonomik anlam taşımayan F/K ve benzeri çarpanlar “Anlamlı değil” olarak gösterilir. Kaynakta bulunmayan değerler tahmin edilmez ve “Veri yok” etiketiyle ayrılır.
             </p>
             <p>
-              Tüm şirketleri ve kaynak tablodaki diğer alanları görmek için <Link href="/borsa/oran-analizi" prefetch={false} className="font-bold text-blue-600 hover:text-blue-800">Oran Analizi</Link> sayfasını inceleyebilirsiniz. Şirket bilgilerine ise <Link href="/hisseler" prefetch={false} className="font-bold text-blue-600 hover:text-blue-800">Hisse Künyeleri</Link> bölümünden ulaşabilirsiniz.
+              Şirketlerin ayrıntılı finansal bilgilerine <Link href="/hisseler" prefetch={false} className="font-bold text-blue-600 hover:text-blue-800">Hisse Künyeleri</Link> bölümünden ulaşabilirsiniz.
             </p>
             <p className="font-medium text-slate-500">Bu araçtaki veriler yatırım tavsiyesi değildir.</p>
           </div>

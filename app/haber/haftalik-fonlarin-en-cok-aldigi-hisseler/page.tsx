@@ -279,33 +279,28 @@ const fonBaglantilari = [
     aciklama: "Fonların en çok tercih ettiği hisseler tablosu",
     href: "/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler",
   },
-  {
-    baslik: "Fon etki analizi",
-    aciklama: "TLY, PHE, PBR ve DFI fon fiyat tahmini ekranı",
-    href: "/fonlar/etki-analizi",
-  },
 ];
 
-const fonEtkiAnaliziLinkleri = [
+const fonDetayLinkleri = [
   {
     kod: "TLY",
     ad: "Tera Portföy Birinci Serbest Fonu",
-    href: "/fonlar/etki-analizi/tly",
+    href: "/fonlar/tly",
   },
   {
     kod: "PHE",
     ad: "Pusula Portföy Hisse Senedi Fonu",
-    href: "/fonlar/etki-analizi/phe",
+    href: "/fonlar/phe",
   },
   {
     kod: "PBR",
     ad: "Pusula Portföy Birinci Değişken Fon",
-    href: "/fonlar/etki-analizi/pbr",
+    href: "/fonlar/pbr",
   },
   {
     kod: "DFI",
     ad: "Atlas Portföy Serbest Fon",
-    href: "/fonlar/etki-analizi/dfi",
+    href: "/fonlar/dfi",
   },
 ];
 
@@ -651,7 +646,7 @@ className="object-cover"
                 </p>
               </Section>
 
-              <Section title="İlgili fon ve analiz sayfaları">
+              <Section title="İlgili fon sayfaları">
                 <div className="grid gap-3 md:grid-cols-3">
                   {fonBaglantilari.map((item) => (
                     <Link
@@ -671,7 +666,7 @@ className="object-cover"
                 </div>
 
                 <div className="mt-4 grid gap-3 sm:grid-cols-2 md:grid-cols-4">
-                  {fonEtkiAnaliziLinkleri.map((fon) => (
+                  {fonDetayLinkleri.map((fon) => (
                     <Link
                       key={fon.href}
                       href={fon.href}

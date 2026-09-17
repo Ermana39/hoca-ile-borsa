@@ -12,19 +12,12 @@ import HaberKart from "@/components/HaberKart";
 import PopulerAramalar from "@/components/PopulerAramalar";
 import { FundLogo } from "@/components/MarketLogo";
 import HomeMarketSummary from "@/components/HomeMarketSummary";
-import fonAcilisData from "@/app/fonlar/etki-analizi/_data/fon-acilis-tahminleri.json";
 import {
   formatNumber,
   formatSignedPercent,
   formatSignedTL,
 } from "@/lib/fon-format";
 import { getDashboardData, type FundListItem } from "@/lib/fon-platform";
-import tlyFundData from "@/data/fonlar/fund-details/tly.json";
-import thfFundData from "@/data/fonlar/fund-details/thf.json";
-import tmvFundData from "@/data/fonlar/fund-details/tmv.json";
-import dohFundData from "@/data/fonlar/fund-details/doh.json";
-import khaFundData from "@/data/fonlar/fund-details/kha.json";
-import dfiFundData from "@/data/fonlar/fund-details/dfi.json";
 import {
   getAllNews,
   ANA_SAYFA_HABER_LIMIT,
@@ -65,7 +58,12 @@ type PageUpdatesData = {
 };
 
 const SON_GUNCELLEME_LIMIT = 12;
-const SON_GUNCELLEME_HARIC_ROUTES = new Set(["/viop-egitim"]);
+const SON_GUNCELLEME_HARIC_ROUTES = new Set([
+  "/viop-egitim",
+  "/borsa/oran-analizi",
+  "/borsa/pivot-analizi",
+  "/fonlar/etki-analizi",
+]);
 
 const kategoriKutulari = [
   {
@@ -135,8 +133,6 @@ const sayfaBasliklari: Record<string, string> = {
     "Haftalık Hacim Artışı Olan Hisseler",
   "/borsa/hacim-artisi-analizi/yillik-hacim-artisi-olanlar":
     "Yıllık Hacim Artışı Olan Hisseler",
-  "/borsa/oran-analizi": "Oran Analizi",
-  "/borsa/pivot-analizi": "Pivot Analizi",
   "/borsa/tedbirli-hisseler": "Tedbirli Hisseler",
   "/borsa/yeni-is-anlasmalari": "Yeni İş Anlaşmaları",
 
@@ -418,34 +414,6 @@ function SonGuncellemelerBar({ items }: { items: GuncellemeItem[] }) {
   );
 }
 
-type FonTahminItem = {
-  tahmin: number | null;
-  gerceklesen: number | null;
-};
-
-type FonTahminData = {
-  tahminTarihi?: string;
-  fonlar?: Record<string, FonTahminItem>;
-};
-
-const takipEdilenFonlar = [
-  tlyFundData.fund,
-  thfFundData.fund,
-  tmvFundData.fund,
-  dohFundData.fund,
-  khaFundData.fund,
-  dfiFundData.fund,
-];
-
-function formatYuzde(value: number | null | undefined) {
-  if (typeof value !== "number" || Number.isNaN(value)) return "—";
-  const sign = value > 0 ? "+" : "";
-  return `${sign}%${value.toLocaleString("tr-TR", {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  })}`;
-}
-
 function formatTahminTarihi(value: string | undefined) {
   if (!value) return "Güncel";
   const [year, month, day] = value.split("-").map(Number);
@@ -464,78 +432,6 @@ function yuzdeClass(value: number | null | undefined) {
   if (value > 0) return "text-emerald-600";
   if (value < 0) return "text-rose-600";
   return "text-slate-600";
-}
-
-function FonAcilisTahminleri() {
-  const data = fonAcilisData as FonTahminData;
-  const tahminTarihi = formatTahminTarihi(data.tahminTarihi);
-
-  return (
-    <div className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
-      <div className="flex items-start justify-between gap-3 border-b border-slate-100 px-4 py-4 md:px-5">
-        <div>
-          <h2 className="text-base font-bold text-slate-900 md:text-lg">
-            Popüler Fonların Açılış Tahminleri
-          </h2>
-          <p className="mt-1 text-[11px] text-slate-500 md:text-xs">
-            Gün sonu hesaplamasına göre bir sonraki işlem günü tahmini.
-          </p>
-        </div>
-        <Link
-          href="/fonlar/etki-analizi"
-          prefetch={false}
-          className="shrink-0 text-xs font-semibold text-blue-600 hover:text-blue-800"
-        >
-          Tümünü Gör →
-        </Link>
-      </div>
-
-      <div className="px-3 py-2 md:px-4">
-        <table className="w-full table-fixed text-left text-sm">
-          <thead>
-            <tr className="border-b border-slate-200 text-[10px] font-semibold uppercase text-slate-500 md:text-[11px]">
-              <th className="w-[32%] px-1 py-2 md:px-2">Fon</th>
-              <th className="w-[36%] px-1 py-2 text-right md:px-2">
-                <span className="block normal-case">{tahminTarihi}</span>
-                Tahmin
-              </th>
-              <th className="w-[32%] px-1 py-2 text-right md:px-2">Gerçekleşen</th>
-            </tr>
-          </thead>
-          <tbody>
-            {takipEdilenFonlar.map((fund) => {
-              const item = data.fonlar?.[fund.kod];
-
-              return (
-                <tr key={fund.kod} className="border-b border-slate-100 last:border-0">
-                  <td className="px-1 py-2.5 md:px-2">
-                    <Link
-                      href={`/fonlar/${fund.slug}`}
-                      prefetch={false}
-                      className="inline-flex items-center gap-2 font-bold text-blue-600 hover:text-blue-800"
-                    >
-                      <FundLogo
-                        fundCode={fund.kod}
-                        managerSlug={fund.yoneticiSlug}
-                        size="sm"
-                      />
-                      {fund.kod}
-                    </Link>
-                  </td>
-                  <td className={`px-1 py-2.5 text-right font-bold md:px-2 ${yuzdeClass(item?.tahmin)}`}>
-                    {formatYuzde(item?.tahmin)}
-                  </td>
-                  <td className={`px-1 py-2.5 text-right font-semibold md:px-2 ${yuzdeClass(item?.gerceklesen)}`}>
-                    {formatYuzde(item?.gerceklesen)}
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  );
 }
 
 function FonlarKisaYollar() {
@@ -731,8 +627,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="grid grid-cols-1 gap-4 px-4 pb-6 md:px-6 lg:grid-cols-2">
-          <FonAcilisTahminleri />
+        <section className="px-4 pb-6 md:px-6">
           <FonlarKisaYollar />
         </section>
 

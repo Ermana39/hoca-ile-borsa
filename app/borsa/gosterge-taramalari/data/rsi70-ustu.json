@@ -1,26 +1,40 @@
 {
-  "columns": [],
-  "rows": [],
+  "columns": [
+    "Sembol",
+    "Periyod",
+    "Birim"
+  ],
+  "rows": [
+    {
+      "Sembol": "ENERY",
+      "Periyod": "Gün",
+      "Birim": "TL"
+    },
+    {
+      "Sembol": "TKFEN",
+      "Periyod": "Gün",
+      "Birim": "TL"
+    }
+  ],
   "rawRows": [
     [
       "Sembol",
       "Periyod",
       "Birim"
+    ],
+    [
+      "ENERY",
+      "Gün",
+      "TL"
+    ],
+    [
+      "TKFEN",
+      "Gün",
+      "TL"
     ]
   ],
   "sheets": {
     "Sonuçlar": {
-      "columns": [],
-      "rows": [],
-      "rawRows": [
-        [
-          "Sembol",
-          "Periyod",
-          "Birim"
-        ]
-      ]
-    },
-    "Filtrelenenler": {
       "columns": [
         "Sembol",
         "Periyod",
@@ -28,22 +42,7 @@
       ],
       "rows": [
         {
-          "Sembol": "BMSTL",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        },
-        {
-          "Sembol": "CELHA",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        },
-        {
-          "Sembol": "EFOR",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        },
-        {
-          "Sembol": "EUKYO",
+          "Sembol": "ENERY",
           "Periyod": "Gün",
           "Birim": "TL"
         },
@@ -60,22 +59,7 @@
           "Birim"
         ],
         [
-          "BMSTL",
-          "Gün",
-          "TL"
-        ],
-        [
-          "CELHA",
-          "Gün",
-          "TL"
-        ],
-        [
-          "EFOR",
-          "Gün",
-          "TL"
-        ],
-        [
-          "EUKYO",
+          "ENERY",
           "Gün",
           "TL"
         ],
@@ -85,7 +69,133 @@
           "TL"
         ]
       ]
+    },
+    "Filtrelenenler": {
+      "columns": [
+        "Sembol",
+        "Periyod",
+        "Birim"
+      ],
+      "rows": [
+        {
+          "Sembol": "AGHOL",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "AHGAZ",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "ANHYT",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "BIMAS",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "BMSTL",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "DEVA",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "GSDDE",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "HALKB",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "HUNER",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "ISDMR",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "TUPRS",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        }
+      ],
+      "rawRows": [
+        [
+          "Sembol",
+          "Periyod",
+          "Birim"
+        ],
+        [
+          "AGHOL",
+          "Gün",
+          "TL"
+        ],
+        [
+          "AHGAZ",
+          "Gün",
+          "TL"
+        ],
+        [
+          "ANHYT",
+          "Gün",
+          "TL"
+        ],
+        [
+          "BIMAS",
+          "Gün",
+          "TL"
+        ],
+        [
+          "BMSTL",
+          "Gün",
+          "TL"
+        ],
+        [
+          "DEVA",
+          "Gün",
+          "TL"
+        ],
+        [
+          "GSDDE",
+          "Gün",
+          "TL"
+        ],
+        [
+          "HALKB",
+          "Gün",
+          "TL"
+        ],
+        [
+          "HUNER",
+          "Gün",
+          "TL"
+        ],
+        [
+          "ISDMR",
+          "Gün",
+          "TL"
+        ],
+        [
+          "TUPRS",
+          "Gün",
+          "TL"
+        ]
+      ]
     }
   },
-  "guncellemeTarihi": "16.09.2026"
+  "guncellemeTarihi": "17.09.2026"
 }

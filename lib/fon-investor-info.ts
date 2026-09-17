@@ -59,15 +59,6 @@ export const fonBilgiKaynaklari = {
   },
 } satisfies Record<string, BilgiKaynagi>;
 
-export const etkiAnaliziFonKodlari = new Set([
-  "TLY",
-  "PHE",
-  "DFI",
-  "KHA",
-  "THF",
-  "TMV",
-]);
-
 function aramaMetni(value: string) {
   return value
     .toLocaleLowerCase("tr-TR")

@@ -229,14 +229,6 @@ const eskiUrlRedirects = [
     destination: "/halka-arz",
   },
   {
-    source: "/fonlar/etki-analizi/:fon(dfi|pbr|phe|tly|kha)-:id(\\d+)",
-    destination: "/fonlar/etki-analizi/:fon",
-  },
-  {
-    source: "/fonlar/etki-analizi/bmu-:id(\\d+)",
-    destination: "/fonlar/etki-analizi",
-  },
-  {
     source: "/rehber/katilim-endeksi-nedir",
     destination: "/rehberler/katilim-endeksi",
   },
@@ -307,8 +299,23 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/fonlar/etki-analizi/:kod",
-        destination: "/fonlar/etki-analizi",
+        source: "/fonlar/etki-analizi",
+        destination: "/fonlar",
+        permanent: true,
+      },
+      {
+        source: "/fonlar/etki-analizi/:path*",
+        destination: "/fonlar",
+        permanent: true,
+      },
+      {
+        source: "/borsa/oran-analizi",
+        destination: "/hisseler",
+        permanent: true,
+      },
+      {
+        source: "/borsa/pivot-analizi",
+        destination: "/hisseler",
         permanent: true,
       },
       // Halka arz slug'ları daha açıklayıcı/SEO-dostu adlara taşındı; eski
@@ -517,10 +524,6 @@ const nextConfig = {
       {
         source: "/manifest.webmanifest",
         headers: [{ key: "Cache-Control", value: "public, max-age=86400" }],
-      },
-      {
-        source: "/fonlar/etki-analizi",
-        headers: [{ key: "Cache-Control", value: "public, max-age=60, must-revalidate" }],
       },
       ...globalSecurityHeaders,
       ...privateApiHeaders,

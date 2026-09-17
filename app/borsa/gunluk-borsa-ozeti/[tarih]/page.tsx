@@ -533,7 +533,7 @@ function GunlukOzetIcerik({ ozet }: { ozet: GunlukOzet }) {
             değerlendirin.
           </p>
 
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
+          <div className="mt-5 grid gap-4">
             <Link
               href="/borsa/gosterge-taramalari"
               prefetch={false}
@@ -550,21 +550,6 @@ function GunlukOzetIcerik({ ozet }: { ozet: GunlukOzet }) {
               </span>
             </Link>
 
-            <Link
-              href="/borsa/pivot-analizi"
-              prefetch={false}
-              className="group rounded-xl border border-zinc-200 bg-white p-5 transition hover:border-blue-300 hover:shadow-sm"
-            >
-              <h3 className="text-lg font-bold text-zinc-900 group-hover:text-blue-700">
-                Pivot Analizi
-              </h3>
-              <p className="mt-2 text-sm leading-6 text-zinc-600">
-                Hisselerin pivot, destek ve direnç seviyelerini görüntüleyin.
-              </p>
-              <span className="mt-4 inline-flex text-sm font-semibold text-blue-600">
-                Analize git <span aria-hidden="true">→</span>
-              </span>
-            </Link>
           </div>
         </section>
 
