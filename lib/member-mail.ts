@@ -1,5 +1,5 @@
 import nodemailer from "nodemailer";
-import type { MemberRecord } from "./member-auth.js";
+import type { MemberRecord } from "#lib/member-auth";
 
 function escapeHtml(value: string) {
   return value

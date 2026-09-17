@@ -1,15 +1,79 @@
 import crypto from "node:crypto";
-import { isValidAdminToken, makeAdminToken } from "../lib/admin-auth.js";
+import { isValidAdminToken, makeAdminToken } from "#lib/admin-auth";
 import {
   cookieValue,
   getClientIp,
   getCookie,
   jsonResponse,
-} from "../lib/http-api.js";
-import { getAdminMemberList, getMemberCounts } from "../lib/member-auth.js";
-import { consumeRateLimit, RateLimitUnavailableError } from "../lib/rate-limit.js";
-import { readJsonObject, RequestBodyError } from "../lib/request-body.js";
-import { isSameOriginRequest } from "../lib/request-security.js";
+} from "#lib/http-api";
+import { getAdminMemberList, getMemberCounts } from "#lib/member-auth";
+import { consumeRateLimit, RateLimitUnavailableError } from "#lib/rate-limit";
+import { readJsonObject, RequestBodyError } from "#lib/request-body";
+import { isSameOriginRequest } from "#lib/request-security";
+
+type AdminMemberData = {
+  memberStats: { active: number; pending: number };
+  members: Awaited<ReturnType<typeof getAdminMemberList>>;
+};
+
+function cookieHeaderFromResponse(response: Response) {
+  const headers = response.headers as Headers & { getSetCookie?: () => string[] };
+  const values = headers.getSetCookie?.() || [response.headers.get("set-cookie") || ""];
+  return values
+    .filter(Boolean)
+    .map((value) => value.split(";", 1)[0])
+    .join("; ");
+}
+
+function isAdminMemberData(value: unknown): value is AdminMemberData {
+  if (!value || typeof value !== "object") return false;
+  const candidate = value as Partial<AdminMemberData>;
+  return (
+    Number.isFinite(candidate.memberStats?.active) &&
+    Number.isFinite(candidate.memberStats?.pending) &&
+    Array.isArray(candidate.members)
+  );
+}
+
+async function getDevelopmentMemberData(): Promise<AdminMemberData> {
+  if (process.env.NODE_ENV !== "development") {
+    throw new Error("Üye veri deposuna ulaşılamadı.");
+  }
+
+  const password = process.env.STATS_ADMIN_PASSWORD || "";
+  if (!password) throw new Error("Yerel yönetim şifresi tanımlı değil.");
+
+  const origin = "https://www.hocaileborsa.com";
+  const loginResponse = await fetch(`${origin}/api/admin-login`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Origin: origin,
+    },
+    body: JSON.stringify({ password }),
+    cache: "no-store",
+    signal: AbortSignal.timeout(15_000),
+  });
+  const cookie = cookieHeaderFromResponse(loginResponse);
+  if (!loginResponse.ok || !cookie) {
+    throw new Error("Canlı yönetim oturumu açılamadı.");
+  }
+
+  const response = await fetch(`${origin}/api/admin-messages`, {
+    headers: { Cookie: cookie },
+    cache: "no-store",
+    signal: AbortSignal.timeout(15_000),
+  });
+  const payload = await response.json().catch(() => null);
+  if (!response.ok || !isAdminMemberData(payload)) {
+    throw new Error("Canlı üye listesi okunamadı.");
+  }
+
+  return {
+    memberStats: payload.memberStats,
+    members: payload.members,
+  };
+}
 
 function passwordsMatch(input: string, expected: string) {
   const a = crypto.createHash("sha256").update(input).digest();
@@ -132,19 +196,42 @@ export const adminMessagesHandler = {
       return jsonResponse({ ok: false, messages: [] }, { status: 401 });
     }
 
-    let memberStats: { active: number; pending: number } | null = null;
-    let members: Awaited<ReturnType<typeof getAdminMemberList>> = [];
-    const [memberStatsResult, membersResult] = await Promise.allSettled([
-      getMemberCounts(),
-      getAdminMemberList(),
-    ]);
-    if (memberStatsResult.status === "fulfilled") memberStats = memberStatsResult.value;
-    if (membersResult.status === "fulfilled") members = membersResult.value;
-
-    return jsonResponse(
-      { ok: true, messages: [], memberStats, members },
-      { headers: { "Cache-Control": "private, no-store" } },
-    );
+    try {
+      const [memberStats, members] = await Promise.all([
+        getMemberCounts(),
+        getAdminMemberList(),
+      ]);
+      return jsonResponse(
+        { ok: true, messages: [], memberStats, members },
+        { headers: { "Cache-Control": "private, no-store" } },
+      );
+    } catch (storeError) {
+      console.warn("[admin-members] Üye veri deposu okunamadı.", {
+        name: storeError instanceof Error ? storeError.name : "UnknownError",
+      });
+      try {
+        const { memberStats, members } = await getDevelopmentMemberData();
+        return jsonResponse(
+          { ok: true, messages: [], memberStats, members },
+          { headers: { "Cache-Control": "private, no-store" } },
+        );
+      } catch (fallbackError) {
+        console.warn("[admin-members] Yerel üye listesi yedeği okunamadı.", {
+          name: fallbackError instanceof Error ? fallbackError.name : "UnknownError",
+        });
+        return jsonResponse(
+          {
+            ok: false,
+            authorized: true,
+            message: "Üye listesi şu anda okunamıyor. Lütfen yeniden deneyin.",
+          },
+          {
+            status: 503,
+            headers: { "Cache-Control": "private, no-store" },
+          },
+        );
+      }
+    }
   },
 };
 

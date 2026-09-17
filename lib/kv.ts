@@ -1,28 +1,22 @@
 import { Redis } from "@upstash/redis";
 
 function getRedisConfig() {
-  const url =
-    process.env.AUTH_KV_KV_REST_API_URL ||
-    process.env.AUTH_KV_REST_API_URL ||
-    process.env.KV_REST_API_URL ||
-    process.env.UPSTASH_REDIS_REST_URL ||
-    process.env.AUTH_KV_KV_URL ||
-    process.env.AUTH_KV_URL ||
-    process.env.KV_URL ||
-    "";
+  const candidates = [
+    [process.env.AUTH_KV_KV_REST_API_URL, process.env.AUTH_KV_KV_REST_API_TOKEN],
+    [process.env.AUTH_KV_REST_API_URL, process.env.AUTH_KV_REST_API_TOKEN],
+    [process.env.KV_REST_API_URL, process.env.KV_REST_API_TOKEN],
+    [process.env.UPSTASH_REDIS_REST_URL, process.env.UPSTASH_REDIS_REST_TOKEN],
+  ] as const;
 
-  const token =
-    process.env.AUTH_KV_KV_REST_API_TOKEN ||
-    process.env.AUTH_KV_REST_API_TOKEN ||
-    process.env.KV_REST_API_TOKEN ||
-    process.env.UPSTASH_REDIS_REST_TOKEN ||
-    "";
-
-  if (!url || !token) {
-    return null;
+  for (const [rawUrl, rawToken] of candidates) {
+    const url = rawUrl?.trim();
+    const token = rawToken?.trim();
+    if (url && token && /^https:\/\//i.test(url)) {
+      return { url, token };
+    }
   }
 
-  return { url, token };
+  return null;
 }
 
 const config = getRedisConfig();

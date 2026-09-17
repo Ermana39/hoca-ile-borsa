@@ -256,6 +256,7 @@ const eskiUrlRedirects = [
 
 const nextConfig = {
   poweredByHeader: false,
+  ...(isDevelopment ? { allowedDevOrigins: ["127.0.0.1"] } : {}),
   // Vercel Hobby derleme makinesi iki cekirdek sagliyor, ancak Next.js varsayilan
   // olarak bir cekirdegi ayirip binlerce statik sayfayi tek worker ile uretiyor.
   // Bu ayar yalniz Vercel build'inde iki cekirdegi de kullanir; yerel gelistirme

@@ -41,6 +41,7 @@ function app({
         return load(path.resolve(path.dirname(file), sourceName));
       }
       if (name.startsWith("@/")) return load(`${name.slice(2)}.ts`);
+      if (name.startsWith("#lib/")) return load(`lib/${name.slice("#lib/".length)}.ts`);
       return require(name);
     };
     new Function("require", "module", "exports", output)(localRequire, compiledModule, compiledModule.exports);
@@ -265,7 +266,8 @@ test("valid login sets protected cookies; tampered, expired and future tokens fa
       assert.equal(auth.isValidAdminToken(`${payload}.${signature}`), false);
     }
     const messages = await load("api/admin.ts").adminMessagesHandler.fetch(request("admin-messages", undefined, { cookie: `hib_admin_token=${token}` }, "GET"));
-    assert.equal(messages.status, 200);
+    assert.equal(messages.status, 503);
+    assert.equal((await messages.json()).authorized, true);
   });
 });
 

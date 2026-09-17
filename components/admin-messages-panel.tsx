@@ -42,6 +42,7 @@ export default function AdminMessagesPanel() {
   const [messages, setMessages] = useState<ContactMessage[]>([]);
   const [memberStats, setMemberStats] = useState<MemberStats | null>(null);
   const [members, setMembers] = useState<MemberRow[]>([]);
+  const [error, setError] = useState("");
 
   const loadMessages = useCallback(async () => {
     setLoading(true);
@@ -51,7 +52,8 @@ export default function AdminMessagesPanel() {
         cache: "no-store",
       });
       const payload = await response.json().catch(() => null);
-      setAuthorized(response.ok && payload?.ok === true);
+      setAuthorized((response.ok && payload?.ok === true) || payload?.authorized === true);
+      setError(response.ok ? "" : (payload?.message || "Yönetim verileri okunamadı."));
       setMessages(Array.isArray(payload?.messages) ? payload.messages : []);
       setMemberStats(
         Number.isFinite(payload?.memberStats?.active) && Number.isFinite(payload?.memberStats?.pending)
@@ -60,7 +62,8 @@ export default function AdminMessagesPanel() {
       );
       setMembers(Array.isArray(payload?.members) ? payload.members : []);
     } catch {
-      setAuthorized(false);
+      setAuthorized(true);
+      setError("Yönetim verileri okunamadı. Lütfen yeniden deneyin.");
       setMessages([]);
       setMemberStats(null);
       setMembers([]);
@@ -82,6 +85,7 @@ export default function AdminMessagesPanel() {
     setMessages([]);
     setMemberStats(null);
     setMembers([]);
+    setError("");
   }
 
   if (loading) {
@@ -119,6 +123,19 @@ export default function AdminMessagesPanel() {
         </div>
 
         <h1 className="mb-6 text-3xl font-bold text-zinc-900">Yönetim Paneli</h1>
+
+        {error ? (
+          <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-red-300 bg-red-50 p-4 text-sm font-semibold text-red-800">
+            <span>{error}</span>
+            <button
+              type="button"
+              onClick={() => void loadMessages()}
+              className="rounded-lg border border-red-300 bg-white px-3 py-2 text-red-800"
+            >
+              Yeniden Dene
+            </button>
+          </div>
+        ) : null}
 
         <section className="mb-6 grid gap-4 sm:grid-cols-2" aria-label="Üyelik özeti">
           <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5">

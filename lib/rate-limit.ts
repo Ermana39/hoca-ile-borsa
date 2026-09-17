@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { kv } from "./kv.js";
+import { kv } from "#lib/kv";
 
 type RateLimitResult = { allowed: boolean; retryAfterSeconds: number };
 type LocalEntry = { count: number; expiresAt: number };
@@ -64,13 +64,16 @@ export async function consumeRateLimit(
     } catch (error) {
       logSharedLimiterFailure(error);
       // A configured shared limiter must never silently fail open.
-      throw new RateLimitUnavailableError("İstek sınırı denetlenemedi.");
+      if (process.env.NODE_ENV !== "development") {
+        throw new RateLimitUnavailableError("İstek sınırı denetlenemedi.");
+      }
+      console.warn("[rate-limit] Yerel bellek sinirlayicisi kullaniliyor.");
     }
   }
 
   // Serverless instances do not share memory. A local fallback in Vercel would
   // reset limits on cold starts and let parallel instances bypass the limit.
-  if (process.env.VERCEL === "1") {
+  if (process.env.VERCEL === "1" && process.env.NODE_ENV !== "development") {
     throw new RateLimitUnavailableError("Paylaşılan istek sınırı yapılandırılmamış.");
   }
 

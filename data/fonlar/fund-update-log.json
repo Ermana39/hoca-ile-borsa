@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-16T15:29:34.620Z",
+  "generatedAt": "2026-09-17T07:20:40.543Z",
   "duplicateKontrolu": {
-    "added": 0,
+    "added": 1977,
     "updated": 0,
-    "skipped": 3962
+    "skipped": 1977
   },
   "islenenFonSayisi": 1066,
-  "islenenSnapshotSayisi": 2039,
-  "kaliciSnapshotSayisi": 1702823,
-  "temizlenenGecersizSnapshotSayisi": 58,
-  "yoneticiyleEslesenFonSayisi": 1963,
-  "bilinmeyenYoneticiSayisi": 18,
+  "islenenSnapshotSayisi": 2038,
+  "kaliciSnapshotSayisi": 1704800,
+  "temizlenenGecersizSnapshotSayisi": 61,
+  "yoneticiyleEslesenFonSayisi": 1957,
+  "bilinmeyenYoneticiSayisi": 20,
   "bilinmeyenYoneticiFonlari": [
     {
       "fonKodu": "OPU",
@@ -20,6 +20,10 @@
     {
       "fonKodu": "DK8",
       "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN SEKİZİNCİ SERBEST (DÖVİZ) FON"
+    },
+    {
+      "fonKodu": "FTM",
+      "fonAdi": "FİBA PORTFÖY KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON"
     },
     {
       "fonKodu": "KPS",
@@ -84,12 +88,16 @@
     {
       "fonKodu": "ICM",
       "fonAdi": "İNCİR PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU"
+    },
+    {
+      "fonKodu": "BPV",
+      "fonAdi": "BTCTURK PORTFÖY PARA PİYASASI (TL) FONU"
     }
   ],
   "kaynakDogrulama": {
-    "sonKaynakTarihi": "2026-09-16",
-    "sonKaynakKayitSayisi": 2039,
-    "sonKaynakGecerliKayitSayisi": 1981,
+    "sonKaynakTarihi": "2026-09-17",
+    "sonKaynakKayitSayisi": 2038,
+    "sonKaynakGecerliKayitSayisi": 1977,
     "gitGecmisindeIncelenenSurumSayisi": 114,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
@@ -111,35 +119,35 @@
       }
     ],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 58,
+      "sayi": 61,
       "ornekler": [
-        "AES:2026-09-16",
-        "APJ:2026-09-16",
-        "ARL:2026-09-16",
-        "ARM:2026-09-16",
-        "BPV:2026-09-16",
-        "FNN:2026-09-16",
-        "FSU:2026-09-16",
-        "GID:2026-09-16",
-        "GKE:2026-09-16",
-        "GKO:2026-09-16",
-        "GMC:2026-09-16",
-        "GMV:2026-09-16",
-        "GNZ:2026-09-16",
-        "GSU:2026-09-16",
-        "GTZ:2026-09-16",
-        "GUK:2026-09-16",
-        "GUM:2026-09-16",
-        "GZB:2026-09-16",
-        "GZE:2026-09-16",
-        "GZP:2026-09-16"
+        "AES:2026-09-17",
+        "APJ:2026-09-17",
+        "ARL:2026-09-17",
+        "ARM:2026-09-17",
+        "DFI:2026-09-17",
+        "FNN:2026-09-17",
+        "FSU:2026-09-17",
+        "GKE:2026-09-17",
+        "GKO:2026-09-17",
+        "GMC:2026-09-17",
+        "GMV:2026-09-17",
+        "GNZ:2026-09-17",
+        "GSU:2026-09-17",
+        "GUM:2026-09-17",
+        "HBN:2026-09-17",
+        "ICN:2026-09-17",
+        "IDF:2026-09-17",
+        "IIS:2026-09-17",
+        "IJH:2026-09-17",
+        "IRB:2026-09-17"
       ]
     }
   },
   "etkiAnaliziTarihselSenkronu": {
     "senkronizeEdildi": true,
     "fonSayisi": 6,
-    "sonTarih": "2026-09-16",
+    "sonTarih": "2026-09-17",
     "fonlar": [
       {
         "fonKodu": "TLY",
@@ -155,15 +163,15 @@
       },
       {
         "fonKodu": "KHA",
-        "tarihSayisi": 649,
+        "tarihSayisi": 650,
         "ilkTarih": "2024-02-09",
-        "sonTarih": "2026-09-16"
+        "sonTarih": "2026-09-17"
       },
       {
         "fonKodu": "THF",
-        "tarihSayisi": 381,
+        "tarihSayisi": 382,
         "ilkTarih": "2025-03-07",
-        "sonTarih": "2026-09-16"
+        "sonTarih": "2026-09-17"
       },
       {
         "fonKodu": "TMV",
@@ -173,22 +181,26 @@
       },
       {
         "fonKodu": "DOH",
-        "tarihSayisi": 346,
+        "tarihSayisi": 347,
         "ilkTarih": "2025-04-30",
-        "sonTarih": "2026-09-16"
+        "sonTarih": "2026-09-17"
       }
     ]
   },
   "etkiAnaliziGerceklesenSenkronu": {
-    "senkronizeEdildi": false,
+    "senkronizeEdildi": true,
     "tahminTarihi": "2026-09-17",
-    "guncellenenFonlar": []
+    "guncellenenFonlar": [
+      "THF",
+      "DOH",
+      "KHA"
+    ]
   },
-  "veriUyarisiSayisi": 80,
+  "veriUyarisiSayisi": 82,
   "veriUyarilari": [
     {
       "tur": "getiri-kaynaginda-guncel-listede-yok",
-      "tarih": "2026-09-16",
+      "tarih": "2026-09-17",
       "kodSayisi": 1,
       "ornekFonKodlari": [
         "EVL"
@@ -441,6 +453,12 @@
       "hamGetiri": 8.64716007
     },
     {
+      "fonKodu": "FTM",
+      "tarih": "2026-09-17",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 4856.0778
+    },
+    {
       "fonKodu": "AP6",
       "tarih": "2024-02-15",
       "tur": "gunluk-getiri-fiyat-kopmasi",
@@ -689,6 +707,12 @@
       "kaynakFonToplamDeger": 1745875961.51,
       "hesaplananFonToplamDeger": 1947624479.89,
       "farkOrani": 0.11555719
+    },
+    {
+      "fonKodu": "SIA",
+      "tarih": "2026-09-17",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.95826326
     }
   ]
 }

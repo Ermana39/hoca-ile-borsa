@@ -1,8 +1,8 @@
 import {
   authActionHandler,
   isMemberAuthAction,
-} from "../lib/member-auth-api.js";
-import { jsonResponse } from "../lib/http-api.js";
+} from "#lib/member-auth-api";
+import { jsonResponse } from "#lib/http-api";
 
 const authRouter = {
   async fetch(request: Request) {
