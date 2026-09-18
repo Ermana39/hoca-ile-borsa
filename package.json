@@ -3,13 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "imports": {
-    "#lib/*": {
-      "types": "./lib/*.ts",
-      "development": "./lib/*.ts",
-      "default": "./lib/*.js"
-    }
-  },
   "scripts": {
     "predev": "npm run fon-etki:import && npm run excel-to-json && npm run update-funds",
     "dev": "next dev",

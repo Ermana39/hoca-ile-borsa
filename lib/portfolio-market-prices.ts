@@ -1,5 +1,5 @@
-import { kv } from "#lib/kv";
-import { mergePriceHistory, type PriceObservation } from "#lib/portfolio-analytics";
+import { kv } from "./kv.js";
+import { mergePriceHistory, type PriceObservation } from "./portfolio-analytics.js";
 
 export type PortfolioMarketCode = "USD" | "EUR" | "XAU_GR";
 

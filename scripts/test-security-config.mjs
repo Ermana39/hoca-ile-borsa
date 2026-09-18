@@ -126,7 +126,9 @@ test("Hobby function limit is respected by grouped API functions", async () => {
   );
 });
 
-test("standalone Vercel function dependencies use Node ESM import paths", () => {
+test("standalone Vercel function dependencies use traceable Node ESM import paths", () => {
+  const apiModules = ["admin.ts", "auth.ts", "misc.ts", "portfolio.ts"]
+    .map((fileName) => path.join(root, "api", fileName));
   const serverModules = [
     "member-auth-api.ts",
     "member-auth.ts",
@@ -134,12 +136,23 @@ test("standalone Vercel function dependencies use Node ESM import paths", () => 
     "member-portfolio.ts",
     "portfolio-market-prices.ts",
     "rate-limit.ts",
-  ];
+  ].map((fileName) => path.join(root, "lib", fileName));
 
-  for (const fileName of serverModules) {
-    const source = fs.readFileSync(path.join(root, "lib", fileName), "utf8");
+  for (const filePath of [...apiModules, ...serverModules]) {
+    const source = fs.readFileSync(filePath, "utf8");
+    const fileName = path.relative(root, filePath).replaceAll("\\", "/");
+    assert.doesNotMatch(
+      source,
+      /from\s+["']#lib\//,
+      `${fileName}: package import aliases are not traced into standalone Vercel functions`,
+    );
     for (const match of source.matchAll(/from\s+["'](\.{1,2}\/[^"']+)["']/g)) {
       assert.ok(match[1].endsWith(".js"), `${fileName}: ${match[1]}`);
+      const dependency = path.resolve(
+        path.dirname(filePath),
+        match[1].replace(/\.js$/, ".ts"),
+      );
+      assert.ok(fs.existsSync(dependency), `${fileName}: ${match[1]}`);
     }
   }
 });

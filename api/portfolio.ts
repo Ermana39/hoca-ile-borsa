@@ -3,12 +3,12 @@ import {
   deletePortfolioHolding,
   listPortfolioHoldings,
   updatePortfolioHolding,
-} from "#lib/member-portfolio";
-import { MemberAuthError, requireVerifiedMemberFromRequest } from "#lib/member-auth";
-import { jsonResponse } from "#lib/http-api";
-import { getPortfolioMarketPrices } from "#lib/portfolio-market-prices";
-import { readJsonObject, RequestBodyError } from "#lib/request-body";
-import { isSameOriginRequest } from "#lib/request-security";
+} from "../lib/member-portfolio.js";
+import { MemberAuthError, requireVerifiedMemberFromRequest } from "../lib/member-auth.js";
+import { jsonResponse } from "../lib/http-api.js";
+import { getPortfolioMarketPrices } from "../lib/portfolio-market-prices.js";
+import { readJsonObject, RequestBodyError } from "../lib/request-body.js";
+import { isSameOriginRequest } from "../lib/request-security.js";
 
 async function withErrors(work: () => Promise<Response>) {
   try {

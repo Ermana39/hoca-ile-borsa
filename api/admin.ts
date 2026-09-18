@@ -1,15 +1,15 @@
 import crypto from "node:crypto";
-import { isValidAdminToken, makeAdminToken } from "#lib/admin-auth";
+import { isValidAdminToken, makeAdminToken } from "../lib/admin-auth.js";
 import {
   cookieValue,
   getClientIp,
   getCookie,
   jsonResponse,
-} from "#lib/http-api";
-import { getAdminMemberList, getMemberCounts } from "#lib/member-auth";
-import { consumeRateLimit, RateLimitUnavailableError } from "#lib/rate-limit";
-import { readJsonObject, RequestBodyError } from "#lib/request-body";
-import { isSameOriginRequest } from "#lib/request-security";
+} from "../lib/http-api.js";
+import { getAdminMemberList, getMemberCounts } from "../lib/member-auth.js";
+import { consumeRateLimit, RateLimitUnavailableError } from "../lib/rate-limit.js";
+import { readJsonObject, RequestBodyError } from "../lib/request-body.js";
+import { isSameOriginRequest } from "../lib/request-security.js";
 
 type AdminMemberData = {
   memberStats: { active: number; pending: number };

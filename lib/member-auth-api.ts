@@ -23,12 +23,12 @@ import {
   validateEmail,
   validatePassword,
   verifyPassword,
-} from "#lib/member-auth";
-import { sendPasswordResetMail, sendVerificationMail } from "#lib/member-mail";
-import { cookieValue, getClientIp, getCookie, jsonResponse } from "#lib/http-api";
-import { consumeRateLimit, RateLimitUnavailableError } from "#lib/rate-limit";
-import { readJsonObject, RequestBodyError } from "#lib/request-body";
-import { isSameOriginRequest } from "#lib/request-security";
+} from "./member-auth.js";
+import { sendPasswordResetMail, sendVerificationMail } from "./member-mail.js";
+import { cookieValue, getClientIp, getCookie, jsonResponse } from "./http-api.js";
+import { consumeRateLimit, RateLimitUnavailableError } from "./rate-limit.js";
+import { readJsonObject, RequestBodyError } from "./request-body.js";
+import { isSameOriginRequest } from "./request-security.js";
 
 function readableCookie(name: string, value: string, maxAge: number, secure: boolean) {
   const parts = [
