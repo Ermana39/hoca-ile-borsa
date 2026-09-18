@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-17T08:26:23.671Z",
+  "generatedAt": "2026-09-18T06:28:59.743Z",
   "duplicateKontrolu": {
-    "added": 6,
-    "updated": 55,
-    "skipped": 3905
+    "added": 1885,
+    "updated": 0,
+    "skipped": 1885
   },
   "islenenFonSayisi": 1066,
-  "islenenSnapshotSayisi": 2038,
-  "kaliciSnapshotSayisi": 1704806,
-  "temizlenenGecersizSnapshotSayisi": 55,
-  "yoneticiyleEslesenFonSayisi": 1963,
-  "bilinmeyenYoneticiSayisi": 20,
+  "islenenSnapshotSayisi": 2039,
+  "kaliciSnapshotSayisi": 1706691,
+  "temizlenenGecersizSnapshotSayisi": 154,
+  "yoneticiyleEslesenFonSayisi": 1864,
+  "bilinmeyenYoneticiSayisi": 21,
   "bilinmeyenYoneticiFonlari": [
     {
       "fonKodu": "OPU",
@@ -92,13 +92,17 @@
     {
       "fonKodu": "BPV",
       "fonAdi": "BTCTURK PORTFÖY PARA PİYASASI (TL) FONU"
+    },
+    {
+      "fonKodu": "EVL",
+      "fonAdi": "EMAA BLUE PORTFÖY ÇOKLU VARLIK KATILIM FONU"
     }
   ],
   "kaynakDogrulama": {
-    "sonKaynakTarihi": "2026-09-17",
-    "sonKaynakKayitSayisi": 2038,
-    "sonKaynakGecerliKayitSayisi": 1983,
-    "gitGecmisindeIncelenenSurumSayisi": 115,
+    "sonKaynakTarihi": "2026-09-18",
+    "sonKaynakKayitSayisi": 2039,
+    "sonKaynakGecerliKayitSayisi": 1885,
+    "gitGecmisindeIncelenenSurumSayisi": 116,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
     "manuelGecmisIceAktarimlari": [],
@@ -119,35 +123,35 @@
       }
     ],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 55,
+      "sayi": 154,
       "ornekler": [
-        "AES:2026-09-17",
-        "APJ:2026-09-17",
-        "ARL:2026-09-17",
-        "ARM:2026-09-17",
-        "FNN:2026-09-17",
-        "FSU:2026-09-17",
-        "GKE:2026-09-17",
-        "GKO:2026-09-17",
-        "GMC:2026-09-17",
-        "GMV:2026-09-17",
-        "GNZ:2026-09-17",
-        "GSU:2026-09-17",
-        "GUM:2026-09-17",
-        "ICN:2026-09-17",
-        "IIS:2026-09-17",
-        "IJH:2026-09-17",
-        "IRB:2026-09-17",
-        "IRF:2026-09-17",
-        "MP2:2026-09-17",
-        "MP4:2026-09-17"
+        "AAL:2026-09-18",
+        "AC7:2026-09-18",
+        "AES:2026-09-18",
+        "AP6:2026-09-18",
+        "APJ:2026-09-18",
+        "ARL:2026-09-18",
+        "ARM:2026-09-18",
+        "AU1:2026-09-18",
+        "BDI:2026-09-18",
+        "BHH:2026-09-18",
+        "BON:2026-09-18",
+        "BSE:2026-09-18",
+        "BYZ:2026-09-18",
+        "CAH:2026-09-18",
+        "CBD:2026-09-18",
+        "CVL:2026-09-18",
+        "DGF:2026-09-18",
+        "DGH:2026-09-18",
+        "DHI:2026-09-18",
+        "DNF:2026-09-18"
       ]
     }
   },
   "etkiAnaliziTarihselSenkronu": {
     "senkronizeEdildi": true,
     "fonSayisi": 6,
-    "sonTarih": "2026-09-17",
+    "sonTarih": "2026-09-18",
     "fonlar": [
       {
         "fonKodu": "TLY",
@@ -157,21 +161,21 @@
       },
       {
         "fonKodu": "DFI",
-        "tarihSayisi": 1041,
+        "tarihSayisi": 1042,
         "ilkTarih": "2022-07-29",
-        "sonTarih": "2026-09-17"
+        "sonTarih": "2026-09-18"
       },
       {
         "fonKodu": "KHA",
-        "tarihSayisi": 650,
+        "tarihSayisi": 651,
         "ilkTarih": "2024-02-09",
-        "sonTarih": "2026-09-17"
+        "sonTarih": "2026-09-18"
       },
       {
         "fonKodu": "THF",
-        "tarihSayisi": 382,
+        "tarihSayisi": 383,
         "ilkTarih": "2025-03-07",
-        "sonTarih": "2026-09-17"
+        "sonTarih": "2026-09-18"
       },
       {
         "fonKodu": "TMV",
@@ -188,20 +192,40 @@
     ]
   },
   "etkiAnaliziGerceklesenSenkronu": {
-    "senkronizeEdildi": true,
+    "senkronizeEdildi": false,
     "tahminTarihi": "2026-09-17",
-    "guncellenenFonlar": [
-      "DFI"
-    ]
+    "guncellenenFonlar": []
   },
   "veriUyarisiSayisi": 82,
   "veriUyarilari": [
     {
-      "tur": "getiri-kaynaginda-guncel-listede-yok",
-      "tarih": "2026-09-17",
-      "kodSayisi": 1,
+      "tur": "gunluk-kaynakta-eksik-finansal-veri",
+      "tarih": "2026-09-18",
+      "toplamKayitSayisi": 2039,
+      "gecerliKayitSayisi": 1885,
+      "gecersizKayitSayisi": 154,
+      "gecerliOran": 0.92447278,
       "ornekFonKodlari": [
-        "EVL"
+        "AAL",
+        "AC7",
+        "AES",
+        "AP6",
+        "APJ",
+        "ARL",
+        "ARM",
+        "AU1",
+        "BDI",
+        "BHH",
+        "BON",
+        "BSE",
+        "BYZ",
+        "CAH",
+        "CBD",
+        "CVL",
+        "DGF",
+        "DGH",
+        "DHI",
+        "DNF"
       ]
     },
     {
