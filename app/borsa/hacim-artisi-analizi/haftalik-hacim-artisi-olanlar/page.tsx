@@ -2,70 +2,70 @@ import { seoAciklamasi } from "@/lib/seo-metadata";
 import Link from "@/components/NoPrefetchLink";
 
 export const metadata = {
-  title: "Aylık Hacim Artışı Olan BIST Hisseleri",
+  title: "Haftalık Hacim Artışı Olan BIST Hisseleri",
   description:
-    seoAciklamasi("Aylık ortalamasına göre işlem hacmi yükselen BIST hisselerini, güncel hacim tutarlarını ve artış oranlarını karşılaştırmalı olarak inceleyin.", "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
+    seoAciklamasi("Haftalık ortalamasına göre işlem hacmi yükselen BIST hisselerini, güncel hacim tutarlarını ve artış oranlarını karşılaştırmalı olarak inceleyin.", "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
   alternates: {
     canonical:
-      "https://www.hocaileborsa.com/borsa/hacim-artisi-analizi/aylik-hacim-artisi-olanlar",
+      "https://www.hocaileborsa.com/borsa/hacim-artisi-analizi/haftalik-hacim-artisi-olanlar",
   },
   robots: { index: false, follow: true },
 };
 
 const veriler = [
-  { sembol: "LKMNH", islemHacmi: "211,198,905", ortHacim: "27,909,393", artis: "656.73" },
-  { sembol: "CEOEM", islemHacmi: "205,944,894", ortHacim: "37,012,589", artis: "456.42" },
-  { sembol: "AKFGY", islemHacmi: "426,647,327", ortHacim: "79,660,970", artis: "435.58" },
-  { sembol: "BMSCH", islemHacmi: "110,194,265", ortHacim: "21,786,172", artis: "405.80" },
-  { sembol: "MZHLD", islemHacmi: "10,126,520", ortHacim: "2,075,624", artis: "387.88" },
-  { sembol: "PATEK", islemHacmi: "2,184,251,214", ortHacim: "463,391,274", artis: "371.36" },
-  { sembol: "JANTS", islemHacmi: "398,941,828", ortHacim: "90,623,177", artis: "340.22" },
-  { sembol: "GRNYO", islemHacmi: "19,218,617", ortHacim: "4,645,762", artis: "313.68" },
-  { sembol: "VAKBN", islemHacmi: "9,533,393,887", ortHacim: "2,393,175,723", artis: "298.36" },
-  { sembol: "ZRGYO", islemHacmi: "75,116,446", ortHacim: "19,356,512", artis: "288.07" },
-  { sembol: "BVSAN", islemHacmi: "577,935,845", ortHacim: "152,638,219", artis: "278.63" },
-  { sembol: "DCTTR", islemHacmi: "310,254,653", ortHacim: "84,815,489", artis: "265.80" },
-  { sembol: "TTKOM", islemHacmi: "7,683,640,829", ortHacim: "2,111,789,032", artis: "263.85" },
-  { sembol: "MRCYO", islemHacmi: "915,085,970", ortHacim: "263,136,609", artis: "247.76" },
-  { sembol: "ALCAR", islemHacmi: "103,698,979", ortHacim: "30,542,848", artis: "239.52" },
-  { sembol: "EGEPO", islemHacmi: "244,136,293", ortHacim: "72,455,967", artis: "236.94" },
-  { sembol: "IEYHO", islemHacmi: "865,288,997", ortHacim: "263,299,180", artis: "228.63" },
-  { sembol: "MARTI", islemHacmi: "996,832,284", ortHacim: "303,664,918", artis: "228.27" },
-  { sembol: "KONYA", islemHacmi: "225,159,318", ortHacim: "69,722,616", artis: "222.94" },
-  { sembol: "KRPLS", islemHacmi: "231,485,424", ortHacim: "71,850,524", artis: "222.18" },
-  { sembol: "IHLGM", islemHacmi: "118,971,882", ortHacim: "37,381,241", artis: "218.27" },
-  { sembol: "BANVT", islemHacmi: "45,459,640", ortHacim: "14,514,587", artis: "213.20" },
-  { sembol: "EPLAS", islemHacmi: "78,316,139", ortHacim: "25,051,797", artis: "212.62" },
-  { sembol: "EGEEN", islemHacmi: "272,626,950", ortHacim: "88,396,927", artis: "208.41" },
-  { sembol: "FZLGY", islemHacmi: "660,277,857", ortHacim: "218,097,199", artis: "202.74" },
-  { sembol: "KRVGD", islemHacmi: "66,437,977", ortHacim: "22,370,481", artis: "196.99" },
-  { sembol: "CMBTN", islemHacmi: "106,555,239", ortHacim: "36,056,632", artis: "195.52" },
-  { sembol: "BEYAZ", islemHacmi: "50,810,755", ortHacim: "18,642,602", artis: "172.55" },
-  { sembol: "TERA", islemHacmi: "7,371,118,389", ortHacim: "2,746,008,089", artis: "168.43" },
-  { sembol: "KUVAS", islemHacmi: "1,773,682,935", ortHacim: "666,295,588", artis: "166.20" },
-  { sembol: "KZGYO", islemHacmi: "244,742,958", ortHacim: "97,360,103", artis: "151.38" },
-  { sembol: "IHGZT", islemHacmi: "60,998,858", ortHacim: "24,741,713", artis: "146.54" },
-  { sembol: "AKYHO", islemHacmi: "7,421,829", ortHacim: "3,050,603", artis: "143.29" },
-  { sembol: "MIATK", islemHacmi: "1,839,791,447", ortHacim: "765,777,248", artis: "140.25" },
-  { sembol: "KRTEK", islemHacmi: "13,245,109", ortHacim: "5,766,028", artis: "129.71" },
-  { sembol: "EKIZ", islemHacmi: "1,744,666", ortHacim: "773,007", artis: "125.70" },
-  { sembol: "ENERY", islemHacmi: "1,040,328,662", ortHacim: "471,567,225", artis: "120.61" },
-  { sembol: "FLAP", islemHacmi: "29,425,794", ortHacim: "13,353,428", artis: "120.36" },
-  { sembol: "SANKO", islemHacmi: "19,111,699", ortHacim: "8,892,485", artis: "114.92" },
-  { sembol: "KERVN", islemHacmi: "24,935,479", ortHacim: "11,816,478", artis: "111.02" },
-  { sembol: "KLRHO", islemHacmi: "582,656,724", ortHacim: "279,023,814", artis: "108.82" },
-  { sembol: "ALKLC", islemHacmi: "2,134,848,097", ortHacim: "1,027,722,606", artis: "107.73" },
-  { sembol: "BFREN", islemHacmi: "51,202,647", ortHacim: "25,093,307", artis: "104.05" },
-  { sembol: "DEVA", islemHacmi: "206,281,559", ortHacim: "101,141,639", artis: "103.95" },
-  { sembol: "BULGS", islemHacmi: "182,760,253", ortHacim: "91,834,431", artis: "99.01" },
-  { sembol: "KRGYO", islemHacmi: "149,406,364", ortHacim: "75,545,405", artis: "97.77" },
-  { sembol: "KTLEV", islemHacmi: "16,249,359,816", ortHacim: "8,307,369,423", artis: "95.60" },
-  { sembol: "SASA", islemHacmi: "18,244,055,475", ortHacim: "9,415,399,028", artis: "93.77" },
-  { sembol: "IHLAS", islemHacmi: "247,418,706", ortHacim: "131,411,090", artis: "88.28" },
-  { sembol: "MERCN", islemHacmi: "150,932,394", ortHacim: "80,825,093", artis: "86.74" },
+  { sembol: "ULAK", islemHacmi: "564,431,946", ortHacim: "160,468,232", artis: "251.74" },
+  { sembol: "SELEC", islemHacmi: "74,523,516", ortHacim: "21,782,227", artis: "242.13" },
+  { sembol: "GEDIK", islemHacmi: "135,733,885", ortHacim: "46,179,625", artis: "193.92" },
+  { sembol: "GESAN", islemHacmi: "3,247,356,004", ortHacim: "1,154,590,037", artis: "181.26" },
+  { sembol: "MTYKO", islemHacmi: "8,821,137", ortHacim: "3,320,065", artis: "165.69" },
+  { sembol: "KONTR", islemHacmi: "48,736,569", ortHacim: "19,826,684", artis: "145.81" },
+  { sembol: "ALFAS", islemHacmi: "209,906,902", ortHacim: "86,741,786", artis: "141.99" },
+  { sembol: "GLRMK", islemHacmi: "2,984,115,239", ortHacim: "1,253,946,835", artis: "137.98" },
+  { sembol: "ANHYT", islemHacmi: "344,143,110", ortHacim: "146,029,756", artis: "135.67" },
+  { sembol: "ORCAY", islemHacmi: "16,186,647", ortHacim: "7,048,716", artis: "129.64" },
+  { sembol: "PASEU", islemHacmi: "96,694,375", ortHacim: "42,141,235", artis: "129.45" },
+  { sembol: "ASUZU", islemHacmi: "73,568,922", ortHacim: "32,739,569", artis: "124.71" },
+  { sembol: "BANVT", islemHacmi: "52,335,441", ortHacim: "23,387,378", artis: "123.78" },
+  { sembol: "ZRGYO", islemHacmi: "169,507,829", ortHacim: "79,922,474", artis: "112.09" },
+  { sembol: "INVEO", islemHacmi: "109,846,829", ortHacim: "52,334,604", artis: "109.88" },
+  { sembol: "EUPWR", islemHacmi: "3,322,186,354", ortHacim: "1,670,729,333", artis: "98.85" },
+  { sembol: "NUHCM", islemHacmi: "24,412,351", ortHacim: "12,547,857", artis: "94.55" },
+  { sembol: "EMNIS", islemHacmi: "2,351,422", ortHacim: "1,211,918", artis: "94.02" },
+  { sembol: "RYGYO", islemHacmi: "320,469,381", ortHacim: "166,682,720", artis: "92.26" },
+  { sembol: "LMKDC", islemHacmi: "309,894,553", ortHacim: "162,519,816", artis: "90.68" },
+  { sembol: "ISGYO", islemHacmi: "82,808,389", ortHacim: "44,406,099", artis: "86.48" },
+  { sembol: "KRDMB", islemHacmi: "435,956,711", ortHacim: "235,308,857", artis: "85.27" },
+  { sembol: "RYSAS", islemHacmi: "920,362,126", ortHacim: "501,720,750", artis: "83.44" },
+  { sembol: "MAVI", islemHacmi: "881,068,140", ortHacim: "481,276,342", artis: "83.07" },
+  { sembol: "ARDYZ", islemHacmi: "976,853,306", ortHacim: "539,728,306", artis: "80.99" },
+  { sembol: "ODINE", islemHacmi: "12,586,605", ortHacim: "7,098,631", artis: "77.31" },
+  { sembol: "INVES", islemHacmi: "99,452,386", ortHacim: "56,142,391", artis: "77.14" },
+  { sembol: "YGGYO", islemHacmi: "69,444,492", ortHacim: "39,932,770", artis: "73.90" },
+  { sembol: "PAGYO", islemHacmi: "53,069,342", ortHacim: "31,170,663", artis: "70.25" },
+  { sembol: "SNPAM", islemHacmi: "1,625,379", ortHacim: "960,755", artis: "69.18" },
+  { sembol: "COSMO", islemHacmi: "8,852,218", ortHacim: "5,241,715", artis: "68.88" },
+  { sembol: "MEPET", islemHacmi: "12,738,807", ortHacim: "7,592,158", artis: "67.79" },
+  { sembol: "ARCLK", islemHacmi: "263,389,679", ortHacim: "157,531,502", artis: "67.20" },
+  { sembol: "ERBOS", islemHacmi: "13,339,639", ortHacim: "8,017,067", artis: "66.39" },
+  { sembol: "ARFYE", islemHacmi: "117,663,063", ortHacim: "70,852,156", artis: "66.07" },
+  { sembol: "RNPOL", islemHacmi: "18,781,045", ortHacim: "11,358,360", artis: "65.35" },
+  { sembol: "UNLU", islemHacmi: "115,383,408", ortHacim: "71,015,884", artis: "62.48" },
+  { sembol: "DOHOL", islemHacmi: "474,253,190", ortHacim: "295,000,040", artis: "60.76" },
+  { sembol: "KRONT", islemHacmi: "40,736,708", ortHacim: "25,430,986", artis: "60.19" },
+  { sembol: "PSGYO", islemHacmi: "523,477,465", ortHacim: "335,315,197", artis: "56.12" },
+  { sembol: "PENTA", islemHacmi: "45,940,859", ortHacim: "29,719,905", artis: "54.58" },
+  { sembol: "ATLAS", islemHacmi: "19,984,693", ortHacim: "12,944,064", artis: "54.39" },
+  { sembol: "MEGAP", islemHacmi: "1,847,803", ortHacim: "1,198,105", artis: "54.23" },
+  { sembol: "DOFRB", islemHacmi: "636,001,570", ortHacim: "414,181,949", artis: "53.56" },
+  { sembol: "ANSGR", islemHacmi: "223,295,108", ortHacim: "146,595,261", artis: "52.32" },
+  { sembol: "SEGMN", islemHacmi: "100,800,817", ortHacim: "66,249,129", artis: "52.15" },
+  { sembol: "EGPRO", islemHacmi: "90,270,422", ortHacim: "59,576,139", artis: "51.52" },
+  { sembol: "ISBIR", islemHacmi: "2,354,150", ortHacim: "1,554,908", artis: "51.40" },
+  { sembol: "LIDFA", islemHacmi: "61,176,182", ortHacim: "40,656,714", artis: "50.47" },
+  { sembol: "ALVES", islemHacmi: "19,557,939", ortHacim: "13,166,062", artis: "48.55" },
 ];
 
-export default function YillikHacimArtisiPage() {
+export default function HaftalikHacimArtisiPage() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-7xl">
@@ -85,7 +85,7 @@ export default function YillikHacimArtisiPage() {
         </div>
 
         <h1 className="mb-6 text-3xl font-bold text-zinc-900">
-          Aylık Hacim Artışı Olanlar
+          Haftalık Hacim Artışı Olanlar
         </h1>
 
         <div className="overflow-x-auto rounded-2xl border border-blue-200 bg-blue-50 p-4">
@@ -126,12 +126,12 @@ export default function YillikHacimArtisiPage() {
 
         <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
-            Yıllık Hacim Artışı Olan Hisseler Hakkında
+            Haftalık Hacim Artışı Olan Hisseler Hakkında
           </h2>
 
           <p className="mb-4 leading-7 text-zinc-700">
-            Yıllık hacim artışı olan hisseler sayfası, son işlem hacmi ile uzun
-            dönem ortalama hacim arasında belirgin fark bulunan hisseleri takip
+            Haftalık hacim artışı olan hisseler sayfası, son işlem hacmi ile haftalık
+            ortalama hacim arasında belirgin fark bulunan hisseleri takip
             etmek isteyen yatırımcılar için hazırlanmıştır. Bu sayfada işlem hacmi
             dikkat çekici şekilde artan hisseleri toplu olarak inceleyebilir,
             piyasadaki güçlü ilgi gören şirketleri daha kolay belirleyebilirsiniz.
@@ -139,7 +139,7 @@ export default function YillikHacimArtisiPage() {
 
           <p className="mb-4 leading-7 text-zinc-700">
             Hacim artışı, teknik analizde fiyat hareketinin gücünü destekleyen
-            önemli göstergelerden biridir. Özellikle yıllık ortalama hacme göre
+            önemli göstergelerden biridir. Özellikle haftalık ortalama hacme göre
             yükselen işlem hacmi, yatırımcı ilgisinin arttığını ve hissede önemli
             bir hareketlilik oluştuğunu gösterebilir. Bu nedenle yüksek hacim artışı
             yaşayan hisseler, kısa ve orta vadeli analizlerde yakından izlenir.
@@ -155,7 +155,7 @@ export default function YillikHacimArtisiPage() {
 
           <p className="leading-7 text-zinc-700">
             Güncel hacim artışı olan hisseler, BIST işlem hacmi karşılaştırmaları,
-            yıllık ortalamaya göre yükselen hisseler ve borsa teknik takip ekranları
+            haftalık ortalamaya göre yükselen hisseler ve borsa teknik takip ekranları
             için bu sayfayı düzenli olarak takip edebilirsiniz.
           </p>
         </section>
