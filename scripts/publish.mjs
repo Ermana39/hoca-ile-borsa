@@ -4,6 +4,7 @@ import path from "node:path";
 
 const root = process.cwd();
 const publicRoot = path.join(root, "public");
+const supportedNewsVersions = new Set([1, 2]);
 
 function run(command, args, { capture = false, allowFailure = false } = {}) {
   const result = spawnSync(command, args, {
@@ -51,6 +52,12 @@ function verifyChangedNews() {
     const absoluteNewsFile = path.join(root, newsFile);
     const record = JSON.parse(fs.readFileSync(absoluteNewsFile, "utf8"));
     if (record?.durum !== "yayinda") continue;
+
+    if (!supportedNewsVersions.has(record?.surum)) {
+      throw new Error(
+        `Yayindaki haberin surumu desteklenmiyor: ${newsFile} (surum: ${record?.surum ?? "yok"})`,
+      );
+    }
 
     if (!isInGitIndex(newsFile)) {
       throw new Error(`Yayindaki haber Git'e eklenmedi: ${newsFile}`);

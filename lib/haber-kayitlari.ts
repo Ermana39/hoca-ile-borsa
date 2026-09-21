@@ -419,7 +419,7 @@ function yeniHaberKaydiniNormalizeEt(veri: unknown): HaberKaydi | null {
   const kategori = haberKategoriDegeriniNormalizeEt(veri);
 
   if (
-    veri.surum !== HABER_KAYIT_SURUMU ||
+    (veri.surum !== HABER_KAYIT_SURUMU && veri.surum !== 2) ||
     (veri.durum !== "taslak" && veri.durum !== "yayinda") ||
     typeof veri.slug !== "string" ||
     typeof veri.baslik !== "string" ||

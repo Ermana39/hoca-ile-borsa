@@ -551,7 +551,9 @@ for (const { goreliDosya, veri } of kayitlar) {
     ? hedefKayit
     : veri.durum === "yayinda" || hedefKayit;
 
-  if (veri.surum !== 1) hata(goreliDosya, "surum alanı 1 olmalı.");
+  if (veri.surum !== 1 && veri.surum !== 2) {
+    hata(goreliDosya, "surum alanı 1 veya 2 olmalı.");
+  }
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(veri.slug || "")) {
     hata(goreliDosya, "slug yalnızca küçük harf, rakam ve tire içermeli.");
   }
