@@ -46,5 +46,10 @@ Thumbs.db
 /data/admin-stats.json
 
 data/fonlar/fund-history.json
+
+# Fon içe aktarma sırasında app/fonlar köküne bırakılan tarihli kaynak kopyaları.
+# Site, alt veri klasörlerindeki standart isimli Excel dosyalarını kullanır.
+/app/fonlar/Fon_Verileri_EXCEL_Tum_Veri_*.xlsx
+/app/fonlar/Menkul_Kiymet_Yatirim_Fonlari_EXCEL_Tum_Veri_*.xlsx
 .vercel
 .env*

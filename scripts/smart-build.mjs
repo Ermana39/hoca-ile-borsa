@@ -69,7 +69,6 @@ function classify(files, forceFull = false) {
   const changed = normalizeFiles(files);
   const has = (test) => changed.some((file) => test(file));
   const excelFiles = changed.filter((file) => /\.(xlsx|xls|xlsm)$/i.test(file));
-  const effectExcel = "app/fonlar/etki-analizi/_data/fon-etki-verileri.xlsx";
   const fundExcel = [
     "app/fonlar/getiri/menkul-kiymet-yatirim-fonlari/data/menkul-kiymet-yatirim-fonlari-getiri.xlsx",
     "app/fonlar/tarihsel-veriler/menkul-kiymet-yatirim-fonlari/data/menkul-kiymet-yatirim-fonlari-tarihsel.xlsx",
@@ -80,7 +79,6 @@ function classify(files, forceFull = false) {
     file === "scripts/build-static-export.mjs" ||
     file.startsWith("scripts/lib/") ||
     [
-      "scripts/import-fon-etki-verileri.mjs",
       "scripts/excel-to-json.mjs",
       "scripts/update-funds.mjs",
       "scripts/test-fund-platform.mjs",
@@ -95,11 +93,8 @@ function classify(files, forceFull = false) {
     ].includes(file)
   );
   const full = forceFull || buildInfrastructureChanged;
-  const excel = full || excelFiles.some((file) => file !== effectExcel);
-  // Tahmin Excel'i yalnızca kullanıcı o dosyayı gerçekten değiştirdiğinde
-  // işlenir. Genel bir tam hazırlık, mevcut tahmini ertesi güne taşımamalı.
-  const effect = changed.includes(effectExcel);
-  const funds = full || effect || fundExcel.some((file) => changed.includes(file));
+  const excel = full || excelFiles.length > 0;
+  const funds = full || fundExcel.some((file) => changed.includes(file));
   const companySync = full || has((file) =>
     /\.(xlsx|xls|xlsm)$/i.test(file) &&
     (file.startsWith("app/borsa/") || file.includes("oran-analizi"))
@@ -122,7 +117,6 @@ function classify(files, forceFull = false) {
 
   return {
     full,
-    effect,
     excel,
     funds,
     news,
@@ -157,7 +151,6 @@ function describe(groups) {
 }
 
 function prepare(groups) {
-  if (groups.effect) run(process.execPath, ["scripts/import-fon-etki-verileri.mjs"], "Fon etki verisini hazirla");
   if (groups.excel) {
     run(process.execPath, ["scripts/excel-to-json.mjs"], "Degisen Excel verilerini JSON'a cevir");
   }
@@ -177,10 +170,9 @@ function prepare(groups) {
   if (groups.ipo) run(process.execPath, ["scripts/archive-ipo-draft.mjs", "--check-approved"], "Halka arz arsivini dogrula");
 }
 
-function fullGroups(changedCount = 0, preserve = {}) {
+function fullGroups(changedCount = 0) {
   return {
     ...classify([], true),
-    effect: Boolean(preserve.effect),
     changedCount,
   };
 }
@@ -217,7 +209,7 @@ if (prepareOnly || showPlanOnly) {
     if (groups.full) throw error;
     console.warn(`[build] Hizli hazirlik basarisiz: ${error.message}`);
     console.warn("[build] Guvenli tam hazirliga geciliyor.");
-    groups = fullGroups(files.length, groups);
+    groups = fullGroups(files.length);
     prepare(groups);
   }
   writePlan(groups);
@@ -245,7 +237,7 @@ if (!alreadyPrepared) {
     if (groups.full) throw error;
     console.warn(`[build] Hizli hazirlik basarisiz: ${error.message}`);
     console.warn("[build] Guvenli tam hazirliga geciliyor.");
-    groups = fullGroups(detectedFiles?.length ?? 0, groups);
+    groups = fullGroups(detectedFiles?.length ?? 0);
     prepare(groups);
   }
 }
@@ -253,7 +245,7 @@ if (!alreadyPrepared) {
 let status = run(process.execPath, ["scripts/build-static-export.mjs"], "Statik siteyi olustur", { allowFailure: true });
 if (status !== 0 && !groups.full) {
   console.warn("[build] Hizli build basarisiz. Tam hazirlikla bir kez daha deneniyor.");
-  groups = fullGroups(detectedFiles?.length ?? 0, groups);
+  groups = fullGroups(detectedFiles?.length ?? 0);
   prepare(groups);
   status = run(process.execPath, ["scripts/build-static-export.mjs"], "Tam statik siteyi olustur", { allowFailure: true });
 }

@@ -83,12 +83,41 @@ function verifyChangedNews() {
   }
 }
 
-function verifyNothingWasLeftOut() {
+function omittedFiles() {
   const unstaged = outputLines(run("git", ["diff", "--name-only"], { capture: true }).stdout);
   const untracked = outputLines(
     run("git", ["ls-files", "--others", "--exclude-standard"], { capture: true }).stdout,
   );
-  const omitted = [...new Set([...unstaged, ...untracked])];
+  return [...new Set([...unstaged, ...untracked])];
+}
+
+function wait(milliseconds) {
+  Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, milliseconds);
+}
+
+function stageStableChanges(maxAttempts = 4) {
+  let omitted = [];
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+    run("git", ["add", "-A"]);
+    wait(300);
+    omitted = omittedFiles();
+    if (omitted.length === 0) return;
+
+    if (attempt < maxAttempts) {
+      console.log(
+        `Yayin sirasinda degisen ${omitted.length} dosya yeniden hazirlaniyor (${attempt}/${maxAttempts})...`,
+      );
+    }
+  }
+
+  throw new Error(
+    `Yayin sirasinda degismeye devam eden dosyalar var:\n${omitted.map((file) => `- ${file}`).join("\n")}`,
+  );
+}
+
+function verifyNothingWasLeftOut() {
+  const omitted = omittedFiles();
   if (omitted.length > 0) {
     throw new Error(`Yayin disinda kalan dosyalar var:\n${omitted.map((file) => `- ${file}`).join("\n")}`);
   }
@@ -101,7 +130,10 @@ if (!initialStatus) {
 }
 
 run(process.execPath, ["scripts/smart-build.mjs", "--prepare-only"]);
-run("git", ["add", "-A"]);
+stageStableChanges();
+verifyNothingWasLeftOut();
+verifyChangedNews();
+stageStableChanges();
 verifyNothingWasLeftOut();
 verifyChangedNews();
 

@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-18T06:28:59.743Z",
+  "generatedAt": "2026-09-21T08:01:27.029Z",
   "duplicateKontrolu": {
-    "added": 1885,
+    "added": 0,
     "updated": 0,
-    "skipped": 1885
+    "skipped": 3900
   },
-  "islenenFonSayisi": 1066,
-  "islenenSnapshotSayisi": 2039,
-  "kaliciSnapshotSayisi": 1706691,
-  "temizlenenGecersizSnapshotSayisi": 154,
-  "yoneticiyleEslesenFonSayisi": 1864,
+  "islenenFonSayisi": 1067,
+  "islenenSnapshotSayisi": 2040,
+  "kaliciSnapshotSayisi": 1708641,
+  "temizlenenGecersizSnapshotSayisi": 90,
+  "yoneticiyleEslesenFonSayisi": 1929,
   "bilinmeyenYoneticiSayisi": 21,
   "bilinmeyenYoneticiFonlari": [
     {
@@ -24,10 +24,6 @@
     {
       "fonKodu": "FTM",
       "fonAdi": "FİBA PORTFÖY KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON"
-    },
-    {
-      "fonKodu": "KPS",
-      "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN ONİKİNCİ SERBEST (DÖVİZ) FON"
     },
     {
       "fonKodu": "OAO",
@@ -96,13 +92,17 @@
     {
       "fonKodu": "EVL",
       "fonAdi": "EMAA BLUE PORTFÖY ÇOKLU VARLIK KATILIM FONU"
+    },
+    {
+      "fonKodu": "TNR",
+      "fonAdi": "TUNA PORTFÖY ÖPY PARA PİYASASI ÖZEL FONU"
     }
   ],
   "kaynakDogrulama": {
-    "sonKaynakTarihi": "2026-09-18",
-    "sonKaynakKayitSayisi": 2039,
-    "sonKaynakGecerliKayitSayisi": 1885,
-    "gitGecmisindeIncelenenSurumSayisi": 116,
+    "sonKaynakTarihi": "2026-09-21",
+    "sonKaynakKayitSayisi": 2040,
+    "sonKaynakGecerliKayitSayisi": 1950,
+    "gitGecmisindeIncelenenSurumSayisi": 117,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
     "manuelGecmisIceAktarimlari": [],
@@ -123,109 +123,47 @@
       }
     ],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 154,
+      "sayi": 90,
       "ornekler": [
-        "AAL:2026-09-18",
-        "AC7:2026-09-18",
-        "AES:2026-09-18",
-        "AP6:2026-09-18",
-        "APJ:2026-09-18",
-        "ARL:2026-09-18",
-        "ARM:2026-09-18",
-        "AU1:2026-09-18",
-        "BDI:2026-09-18",
-        "BHH:2026-09-18",
-        "BON:2026-09-18",
-        "BSE:2026-09-18",
-        "BYZ:2026-09-18",
-        "CAH:2026-09-18",
-        "CBD:2026-09-18",
-        "CVL:2026-09-18",
-        "DGF:2026-09-18",
-        "DGH:2026-09-18",
-        "DHI:2026-09-18",
-        "DNF:2026-09-18"
+        "AC5:2026-09-21",
+        "AC7:2026-09-21",
+        "AES:2026-09-21",
+        "AP6:2026-09-21",
+        "AP7:2026-09-21",
+        "APJ:2026-09-21",
+        "ARL:2026-09-21",
+        "ARM:2026-09-21",
+        "BDI:2026-09-21",
+        "BHH:2026-09-21",
+        "BRT:2026-09-21",
+        "BSD:2026-09-21",
+        "BSE:2026-09-21",
+        "BST:2026-09-21",
+        "DHI:2026-09-21",
+        "DLN:2026-09-21",
+        "ESN:2026-09-21",
+        "FNN:2026-09-21",
+        "FSU:2026-09-21",
+        "GKE:2026-09-21"
       ]
     }
   },
   "etkiAnaliziTarihselSenkronu": {
-    "senkronizeEdildi": true,
-    "fonSayisi": 6,
-    "sonTarih": "2026-09-18",
-    "fonlar": [
-      {
-        "fonKodu": "TLY",
-        "tarihSayisi": 1275,
-        "ilkTarih": "2021-08-23",
-        "sonTarih": "2026-09-16"
-      },
-      {
-        "fonKodu": "DFI",
-        "tarihSayisi": 1042,
-        "ilkTarih": "2022-07-29",
-        "sonTarih": "2026-09-18"
-      },
-      {
-        "fonKodu": "KHA",
-        "tarihSayisi": 651,
-        "ilkTarih": "2024-02-09",
-        "sonTarih": "2026-09-18"
-      },
-      {
-        "fonKodu": "THF",
-        "tarihSayisi": 383,
-        "ilkTarih": "2025-03-07",
-        "sonTarih": "2026-09-18"
-      },
-      {
-        "fonKodu": "TMV",
-        "tarihSayisi": 1058,
-        "ilkTarih": "2022-06-30",
-        "sonTarih": "2026-09-16"
-      },
-      {
-        "fonKodu": "DOH",
-        "tarihSayisi": 347,
-        "ilkTarih": "2025-04-30",
-        "sonTarih": "2026-09-17"
-      }
-    ]
+    "senkronizeEdildi": false,
+    "neden": "Etki analizi veri dosyası bulunamadı."
   },
   "etkiAnaliziGerceklesenSenkronu": {
     "senkronizeEdildi": false,
-    "tahminTarihi": "2026-09-17",
-    "guncellenenFonlar": []
+    "neden": "Fon açılış tahmin dosyası bulunamadı."
   },
   "veriUyarisiSayisi": 82,
   "veriUyarilari": [
     {
-      "tur": "gunluk-kaynakta-eksik-finansal-veri",
-      "tarih": "2026-09-18",
-      "toplamKayitSayisi": 2039,
-      "gecerliKayitSayisi": 1885,
-      "gecersizKayitSayisi": 154,
-      "gecerliOran": 0.92447278,
+      "tur": "getiri-kaynaginda-guncel-listede-yok",
+      "tarih": "2026-09-21",
+      "kodSayisi": 1,
       "ornekFonKodlari": [
-        "AAL",
-        "AC7",
-        "AES",
-        "AP6",
-        "APJ",
-        "ARL",
-        "ARM",
-        "AU1",
-        "BDI",
-        "BHH",
-        "BON",
-        "BSE",
-        "BYZ",
-        "CAH",
-        "CBD",
-        "CVL",
-        "DGF",
-        "DGH",
-        "DHI",
-        "DNF"
+        "ZND"
       ]
     },
     {

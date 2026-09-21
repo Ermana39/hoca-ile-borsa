@@ -775,6 +775,11 @@ assert(
   "Dashboard yatırımcı kaybeden özeti yanlış."
 );
 
+if (
+  fs.existsSync(sourcePaths.etki) &&
+  fs.existsSync(sourcePaths.etkiExcel) &&
+  fs.existsSync(sourcePaths.etkiTahmin)
+) {
 const effectData = JSON.parse(fs.readFileSync(sourcePaths.etki, "utf8"));
 const effectWorkbook = XLSX.read(fs.readFileSync(sourcePaths.etkiExcel), {
   type: "buffer",
@@ -953,6 +958,7 @@ for (const code of expectedForecastFunds) {
     );
   }
 }
+}
 
 const tercihHeaders = [
   "Sembol",
@@ -1080,6 +1086,5 @@ console.log(`Güncel / aktif fon: ${current.fonlar.length} / ${activeFunds.lengt
 console.log(`Getiri kaydı: ${returnCodes.size}`);
 console.log(`Yönetici: ${managers.yoneticiler.length}`);
 console.log(`Kontrol edilen fon detayı: ${detailFiles.length}`);
-console.log(`Etki analizi fonu: ${expectedEffectFunds.length}`);
 console.log(`Haftalık fon tercih hissesi: ${tercihSourceRows.length} (${isoToTr(tercihStart)} - ${isoToTr(tercihEnd)})`);
 console.log("Fon kaynakları, hesaplamaları ve sayfa verileri doğrulandı.");
