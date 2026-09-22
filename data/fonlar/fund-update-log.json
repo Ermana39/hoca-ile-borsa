@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-21T08:01:27.029Z",
+  "generatedAt": "2026-09-22T08:44:49.958Z",
   "duplicateKontrolu": {
-    "added": 0,
+    "added": 1961,
     "updated": 0,
-    "skipped": 3900
+    "skipped": 1961
   },
-  "islenenFonSayisi": 1067,
-  "islenenSnapshotSayisi": 2040,
-  "kaliciSnapshotSayisi": 1708641,
-  "temizlenenGecersizSnapshotSayisi": 90,
-  "yoneticiyleEslesenFonSayisi": 1929,
+  "islenenFonSayisi": 1068,
+  "islenenSnapshotSayisi": 2039,
+  "kaliciSnapshotSayisi": 1710602,
+  "temizlenenGecersizSnapshotSayisi": 78,
+  "yoneticiyleEslesenFonSayisi": 1940,
   "bilinmeyenYoneticiSayisi": 21,
   "bilinmeyenYoneticiFonlari": [
     {
@@ -24,6 +24,10 @@
     {
       "fonKodu": "FTM",
       "fonAdi": "FİBA PORTFÖY KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON"
+    },
+    {
+      "fonKodu": "KPS",
+      "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN ONİKİNCİ SERBEST (DÖVİZ) FON"
     },
     {
       "fonKodu": "OAO",
@@ -92,17 +96,13 @@
     {
       "fonKodu": "EVL",
       "fonAdi": "EMAA BLUE PORTFÖY ÇOKLU VARLIK KATILIM FONU"
-    },
-    {
-      "fonKodu": "TNR",
-      "fonAdi": "TUNA PORTFÖY ÖPY PARA PİYASASI ÖZEL FONU"
     }
   ],
   "kaynakDogrulama": {
-    "sonKaynakTarihi": "2026-09-21",
-    "sonKaynakKayitSayisi": 2040,
-    "sonKaynakGecerliKayitSayisi": 1950,
-    "gitGecmisindeIncelenenSurumSayisi": 117,
+    "sonKaynakTarihi": "2026-09-22",
+    "sonKaynakKayitSayisi": 2039,
+    "sonKaynakGecerliKayitSayisi": 1961,
+    "gitGecmisindeIncelenenSurumSayisi": 118,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
     "manuelGecmisIceAktarimlari": [],
@@ -123,28 +123,28 @@
       }
     ],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 90,
+      "sayi": 78,
       "ornekler": [
-        "AC5:2026-09-21",
-        "AC7:2026-09-21",
-        "AES:2026-09-21",
-        "AP6:2026-09-21",
-        "AP7:2026-09-21",
-        "APJ:2026-09-21",
-        "ARL:2026-09-21",
-        "ARM:2026-09-21",
-        "BDI:2026-09-21",
-        "BHH:2026-09-21",
-        "BRT:2026-09-21",
-        "BSD:2026-09-21",
-        "BSE:2026-09-21",
-        "BST:2026-09-21",
-        "DHI:2026-09-21",
-        "DLN:2026-09-21",
-        "ESN:2026-09-21",
-        "FNN:2026-09-21",
-        "FSU:2026-09-21",
-        "GKE:2026-09-21"
+        "AES:2026-09-22",
+        "APJ:2026-09-22",
+        "APP:2026-09-22",
+        "ARL:2026-09-22",
+        "ARM:2026-09-22",
+        "BDS:2026-09-22",
+        "BHH:2026-09-22",
+        "DUH:2026-09-22",
+        "FNN:2026-09-22",
+        "FNT:2026-09-22",
+        "GKE:2026-09-22",
+        "GKO:2026-09-22",
+        "GMC:2026-09-22",
+        "GMV:2026-09-22",
+        "GNZ:2026-09-22",
+        "GSU:2026-09-22",
+        "GUM:2026-09-22",
+        "HAT:2026-09-22",
+        "HBV:2026-09-22",
+        "HDA:2026-09-22"
       ]
     }
   },
@@ -156,14 +156,15 @@
     "senkronizeEdildi": false,
     "neden": "Fon açılış tahmin dosyası bulunamadı."
   },
-  "veriUyarisiSayisi": 82,
+  "veriUyarisiSayisi": 84,
   "veriUyarilari": [
     {
       "tur": "getiri-kaynaginda-guncel-listede-yok",
-      "tarih": "2026-09-21",
-      "kodSayisi": 1,
+      "tarih": "2026-09-22",
+      "kodSayisi": 2,
       "ornekFonKodlari": [
-        "ZND"
+        "ZND",
+        "ZTS"
       ]
     },
     {
@@ -475,6 +476,14 @@
       "hamGetiri": 1.41075935
     },
     {
+      "fonKodu": "BTP",
+      "tarih": "2026-09-22",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 269041618.29,
+      "hesaplananFonToplamDeger": 885465643.28,
+      "farkOrani": 2.29118465
+    },
+    {
       "fonKodu": "TMH",
       "tarih": "2025-05-05",
       "tur": "gunluk-getiri-fiyat-kopmasi",
@@ -499,6 +508,14 @@
       "kaynakFonToplamDeger": 2499342883.57,
       "hesaplananFonToplamDeger": 2420323199.56,
       "farkOrani": 0.03161618
+    },
+    {
+      "fonKodu": "RBP",
+      "tarih": "2026-09-22",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 762863963.6,
+      "hesaplananFonToplamDeger": 660765024.29,
+      "farkOrani": 0.13383636
     },
     {
       "fonKodu": "DLZ",
