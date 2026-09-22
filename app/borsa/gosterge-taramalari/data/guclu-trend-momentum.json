@@ -6,7 +6,22 @@
   ],
   "rows": [
     {
+      "Sembol": "AHGAZ",
+      "Periyod": "Gün",
+      "Birim": "TL"
+    },
+    {
       "Sembol": "BAHKM",
+      "Periyod": "Gün",
+      "Birim": "TL"
+    },
+    {
+      "Sembol": "BIMAS",
+      "Periyod": "Gün",
+      "Birim": "TL"
+    },
+    {
+      "Sembol": "HUNER",
       "Periyod": "Gün",
       "Birim": "TL"
     }
@@ -18,7 +33,22 @@
       "Birim"
     ],
     [
+      "AHGAZ",
+      "Gün",
+      "TL"
+    ],
+    [
       "BAHKM",
+      "Gün",
+      "TL"
+    ],
+    [
+      "BIMAS",
+      "Gün",
+      "TL"
+    ],
+    [
+      "HUNER",
       "Gün",
       "TL"
     ]
@@ -32,33 +62,12 @@
       ],
       "rows": [
         {
-          "Sembol": "BAHKM",
+          "Sembol": "AHGAZ",
           "Periyod": "Gün",
           "Birim": "TL"
-        }
-      ],
-      "rawRows": [
-        [
-          "Sembol",
-          "Periyod",
-          "Birim"
-        ],
-        [
-          "BAHKM",
-          "Gün",
-          "TL"
-        ]
-      ]
-    },
-    "Filtrelenenler": {
-      "columns": [
-        "Sembol",
-        "Periyod",
-        "Birim"
-      ],
-      "rows": [
+        },
         {
-          "Sembol": "AHGAZ",
+          "Sembol": "BAHKM",
           "Periyod": "Gün",
           "Birim": "TL"
         },
@@ -68,32 +77,7 @@
           "Birim": "TL"
         },
         {
-          "Sembol": "ISDMR",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        },
-        {
-          "Sembol": "KCHOL",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        },
-        {
-          "Sembol": "RYGYO",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        },
-        {
-          "Sembol": "SOKM",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        },
-        {
-          "Sembol": "TKFEN",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        },
-        {
-          "Sembol": "TUPRS",
+          "Sembol": "HUNER",
           "Periyod": "Gün",
           "Birim": "TL"
         }
@@ -110,7 +94,88 @@
           "TL"
         ],
         [
+          "BAHKM",
+          "Gün",
+          "TL"
+        ],
+        [
           "BIMAS",
+          "Gün",
+          "TL"
+        ],
+        [
+          "HUNER",
+          "Gün",
+          "TL"
+        ]
+      ]
+    },
+    "Filtrelenenler": {
+      "columns": [
+        "Sembol",
+        "Periyod",
+        "Birim"
+      ],
+      "rows": [
+        {
+          "Sembol": "AGHOL",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "DEVA",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "ENERY",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "ISDMR",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "KCHOL",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "KRDMD",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "RYGYO",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "TKFEN",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        }
+      ],
+      "rawRows": [
+        [
+          "Sembol",
+          "Periyod",
+          "Birim"
+        ],
+        [
+          "AGHOL",
+          "Gün",
+          "TL"
+        ],
+        [
+          "DEVA",
+          "Gün",
+          "TL"
+        ],
+        [
+          "ENERY",
           "Gün",
           "TL"
         ],
@@ -125,12 +190,12 @@
           "TL"
         ],
         [
-          "RYGYO",
+          "KRDMD",
           "Gün",
           "TL"
         ],
         [
-          "SOKM",
+          "RYGYO",
           "Gün",
           "TL"
         ],
@@ -138,14 +203,9 @@
           "TKFEN",
           "Gün",
           "TL"
-        ],
-        [
-          "TUPRS",
-          "Gün",
-          "TL"
         ]
       ]
     }
   },
-  "guncellemeTarihi": "21.09.2026"
+  "guncellemeTarihi": "22.09.2026"
 }
