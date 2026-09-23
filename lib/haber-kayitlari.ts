@@ -205,6 +205,22 @@ function objeMi(deger: unknown): deger is BilinmeyenKayit {
   return Boolean(deger) && typeof deger === "object" && !Array.isArray(deger);
 }
 
+function kapEtkiAnaliziMi(deger: unknown): deger is KapEtkiAnalizi {
+  return (
+    objeMi(deger) &&
+    typeof deger.olayTuru === "string" &&
+    typeof deger.ozet === "string" &&
+    Array.isArray(deger.metrikler) &&
+    deger.metrikler.every(objeMi) &&
+    Array.isArray(deger.riskler) &&
+    deger.riskler.every((risk) => typeof risk === "string") &&
+    Array.isArray(deger.takipEdilecekler) &&
+    deger.takipEdilecekler.every((madde) => typeof madde === "string") &&
+    (deger.metodolojiNotu === undefined ||
+      typeof deger.metodolojiNotu === "string")
+  );
+}
+
 function metinDizisi(deger: unknown): string[] {
   return Array.isArray(deger)
     ? deger.filter((oge): oge is string => typeof oge === "string")
@@ -489,8 +505,8 @@ function yeniHaberKaydiniNormalizeEt(veri: unknown): HaberKaydi | null {
       giris: editor && typeof editor.giris === "string" ? editor.giris : "",
       bolumler: editor ? haberBolumleriNormalizeEt(editor.bolumler) : [],
     },
-    ...(objeMi(veri.kapEtkiAnalizi)
-      ? { kapEtkiAnalizi: veri.kapEtkiAnalizi as KapEtkiAnalizi }
+    ...(kapEtkiAnaliziMi(veri.kapEtkiAnalizi)
+      ? { kapEtkiAnalizi: veri.kapEtkiAnalizi }
       : {}),
     ...(sorulariNormalizeEt(veri.sorular)
       ? { sorular: sorulariNormalizeEt(veri.sorular) }
@@ -542,6 +558,8 @@ function temelKayitGecerli(veri: unknown): veri is HaberKaydi {
     Array.isArray(kaynakOzeti.bolumler) &&
     typeof editorDegerlendirmesi?.giris === "string" &&
     Array.isArray(editorDegerlendirmesi.bolumler) &&
+    (kayit.kapEtkiAnalizi === undefined ||
+      kapEtkiAnaliziMi(kayit.kapEtkiAnalizi)) &&
     Array.isArray(kayit.kaynaklar) &&
     kayit.kaynaklar.every(
       (kaynak) =>

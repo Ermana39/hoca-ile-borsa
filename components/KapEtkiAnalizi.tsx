@@ -9,6 +9,8 @@ export default function KapEtkiAnalizi({
 }: {
   analiz: KapEtkiAnaliziVerisi;
 }) {
+  if (!analiz || !Array.isArray(analiz.metrikler)) return null;
+
   const metrikler = analiz.metrikler
     .map(kapEtkiMetrigiGorunumu)
     .filter((metrik): metrik is KapEtkiMetrigiGorunumu => metrik !== null);
