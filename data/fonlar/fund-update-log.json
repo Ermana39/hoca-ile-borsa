@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-22T08:44:49.958Z",
+  "generatedAt": "2026-09-23T07:08:01.963Z",
   "duplicateKontrolu": {
-    "added": 1961,
+    "added": 1897,
     "updated": 0,
-    "skipped": 1961
+    "skipped": 1897
   },
   "islenenFonSayisi": 1068,
   "islenenSnapshotSayisi": 2039,
-  "kaliciSnapshotSayisi": 1710602,
-  "temizlenenGecersizSnapshotSayisi": 78,
-  "yoneticiyleEslesenFonSayisi": 1940,
-  "bilinmeyenYoneticiSayisi": 21,
+  "kaliciSnapshotSayisi": 1712499,
+  "temizlenenGecersizSnapshotSayisi": 142,
+  "yoneticiyleEslesenFonSayisi": 1877,
+  "bilinmeyenYoneticiSayisi": 20,
   "bilinmeyenYoneticiFonlari": [
     {
       "fonKodu": "OPU",
@@ -24,10 +24,6 @@
     {
       "fonKodu": "FTM",
       "fonAdi": "FİBA PORTFÖY KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON"
-    },
-    {
-      "fonKodu": "KPS",
-      "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN ONİKİNCİ SERBEST (DÖVİZ) FON"
     },
     {
       "fonKodu": "OAO",
@@ -99,10 +95,10 @@
     }
   ],
   "kaynakDogrulama": {
-    "sonKaynakTarihi": "2026-09-22",
+    "sonKaynakTarihi": "2026-09-23",
     "sonKaynakKayitSayisi": 2039,
-    "sonKaynakGecerliKayitSayisi": 1961,
-    "gitGecmisindeIncelenenSurumSayisi": 118,
+    "sonKaynakGecerliKayitSayisi": 1897,
+    "gitGecmisindeIncelenenSurumSayisi": 119,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
     "manuelGecmisIceAktarimlari": [],
@@ -123,28 +119,28 @@
       }
     ],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 78,
+      "sayi": 142,
       "ornekler": [
-        "AES:2026-09-22",
-        "APJ:2026-09-22",
-        "APP:2026-09-22",
-        "ARL:2026-09-22",
-        "ARM:2026-09-22",
-        "BDS:2026-09-22",
-        "BHH:2026-09-22",
-        "DUH:2026-09-22",
-        "FNN:2026-09-22",
-        "FNT:2026-09-22",
-        "GKE:2026-09-22",
-        "GKO:2026-09-22",
-        "GMC:2026-09-22",
-        "GMV:2026-09-22",
-        "GNZ:2026-09-22",
-        "GSU:2026-09-22",
-        "GUM:2026-09-22",
-        "HAT:2026-09-22",
-        "HBV:2026-09-22",
-        "HDA:2026-09-22"
+        "AES:2026-09-23",
+        "APJ:2026-09-23",
+        "ARL:2026-09-23",
+        "ARM:2026-09-23",
+        "BHH:2026-09-23",
+        "DLN:2026-09-23",
+        "DNF:2026-09-23",
+        "DUH:2026-09-23",
+        "FNN:2026-09-23",
+        "FNT:2026-09-23",
+        "FSU:2026-09-23",
+        "GAH:2026-09-23",
+        "GBP:2026-09-23",
+        "GBV:2026-09-23",
+        "GCC:2026-09-23",
+        "GDJ:2026-09-23",
+        "GDP:2026-09-23",
+        "GEC:2026-09-23",
+        "GEZ:2026-09-23",
+        "GFD:2026-09-23"
       ]
     }
   },
@@ -156,11 +152,41 @@
     "senkronizeEdildi": false,
     "neden": "Fon açılış tahmin dosyası bulunamadı."
   },
-  "veriUyarisiSayisi": 84,
+  "veriUyarisiSayisi": 85,
   "veriUyarilari": [
     {
+      "tur": "gunluk-kaynakta-eksik-finansal-veri",
+      "tarih": "2026-09-23",
+      "toplamKayitSayisi": 2039,
+      "gecerliKayitSayisi": 1897,
+      "gecersizKayitSayisi": 142,
+      "gecerliOran": 0.93035802,
+      "ornekFonKodlari": [
+        "AES",
+        "APJ",
+        "ARL",
+        "ARM",
+        "BHH",
+        "DLN",
+        "DNF",
+        "DUH",
+        "FNN",
+        "FNT",
+        "FSU",
+        "GAH",
+        "GBP",
+        "GBV",
+        "GCC",
+        "GDJ",
+        "GDP",
+        "GEC",
+        "GEZ",
+        "GFD"
+      ]
+    },
+    {
       "tur": "getiri-kaynaginda-guncel-listede-yok",
-      "tarih": "2026-09-22",
+      "tarih": "2026-09-23",
       "kodSayisi": 2,
       "ornekFonKodlari": [
         "ZND",
