@@ -91,6 +91,26 @@ const guncelHalkaArzKapanislari: Record<string, string> = {
   ARFYE: "14.31",
 };
 
+const netglHalkaArzVerisi: TavanSerisiKaydi = {
+  hisse: "NETGL",
+  islemTarihi: "17.09.2026",
+  katilimciSayisi: "652.353",
+  dagitimSekli: "BİREYSELE %40",
+  arzFiyati: "25.52",
+  guncelFiyat: "24.78",
+  konsorsiyum: "TACİRLER",
+  kapanisTarihi: "2026-09-24",
+  dagitimSonucu: {
+    toplamDagitilanLot: "87.500.000 Lot",
+    bireyselDagitilanLot: "35.000.000 Lot",
+    bireyselYatirimciSayisi: "652.248",
+    kisiBasiLot: "Azami 54 Lot",
+    kisiBasiTutar: "1.378,08 TL",
+    kaynakHref:
+      "/haber/netgl-halka-arz-sonuclari-kac-lot-verdi-ne-zaman-islem-gorecek",
+  },
+};
+
 const bkrgyHalkaArzVerisi: TavanSerisiKaydi = {
   hisse: "BKRGY",
   islemTarihi: "02.09.2026",
@@ -207,6 +227,7 @@ const metenHalkaArzVerisi = {
 } as (typeof baseHalkaArzVerileri)[number];
 
 const halkaArzKayitlari: TavanSerisiKaydi[] = [
+  netglHalkaArzVerisi,
   bkrgyHalkaArzVerisi,
   intetHalkaArzVerisi,
   kpeksHalkaArzVerisi,
