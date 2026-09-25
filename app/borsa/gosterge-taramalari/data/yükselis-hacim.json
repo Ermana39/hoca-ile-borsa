@@ -6,22 +6,27 @@
   ],
   "rows": [
     {
-      "Sembol": "AHGAZ",
+      "Sembol": "BAHKM",
       "Periyod": "Gün",
       "Birim": "TL"
     },
     {
-      "Sembol": "CELHA",
+      "Sembol": "ETILR",
       "Periyod": "Gün",
       "Birim": "TL"
     },
     {
-      "Sembol": "ISDMR",
+      "Sembol": "GMTAS",
       "Periyod": "Gün",
       "Birim": "TL"
     },
     {
-      "Sembol": "TKFEN",
+      "Sembol": "HRKET",
+      "Periyod": "Gün",
+      "Birim": "TL"
+    },
+    {
+      "Sembol": "SKYMD",
       "Periyod": "Gün",
       "Birim": "TL"
     },
@@ -38,22 +43,27 @@
       "Birim"
     ],
     [
-      "AHGAZ",
+      "BAHKM",
       "Gün",
       "TL"
     ],
     [
-      "CELHA",
+      "ETILR",
       "Gün",
       "TL"
     ],
     [
-      "ISDMR",
+      "GMTAS",
       "Gün",
       "TL"
     ],
     [
-      "TKFEN",
+      "HRKET",
+      "Gün",
+      "TL"
+    ],
+    [
+      "SKYMD",
       "Gün",
       "TL"
     ],
@@ -72,6 +82,82 @@
       ],
       "rows": [
         {
+          "Sembol": "BAHKM",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "ETILR",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "GMTAS",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "HRKET",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "SKYMD",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "TRMET",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        }
+      ],
+      "rawRows": [
+        [
+          "Sembol",
+          "Periyod",
+          "Birim"
+        ],
+        [
+          "BAHKM",
+          "Gün",
+          "TL"
+        ],
+        [
+          "ETILR",
+          "Gün",
+          "TL"
+        ],
+        [
+          "GMTAS",
+          "Gün",
+          "TL"
+        ],
+        [
+          "HRKET",
+          "Gün",
+          "TL"
+        ],
+        [
+          "SKYMD",
+          "Gün",
+          "TL"
+        ],
+        [
+          "TRMET",
+          "Gün",
+          "TL"
+        ]
+      ]
+    },
+    "Filtrelenenler": {
+      "columns": [
+        "Sembol",
+        "Periyod",
+        "Birim"
+      ],
+      "rows": [
+        {
           "Sembol": "AHGAZ",
           "Periyod": "Gün",
           "Birim": "TL"
@@ -82,17 +168,37 @@
           "Birim": "TL"
         },
         {
+          "Sembol": "ENERY",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "HUNER",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
           "Sembol": "ISDMR",
           "Periyod": "Gün",
           "Birim": "TL"
         },
         {
-          "Sembol": "TKFEN",
+          "Sembol": "KRDMD",
           "Periyod": "Gün",
           "Birim": "TL"
         },
         {
-          "Sembol": "TRMET",
+          "Sembol": "ORGE",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "RYGYO",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "TKFEN",
           "Periyod": "Gün",
           "Birim": "TL"
         }
@@ -114,88 +220,7 @@
           "TL"
         ],
         [
-          "ISDMR",
-          "Gün",
-          "TL"
-        ],
-        [
-          "TKFEN",
-          "Gün",
-          "TL"
-        ],
-        [
-          "TRMET",
-          "Gün",
-          "TL"
-        ]
-      ]
-    },
-    "Filtrelenenler": {
-      "columns": [
-        "Sembol",
-        "Periyod",
-        "Birim"
-      ],
-      "rows": [
-        {
-          "Sembol": "ENERY",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        },
-        {
-          "Sembol": "ETILR",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        },
-        {
-          "Sembol": "GMTAS",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        },
-        {
-          "Sembol": "HUNER",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        },
-        {
-          "Sembol": "KRDMD",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        },
-        {
-          "Sembol": "RYGYO",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        },
-        {
-          "Sembol": "RYSAS",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        },
-        {
-          "Sembol": "TUPRS",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        }
-      ],
-      "rawRows": [
-        [
-          "Sembol",
-          "Periyod",
-          "Birim"
-        ],
-        [
           "ENERY",
-          "Gün",
-          "TL"
-        ],
-        [
-          "ETILR",
-          "Gün",
-          "TL"
-        ],
-        [
-          "GMTAS",
           "Gün",
           "TL"
         ],
@@ -205,7 +230,17 @@
           "TL"
         ],
         [
+          "ISDMR",
+          "Gün",
+          "TL"
+        ],
+        [
           "KRDMD",
+          "Gün",
+          "TL"
+        ],
+        [
+          "ORGE",
           "Gün",
           "TL"
         ],
@@ -215,17 +250,12 @@
           "TL"
         ],
         [
-          "RYSAS",
-          "Gün",
-          "TL"
-        ],
-        [
-          "TUPRS",
+          "TKFEN",
           "Gün",
           "TL"
         ]
       ]
     }
   },
-  "guncellemeTarihi": "24.09.2026"
+  "guncellemeTarihi": "25.09.2026"
 }
