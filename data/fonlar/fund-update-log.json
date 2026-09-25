@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-24T06:25:34.366Z",
+  "generatedAt": "2026-09-25T06:39:30.129Z",
   "duplicateKontrolu": {
-    "added": 0,
+    "added": 1913,
     "updated": 0,
-    "skipped": 3710
+    "skipped": 1913
   },
   "islenenFonSayisi": 1068,
-  "islenenSnapshotSayisi": 2039,
-  "kaliciSnapshotSayisi": 1714354,
-  "temizlenenGecersizSnapshotSayisi": 184,
-  "yoneticiyleEslesenFonSayisi": 1837,
+  "islenenSnapshotSayisi": 2040,
+  "kaliciSnapshotSayisi": 1716267,
+  "temizlenenGecersizSnapshotSayisi": 127,
+  "yoneticiyleEslesenFonSayisi": 1895,
   "bilinmeyenYoneticiSayisi": 18,
   "bilinmeyenYoneticiFonlari": [
     {
@@ -24,10 +24,6 @@
     {
       "fonKodu": "FTM",
       "fonAdi": "FİBA PORTFÖY KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON"
-    },
-    {
-      "fonKodu": "KPS",
-      "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN ONİKİNCİ SERBEST (DÖVİZ) FON"
     },
     {
       "fonKodu": "OAO",
@@ -84,13 +80,17 @@
     {
       "fonKodu": "ZND",
       "fonAdi": "ZİRAAT PORTFÖY NADİR TOPRAK ELEMENTLERİ VE STRATEJİK METALLER FON SEPETİ FONU"
+    },
+    {
+      "fonKodu": "ZTS",
+      "fonAdi": "İŞ PORTFÖY YAPAY ZEKA TEKNOLOJİLERİ ŞİRKETLERİ DEĞİŞKEN FON"
     }
   ],
   "kaynakDogrulama": {
-    "sonKaynakTarihi": "2026-09-24",
-    "sonKaynakKayitSayisi": 2039,
-    "sonKaynakGecerliKayitSayisi": 1855,
-    "gitGecmisindeIncelenenSurumSayisi": 120,
+    "sonKaynakTarihi": "2026-09-25",
+    "sonKaynakKayitSayisi": 2040,
+    "sonKaynakGecerliKayitSayisi": 1913,
+    "gitGecmisindeIncelenenSurumSayisi": 121,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
     "manuelGecmisIceAktarimlari": [],
@@ -111,28 +111,28 @@
       }
     ],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 184,
+      "sayi": 127,
       "ornekler": [
-        "AES:2026-09-24",
-        "APJ:2026-09-24",
-        "ARL:2026-09-24",
-        "ARM:2026-09-24",
-        "AVC:2026-09-24",
-        "BHH:2026-09-24",
-        "BJD:2026-09-24",
-        "DLN:2026-09-24",
-        "FNN:2026-09-24",
-        "GAC:2026-09-24",
-        "GAH:2026-09-24",
-        "GAJ:2026-09-24",
-        "GAU:2026-09-24",
-        "GAV:2026-09-24",
-        "GBP:2026-09-24",
-        "GBV:2026-09-24",
-        "GCA:2026-09-24",
-        "GCC:2026-09-24",
-        "GCI:2026-09-24",
-        "GCZ:2026-09-24"
+        "AES:2026-09-25",
+        "APJ:2026-09-25",
+        "ARL:2026-09-25",
+        "ARM:2026-09-25",
+        "BHH:2026-09-25",
+        "BJD:2026-09-25",
+        "DFI:2026-09-25",
+        "DOH:2026-09-25",
+        "FNN:2026-09-25",
+        "FSU:2026-09-25",
+        "GAC:2026-09-25",
+        "GAH:2026-09-25",
+        "GAJ:2026-09-25",
+        "GBP:2026-09-25",
+        "GBV:2026-09-25",
+        "GCA:2026-09-25",
+        "GCC:2026-09-25",
+        "GCZ:2026-09-25",
+        "GDJ:2026-09-25",
+        "GEZ:2026-09-25"
       ]
     }
   },
@@ -148,40 +148,32 @@
   "veriUyarilari": [
     {
       "tur": "gunluk-kaynakta-eksik-finansal-veri",
-      "tarih": "2026-09-24",
-      "toplamKayitSayisi": 2039,
-      "gecerliKayitSayisi": 1855,
-      "gecersizKayitSayisi": 184,
-      "gecerliOran": 0.90975969,
+      "tarih": "2026-09-25",
+      "toplamKayitSayisi": 2040,
+      "gecerliKayitSayisi": 1913,
+      "gecersizKayitSayisi": 127,
+      "gecerliOran": 0.9377451,
       "ornekFonKodlari": [
         "AES",
         "APJ",
         "ARL",
         "ARM",
-        "AVC",
         "BHH",
         "BJD",
-        "DLN",
+        "DFI",
+        "DOH",
         "FNN",
+        "FSU",
         "GAC",
         "GAH",
         "GAJ",
-        "GAU",
-        "GAV",
         "GBP",
         "GBV",
         "GCA",
         "GCC",
-        "GCI",
-        "GCZ"
-      ]
-    },
-    {
-      "tur": "getiri-kaynaginda-guncel-listede-yok",
-      "tarih": "2026-09-24",
-      "kodSayisi": 1,
-      "ornekFonKodlari": [
-        "ZTS"
+        "GCZ",
+        "GDJ",
+        "GEZ"
       ]
     },
     {
@@ -491,6 +483,14 @@
       "tarih": "2026-03-10",
       "tur": "gunluk-getiri-fiyat-kopmasi",
       "hamGetiri": 1.41075935
+    },
+    {
+      "fonKodu": "BIA",
+      "tarih": "2026-09-25",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 4885932.64,
+      "hesaplananFonToplamDeger": 16801716.14,
+      "farkOrani": 2.43879406
     },
     {
       "fonKodu": "BTP",
