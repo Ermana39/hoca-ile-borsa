@@ -53,7 +53,7 @@ export const metadata: Metadata = {
 };
 
 const guncelHalkaArzKapanislari: Record<string, string> = {
-  NETGL: "24.78",
+  NETGL: "22.32",
   BKRGY: "5.80",
   INTET: "50.80",
   KPEKS: "57.40",
@@ -97,7 +97,7 @@ const netglHalkaArzVerisi: TavanSerisiKaydi = {
   katilimciSayisi: "652.353",
   dagitimSekli: "BİREYSELE %40",
   arzFiyati: "25.52",
-  guncelFiyat: "24.78",
+  guncelFiyat: "22.32",
   konsorsiyum: "TACİRLER",
   kapanisTarihi: "2026-09-24",
   dagitimSonucu: {
