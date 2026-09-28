@@ -52,50 +52,46 @@ export const metadata: Metadata = {
   },
 };
 
-// Tablonun kapanış tarihi ve fiyatları yalnızca bu sayfa içeriğinden gelir.
-const tavanSerisiGuncelVeri: {
-  kapanisTarihi: string;
-  fiyatlar: Record<string, string>;
-} = {
-  kapanisTarihi: "2026-09-28",
-  fiyatlar: {
-  NETGL: "22.32",
-  BKRGY: "5.85",
-  INTET: "51.05",
-  KPEKS: "56.90",
-  TKNKA: "67.60",
-  VEYAS: "88.35",
-  CITAS: "102.30",
-  QUICK: "45.20",
-  KARCL: "100.50",
-  MASFN: "38.14",
-  ALBTN: "23.32",
-  METEN: "18.34",
-  SARAE: "45.02",
-  SSAAT: "27.84",
-  ISVEA: "41.94",
-  EKIM: "13.00",
-  GOLDA: "8.65",
-  ORZAX: "77.55",
-  SOHOE: "7.89",
-  BETAE: "61.35",
-  EKDMR: "33.20",
-  AAGYO: "8.34",
-  MCARD: "91.70",
-  LXGYO: "7.00",
-  GENKM: "8.15",
-  SVGYO: "6.72",
-  EMPAE: "49.98",
-  ATATR: "6.11",
-  BESTE: "22.64",
-  AKHAN: "27.64",
-  NETCD: "91.70",
-  UCAYM: "17.00",
-  ZGYO: "17.83",
-  FRMPL: "24.04",
+const tavanSerisiKapanisTarihi = "2026-09-28";
+
+// Tablodaki güncel kapanış fiyatlarının tek kaynağı bu listedir.
+const guncelHalkaArzKapanislari: Record<string, string> = {
+  NETGL: "20.10",
+  BKRGY: "5.49",
+  INTET: "49.40",
+  KPEKS: "53.25",
+  TKNKA: "60.85",
+  VEYAS: "79.55",
+  CITAS: "112.50",
+  QUICK: "43.36",
+  KARCL: "90.45",
+  MASFN: "37.60",
+  ALBTN: "21.92",
+  METEN: "17.50",
+  SARAE: "40.52",
+  SSAAT: "26.96",
+  ISVEA: "37.76",
+  EKIM: "11.99",
+  GOLDA: "7.79",
+  ORZAX: "75.50",
+  SOHOE: "7.32",
+  BETAE: "57.65",
+  EKDMR: "31.04",
+  AAGYO: "7.85",
+  MCARD: "85.75",
+  LXGYO: "6.60",
+  GENKM: "7.55",
+  SVGYO: "6.05",
+  EMPAE: "45.44",
+  ATATR: "5.75",
+  BESTE: "20.38",
+  AKHAN: "26.00",
+  NETCD: "83.50",
+  UCAYM: "15.57",
+  ZGYO: "16.30",
+  FRMPL: "22.96",
   MEYSU: "8.68",
   ARFYE: "14.31",
-  },
 };
 
 const netglHalkaArzVerisi: TavanSerisiTemelKaydi = {
@@ -232,7 +228,7 @@ const halkaArzKayitlari: TavanSerisiTemelKaydi[] = [
 ];
 
 const halkaArzVerileri = halkaArzKayitlari.map((item) => {
-  const guncelFiyat = tavanSerisiGuncelVeri.fiyatlar[item.hisse];
+  const guncelFiyat = guncelHalkaArzKapanislari[item.hisse];
   if (!guncelFiyat) {
     throw new Error(`${item.hisse} için güncel halka arz kapanış fiyatı bulunamadı.`);
   }
@@ -241,7 +237,7 @@ const halkaArzVerileri = halkaArzKayitlari.map((item) => {
     ...item,
     guncelFiyat,
   };
-  const kapanisTarihi = tavanSerisiGuncelVeri.kapanisTarihi;
+  const kapanisTarihi = tavanSerisiKapanisTarihi;
   const hisseGetirisi = getHalkaArzGetirisi(guncelItem) ?? 0;
   return {
     ...guncelItem,
@@ -615,36 +611,36 @@ export default function HalkaArzTavanSerisiPage() {
               </colgroup>
               <thead>
                 <tr>
-                  <th className="sticky top-[52px] z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-0 z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     HİSSE
                   </th>
-                  <th className="sticky top-[52px] z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-0 z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     İŞLEM TARİHİ
                   </th>
-                  <th className="sticky top-[52px] z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-0 z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     KATILIMCI SAYISI
                   </th>
-                  <th className="sticky top-[52px] z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-0 z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     DAĞITIM ŞEKLİ
                   </th>
-                  <th className="sticky top-[52px] z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-0 z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     ARZ FİYATI
                   </th>
-                  <th className="sticky top-[52px] z-30 border border-slate-700 bg-slate-900 px-1 py-2.5 leading-tight text-white">
+                  <th className="sticky top-0 z-30 border border-slate-700 bg-slate-900 px-1 py-2.5 leading-tight text-white">
                     <span className="block">GÜN SONU</span>
                     <span className="block">KAPANIŞ</span>
                     <span className="block">FİYATI</span>
                   </th>
-                  <th className="sticky top-[52px] z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-0 z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     MARJ
                   </th>
-                  <th className="sticky top-[52px] z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-0 z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     BIST 100 GETİRİSİ
                   </th>
-                  <th className="sticky top-[52px] z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-0 z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     BIST 100&apos;E GÖRE FARK
                   </th>
-                  <th className="sticky top-[52px] z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-0 z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     KONSORSİYUM
                   </th>
                 </tr>
