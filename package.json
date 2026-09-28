@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "predev": "npm run excel-to-json && npm run update-funds",
+    "data:prepare": "npm run excel-to-json && npm run update-funds",
     "dev": "next dev",
     "update-funds": "node scripts/update-funds.mjs && node scripts/test-fund-platform.mjs",
     "test-funds": "node scripts/test-fund-platform.mjs",

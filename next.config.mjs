@@ -513,18 +513,24 @@ const nextConfig = {
       ],
     }];
 
+    const productionCacheHeaders = isDevelopment
+      ? []
+      : [
+          ...generalImageHeaders,
+          ...imageHeaders,
+          ...buildAssetHeaders,
+          {
+            source: "/data/fonlar/history-bundles/:path*",
+            headers: [{ key: "Cache-Control", value: ONE_YEAR_CACHE }],
+          },
+          {
+            source: "/manifest.webmanifest",
+            headers: [{ key: "Cache-Control", value: "public, max-age=86400" }],
+          },
+        ];
+
     return [
-      ...generalImageHeaders,
-      ...imageHeaders,
-      ...buildAssetHeaders,
-      {
-        source: "/data/fonlar/history-bundles/:path*",
-        headers: [{ key: "Cache-Control", value: ONE_YEAR_CACHE }],
-      },
-      {
-        source: "/manifest.webmanifest",
-        headers: [{ key: "Cache-Control", value: "public, max-age=86400" }],
-      },
+      ...productionCacheHeaders,
       ...globalSecurityHeaders,
       ...privateApiHeaders,
     ];
