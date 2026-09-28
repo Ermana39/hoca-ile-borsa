@@ -19,8 +19,6 @@ const title = "2026 Halka Arz Tavan Serisi: Güncel Performans Takibi";
 const description =
   "2026 halka arzlarının gerçekleşen tavan serisi ve performans tablosu: arz fiyatı, gün sonu kapanışı, getiri, marj ve BIST 100 karşılaştırması.";
 
-const tavanSerisiKapanisTarihi = "2026-09-25";
-
 type TavanSerisiKaydi = HalkaArzSonucu & {
   kapanisTarihi?: string;
 };
@@ -54,9 +52,13 @@ export const metadata: Metadata = {
   },
 };
 
-// Tablonun tek güncel kapanış kaynağıdır. Günlük güncellemede yalnızca bu
-// liste ve tavanSerisiKapanisTarihi değiştirilir.
-const guncelHalkaArzKapanislari: Record<string, string> = {
+// Tablonun kapanış tarihi ve fiyatları yalnızca bu sayfa içeriğinden gelir.
+const tavanSerisiGuncelVeri: {
+  kapanisTarihi: string;
+  fiyatlar: Record<string, string>;
+} = {
+  kapanisTarihi: "2026-09-28",
+  fiyatlar: {
   NETGL: "22.32",
   BKRGY: "5.85",
   INTET: "51.05",
@@ -93,6 +95,7 @@ const guncelHalkaArzKapanislari: Record<string, string> = {
   FRMPL: "24.04",
   MEYSU: "8.68",
   ARFYE: "14.31",
+  },
 };
 
 const netglHalkaArzVerisi: TavanSerisiTemelKaydi = {
@@ -229,7 +232,7 @@ const halkaArzKayitlari: TavanSerisiTemelKaydi[] = [
 ];
 
 const halkaArzVerileri = halkaArzKayitlari.map((item) => {
-  const guncelFiyat = guncelHalkaArzKapanislari[item.hisse];
+  const guncelFiyat = tavanSerisiGuncelVeri.fiyatlar[item.hisse];
   if (!guncelFiyat) {
     throw new Error(`${item.hisse} için güncel halka arz kapanış fiyatı bulunamadı.`);
   }
@@ -238,9 +241,7 @@ const halkaArzVerileri = halkaArzKayitlari.map((item) => {
     ...item,
     guncelFiyat,
   };
-  const kapanisTarihi =
-    guncelItem.kapanisTarihi ??
-    (["MEYSU", "ARFYE"].includes(item.hisse) ? "2026-09-23" : tavanSerisiKapanisTarihi);
+  const kapanisTarihi = tavanSerisiGuncelVeri.kapanisTarihi;
   const hisseGetirisi = getHalkaArzGetirisi(guncelItem) ?? 0;
   return {
     ...guncelItem,
