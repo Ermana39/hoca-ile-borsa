@@ -3,6 +3,7 @@ export const revalidate = false;
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import HeaderAdUnit from "@/components/HeaderAdUnit";
 import Footer from "@/components/Footer";
 import { THEME_INITIALIZATION_SCRIPT } from "@/lib/theme";
 
@@ -135,6 +136,7 @@ export default function RootLayout({
 
       <body className="site-background">
         <Navbar />
+        <HeaderAdUnit />
         {children}
         <Footer />
       </body>
