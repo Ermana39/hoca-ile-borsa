@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-28T15:55:46.074Z",
+  "generatedAt": "2026-09-29T07:33:52.205Z",
   "duplicateKontrolu": {
-    "added": 0,
+    "added": 1946,
     "updated": 0,
-    "skipped": 3790
+    "skipped": 1946
   },
   "islenenFonSayisi": 1069,
-  "islenenSnapshotSayisi": 2040,
-  "kaliciSnapshotSayisi": 1718162,
-  "temizlenenGecersizSnapshotSayisi": 145,
-  "yoneticiyleEslesenFonSayisi": 1871,
+  "islenenSnapshotSayisi": 2037,
+  "kaliciSnapshotSayisi": 1720108,
+  "temizlenenGecersizSnapshotSayisi": 91,
+  "yoneticiyleEslesenFonSayisi": 1922,
   "bilinmeyenYoneticiSayisi": 24,
   "bilinmeyenYoneticiFonlari": [
     {
@@ -111,9 +111,9 @@
     }
   ],
   "kaynakDogrulama": {
-    "sonKaynakTarihi": "2026-09-28",
-    "sonKaynakKayitSayisi": 2040,
-    "sonKaynakGecerliKayitSayisi": 1895,
+    "sonKaynakTarihi": "2026-09-29",
+    "sonKaynakKayitSayisi": 2037,
+    "sonKaynakGecerliKayitSayisi": 1946,
     "gitGecmisindeIncelenenSurumSayisi": 123,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
@@ -135,28 +135,28 @@
       }
     ],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 145,
+      "sayi": 91,
       "ornekler": [
-        "AES:2026-09-28",
-        "AFO:2026-09-28",
-        "APJ:2026-09-28",
-        "ARL:2026-09-28",
-        "ARM:2026-09-28",
-        "BHH:2026-09-28",
-        "BHL:2026-09-28",
-        "BIY:2026-09-28",
-        "CFO:2026-09-28",
-        "DDA:2026-09-28",
-        "DFI:2026-09-28",
-        "DOH:2026-09-28",
-        "FNN:2026-09-28",
-        "FSU:2026-09-28",
-        "GAH:2026-09-28",
-        "GAV:2026-09-28",
-        "GBP:2026-09-28",
-        "GBV:2026-09-28",
-        "GCC:2026-09-28",
-        "GCZ:2026-09-28"
+        "AES:2026-09-29",
+        "APJ:2026-09-29",
+        "ARL:2026-09-29",
+        "ARM:2026-09-29",
+        "BHH:2026-09-29",
+        "BIY:2026-09-29",
+        "DFI:2026-09-29",
+        "DOH:2026-09-29",
+        "DUH:2026-09-29",
+        "FNN:2026-09-29",
+        "FNT:2026-09-29",
+        "GKE:2026-09-29",
+        "GKO:2026-09-29",
+        "GMC:2026-09-29",
+        "GMV:2026-09-29",
+        "GNZ:2026-09-29",
+        "GSU:2026-09-29",
+        "GTZ:2026-09-29",
+        "GUM:2026-09-29",
+        "GVI:2026-09-29"
       ]
     }
   },
@@ -170,36 +170,6 @@
   },
   "veriUyarisiSayisi": 89,
   "veriUyarilari": [
-    {
-      "tur": "gunluk-kaynakta-eksik-finansal-veri",
-      "tarih": "2026-09-28",
-      "toplamKayitSayisi": 2040,
-      "gecerliKayitSayisi": 1895,
-      "gecersizKayitSayisi": 145,
-      "gecerliOran": 0.92892157,
-      "ornekFonKodlari": [
-        "AES",
-        "AFO",
-        "APJ",
-        "ARL",
-        "ARM",
-        "BHH",
-        "BHL",
-        "BIY",
-        "CFO",
-        "DDA",
-        "DFI",
-        "DOH",
-        "FNN",
-        "FSU",
-        "GAH",
-        "GAV",
-        "GBP",
-        "GBV",
-        "GCC",
-        "GCZ"
-      ]
-    },
     {
       "fonKodu": "KJK",
       "tarih": "2023-12-13",
@@ -423,6 +393,14 @@
       "kaynakFonToplamDeger": 69601361.23,
       "hesaplananFonToplamDeger": 70128492.99,
       "farkOrani": 0.00757358
+    },
+    {
+      "fonKodu": "BDI",
+      "tarih": "2026-09-29",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 53651472.45,
+      "hesaplananFonToplamDeger": 53944994.61,
+      "farkOrani": 0.00547091
     },
     {
       "fonKodu": "SRA",
