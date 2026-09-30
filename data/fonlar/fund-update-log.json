@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-29T07:33:52.205Z",
+  "generatedAt": "2026-09-30T07:45:39.402Z",
   "duplicateKontrolu": {
-    "added": 1946,
+    "added": 1985,
     "updated": 0,
-    "skipped": 1946
+    "skipped": 1985
   },
-  "islenenFonSayisi": 1069,
-  "islenenSnapshotSayisi": 2037,
-  "kaliciSnapshotSayisi": 1720108,
-  "temizlenenGecersizSnapshotSayisi": 91,
-  "yoneticiyleEslesenFonSayisi": 1922,
+  "islenenFonSayisi": 1070,
+  "islenenSnapshotSayisi": 2034,
+  "kaliciSnapshotSayisi": 1722093,
+  "temizlenenGecersizSnapshotSayisi": 49,
+  "yoneticiyleEslesenFonSayisi": 1961,
   "bilinmeyenYoneticiSayisi": 24,
   "bilinmeyenYoneticiFonlari": [
     {
@@ -111,10 +111,10 @@
     }
   ],
   "kaynakDogrulama": {
-    "sonKaynakTarihi": "2026-09-29",
-    "sonKaynakKayitSayisi": 2037,
-    "sonKaynakGecerliKayitSayisi": 1946,
-    "gitGecmisindeIncelenenSurumSayisi": 123,
+    "sonKaynakTarihi": "2026-09-30",
+    "sonKaynakKayitSayisi": 2034,
+    "sonKaynakGecerliKayitSayisi": 1985,
+    "gitGecmisindeIncelenenSurumSayisi": 124,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
     "manuelGecmisIceAktarimlari": [],
@@ -135,28 +135,28 @@
       }
     ],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 91,
+      "sayi": 49,
       "ornekler": [
-        "AES:2026-09-29",
-        "APJ:2026-09-29",
-        "ARL:2026-09-29",
-        "ARM:2026-09-29",
-        "BHH:2026-09-29",
-        "BIY:2026-09-29",
-        "DFI:2026-09-29",
-        "DOH:2026-09-29",
-        "DUH:2026-09-29",
-        "FNN:2026-09-29",
-        "FNT:2026-09-29",
-        "GKE:2026-09-29",
-        "GKO:2026-09-29",
-        "GMC:2026-09-29",
-        "GMV:2026-09-29",
-        "GNZ:2026-09-29",
-        "GSU:2026-09-29",
-        "GTZ:2026-09-29",
-        "GUM:2026-09-29",
-        "GVI:2026-09-29"
+        "AES:2026-09-30",
+        "APJ:2026-09-30",
+        "ARL:2026-09-30",
+        "ARM:2026-09-30",
+        "BHH:2026-09-30",
+        "DFI:2026-09-30",
+        "DOH:2026-09-30",
+        "FNN:2026-09-30",
+        "GKE:2026-09-30",
+        "GKO:2026-09-30",
+        "GMC:2026-09-30",
+        "GMV:2026-09-30",
+        "GNZ:2026-09-30",
+        "GSU:2026-09-30",
+        "GUM:2026-09-30",
+        "HVA:2026-09-30",
+        "IJH:2026-09-30",
+        "IRF:2026-09-30",
+        "MGE:2026-09-30",
+        "MP2:2026-09-30"
       ]
     }
   },
@@ -168,8 +168,16 @@
     "senkronizeEdildi": false,
     "neden": "Fon açılış tahmin dosyası bulunamadı."
   },
-  "veriUyarisiSayisi": 89,
+  "veriUyarisiSayisi": 92,
   "veriUyarilari": [
+    {
+      "tur": "getiri-kaynaginda-guncel-listede-yok",
+      "tarih": "2026-09-30",
+      "kodSayisi": 1,
+      "ornekFonKodlari": [
+        "ICO"
+      ]
+    },
     {
       "fonKodu": "KJK",
       "tarih": "2023-12-13",
@@ -401,6 +409,14 @@
       "kaynakFonToplamDeger": 53651472.45,
       "hesaplananFonToplamDeger": 53944994.61,
       "farkOrani": 0.00547091
+    },
+    {
+      "fonKodu": "BDI",
+      "tarih": "2026-09-30",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 39213164.94,
+      "hesaplananFonToplamDeger": 38840396.12,
+      "farkOrani": 0.00950622
     },
     {
       "fonKodu": "SRA",
@@ -673,6 +689,14 @@
       "tarih": "2025-08-20",
       "tur": "gunluk-getiri-fiyat-kopmasi",
       "hamGetiri": 1.9653879
+    },
+    {
+      "fonKodu": "BRB",
+      "tarih": "2026-09-30",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 3278.13,
+      "hesaplananFonToplamDeger": 145093902.48,
+      "farkOrani": 44260.18014844
     },
     {
       "fonKodu": "BLA",
