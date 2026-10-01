@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-01T05:56:22.982Z",
+  "generatedAt": "2026-10-01T07:33:23.735Z",
   "duplicateKontrolu": {
-    "added": 1703,
-    "updated": 0,
-    "skipped": 1703
+    "added": 239,
+    "updated": 62,
+    "skipped": 3583
   },
   "islenenFonSayisi": 1070,
   "islenenSnapshotSayisi": 2033,
-  "kaliciSnapshotSayisi": 1723796,
-  "temizlenenGecersizSnapshotSayisi": 330,
-  "yoneticiyleEslesenFonSayisi": 1686,
-  "bilinmeyenYoneticiSayisi": 17,
+  "kaliciSnapshotSayisi": 1724035,
+  "temizlenenGecersizSnapshotSayisi": 91,
+  "yoneticiyleEslesenFonSayisi": 1918,
+  "bilinmeyenYoneticiSayisi": 24,
   "bilinmeyenYoneticiFonlari": [
     {
       "fonKodu": "OPU",
@@ -30,12 +30,20 @@
       "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN ONİKİNCİ SERBEST (DÖVİZ) FON"
     },
     {
+      "fonKodu": "OAO",
+      "fonAdi": "TEB PORTFÖY ODEABANK AYRICALIKLI VE ÖZEL BANKACILIK DEĞİŞKEN ÖZEL FON"
+    },
+    {
       "fonKodu": "SGK",
       "fonAdi": "EMAA BLUE PORTFÖY BİYOTEKNOLOJİ VE SAĞLIK SEKTÖRÜ DEĞİŞKEN FON"
     },
     {
       "fonKodu": "DMI",
       "fonAdi": "İŞ PORTFÖY DM HİSSE SENEDİ ÖZEL FON (HİSSE SENEDİ YOĞUN FON)"
+    },
+    {
+      "fonKodu": "GLL",
+      "fonAdi": "GOLDEN GLOBAL PORTFÖY ALTIN KATILIM FONU"
     },
     {
       "fonKodu": "ETN",
@@ -56,6 +64,26 @@
     {
       "fonKodu": "VKR",
       "fonAdi": "ALBARAKA PORTFÖY İKİNCİ PARA PİYASASI KATILIM FONU"
+    },
+    {
+      "fonKodu": "GOK",
+      "fonAdi": "GOLDEN GLOBAL PORTFÖY KISA VADELİ KİRA SERTİFİKALARI KATILIM FONU"
+    },
+    {
+      "fonKodu": "VHK",
+      "fonAdi": "V PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)"
+    },
+    {
+      "fonKodu": "VPH",
+      "fonAdi": "V PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)"
+    },
+    {
+      "fonKodu": "VPD",
+      "fonAdi": "V PORTFÖY BİRİNCİ DEĞİŞKEN FON"
+    },
+    {
+      "fonKodu": "VPE",
+      "fonAdi": "V PORTFÖY İKİNCİ DEĞİŞKEN FON"
     },
     {
       "fonKodu": "ICM",
@@ -85,8 +113,8 @@
   "kaynakDogrulama": {
     "sonKaynakTarihi": "2026-10-01",
     "sonKaynakKayitSayisi": 2033,
-    "sonKaynakGecerliKayitSayisi": 1703,
-    "gitGecmisindeIncelenenSurumSayisi": 125,
+    "sonKaynakGecerliKayitSayisi": 1942,
+    "gitGecmisindeIncelenenSurumSayisi": 126,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
     "manuelGecmisIceAktarimlari": [],
@@ -107,28 +135,28 @@
       }
     ],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 330,
+      "sayi": 91,
       "ornekler": [
-        "AC5:2026-10-01",
         "AC7:2026-10-01",
-        "AC8:2026-10-01",
-        "ACC:2026-10-01",
-        "ACN:2026-10-01",
-        "ACU:2026-10-01",
         "AES:2026-10-01",
-        "AJ1:2026-10-01",
-        "AP7:2026-10-01",
         "APJ:2026-10-01",
         "ARL:2026-10-01",
         "ARM:2026-10-01",
-        "AU1:2026-10-01",
-        "BDC:2026-10-01",
         "BHH:2026-10-01",
         "BIY:2026-10-01",
-        "BON:2026-10-01",
-        "BRZ:2026-10-01",
-        "BSC:2026-10-01",
-        "CFO:2026-10-01"
+        "DFI:2026-10-01",
+        "DOH:2026-10-01",
+        "FNN:2026-10-01",
+        "FSU:2026-10-01",
+        "GAH:2026-10-01",
+        "GAV:2026-10-01",
+        "GBV:2026-10-01",
+        "GCC:2026-10-01",
+        "GCZ:2026-10-01",
+        "GEI:2026-10-01",
+        "GFY:2026-10-01",
+        "GGP:2026-10-01",
+        "GGR:2026-10-01"
       ]
     }
   },
@@ -140,38 +168,8 @@
     "senkronizeEdildi": false,
     "neden": "Fon açılış tahmin dosyası bulunamadı."
   },
-  "veriUyarisiSayisi": 97,
+  "veriUyarisiSayisi": 96,
   "veriUyarilari": [
-    {
-      "tur": "gunluk-kaynakta-eksik-finansal-veri",
-      "tarih": "2026-10-01",
-      "toplamKayitSayisi": 2033,
-      "gecerliKayitSayisi": 1703,
-      "gecersizKayitSayisi": 330,
-      "gecerliOran": 0.83767831,
-      "ornekFonKodlari": [
-        "AC5",
-        "AC7",
-        "AC8",
-        "ACC",
-        "ACN",
-        "ACU",
-        "AES",
-        "AJ1",
-        "AP7",
-        "APJ",
-        "ARL",
-        "ARM",
-        "AU1",
-        "BDC",
-        "BHH",
-        "BIY",
-        "BON",
-        "BRZ",
-        "BSC",
-        "CFO"
-      ]
-    },
     {
       "tur": "getiri-kaynaginda-guncel-listede-yok",
       "tarih": "2026-10-01",
@@ -287,7 +285,7 @@
       "tarih": "2026-10-01",
       "tur": "fon-toplam-degeri-duzeltildi",
       "kaynakFonToplamDeger": 221716745.35,
-      "hesaplananFonToplamDeger": 201697424.53,
+      "hesaplananFonToplamDeger": 221716834.9,
       "farkOrani": 0.09029233
     },
     {
