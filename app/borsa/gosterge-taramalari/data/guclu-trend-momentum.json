@@ -6,12 +6,32 @@
   ],
   "rows": [
     {
+      "Sembol": "AHGAZ",
+      "Periyod": "Gün",
+      "Birim": "TL"
+    },
+    {
+      "Sembol": "ENERY",
+      "Periyod": "Gün",
+      "Birim": "TL"
+    },
+    {
       "Sembol": "ETILR",
       "Periyod": "Gün",
       "Birim": "TL"
     },
     {
       "Sembol": "GMTAS",
+      "Periyod": "Gün",
+      "Birim": "TL"
+    },
+    {
+      "Sembol": "HRKET",
+      "Periyod": "Gün",
+      "Birim": "TL"
+    },
+    {
+      "Sembol": "HUNER",
       "Periyod": "Gün",
       "Birim": "TL"
     },
@@ -28,12 +48,32 @@
       "Birim"
     ],
     [
+      "AHGAZ",
+      "Gün",
+      "TL"
+    ],
+    [
+      "ENERY",
+      "Gün",
+      "TL"
+    ],
+    [
       "ETILR",
       "Gün",
       "TL"
     ],
     [
       "GMTAS",
+      "Gün",
+      "TL"
+    ],
+    [
+      "HRKET",
+      "Gün",
+      "TL"
+    ],
+    [
+      "HUNER",
       "Gün",
       "TL"
     ],
@@ -52,52 +92,6 @@
       ],
       "rows": [
         {
-          "Sembol": "ETILR",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        },
-        {
-          "Sembol": "GMTAS",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        },
-        {
-          "Sembol": "SKYMD",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        }
-      ],
-      "rawRows": [
-        [
-          "Sembol",
-          "Periyod",
-          "Birim"
-        ],
-        [
-          "ETILR",
-          "Gün",
-          "TL"
-        ],
-        [
-          "GMTAS",
-          "Gün",
-          "TL"
-        ],
-        [
-          "SKYMD",
-          "Gün",
-          "TL"
-        ]
-      ]
-    },
-    "Filtrelenenler": {
-      "columns": [
-        "Sembol",
-        "Periyod",
-        "Birim"
-      ],
-      "rows": [
-        {
           "Sembol": "AHGAZ",
           "Periyod": "Gün",
           "Birim": "TL"
@@ -108,12 +102,27 @@
           "Birim": "TL"
         },
         {
+          "Sembol": "ETILR",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "GMTAS",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
           "Sembol": "HRKET",
           "Periyod": "Gün",
           "Birim": "TL"
         },
         {
           "Sembol": "HUNER",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "SKYMD",
           "Periyod": "Gün",
           "Birim": "TL"
         }
@@ -135,6 +144,16 @@
           "TL"
         ],
         [
+          "ETILR",
+          "Gün",
+          "TL"
+        ],
+        [
+          "GMTAS",
+          "Gün",
+          "TL"
+        ],
+        [
           "HRKET",
           "Gün",
           "TL"
@@ -143,9 +162,60 @@
           "HUNER",
           "Gün",
           "TL"
+        ],
+        [
+          "SKYMD",
+          "Gün",
+          "TL"
+        ]
+      ]
+    },
+    "Filtrelenenler": {
+      "columns": [
+        "Sembol",
+        "Periyod",
+        "Birim"
+      ],
+      "rows": [
+        {
+          "Sembol": "CELHA",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "FLAP",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "TKFEN",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        }
+      ],
+      "rawRows": [
+        [
+          "Sembol",
+          "Periyod",
+          "Birim"
+        ],
+        [
+          "CELHA",
+          "Gün",
+          "TL"
+        ],
+        [
+          "FLAP",
+          "Gün",
+          "TL"
+        ],
+        [
+          "TKFEN",
+          "Gün",
+          "TL"
         ]
       ]
     }
   },
-  "guncellemeTarihi": "30.09.2026"
+  "guncellemeTarihi": "01.10.2026"
 }
