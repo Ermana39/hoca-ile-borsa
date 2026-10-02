@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-01T07:33:23.735Z",
+  "generatedAt": "2026-10-02T06:31:16.830Z",
   "duplicateKontrolu": {
-    "added": 239,
-    "updated": 62,
-    "skipped": 3583
+    "added": 1848,
+    "updated": 0,
+    "skipped": 1848
   },
-  "islenenFonSayisi": 1070,
+  "islenenFonSayisi": 1071,
   "islenenSnapshotSayisi": 2033,
-  "kaliciSnapshotSayisi": 1724035,
-  "temizlenenGecersizSnapshotSayisi": 91,
-  "yoneticiyleEslesenFonSayisi": 1918,
-  "bilinmeyenYoneticiSayisi": 24,
+  "kaliciSnapshotSayisi": 1725883,
+  "temizlenenGecersizSnapshotSayisi": 185,
+  "yoneticiyleEslesenFonSayisi": 1823,
+  "bilinmeyenYoneticiSayisi": 25,
   "bilinmeyenYoneticiFonlari": [
     {
       "fonKodu": "OPU",
@@ -108,13 +108,17 @@
     {
       "fonKodu": "EGA",
       "fonAdi": "QNB PORTFÖY ENPARA ALTIN ÖZEL FONU"
+    },
+    {
+      "fonKodu": "ICO",
+      "fonAdi": "İNCİR PORTFÖY BİRİNCİ FON SEPETİ FONU"
     }
   ],
   "kaynakDogrulama": {
-    "sonKaynakTarihi": "2026-10-01",
+    "sonKaynakTarihi": "2026-10-02",
     "sonKaynakKayitSayisi": 2033,
-    "sonKaynakGecerliKayitSayisi": 1942,
-    "gitGecmisindeIncelenenSurumSayisi": 126,
+    "sonKaynakGecerliKayitSayisi": 1848,
+    "gitGecmisindeIncelenenSurumSayisi": 127,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
     "manuelGecmisIceAktarimlari": [],
@@ -135,28 +139,28 @@
       }
     ],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 91,
+      "sayi": 185,
       "ornekler": [
-        "AC7:2026-10-01",
-        "AES:2026-10-01",
-        "APJ:2026-10-01",
-        "ARL:2026-10-01",
-        "ARM:2026-10-01",
-        "BHH:2026-10-01",
-        "BIY:2026-10-01",
-        "DFI:2026-10-01",
-        "DOH:2026-10-01",
-        "FNN:2026-10-01",
-        "FSU:2026-10-01",
-        "GAH:2026-10-01",
-        "GAV:2026-10-01",
-        "GBV:2026-10-01",
-        "GCC:2026-10-01",
-        "GCZ:2026-10-01",
-        "GEI:2026-10-01",
-        "GFY:2026-10-01",
-        "GGP:2026-10-01",
-        "GGR:2026-10-01"
+        "AC7:2026-10-02",
+        "AES:2026-10-02",
+        "AFO:2026-10-02",
+        "APJ:2026-10-02",
+        "ARL:2026-10-02",
+        "ARM:2026-10-02",
+        "BHH:2026-10-02",
+        "DFI:2026-10-02",
+        "DOH:2026-10-02",
+        "EME:2026-10-02",
+        "FNN:2026-10-02",
+        "FSU:2026-10-02",
+        "GAC:2026-10-02",
+        "GAH:2026-10-02",
+        "GAJ:2026-10-02",
+        "GAU:2026-10-02",
+        "GAV:2026-10-02",
+        "GBP:2026-10-02",
+        "GBV:2026-10-02",
+        "GCA:2026-10-02"
       ]
     }
   },
@@ -168,14 +172,36 @@
     "senkronizeEdildi": false,
     "neden": "Fon açılış tahmin dosyası bulunamadı."
   },
-  "veriUyarisiSayisi": 96,
+  "veriUyarisiSayisi": 99,
   "veriUyarilari": [
     {
-      "tur": "getiri-kaynaginda-guncel-listede-yok",
-      "tarih": "2026-10-01",
-      "kodSayisi": 1,
+      "tur": "gunluk-kaynakta-eksik-finansal-veri",
+      "tarih": "2026-10-02",
+      "toplamKayitSayisi": 2033,
+      "gecerliKayitSayisi": 1848,
+      "gecersizKayitSayisi": 185,
+      "gecerliOran": 0.90900148,
       "ornekFonKodlari": [
-        "ICO"
+        "AC7",
+        "AES",
+        "AFO",
+        "APJ",
+        "ARL",
+        "ARM",
+        "BHH",
+        "DFI",
+        "DOH",
+        "EME",
+        "FNN",
+        "FSU",
+        "GAC",
+        "GAH",
+        "GAJ",
+        "GAU",
+        "GAV",
+        "GBP",
+        "GBV",
+        "GCA"
       ]
     },
     {
@@ -225,6 +251,12 @@
       "tarih": "2026-07-01",
       "tur": "gunluk-getiri-fiyat-kopmasi",
       "hamGetiri": 8.1247619
+    },
+    {
+      "fonKodu": "HPL",
+      "tarih": "2026-10-02",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 2.47636053
     },
     {
       "fonKodu": "LFD",
@@ -433,6 +465,14 @@
       "kaynakFonToplamDeger": 26310337.25,
       "hesaplananFonToplamDeger": 25893597.41,
       "farkOrani": 0.0158394
+    },
+    {
+      "fonKodu": "BDI",
+      "tarih": "2026-10-02",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 14686878.64,
+      "hesaplananFonToplamDeger": 15104598.49,
+      "farkOrani": 0.0284417
     },
     {
       "fonKodu": "SRA",
@@ -739,6 +779,12 @@
       "tarih": "2025-09-16",
       "tur": "gunluk-getiri-fiyat-kopmasi",
       "hamGetiri": 1.29466407
+    },
+    {
+      "fonKodu": "PMH",
+      "tarih": "2026-10-02",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.42857143
     },
     {
       "fonKodu": "PDS",
