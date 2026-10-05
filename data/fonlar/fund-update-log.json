@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-02T06:31:16.830Z",
+  "generatedAt": "2026-10-05T06:24:43.162Z",
   "duplicateKontrolu": {
-    "added": 1848,
+    "added": 1818,
     "updated": 0,
-    "skipped": 1848
+    "skipped": 1818
   },
   "islenenFonSayisi": 1071,
-  "islenenSnapshotSayisi": 2033,
-  "kaliciSnapshotSayisi": 1725883,
-  "temizlenenGecersizSnapshotSayisi": 185,
-  "yoneticiyleEslesenFonSayisi": 1823,
-  "bilinmeyenYoneticiSayisi": 25,
+  "islenenSnapshotSayisi": 2034,
+  "kaliciSnapshotSayisi": 1727701,
+  "temizlenenGecersizSnapshotSayisi": 216,
+  "yoneticiyleEslesenFonSayisi": 1795,
+  "bilinmeyenYoneticiSayisi": 23,
   "bilinmeyenYoneticiFonlari": [
     {
       "fonKodu": "OPU",
@@ -42,10 +42,6 @@
       "fonAdi": "İŞ PORTFÖY DM HİSSE SENEDİ ÖZEL FON (HİSSE SENEDİ YOĞUN FON)"
     },
     {
-      "fonKodu": "GLL",
-      "fonAdi": "GOLDEN GLOBAL PORTFÖY ALTIN KATILIM FONU"
-    },
-    {
       "fonKodu": "ETN",
       "fonAdi": "EMAA BLUE PORTFÖY TEMKİNLİ DEĞİŞKEN FON"
     },
@@ -64,10 +60,6 @@
     {
       "fonKodu": "VKR",
       "fonAdi": "ALBARAKA PORTFÖY İKİNCİ PARA PİYASASI KATILIM FONU"
-    },
-    {
-      "fonKodu": "GOK",
-      "fonAdi": "GOLDEN GLOBAL PORTFÖY KISA VADELİ KİRA SERTİFİKALARI KATILIM FONU"
     },
     {
       "fonKodu": "VHK",
@@ -115,10 +107,10 @@
     }
   ],
   "kaynakDogrulama": {
-    "sonKaynakTarihi": "2026-10-02",
-    "sonKaynakKayitSayisi": 2033,
-    "sonKaynakGecerliKayitSayisi": 1848,
-    "gitGecmisindeIncelenenSurumSayisi": 127,
+    "sonKaynakTarihi": "2026-10-05",
+    "sonKaynakKayitSayisi": 2034,
+    "sonKaynakGecerliKayitSayisi": 1818,
+    "gitGecmisindeIncelenenSurumSayisi": 128,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
     "manuelGecmisIceAktarimlari": [],
@@ -139,28 +131,28 @@
       }
     ],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 185,
+      "sayi": 216,
       "ornekler": [
-        "AC7:2026-10-02",
-        "AES:2026-10-02",
-        "AFO:2026-10-02",
-        "APJ:2026-10-02",
-        "ARL:2026-10-02",
-        "ARM:2026-10-02",
-        "BHH:2026-10-02",
-        "DFI:2026-10-02",
-        "DOH:2026-10-02",
-        "EME:2026-10-02",
-        "FNN:2026-10-02",
-        "FSU:2026-10-02",
-        "GAC:2026-10-02",
-        "GAH:2026-10-02",
-        "GAJ:2026-10-02",
-        "GAU:2026-10-02",
-        "GAV:2026-10-02",
-        "GBP:2026-10-02",
-        "GBV:2026-10-02",
-        "GCA:2026-10-02"
+        "AC7:2026-10-05",
+        "ACD:2026-10-05",
+        "AES:2026-10-05",
+        "AFO:2026-10-05",
+        "APJ:2026-10-05",
+        "ARL:2026-10-05",
+        "ARM:2026-10-05",
+        "BHH:2026-10-05",
+        "BHI:2026-10-05",
+        "BVZ:2026-10-05",
+        "DFI:2026-10-05",
+        "DOH:2026-10-05",
+        "DUH:2026-10-05",
+        "EME:2026-10-05",
+        "FNN:2026-10-05",
+        "FNT:2026-10-05",
+        "FSU:2026-10-05",
+        "GAH:2026-10-05",
+        "GAU:2026-10-05",
+        "GAV:2026-10-05"
       ]
     }
   },
@@ -172,37 +164,43 @@
     "senkronizeEdildi": false,
     "neden": "Fon açılış tahmin dosyası bulunamadı."
   },
-  "veriUyarisiSayisi": 99,
+  "veriUyarisiSayisi": 101,
   "veriUyarilari": [
     {
       "tur": "gunluk-kaynakta-eksik-finansal-veri",
-      "tarih": "2026-10-02",
-      "toplamKayitSayisi": 2033,
-      "gecerliKayitSayisi": 1848,
-      "gecersizKayitSayisi": 185,
-      "gecerliOran": 0.90900148,
+      "tarih": "2026-10-05",
+      "toplamKayitSayisi": 2034,
+      "gecerliKayitSayisi": 1818,
+      "gecersizKayitSayisi": 216,
+      "gecerliOran": 0.89380531,
       "ornekFonKodlari": [
         "AC7",
+        "ACD",
         "AES",
         "AFO",
         "APJ",
         "ARL",
         "ARM",
         "BHH",
+        "BHI",
+        "BVZ",
         "DFI",
         "DOH",
+        "DUH",
         "EME",
         "FNN",
+        "FNT",
         "FSU",
-        "GAC",
         "GAH",
-        "GAJ",
         "GAU",
-        "GAV",
-        "GBP",
-        "GBV",
-        "GCA"
+        "GAV"
       ]
+    },
+    {
+      "fonKodu": "GEI",
+      "tarih": "2026-10-05",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 899.9009009
     },
     {
       "fonKodu": "KJK",
@@ -473,6 +471,14 @@
       "kaynakFonToplamDeger": 14686878.64,
       "hesaplananFonToplamDeger": 15104598.49,
       "farkOrani": 0.0284417
+    },
+    {
+      "fonKodu": "BDI",
+      "tarih": "2026-10-05",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 3914555.47,
+      "hesaplananFonToplamDeger": 4315599.57,
+      "farkOrani": 0.10244946
     },
     {
       "fonKodu": "SRA",
