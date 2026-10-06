@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-05T06:24:43.162Z",
+  "generatedAt": "2026-10-06T07:55:57.267Z",
   "duplicateKontrolu": {
-    "added": 1818,
+    "added": 1926,
     "updated": 0,
-    "skipped": 1818
+    "skipped": 1926
   },
   "islenenFonSayisi": 1071,
-  "islenenSnapshotSayisi": 2034,
-  "kaliciSnapshotSayisi": 1727701,
-  "temizlenenGecersizSnapshotSayisi": 216,
-  "yoneticiyleEslesenFonSayisi": 1795,
-  "bilinmeyenYoneticiSayisi": 23,
+  "islenenSnapshotSayisi": 2032,
+  "kaliciSnapshotSayisi": 1729627,
+  "temizlenenGecersizSnapshotSayisi": 106,
+  "yoneticiyleEslesenFonSayisi": 1901,
+  "bilinmeyenYoneticiSayisi": 25,
   "bilinmeyenYoneticiFonlari": [
     {
       "fonKodu": "OPU",
@@ -42,6 +42,10 @@
       "fonAdi": "İŞ PORTFÖY DM HİSSE SENEDİ ÖZEL FON (HİSSE SENEDİ YOĞUN FON)"
     },
     {
+      "fonKodu": "GLL",
+      "fonAdi": "GOLDEN GLOBAL PORTFÖY ALTIN KATILIM FONU"
+    },
+    {
       "fonKodu": "ETN",
       "fonAdi": "EMAA BLUE PORTFÖY TEMKİNLİ DEĞİŞKEN FON"
     },
@@ -60,6 +64,10 @@
     {
       "fonKodu": "VKR",
       "fonAdi": "ALBARAKA PORTFÖY İKİNCİ PARA PİYASASI KATILIM FONU"
+    },
+    {
+      "fonKodu": "GOK",
+      "fonAdi": "GOLDEN GLOBAL PORTFÖY KISA VADELİ KİRA SERTİFİKALARI KATILIM FONU"
     },
     {
       "fonKodu": "VHK",
@@ -107,10 +115,10 @@
     }
   ],
   "kaynakDogrulama": {
-    "sonKaynakTarihi": "2026-10-05",
-    "sonKaynakKayitSayisi": 2034,
-    "sonKaynakGecerliKayitSayisi": 1818,
-    "gitGecmisindeIncelenenSurumSayisi": 128,
+    "sonKaynakTarihi": "2026-10-06",
+    "sonKaynakKayitSayisi": 2032,
+    "sonKaynakGecerliKayitSayisi": 1926,
+    "gitGecmisindeIncelenenSurumSayisi": 129,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
     "manuelGecmisIceAktarimlari": [],
@@ -131,28 +139,28 @@
       }
     ],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 216,
+      "sayi": 106,
       "ornekler": [
-        "AC7:2026-10-05",
-        "ACD:2026-10-05",
-        "AES:2026-10-05",
-        "AFO:2026-10-05",
-        "APJ:2026-10-05",
-        "ARL:2026-10-05",
-        "ARM:2026-10-05",
-        "BHH:2026-10-05",
-        "BHI:2026-10-05",
-        "BVZ:2026-10-05",
-        "DFI:2026-10-05",
-        "DOH:2026-10-05",
-        "DUH:2026-10-05",
-        "EME:2026-10-05",
-        "FNN:2026-10-05",
-        "FNT:2026-10-05",
-        "FSU:2026-10-05",
-        "GAH:2026-10-05",
-        "GAU:2026-10-05",
-        "GAV:2026-10-05"
+        "AC7:2026-10-06",
+        "AES:2026-10-06",
+        "APJ:2026-10-06",
+        "ARL:2026-10-06",
+        "ARM:2026-10-06",
+        "BDI:2026-10-06",
+        "BHH:2026-10-06",
+        "DFI:2026-10-06",
+        "DOH:2026-10-06",
+        "DUH:2026-10-06",
+        "EME:2026-10-06",
+        "FNN:2026-10-06",
+        "FNT:2026-10-06",
+        "GAH:2026-10-06",
+        "GBV:2026-10-06",
+        "GGP:2026-10-06",
+        "GJO:2026-10-06",
+        "GKE:2026-10-06",
+        "GKO:2026-10-06",
+        "GMC:2026-10-06"
       ]
     }
   },
@@ -168,32 +176,32 @@
   "veriUyarilari": [
     {
       "tur": "gunluk-kaynakta-eksik-finansal-veri",
-      "tarih": "2026-10-05",
-      "toplamKayitSayisi": 2034,
-      "gecerliKayitSayisi": 1818,
-      "gecersizKayitSayisi": 216,
-      "gecerliOran": 0.89380531,
+      "tarih": "2026-10-06",
+      "toplamKayitSayisi": 2032,
+      "gecerliKayitSayisi": 1926,
+      "gecersizKayitSayisi": 106,
+      "gecerliOran": 0.94783465,
       "ornekFonKodlari": [
         "AC7",
-        "ACD",
         "AES",
-        "AFO",
         "APJ",
         "ARL",
         "ARM",
+        "BDI",
         "BHH",
-        "BHI",
-        "BVZ",
         "DFI",
         "DOH",
         "DUH",
         "EME",
         "FNN",
         "FNT",
-        "FSU",
         "GAH",
-        "GAU",
-        "GAV"
+        "GBV",
+        "GGP",
+        "GJO",
+        "GKE",
+        "GKO",
+        "GMC"
       ]
     },
     {

@@ -1,6 +1,7 @@
 import { serializeJsonLd } from "@/lib/json-ld";
 export const revalidate = false;
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import HeaderAdUnit from "@/components/HeaderAdUnit";
@@ -139,6 +140,7 @@ export default function RootLayout({
         <HeaderAdUnit />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
