@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-07T06:25:49.303Z",
+  "generatedAt": "2026-10-08T06:28:42.049Z",
   "duplicateKontrolu": {
-    "added": 1873,
+    "added": 1865,
     "updated": 0,
-    "skipped": 1873
+    "skipped": 1865
   },
   "islenenFonSayisi": 1071,
-  "islenenSnapshotSayisi": 2033,
-  "kaliciSnapshotSayisi": 1731500,
-  "temizlenenGecersizSnapshotSayisi": 160,
-  "yoneticiyleEslesenFonSayisi": 1848,
+  "islenenSnapshotSayisi": 2028,
+  "kaliciSnapshotSayisi": 1733365,
+  "temizlenenGecersizSnapshotSayisi": 163,
+  "yoneticiyleEslesenFonSayisi": 1840,
   "bilinmeyenYoneticiSayisi": 25,
   "bilinmeyenYoneticiFonlari": [
     {
@@ -115,10 +115,10 @@
     }
   ],
   "kaynakDogrulama": {
-    "sonKaynakTarihi": "2026-10-07",
-    "sonKaynakKayitSayisi": 2033,
-    "sonKaynakGecerliKayitSayisi": 1873,
-    "gitGecmisindeIncelenenSurumSayisi": 130,
+    "sonKaynakTarihi": "2026-10-08",
+    "sonKaynakKayitSayisi": 2028,
+    "sonKaynakGecerliKayitSayisi": 1865,
+    "gitGecmisindeIncelenenSurumSayisi": 131,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
     "manuelGecmisIceAktarimlari": [],
@@ -139,28 +139,28 @@
       }
     ],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 160,
+      "sayi": 163,
       "ornekler": [
-        "ABJ:2026-10-07",
-        "AC7:2026-10-07",
-        "AES:2026-10-07",
-        "APJ:2026-10-07",
-        "ARL:2026-10-07",
-        "ARM:2026-10-07",
-        "AU1:2026-10-07",
-        "BDI:2026-10-07",
-        "BHH:2026-10-07",
-        "BON:2026-10-07",
-        "BSC:2026-10-07",
-        "CVL:2026-10-07",
-        "DFI:2026-10-07",
-        "DOH:2026-10-07",
-        "DUH:2026-10-07",
-        "EME:2026-10-07",
-        "FDE:2026-10-07",
-        "FNN:2026-10-07",
-        "FNT:2026-10-07",
-        "FSU:2026-10-07"
+        "AC6:2026-10-08",
+        "AC7:2026-10-08",
+        "AES:2026-10-08",
+        "AHV:2026-10-08",
+        "APJ:2026-10-08",
+        "ARL:2026-10-08",
+        "ARM:2026-10-08",
+        "AU1:2026-10-08",
+        "AVC:2026-10-08",
+        "BDI:2026-10-08",
+        "BHH:2026-10-08",
+        "BIY:2026-10-08",
+        "BON:2026-10-08",
+        "DFI:2026-10-08",
+        "DOH:2026-10-08",
+        "EME:2026-10-08",
+        "FNN:2026-10-08",
+        "FSU:2026-10-08",
+        "GAH:2026-10-08",
+        "GAV:2026-10-08"
       ]
     }
   },
@@ -172,36 +172,36 @@
     "senkronizeEdildi": false,
     "neden": "Fon açılış tahmin dosyası bulunamadı."
   },
-  "veriUyarisiSayisi": 104,
+  "veriUyarisiSayisi": 106,
   "veriUyarilari": [
     {
       "tur": "gunluk-kaynakta-eksik-finansal-veri",
-      "tarih": "2026-10-07",
-      "toplamKayitSayisi": 2033,
-      "gecerliKayitSayisi": 1873,
-      "gecersizKayitSayisi": 160,
-      "gecerliOran": 0.92129857,
+      "tarih": "2026-10-08",
+      "toplamKayitSayisi": 2028,
+      "gecerliKayitSayisi": 1865,
+      "gecersizKayitSayisi": 163,
+      "gecerliOran": 0.91962525,
       "ornekFonKodlari": [
-        "ABJ",
+        "AC6",
         "AC7",
         "AES",
+        "AHV",
         "APJ",
         "ARL",
         "ARM",
         "AU1",
+        "AVC",
         "BDI",
         "BHH",
+        "BIY",
         "BON",
-        "BSC",
-        "CVL",
         "DFI",
         "DOH",
-        "DUH",
         "EME",
-        "FDE",
         "FNN",
-        "FNT",
-        "FSU"
+        "FSU",
+        "GAH",
+        "GAV"
       ]
     },
     {
@@ -345,6 +345,12 @@
       "hamGetiri": 16.61828083
     },
     {
+      "fonKodu": "NHY",
+      "tarih": "2026-10-08",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.58955241
+    },
+    {
       "fonKodu": "IEZ",
       "tarih": "2024-06-03",
       "tur": "gunluk-getiri-fiyat-kopmasi",
@@ -445,6 +451,14 @@
       "kaynakFonToplamDeger": 132753225.98,
       "hesaplananFonToplamDeger": 127417420.81,
       "farkOrani": 0.04019341
+    },
+    {
+      "fonKodu": "RIH",
+      "tarih": "2026-10-08",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 39882025.84,
+      "hesaplananFonToplamDeger": 40475802.5,
+      "farkOrani": 0.01488833
     },
     {
       "fonKodu": "FDY",
