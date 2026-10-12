@@ -13,7 +13,14 @@ function jsonDosyalari(dir) {
 }
 
 function readJson(dir, file) {
-  return JSON.parse(fs.readFileSync(path.join(dir, file), "utf8"));
+  const filePath = path.join(dir, file);
+  try {
+    return JSON.parse(fs.readFileSync(filePath, "utf8"));
+  } catch (error) {
+    const relativePath = path.relative(root, filePath).replaceAll("\\", "/");
+    const message = error instanceof Error ? error.message : String(error);
+    throw new Error(`Gecersiz JSON: ${relativePath}\n${message}`);
+  }
 }
 
 function doluListe(value) {
