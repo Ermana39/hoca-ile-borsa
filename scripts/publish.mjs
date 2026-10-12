@@ -102,6 +102,113 @@ function wait(milliseconds) {
   Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, milliseconds);
 }
 
+const npxCommand = process.platform === "win32" ? "npx.cmd" : "npx";
+
+function linkedProjectName() {
+  const projectFile = path.join(root, ".vercel", "project.json");
+  if (!fs.existsSync(projectFile)) {
+    throw new Error("Vercel proje baglantisi bulunamadi. Once `npx vercel link` calistirilmali.");
+  }
+
+  const project = JSON.parse(fs.readFileSync(projectFile, "utf8"));
+  if (typeof project?.projectName !== "string" || !project.projectName.trim()) {
+    throw new Error(".vercel/project.json icinde projectName bulunamadi.");
+  }
+  return project.projectName.trim();
+}
+
+function deploymentsForCommit(projectName, commitSha) {
+  const result = run(
+    npxCommand,
+    [
+      "vercel",
+      "list",
+      projectName,
+      "--meta",
+      `publishCommitSha=${commitSha}`,
+      "--limit",
+      "5",
+      "--json",
+    ],
+    { capture: true },
+  );
+
+  let payload;
+  try {
+    payload = JSON.parse(result.stdout);
+  } catch {
+    throw new Error("Vercel dagitim listesi okunamadi.");
+  }
+
+  return Array.isArray(payload?.deployments)
+    ? payload.deployments.sort((left, right) => Number(right.createdAt) - Number(left.createdAt))
+    : [];
+}
+
+function deploymentUrl(deployment) {
+  return deployment?.url ? `https://${deployment.url}` : null;
+}
+
+function waitForProduction(projectName, commitSha, maxMinutes = 25) {
+  const deadline = Date.now() + maxMinutes * 60_000;
+  let lastState = "";
+
+  while (Date.now() < deadline) {
+    const deployment = deploymentsForCommit(projectName, commitSha)[0];
+    const state = String(deployment?.state ?? "").toUpperCase();
+    const url = deploymentUrl(deployment);
+
+    if (state === "READY") return deployment;
+    if (["ERROR", "CANCELED"].includes(state)) {
+      throw new Error(`Vercel production dagitimi ${state} durumunda sonlandi${url ? `: ${url}` : "."}`);
+    }
+
+    const stateLabel = state || "KAYIT BEKLENIYOR";
+    if (stateLabel !== lastState) {
+      console.log(`Vercel durumu: ${stateLabel}${url ? ` (${url})` : ""}`);
+      lastState = stateLabel;
+    }
+    wait(10_000);
+  }
+
+  throw new Error(`Vercel production dagitimi ${maxMinutes} dakika icinde tamamlanmadi.`);
+}
+
+function deployCurrentCommit() {
+  const projectName = linkedProjectName();
+  const commitSha = run("git", ["rev-parse", "HEAD"], { capture: true }).stdout.trim();
+  const existing = deploymentsForCommit(projectName, commitSha)[0];
+  const existingState = String(existing?.state ?? "").toUpperCase();
+
+  if (existingState === "READY") {
+    console.log(`Bu commit zaten production ortaminda: ${deploymentUrl(existing)}`);
+    return;
+  }
+
+  if (existing && !["ERROR", "CANCELED"].includes(existingState)) {
+    console.log(`Bu commit icin devam eden Vercel dagitimi bulundu: ${deploymentUrl(existing)}`);
+  } else {
+    console.log("Vercel production dagitimi baslatiliyor...");
+    run(npxCommand, [
+      "vercel",
+      "deploy",
+      "--prod",
+      "--yes",
+      "--archive=tgz",
+      "--logs",
+      "--force",
+      "--with-cache",
+      "--meta",
+      `publishCommitSha=${commitSha}`,
+      "--meta",
+      "publishSource=single-command",
+    ]);
+  }
+
+  const deployment = waitForProduction(projectName, commitSha);
+  console.log(`Vercel production yayini hazir: ${deploymentUrl(deployment)}`);
+}
+
 function stageStableChanges(maxAttempts = 4) {
   let omitted = [];
 
@@ -131,35 +238,36 @@ function verifyNothingWasLeftOut() {
 }
 
 const initialStatus = run("git", ["status", "--porcelain"], { capture: true }).stdout.trim();
-if (!initialStatus) {
-  console.log("Yayinlanacak yeni degisiklik bulunamadi.");
-  process.exit(0);
+if (initialStatus) {
+  run(process.execPath, ["scripts/smart-build.mjs", "--prepare-only"]);
+  stageStableChanges();
+  verifyNothingWasLeftOut();
+  verifyChangedNews();
+  stageStableChanges();
+  verifyNothingWasLeftOut();
+  verifyChangedNews();
+
+  const staged = run("git", ["diff", "--cached", "--quiet"], { allowFailure: true });
+  if (staged.status !== 0 && staged.status !== 1) {
+    throw new Error("Hazirlanan degisiklikler kontrol edilemedi.");
+  }
+
+  if (staged.status === 1) {
+    const now = new Intl.DateTimeFormat("tr-TR", {
+      timeZone: "Europe/Istanbul",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+    }).format(new Date());
+
+    run("git", ["commit", "-m", `Site guncellemesi - ${now}`]);
+    run("git", ["push"]);
+    console.log("Degisiklikler GitHub'a gonderildi.");
+  }
+} else {
+  console.log("Yeni dosya degisikligi yok; mevcut commit'in production durumu kontrol ediliyor.");
 }
 
-run(process.execPath, ["scripts/smart-build.mjs", "--prepare-only"]);
-stageStableChanges();
-verifyNothingWasLeftOut();
-verifyChangedNews();
-stageStableChanges();
-verifyNothingWasLeftOut();
-verifyChangedNews();
-
-const staged = run("git", ["diff", "--cached", "--quiet"], { allowFailure: true });
-if (staged.status === 0) {
-  console.log("Yayinlanacak yeni degisiklik bulunamadi.");
-  process.exit(0);
-}
-if (staged.status !== 1) throw new Error("Hazirlanan degisiklikler kontrol edilemedi.");
-
-const now = new Intl.DateTimeFormat("tr-TR", {
-  timeZone: "Europe/Istanbul",
-  year: "numeric",
-  month: "2-digit",
-  day: "2-digit",
-  hour: "2-digit",
-  minute: "2-digit",
-}).format(new Date());
-
-run("git", ["commit", "-m", `Site guncellemesi - ${now}`]);
-run("git", ["push"]);
-console.log("Degisiklikler gonderildi. Vercel production yayini otomatik basladi.");
+deployCurrentCommit();

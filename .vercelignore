@@ -2,8 +2,18 @@
 .tmp/
 .codex-tmp/
 .next-dynamic-api-backup/
+.next/
+.vercel/
+node_modules/
+out/
+output/
+tmp/
+coverage/
 .codex-*.log
 .env*
 .git/
 .agents/
 .claude/
+
+# Yerelde tutulan buyuk fon arsivi production build girdisi degildir.
+data/fonlar/fund-history.json

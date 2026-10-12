@@ -13,6 +13,11 @@ export const config = {
   framework: null,
   buildCommand: "npm run build",
   outputDirectory: "out",
+  // `npm run yayinla` production dagitimini dogrudan ve dogrulayarak baslatir.
+  // GitHub webhook'u gecikse veya kaybolsa bile yayin akisi buna bagli kalmaz.
+  git: {
+    deploymentEnabled: false,
+  },
   cleanUrls: true,
   trailingSlash: false,
   functions: {
