@@ -102,7 +102,24 @@ function wait(milliseconds) {
   Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, milliseconds);
 }
 
-const npxCommand = process.platform === "win32" ? "npx.cmd" : "npx";
+function resolveNpxCli() {
+  const candidates = [
+    process.env.npm_execpath
+      ? path.join(path.dirname(process.env.npm_execpath), "npx-cli.js")
+      : null,
+    path.join(path.dirname(process.execPath), "node_modules", "npm", "bin", "npx-cli.js"),
+  ].filter(Boolean);
+
+  const npxCli = candidates.find((candidate) => fs.existsSync(candidate));
+  if (!npxCli) {
+    throw new Error("npm/npx calistiricisi bulunamadi. Node.js kurulumu kontrol edilmeli.");
+  }
+  return npxCli;
+}
+
+function runVercel(args, options) {
+  return run(process.execPath, [resolveNpxCli(), "vercel", ...args], options);
+}
 
 function linkedProjectName() {
   const projectFile = path.join(root, ".vercel", "project.json");
@@ -118,10 +135,8 @@ function linkedProjectName() {
 }
 
 function deploymentsForCommit(projectName, commitSha) {
-  const result = run(
-    npxCommand,
+  const result = runVercel(
     [
-      "vercel",
       "list",
       projectName,
       "--meta",
@@ -189,8 +204,7 @@ function deployCurrentCommit() {
     console.log(`Bu commit icin devam eden Vercel dagitimi bulundu: ${deploymentUrl(existing)}`);
   } else {
     console.log("Vercel production dagitimi baslatiliyor...");
-    run(npxCommand, [
-      "vercel",
+    runVercel([
       "deploy",
       "--prod",
       "--yes",
