@@ -4,6 +4,7 @@ import { FonBreadcrumb } from "../_components/FonUi";
 import { formatNumber } from "@/lib/fon-format";
 import {
   RISK_METRIC_CONFIGS,
+  getRiskRanking,
   getRiskRankingCategories,
 } from "@/lib/fon-risk-ranking";
 
@@ -51,7 +52,12 @@ export default function RiskSiralamalariPage() {
                 {metric.description}
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
-                {featuredCategories.slice(0, 3).map((category) => (
+                {featuredCategories
+                  .filter((category) =>
+                    Boolean(getRiskRanking(metric.slug, category.slug)?.rows.length)
+                  )
+                  .slice(0, 3)
+                  .map((category) => (
                   <Link
                     key={category.slug}
                     href={`/fonlar/risk-siralamalari/${metric.slug}/${category.slug}`}
@@ -59,7 +65,7 @@ export default function RiskSiralamalariPage() {
                   >
                     {category.label}
                   </Link>
-                ))}
+                  ))}
               </div>
             </div>
           ))}
@@ -70,15 +76,22 @@ export default function RiskSiralamalariPage() {
             Şemsiye Türleri
           </h2>
           <div className="mt-4 flex flex-wrap gap-2">
-            {categories.map((category) => (
-              <Link
-                key={category.slug}
-                href={`/fonlar/risk-siralamalari/${RISK_METRIC_CONFIGS[0].slug}/${category.slug}`}
-                className="rounded-full border border-slate-200 bg-white px-3 py-1 text-sm font-semibold text-slate-700 hover:border-blue-200 hover:text-blue-700"
-              >
-                {category.label} ({formatNumber(category.fundCount)})
-              </Link>
-            ))}
+            {categories.map((category) => {
+              const metric = RISK_METRIC_CONFIGS.find((item) =>
+                Boolean(getRiskRanking(item.slug, category.slug)?.rows.length)
+              );
+              if (!metric) return null;
+
+              return (
+                <Link
+                  key={category.slug}
+                  href={`/fonlar/risk-siralamalari/${metric.slug}/${category.slug}`}
+                  className="rounded-full border border-slate-200 bg-white px-3 py-1 text-sm font-semibold text-slate-700 hover:border-blue-200 hover:text-blue-700"
+                >
+                  {category.label} ({formatNumber(category.fundCount)})
+                </Link>
+              );
+            })}
           </div>
         </section>
       </div>

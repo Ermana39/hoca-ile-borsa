@@ -2,6 +2,7 @@ import { serializeJsonLd } from "@/lib/json-ld";
 import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
+import FonDetayLink from "@/components/FonDetayLink";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
@@ -667,10 +668,10 @@ className="object-cover"
 
                 <div className="mt-4 grid gap-3 sm:grid-cols-2 md:grid-cols-4">
                   {fonDetayLinkleri.map((fon) => (
-                    <Link
+                    <FonDetayLink
                       key={fon.href}
                       href={fon.href}
-                      prefetch={false}
+                      fallbackElement="div"
                       className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:-translate-y-0.5 hover:border-emerald-300 hover:bg-emerald-50"
                     >
                       <div className="text-base font-bold text-slate-900">
@@ -679,7 +680,7 @@ className="object-cover"
                       <p className="mt-1 text-xs leading-5 text-slate-600">
                         {fon.ad}
                       </p>
-                    </Link>
+                    </FonDetayLink>
                   ))}
                 </div>
               </Section>

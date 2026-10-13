@@ -2,6 +2,7 @@ import { serializeJsonLd } from "@/lib/json-ld";
 import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
+import FonDetayLink from "@/components/FonDetayLink";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
@@ -222,13 +223,12 @@ className="object-cover"
                     {fonlar.map((fon) => (
                       <tr key={fon.kod}>
                         <th className="px-4 py-3 font-semibold text-slate-900">
-                          <Link
+                          <FonDetayLink
                             href={fon.href}
-                            prefetch={false}
                             className="text-blue-700 hover:underline"
                           >
                             {fon.kod}
-                          </Link>
+                          </FonDetayLink>
                         </th>
                         <td className="px-4 py-3 font-semibold text-emerald-700">
                           {fon.tahminiEtki}
@@ -271,13 +271,12 @@ className="object-cover"
                       Pozitif katkıda {fon.pozitif}, negatif tarafta {fon.negatif}{" "}
                       hisseleri izleniyor.
                     </p>
-                    <Link
+                    <FonDetayLink
                       href={fon.href}
-                      prefetch={false}
                       className="mt-3 inline-block text-sm font-semibold text-blue-700 hover:underline"
                     >
                       {fon.kod} fon detay sayfası
-                    </Link>
+                    </FonDetayLink>
                   </section>
                 ))}
               </div>

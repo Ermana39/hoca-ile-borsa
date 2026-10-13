@@ -8,6 +8,7 @@ import {
   getFundCategories,
   getFundManagersForFilter,
 } from "@/lib/fon-platform";
+import QueryParamIndexingGuard from "@/components/QueryParamIndexingGuard";
 import FonTarayiciClient, { type ScannerFund } from "./FonTarayiciClient";
 
 export const metadata: Metadata = {
@@ -16,6 +17,10 @@ export const metadata: Metadata = {
     "Yatırım fonlarını fon kodu, tür, yönetici, risk seviyesi, büyüklük, yatırımcı sayısı, para akışı ve getiriye göre tarayın.",
   alternates: {
     canonical: "https://www.hocaileborsa.com/fonlar/fon-tarayici",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -57,6 +62,9 @@ export default function FonTarayiciPage() {
 
   return (
     <main className="min-h-screen bg-[#f8fafc]">
+      <Suspense fallback={null}>
+        <QueryParamIndexingGuard />
+      </Suspense>
       <div className="mx-auto max-w-7xl px-4 py-6 md:px-6">
         <FonBreadcrumb current="Fon Tarayıcı" />
 

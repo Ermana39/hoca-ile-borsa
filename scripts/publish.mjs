@@ -20,6 +20,55 @@ function run(command, args, { capture = false, allowFailure = false } = {}) {
   return result;
 }
 
+function hasRunningGitProcess() {
+  const command = process.platform === "win32" ? "tasklist" : "ps";
+  const args =
+    process.platform === "win32"
+      ? ["/FI", "IMAGENAME eq git.exe", "/FO", "CSV", "/NH"]
+      : ["-A", "-o", "comm="];
+  const result = spawnSync(command, args, {
+    cwd: root,
+    encoding: "utf8",
+    stdio: ["ignore", "pipe", "pipe"],
+    shell: false,
+    windowsHide: true,
+  });
+
+  if (result.error || result.status !== 0) return null;
+
+  if (process.platform === "win32") {
+    return result.stdout.toLowerCase().includes('"git.exe"');
+  }
+
+  return outputLines(result.stdout).some((processName) => path.basename(processName) === "git");
+}
+
+function recoverStaleGitIndexLock() {
+  const lockPath = path.join(root, ".git", "index.lock");
+  if (!fs.existsSync(lockPath)) return;
+
+  const gitRunning = hasRunningGitProcess();
+  if (gitRunning === null) {
+    const first = fs.statSync(lockPath);
+    wait(1_500);
+    if (!fs.existsSync(lockPath)) return;
+    const second = fs.statSync(lockPath);
+    if (first.size !== second.size || first.mtimeMs !== second.mtimeMs) {
+      throw new Error(
+        "Git index kilidi halen degisiyor. Aktif Git islemi tamamlandiktan sonra yayin komutunu yeniden calistirin.",
+      );
+    }
+  }
+  if (gitRunning) {
+    throw new Error(
+      "Git index kilidi bulundu ve bir Git islemi calisiyor. Islem tamamlandiktan sonra yayin komutunu yeniden calistirin.",
+    );
+  }
+
+  fs.rmSync(lockPath);
+  console.log("Yarim kalan Git isleminden kalan index kilidi otomatik temizlendi.");
+}
+
 function outputLines(value) {
   return String(value ?? "")
     .split(/\r?\n/)
@@ -227,7 +276,8 @@ function stageStableChanges(maxAttempts = 4) {
   let omitted = [];
 
   for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
-    run("git", ["add", "-A"]);
+    recoverStaleGitIndexLock();
+    run("git", ["add", "-A"], { capture: true });
     wait(300);
     omitted = omittedFiles();
     if (omitted.length === 0) return;

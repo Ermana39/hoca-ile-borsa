@@ -47,6 +47,7 @@ function hrefToString(href: LinkHref) {
  */
 export default function NoPrefetchLink({
   href,
+  rel,
   prefetch,
   replace,
   scroll,
@@ -60,5 +61,14 @@ export default function NoPrefetchLink({
   void shallow;
   void locale;
 
-  return <a {...props} href={hrefToString(href)} />;
+  const resolvedHref = hrefToString(href);
+  const isFacetedFundUrl =
+    resolvedHref.includes("?") &&
+    (resolvedHref.startsWith("/fonlar/fon-tarayici?") ||
+      resolvedHref.startsWith("/fonlar/fon-karsilastirma?"));
+  const resolvedRel = isFacetedFundUrl
+    ? [...new Set([...(rel?.split(/\s+/).filter(Boolean) ?? []), "nofollow"])].join(" ")
+    : rel;
+
+  return <a {...props} href={resolvedHref} rel={resolvedRel} />;
 }

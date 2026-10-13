@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
+import { normalizeStaticSeoOutput } from "./normalize-static-seo-output.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const apiRoot = path.join(root, "app", "api");
@@ -236,6 +237,8 @@ try {
     if (!fs.existsSync(path.join(outRoot, "index.html"))) {
       throw new Error("Statik cikti dogrulanamadi: out/index.html bulunamadi.");
     }
+
+    await normalizeStaticSeoOutput(outRoot);
 
     pruneNextTextPayloads(outRoot);
     bundleFundHistory(outRoot);

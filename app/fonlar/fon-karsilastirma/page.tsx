@@ -4,6 +4,7 @@ import Link from "@/components/NoPrefetchLink";
 import { FonBreadcrumb } from "../_components/FonUi";
 import { formatDate } from "@/lib/fon-format";
 import { getCurrentFundsData } from "@/lib/fon-platform";
+import QueryParamIndexingGuard from "@/components/QueryParamIndexingGuard";
 import FonKarsilastirmaClient, { type ComparisonFund } from "./FonKarsilastirmaClient";
 
 export const metadata: Metadata = {
@@ -12,6 +13,10 @@ export const metadata: Metadata = {
     "2 ila 5 yatırım fonunu güncel fiyat, risk, fon büyüklüğü, yatırımcı sayısı, para akışı ve dönemsel getiriye göre aynı ekranda karşılaştırın.",
   alternates: {
     canonical: "https://www.hocaileborsa.com/fonlar/fon-karsilastirma",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -32,6 +37,9 @@ export default function FonKarsilastirmaPage() {
 
   return (
     <main className="min-h-screen bg-[#f8fafc]">
+      <Suspense fallback={null}>
+        <QueryParamIndexingGuard />
+      </Suspense>
       <div className="mx-auto max-w-7xl px-4 py-6 md:px-6">
         <FonBreadcrumb current="Fon Karşılaştırma" />
 

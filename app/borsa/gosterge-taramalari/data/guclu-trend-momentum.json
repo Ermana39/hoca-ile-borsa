@@ -6,22 +6,12 @@
   ],
   "rows": [
     {
-      "Sembol": "AHGAZ",
-      "Periyod": "Gün",
-      "Birim": "TL"
-    },
-    {
-      "Sembol": "ALBRK",
-      "Periyod": "Gün",
-      "Birim": "TL"
-    },
-    {
       "Sembol": "ENERY",
       "Periyod": "Gün",
       "Birim": "TL"
     },
     {
-      "Sembol": "GLYHO",
+      "Sembol": "ENJSA",
       "Periyod": "Gün",
       "Birim": "TL"
     },
@@ -34,6 +24,11 @@
       "Sembol": "ORGE",
       "Periyod": "Gün",
       "Birim": "TL"
+    },
+    {
+      "Sembol": "VAKBN",
+      "Periyod": "Gün",
+      "Birim": "TL"
     }
   ],
   "rawRows": [
@@ -43,22 +38,12 @@
       "Birim"
     ],
     [
-      "AHGAZ",
-      "Gün",
-      "TL"
-    ],
-    [
-      "ALBRK",
-      "Gün",
-      "TL"
-    ],
-    [
       "ENERY",
       "Gün",
       "TL"
     ],
     [
-      "GLYHO",
+      "ENJSA",
       "Gün",
       "TL"
     ],
@@ -69,6 +54,11 @@
     ],
     [
       "ORGE",
+      "Gün",
+      "TL"
+    ],
+    [
+      "VAKBN",
       "Gün",
       "TL"
     ]
@@ -82,22 +72,12 @@
       ],
       "rows": [
         {
-          "Sembol": "AHGAZ",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        },
-        {
-          "Sembol": "ALBRK",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        },
-        {
           "Sembol": "ENERY",
           "Periyod": "Gün",
           "Birim": "TL"
         },
         {
-          "Sembol": "GLYHO",
+          "Sembol": "ENJSA",
           "Periyod": "Gün",
           "Birim": "TL"
         },
@@ -108,67 +88,6 @@
         },
         {
           "Sembol": "ORGE",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        }
-      ],
-      "rawRows": [
-        [
-          "Sembol",
-          "Periyod",
-          "Birim"
-        ],
-        [
-          "AHGAZ",
-          "Gün",
-          "TL"
-        ],
-        [
-          "ALBRK",
-          "Gün",
-          "TL"
-        ],
-        [
-          "ENERY",
-          "Gün",
-          "TL"
-        ],
-        [
-          "GLYHO",
-          "Gün",
-          "TL"
-        ],
-        [
-          "HRKET",
-          "Gün",
-          "TL"
-        ],
-        [
-          "ORGE",
-          "Gün",
-          "TL"
-        ]
-      ]
-    },
-    "Filtrelenenler": {
-      "columns": [
-        "Sembol",
-        "Periyod",
-        "Birim"
-      ],
-      "rows": [
-        {
-          "Sembol": "CELHA",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        },
-        {
-          "Sembol": "DURDO",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        },
-        {
-          "Sembol": "INDES",
           "Periyod": "Gün",
           "Birim": "TL"
         },
@@ -185,17 +104,22 @@
           "Birim"
         ],
         [
-          "CELHA",
+          "ENERY",
           "Gün",
           "TL"
         ],
         [
-          "DURDO",
+          "ENJSA",
           "Gün",
           "TL"
         ],
         [
-          "INDES",
+          "HRKET",
+          "Gün",
+          "TL"
+        ],
+        [
+          "ORGE",
           "Gün",
           "TL"
         ],
@@ -205,7 +129,73 @@
           "TL"
         ]
       ]
+    },
+    "Filtrelenenler": {
+      "columns": [
+        "Sembol",
+        "Periyod",
+        "Birim"
+      ],
+      "rows": [
+        {
+          "Sembol": "DURDO",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "GLYHO",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "GMTAS",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "INDES",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "RYGYO",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        }
+      ],
+      "rawRows": [
+        [
+          "Sembol",
+          "Periyod",
+          "Birim"
+        ],
+        [
+          "DURDO",
+          "Gün",
+          "TL"
+        ],
+        [
+          "GLYHO",
+          "Gün",
+          "TL"
+        ],
+        [
+          "GMTAS",
+          "Gün",
+          "TL"
+        ],
+        [
+          "INDES",
+          "Gün",
+          "TL"
+        ],
+        [
+          "RYGYO",
+          "Gün",
+          "TL"
+        ]
+      ]
     }
   },
-  "guncellemeTarihi": "12.10.2026"
+  "guncellemeTarihi": "13.10.2026"
 }

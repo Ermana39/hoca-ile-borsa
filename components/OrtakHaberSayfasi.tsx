@@ -8,7 +8,7 @@ import AdsenseResponsiveUnit from "@/components/AdsenseResponsiveUnit";
 import HaberAltKisim from "@/components/HaberAltKisim";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import KapEtkiAnalizi from "@/components/KapEtkiAnalizi";
-import { getFundDetail } from "@/lib/fon-platform";
+import { getFundBySlug } from "@/lib/fon-platform";
 import { getOnayliHalkaArzKaydiByKod } from "@/lib/halka-arz";
 import { formatHaberTarihi } from "@/lib/haber-tarih";
 import { getKategori } from "@/lib/haber-kategorileri";
@@ -93,7 +93,7 @@ function fonVarMi(kod: string) {
   const kayitli = fonVarlikOnbellegi.get(slug);
   if (typeof kayitli === "boolean") return kayitli;
 
-  const varMi = Boolean(getFundDetail(slug));
+  const varMi = getFundBySlug(slug)?.aktifMi === true;
   fonVarlikOnbellegi.set(slug, varMi);
   return varMi;
 }
@@ -127,11 +127,12 @@ function getKodLinki(kod: string, linkleme: HaberLinklemeKapsami) {
     return `/fonlar/${fonKodu}`;
   }
 
-  if (hisseVarMi(buyukKod)) {
-    return `/hisse/${buyukKod.toLowerCase()}`;
-  }
+  const halkaArzLinki = getOnayliHalkaArzLinki(buyukKod);
+  if (halkaArzLinki && !hisseVarMi(buyukKod)) return halkaArzLinki;
 
-  return getOnayliHalkaArzLinki(buyukKod);
+  return hisseVarMi(buyukKod)
+    ? `/hisse/${buyukKod.toLowerCase()}`
+    : halkaArzLinki;
 }
 
 function HaberMetni({
@@ -186,6 +187,10 @@ function haberLinkiniDuzelt(href: string, label?: string) {
   const yerelHref = yerelSiteHref(href);
   const labelKod = label?.match(kodDeseni)?.[0]?.toUpperCase();
 
+  if (/^\/borsa\/(?:oran|pivot)-analizi(?:[/?#]|$)/i.test(yerelHref)) {
+    return "/hisseler";
+  }
+
   if (labelKod && hisseVarMi(labelKod) && /^\/hisseler(?:[/?#]|$)/i.test(yerelHref)) {
     return `/hisse/${labelKod.toLowerCase()}`;
   }
@@ -205,6 +210,9 @@ function haberLinkiniDuzelt(href: string, label?: string) {
     return "/fonlar";
   }
 
+  const fonDetayEslesme = yerelHref.match(/^\/fonlar\/([a-z0-9-]+)$/i);
+  if (fonDetayEslesme && !fonVarMi(fonDetayEslesme[1])) return null;
+
   return yerelHref;
 }
 
@@ -219,6 +227,7 @@ function bolumlerdenSembolLinkleriTopla(bolumler: HaberBolumu[]) {
     if (hisseVarMi(kod) || fonVarMi(kod) || getOnayliHalkaArzLinki(kod)) continue;
 
     const href = haberLinkiniDuzelt(bolum.haberLink, bolum.haberLinkMetni);
+    if (!href) continue;
     if (
       href.startsWith("/halka-arz/onayli-izahnameler/") ||
       href.startsWith("/halka-arz/taslak-izahnameler/")
@@ -377,7 +386,7 @@ function getFonKapanisKodlari(kayit: HaberKaydi) {
         return eslesme ? [eslesme[1].toLowerCase()] : [];
       })
     )
-  );
+  ).filter(fonVarMi);
 }
 
 function getBolumFonKodlari(baslik: string, fonKodlari: string[]) {
@@ -878,9 +887,9 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
   const fonKapanisKodlari = getFonKapanisKodlari(kayit);
   const linkleme = {
     fonKodlari: new Set(
-      [...(kayit.ilgiliFonlar ?? []), ...fonKapanisKodlari].map((kod) =>
-        kod.toUpperCase()
-      )
+      [...(kayit.ilgiliFonlar ?? []), ...fonKapanisKodlari]
+        .filter(fonVarMi)
+        .map((kod) => kod.toUpperCase())
     ),
     sembolLinkleri: bolumlerdenSembolLinkleriTopla([
       ...kayit.kaynakOzeti.bolumler,

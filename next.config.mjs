@@ -194,11 +194,6 @@ const izahnameSlugRedirects = [
 ];
 
 const halkaArzHisseRedirects = [
-  ["/hisse/golda", "/halka-arz/onayli-izahnameler/golda-gida-san-ve-tic"],
-  ["/hisse/ekim", "/halka-arz/onayli-izahnameler/ekim-turizm-tic-ve-san"],
-  ["/hisse/isvea", "/halka-arz/onayli-izahnameler/isvea-seramik-ve-banyo-urunleri-sanayi"],
-  ["/hisse/orzax", "/halka-arz/onayli-izahnameler/orzaks-ilac-ve-kimya-san-tic"],
-  ["/hisse/meten", "/halka-arz/onayli-izahnameler/metgun-enerji-yatirimlari"],
   ["/hisse/yesot", "/halka-arz/taslak-izahnameler/yes-oto-kiralama-ve-turizm-yatirimlari"],
 ];
 
@@ -279,6 +274,17 @@ const nextConfig = {
   ...(process.env.HIB_STATIC_EXPORT_BUILD === "1" ? {} : {
   async redirects() {
     return [
+      {
+        source: "/:path*/",
+        has: [
+          {
+            type: "host",
+            value: "hocaileborsa.com",
+          },
+        ],
+        destination: "https://www.hocaileborsa.com/:path*",
+        permanent: true,
+      },
       {
         source: "/:path*",
         has: [

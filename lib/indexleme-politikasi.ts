@@ -62,6 +62,10 @@ export function dizinDisiYolMu(route: string): boolean {
 }
 
 export function sitemapteIndexlenebilirStatikYolMu(route: string): boolean {
+  if (!route.startsWith("/") || route.includes("?") || route.includes("#")) {
+    return false;
+  }
+  if (route !== "/" && route.endsWith("/")) return false;
   if (NOINDEX_STATIK_YOLLAR.has(route)) return false;
   return !dizinDisiYolMu(route);
 }

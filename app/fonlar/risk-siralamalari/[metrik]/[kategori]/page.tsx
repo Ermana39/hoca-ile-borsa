@@ -151,7 +151,9 @@ export default async function RiskSiralamaPage({
         </section>
 
         <section className="mb-5 flex flex-wrap gap-2">
-          {RISK_METRIC_CONFIGS.map((metric) => {
+          {RISK_METRIC_CONFIGS.filter((metric) =>
+            Boolean(getRiskRanking(metric.slug, ranking.category.slug)?.rows.length)
+          ).map((metric) => {
             const isCurrent = metric.key === ranking.metric.key;
 
             return (

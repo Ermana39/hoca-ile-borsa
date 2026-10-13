@@ -7,6 +7,7 @@ import {
 } from "@/lib/haberler";
 import { getEnGuncelGunlukOzet } from "@/lib/gunluk-ozet";
 import { getHisseIcerikHedefi } from "@/lib/hisse-icerik-hedefi";
+import { getFundBySlug } from "@/lib/fon-platform";
 import Link from "@/components/NoPrefetchLink";
 import HaberKategoriEtiketi from "@/components/HaberKategoriEtiketi";
 import HaberIlgiliHaberler from "@/components/HaberIlgiliHaberler";
@@ -67,6 +68,10 @@ function haberBasligi(href: string) {
   return getAllNews().find((item) => item.href === href)?.title || "";
 }
 
+function yayindakiFonKodlari(kodlar: string[]) {
+  return kodlar.filter((kod) => getFundBySlug(kod)?.aktifMi === true);
+}
+
 // getAllNews() en yeniden en eskiye sıralı döner; ilk eşleşme en güncel olanıdır.
 function enGuncelKapHaberi(haricHref?: string): RelatedContentItem | null {
   const item = getAllNews().find(
@@ -102,7 +107,7 @@ function halkaArzOzelLinkleri(href: string, title: string) {
 function relatedItems(href: string, kategori?: string): RelatedContentItem[] {
   const title = haberBasligi(href);
   const hisseler = getHaberIlgiliHisseler(href);
-  const fonlar = getHaberIlgiliFonlar(href);
+  const fonlar = yayindakiFonKodlari(getHaberIlgiliFonlar(href));
   const items = new Map<string, RelatedContentItem>();
 
   for (const kod of hisseler.slice(0, 3)) {
@@ -128,9 +133,9 @@ function relatedItems(href: string, kategori?: string): RelatedContentItem[] {
 
   for (const kod of fonlar.slice(0, 3)) {
     const temizKod = kod.toLocaleUpperCase("tr-TR");
-    items.set(`/fonlar/${temizKod.toLocaleLowerCase("tr-TR")}`, {
+    items.set(`/fonlar/${temizKod.toLowerCase()}`, {
       title: `${temizKod} fon detayları`,
-      href: `/fonlar/${temizKod.toLocaleLowerCase("tr-TR")}`,
+      href: `/fonlar/${temizKod.toLowerCase()}`,
       description: `${temizKod} fiyat, getiri, para akışı ve yatırımcı değişimi.`,
       type: "İlgili fon",
     });
@@ -282,7 +287,7 @@ function ctaMetni(kategori?: string, href?: string) {
 export default function HaberAltBilgi({ href }: { href: string }) {
   const slug = getHaberKategorisi(href);
   const ilgiliHisseler = getHaberIlgiliHisseler(href);
-  const ilgiliFonlar = getHaberIlgiliFonlar(href);
+  const ilgiliFonlar = yayindakiFonKodlari(getHaberIlgiliFonlar(href));
   const ilgiliVar = getIlgiliHaberler(href, 4).length > 0;
   const hisseHaberleri = hisseBazliHaberler(href);
   const fonHaberleri = fonBazliHaberler(href);
@@ -340,7 +345,7 @@ export default function HaberAltBilgi({ href }: { href: string }) {
             return (
               <Link
                 key={temizKod}
-                href={`/fonlar/${temizKod.toLocaleLowerCase("tr-TR")}`}
+                href={`/fonlar/${temizKod.toLowerCase()}`}
                 prefetch={false}
                 aria-label={`${temizKod} fon detay sayfasını aç`}
                 title="Fon detay sayfasını aç"

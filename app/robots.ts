@@ -21,12 +21,6 @@ export default function robots(): MetadataRoute.Robots {
           "/mesajlar",
           "/istatistik",
           "/guvenlik-kayitlari",
-          // Fon tablolarındaki sıralama parametreleri sayfa içeriğini
-          // değiştirmez (sadece sıra), canonical zaten param'sız sürüme
-          // işaret eder. Google'ın faceted-navigation önerisi gereği bu
-          // yinelenen sıralama URL'lerinin taranması engelleniyor.
-          "/*sort=",
-          "/*dir=",
         ],
       },
       // Yapay zeka eğitim/tarama botları ile agresif scraper'lar siteyi tümüyle
