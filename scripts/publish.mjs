@@ -241,6 +241,16 @@ function waitForProduction(projectName, commitSha, maxMinutes = 25) {
 function deployCurrentCommit() {
   const projectName = linkedProjectName();
   const commitSha = run("git", ["rev-parse", "HEAD"], { capture: true }).stdout.trim();
+  const parentSha = run("git", ["rev-parse", "HEAD^"], { capture: true }).stdout.trim();
+  let buildPlanBase = null;
+  try {
+    const plan = JSON.parse(fs.readFileSync(path.join(root, ".hib-build-plan.json"), "utf8"));
+    if (plan.version === 1 && plan.prepared === true && plan.baseSha === parentSha) {
+      buildPlanBase = parentSha;
+    }
+  } catch {
+    // Missing or invalid plan keeps the build's full preparation fallback.
+  }
   const existing = deploymentsForCommit(projectName, commitSha)[0];
   const existingState = String(existing?.state ?? "").toUpperCase();
 
@@ -261,6 +271,7 @@ function deployCurrentCommit() {
       "--logs",
       "--force",
       "--with-cache",
+      ...(buildPlanBase ? ["--build-env", `HIB_BUILD_PLAN_BASE_SHA=${buildPlanBase}`] : []),
       "--meta",
       `publishCommitSha=${commitSha}`,
       "--meta",

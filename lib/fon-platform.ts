@@ -217,6 +217,12 @@ export function getCurrentFundsData() {
   });
 }
 
+let fundLookupCache: {
+  mtimeMs: number;
+  size: number;
+  funds: Map<string, Fund>;
+} | null = null;
+
 export function getDashboardData() {
   return readJson<DashboardData>("fund-dashboard.json", {
     version: 1,
@@ -246,7 +252,30 @@ export function getManagersData() {
 
 export function getFundBySlug(slug: string) {
   const safeSlug = safeFundSlug(slug);
-  return getCurrentFundsData().fonlar.find((fund) => fund.slug === safeSlug) ?? null;
+  if (!safeSlug) return null;
+
+  const filePath = path.join(DATA_DIR, "fund-current.json");
+  let stat;
+  try {
+    stat = fs.statSync(filePath);
+  } catch {
+    fundLookupCache = null;
+    return null;
+  }
+
+  if (
+    !fundLookupCache ||
+    fundLookupCache.mtimeMs !== stat.mtimeMs ||
+    fundLookupCache.size !== stat.size
+  ) {
+    fundLookupCache = {
+      mtimeMs: stat.mtimeMs,
+      size: stat.size,
+      funds: new Map(getCurrentFundsData().fonlar.map((fund) => [fund.slug, fund])),
+    };
+  }
+
+  return fundLookupCache.funds.get(safeSlug) ?? null;
 }
 
 export function getFundDetail(slug: string) {

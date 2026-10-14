@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Hesaplayıcılar",
   description:
-    "Mevduat, kredi, borsa, temettü, gayrimenkul, emeklilik, vergi, döviz ve altın için tüm finansal hesaplayıcılara tek sayfadan ulaşın.",
+    "Borsa, temettü, birikim, gayrimenkul, emeklilik, vergi, döviz ve altın için finansal hesaplayıcılara tek sayfadan ulaşın.",
   alternates: { canonical: "https://www.hocaileborsa.com/hesaplayici" },
 };
 
@@ -18,7 +18,7 @@ const gruplar: Grup[] = [
     kutular: [
       {
         title: "Mevduat Faizi Hesaplayıcı",
-        href: "/mevduat-kredi-faizleri/mevduat-faizi-oranlari",
+        href: "/hesaplayici/mevduat-faizi",
         description: "Ana para, faiz oranı, vade ve stopaja göre mevduat getirinizi hesaplayın.",
         icon: "mevduat-faizi",
       },
@@ -41,19 +41,19 @@ const gruplar: Grup[] = [
     kutular: [
       {
         title: "Konut Kredisi Hesaplayıcı",
-        href: "/mevduat-kredi-faizleri/konut-kredisi-oranlari",
+        href: "/hesaplayici/konut-kredisi",
         description: "Konut kredisi taksit ve toplam ödeme tutarınızı hesaplayın.",
         icon: "konut-kredisi",
       },
       {
         title: "Tüketici Kredisi Hesaplayıcı",
-        href: "/mevduat-kredi-faizleri/tuketici-faizi-oranlari",
+        href: "/hesaplayici/tuketici-kredisi",
         description: "Tüketici kredisi taksit ve geri ödeme tutarınızı hesaplayın.",
         icon: "tuketici-faizi",
       },
       {
         title: "Taşıt Kredisi Hesaplayıcı",
-        href: "/mevduat-kredi-faizleri/tasit-kredisi-oranlari",
+        href: "/hesaplayici/tasit-kredisi",
         description: "Taşıt kredisi taksit ve geri ödeme tutarınızı hesaplayın.",
         icon: "tasit-kredisi",
       },

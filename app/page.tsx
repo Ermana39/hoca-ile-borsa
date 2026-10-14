@@ -92,9 +92,9 @@ const kategoriKutulari = [
     icon: "temettu" as CategoryIconName,
   },
   {
-    title: "Faiz Oranları",
-    href: "/mevduat-kredi-faizleri",
-    icon: "faiz-oranlari" as CategoryIconName,
+    title: "Hesaplayıcılar",
+    href: "/hesaplayici",
+    icon: "kar-zarar" as CategoryIconName,
   },
 ];
 
@@ -104,8 +104,7 @@ const sayfaBasliklari: Record<string, string> = {
   "/fonlar": "Fonlar",
   "/halka-arz": "Halka Arz",
   "/temettu": "Temettü",
-  "/mevduat-kredi-faizleri": "Mevduat ve Kredi Faizleri",
-  "/faiz-oranlari": "Faiz Oranları",
+  "/hesaplayici": "Hesaplayıcılar",
 
   "/borsa/dip-zirve-analizi": "Dip Zirve Analizi",
   "/borsa/egitim-videolari": "Eğitim Videoları",
@@ -152,15 +151,6 @@ const sayfaBasliklari: Record<string, string> = {
   "/temettu/mayis-ayi-temettu-verenler": "Mayıs Ayı Temettü Verenler",
   "/temettu/haziran-ayi-temettu-verenler": "Haziran Ayı Temettü Verenler",
   "/temettu/eylul-ayi-temettu-verenler": "Eylül Ayı Temettü Verenler",
-
-  "/mevduat-kredi-faizleri/mevduat-faizi-oranlari":
-    "Mevduat Faizi Oranları",
-  "/mevduat-kredi-faizleri/tuketici-faizi-oranlari":
-    "Tüketici Faizi Oranları",
-  "/mevduat-kredi-faizleri/konut-kredisi-oranlari":
-    "Konut Kredisi Oranları",
-  "/mevduat-kredi-faizleri/tasit-kredisi-oranlari":
-    "Taşıt Kredisi Oranları",
 
   "/hakkimizda": "Hakkımızda",
   "/gizlilik-politikasi": "Gizlilik Politikası",
@@ -654,7 +644,7 @@ export default function HomePage() {
             <div className="grid grid-cols-2 gap-3 p-4 md:grid-cols-4 md:p-5">
               {[
                 { label: "Halka Arz Takvimi", href: "/halka-arz/takvim" },
-                { label: "Mevduat Faizi Hesapla", href: "/mevduat-kredi-faizleri/mevduat-faizi-oranlari" },
+                { label: "Mevduat Faizi Hesapla", href: "/hesaplayici/mevduat-faizi" },
                 { label: "Temettü Hesaplama", href: "/temettu/temettu-hesaplama-araci" },
                 { label: "Hisse Kâr / Zarar", href: "/borsa/kar-zarar-hesaplama" },
               ].map((t) => (

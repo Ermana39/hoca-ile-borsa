@@ -57,8 +57,7 @@ function getRouteSettings(route: string): {
     route === "/halka-arz" ||
     route === "/halka-arz/takvim" ||
     route === "/temettu" ||
-    route === "/fonlar" ||
-    route === "/mevduat-kredi-faizleri"
+    route === "/fonlar"
   ) {
     return { priority: 0.95, changeFrequency: "daily" };
   }

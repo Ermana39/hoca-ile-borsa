@@ -21,7 +21,7 @@ const ANAHTAR_MAP: { keywords: string[]; links: IlgiliLink[] }[] = [
   {
     keywords: ["faiz", "merkez bankasi", "merkez bankası", "tcmb", "mevduat"],
     links: [
-      { label: "Mevduat Faizi Oranları", href: "/mevduat-kredi-faizleri/mevduat-faizi-oranlari" },
+      { label: "Mevduat Faizi Hesaplayıcı", href: "/hesaplayici/mevduat-faizi" },
       { label: "Bileşik Faiz / Birikim", href: "/hesaplayici/bilesik-faiz" },
       { label: "Tüm Hesaplayıcılar", href: "/hesaplayici" },
     ],
@@ -29,9 +29,9 @@ const ANAHTAR_MAP: { keywords: string[]; links: IlgiliLink[] }[] = [
   {
     keywords: ["kredi", "konut kred", "tuketici kred", "tüketici kred", "tasit kred", "taşıt kred"],
     links: [
-      { label: "Konut Kredisi Oranları", href: "/mevduat-kredi-faizleri/konut-kredisi-oranlari" },
-      { label: "Tüketici Faizi Oranları", href: "/mevduat-kredi-faizleri/tuketici-faizi-oranlari" },
-      { label: "Taşıt Kredisi Oranları", href: "/mevduat-kredi-faizleri/tasit-kredisi-oranlari" },
+      { label: "Konut Kredisi Hesaplayıcı", href: "/hesaplayici/konut-kredisi" },
+      { label: "Tüketici Kredisi Hesaplayıcı", href: "/hesaplayici/tuketici-kredisi" },
+      { label: "Taşıt Kredisi Hesaplayıcı", href: "/hesaplayici/tasit-kredisi" },
     ],
   },
   {
@@ -146,7 +146,7 @@ const ANAHTAR_MAP: { keywords: string[]; links: IlgiliLink[] }[] = [
 const VARSAYILAN: IlgiliLink[] = [
   { label: "Tüm Hesaplayıcılar", href: "/hesaplayici" },
   { label: "Borsa Analiz", href: "/borsa" },
-  { label: "Faiz Oranları", href: "/mevduat-kredi-faizleri" },
+  { label: "Fonlar", href: "/fonlar" },
 ];
 
 function normalize(s: string) {

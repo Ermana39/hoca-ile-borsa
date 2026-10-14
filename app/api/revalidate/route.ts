@@ -14,10 +14,10 @@ function safeEqual(a: string, b: string) {
 // Belirli bir veri kategorisini veya tüm siteyi yeniden oluşturur.
 // Kullanım: POST /api/revalidate
 //   Header: x-secret: <REVALIDATE_SECRET>
-//   Body (isteğe bağlı): { "scope": "borsa" | "fonlar" | "faiz" | "haberler" | "data" | "all" }
+//   Body (isteğe bağlı): { "scope": "borsa" | "fonlar" | "haberler" | "data" | "all" }
 //   Scope belirtilmezse Excel kaynaklı piyasa verileri için "data" varsayılır.
 
-const VALID_SCOPES = new Set(["borsa", "fonlar", "faiz", "haberler", "data", "all"]);
+const VALID_SCOPES = new Set(["borsa", "fonlar", "haberler", "data", "all"]);
 
 const BORSA_PATHS = [
   "/borsa",
@@ -46,14 +46,6 @@ const FON_PATHS = [
   "/fonlar/getiri",
   "/fonlar/tarihsel-veriler",
   "/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler",
-];
-
-const FAIZ_PATHS = [
-  "/mevduat-kredi-faizleri",
-  "/mevduat-kredi-faizleri/mevduat-faizi-oranlari",
-  "/mevduat-kredi-faizleri/konut-kredisi-oranlari",
-  "/mevduat-kredi-faizleri/tasit-kredisi-oranlari",
-  "/mevduat-kredi-faizleri/tuketici-faizi-oranlari",
 ];
 
 export async function POST(request: NextRequest) {
@@ -93,14 +85,6 @@ export async function POST(request: NextRequest) {
     revalidateTag("fon-getiri-json-data", "max");
     revalidateTag("fon-tarihsel-json-data", "max");
 
-  }
-
-  if (scope === "faiz" || scope === "data" || scope === "all") {
-    for (const p of FAIZ_PATHS) {
-      revalidatePath(p);
-      revalidated.push(p);
-    }
-    revalidateTag("faiz-takip-json-data", "max");
   }
 
   if (scope === "haberler" || scope === "all") {

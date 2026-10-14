@@ -100,7 +100,6 @@ export default function Footer() {
               { label: "Fonlar", href: "/fonlar" },
               { label: "Temettü", href: "/temettu" },
               { label: "Borsa Analiz", href: "/borsa" },
-              { label: "Faiz Oranları", href: "/mevduat-kredi-faizleri" },
               { label: "Rehberler", href: "/rehberler" },
               { label: "Borsa Sözlüğü", href: "/sozluk" },
             ]}
@@ -110,14 +109,9 @@ export default function Footer() {
             title="Hesaplayıcılar"
             links={[
               { label: "Tüm Hesaplayıcılar", href: "/hesaplayici" },
-              {
-                label: "Mevduat Faizi Hesapla",
-                href: "/mevduat-kredi-faizleri/mevduat-faizi-oranlari",
-              },
-              {
-                label: "Konut Kredisi Hesapla",
-                href: "/mevduat-kredi-faizleri/konut-kredisi-oranlari",
-              },
+              { label: "Bileşik Faiz Hesapla", href: "/hesaplayici/bilesik-faiz" },
+              { label: "Mevduat Faizi Hesapla", href: "/hesaplayici/mevduat-faizi" },
+              { label: "Konut Kredisi Hesapla", href: "/hesaplayici/konut-kredisi" },
               {
                 label: "Temettü Hesaplama",
                 href: "/temettu/temettu-hesaplama-araci",

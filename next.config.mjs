@@ -252,7 +252,7 @@ const nextConfig = {
     ? {
         experimental: {
           cpus: 2,
-          staticGenerationMaxConcurrency: 16,
+          staticGenerationMaxConcurrency: 4,
           staticGenerationMinPagesPerWorker: 50,
         },
       }

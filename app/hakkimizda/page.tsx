@@ -8,7 +8,7 @@ const siteUrl = "https://www.hocaileborsa.com";
 export const metadata: Metadata = {
   title: "Hakkımızda",
   description:
-    "Hoca İle Borsa; borsa, halka arz, temettü, fonlar ve faiz oranları üzerine içerik üreten bağımsız bir finans platformu. Kurucusu, yayın ilkeleri ve veri kaynakları hakkında bilgi.",
+    "Hoca İle Borsa; borsa, halka arz, temettü, fonlar ve hesaplayıcılar sunan bağımsız bir finans platformu. Kurucusu, yayın ilkeleri ve veri kaynakları hakkında bilgi.",
   alternates: { canonical: `${siteUrl}/hakkimizda` },
   openGraph: {
     type: "website",
@@ -31,7 +31,7 @@ export default function HakkimizdaPage() {
     url,
     name: "Hakkımızda | Hoca İle Borsa",
     description:
-      "Hoca İle Borsa; borsa, halka arz, temettü, fonlar ve faiz oranları üzerine içerik üreten bağımsız bir finans platformudur.",
+      "Hoca İle Borsa; borsa, halka arz, temettü, fonlar ve hesaplayıcılar sunan bağımsız bir finans platformudur.",
     inLanguage: "tr",
     isPartOf: { "@id": `${siteUrl}/#organization` },
     about: { "@id": `${siteUrl}/#organization` },
@@ -71,7 +71,7 @@ export default function HakkimizdaPage() {
 
         <div className="space-y-5 rounded-2xl border border-zinc-200 bg-white p-6 text-zinc-700">
           <p>
-            Hoca İle Borsa; borsa, halka arz, temettü, fonlar, faiz oranları ve
+            Hoca İle Borsa; borsa, halka arz, temettü, fonlar, hesaplayıcılar ve
             piyasa verileri üzerine içerik üreten bağımsız bir finans içerik
             platformudur.
           </p>

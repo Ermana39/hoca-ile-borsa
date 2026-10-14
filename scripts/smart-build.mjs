@@ -135,7 +135,8 @@ function readPreparedPlan() {
 
     const parent = git(["rev-parse", "HEAD^"], { allowFailure: true });
     const previous = process.env.VERCEL_GIT_PREVIOUS_SHA?.trim();
-    const expectedBase = parent || previous;
+    const buildPlanBase = process.env.HIB_BUILD_PLAN_BASE_SHA?.trim();
+    const expectedBase = buildPlanBase || parent || previous;
     if (!expectedBase || expectedBase !== plan.baseSha) return null;
     return plan;
   } catch {

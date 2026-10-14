@@ -21,7 +21,6 @@ const GUNCELLEME_GIZLENECEK_SAYFALAR = new Set([
   "/fonlar",
   "/halka-arz",
   "/temettu",
-  "/mevduat-kredi-faizleri",
 ]);
 
 function normalizePath(path: string) {

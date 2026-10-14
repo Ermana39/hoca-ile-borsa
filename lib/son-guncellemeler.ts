@@ -80,9 +80,4 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
     href: "/temettu",
     updatedAt: "29.04.2026 19:05",
   },
-  {
-    title: "Günlük Faiz Oranları",
-    href: "/mevduat-kredi-faizleri",
-    updatedAt: "30.04.2026 09:11",
-  },
 ];
