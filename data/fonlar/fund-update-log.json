@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-14T07:25:57.955Z",
+  "generatedAt": "2026-10-15T07:34:00.140Z",
   "duplicateKontrolu": {
-    "added": 1969,
+    "added": 1915,
     "updated": 0,
-    "skipped": 1969
+    "skipped": 1915
   },
   "islenenFonSayisi": 1071,
-  "islenenSnapshotSayisi": 2025,
-  "kaliciSnapshotSayisi": 1741262,
-  "temizlenenGecersizSnapshotSayisi": 56,
-  "yoneticiyleEslesenFonSayisi": 1944,
+  "islenenSnapshotSayisi": 2023,
+  "kaliciSnapshotSayisi": 1743177,
+  "temizlenenGecersizSnapshotSayisi": 108,
+  "yoneticiyleEslesenFonSayisi": 1890,
   "bilinmeyenYoneticiSayisi": 25,
   "bilinmeyenYoneticiFonlari": [
     {
@@ -115,10 +115,10 @@
     }
   ],
   "kaynakDogrulama": {
-    "sonKaynakTarihi": "2026-10-14",
-    "sonKaynakKayitSayisi": 2025,
-    "sonKaynakGecerliKayitSayisi": 1969,
-    "gitGecmisindeIncelenenSurumSayisi": 135,
+    "sonKaynakTarihi": "2026-10-15",
+    "sonKaynakKayitSayisi": 2023,
+    "sonKaynakGecerliKayitSayisi": 1915,
+    "gitGecmisindeIncelenenSurumSayisi": 136,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
     "manuelGecmisIceAktarimlari": [],
@@ -139,28 +139,28 @@
       }
     ],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 56,
+      "sayi": 108,
       "ornekler": [
-        "AC7:2026-10-14",
-        "AES:2026-10-14",
-        "APJ:2026-10-14",
-        "ARL:2026-10-14",
-        "ARM:2026-10-14",
-        "BDI:2026-10-14",
-        "BHH:2026-10-14",
-        "DFI:2026-10-14",
-        "DOH:2026-10-14",
-        "EME:2026-10-14",
-        "FNN:2026-10-14",
-        "FSU:2026-10-14",
-        "GKO:2026-10-14",
-        "GMC:2026-10-14",
-        "GMV:2026-10-14",
-        "GNZ:2026-10-14",
-        "GSU:2026-10-14",
-        "GUA:2026-10-14",
-        "GUM:2026-10-14",
-        "GVI:2026-10-14"
+        "AC7:2026-10-15",
+        "AES:2026-10-15",
+        "APJ:2026-10-15",
+        "ARL:2026-10-15",
+        "ARM:2026-10-15",
+        "BDI:2026-10-15",
+        "DFI:2026-10-15",
+        "DOH:2026-10-15",
+        "DUH:2026-10-15",
+        "EME:2026-10-15",
+        "FNN:2026-10-15",
+        "FNT:2026-10-15",
+        "FSU:2026-10-15",
+        "GCZ:2026-10-15",
+        "GKM:2026-10-15",
+        "GKO:2026-10-15",
+        "GMC:2026-10-15",
+        "GMV:2026-10-15",
+        "GNZ:2026-10-15",
+        "GP3:2026-10-15"
       ]
     }
   },
@@ -172,8 +172,38 @@
     "senkronizeEdildi": false,
     "neden": "Fon açılış tahmin dosyası bulunamadı."
   },
-  "veriUyarisiSayisi": 107,
+  "veriUyarisiSayisi": 109,
   "veriUyarilari": [
+    {
+      "tur": "gunluk-kaynakta-eksik-finansal-veri",
+      "tarih": "2026-10-15",
+      "toplamKayitSayisi": 2023,
+      "gecerliKayitSayisi": 1915,
+      "gecersizKayitSayisi": 108,
+      "gecerliOran": 0.94661394,
+      "ornekFonKodlari": [
+        "AC7",
+        "AES",
+        "APJ",
+        "ARL",
+        "ARM",
+        "BDI",
+        "DFI",
+        "DOH",
+        "DUH",
+        "EME",
+        "FNN",
+        "FNT",
+        "FSU",
+        "GCZ",
+        "GKM",
+        "GKO",
+        "GMC",
+        "GMV",
+        "GNZ",
+        "GP3"
+      ]
+    },
     {
       "fonKodu": "GEI",
       "tarih": "2026-10-05",
@@ -525,6 +555,14 @@
       "tarih": "2024-02-15",
       "tur": "gunluk-getiri-fiyat-kopmasi",
       "hamGetiri": 3.45117433
+    },
+    {
+      "fonKodu": "FDG",
+      "tarih": "2026-10-15",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 30864590.98,
+      "hesaplananFonToplamDeger": 46658631.22,
+      "farkOrani": 0.51172038
     },
     {
       "fonKodu": "DHI",
