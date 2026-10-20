@@ -6,12 +6,12 @@
   ],
   "rows": [
     {
-      "Sembol": "GMTAS",
+      "Sembol": "ENJSA",
       "Periyod": "Gün",
       "Birim": "TL"
     },
     {
-      "Sembol": "SOKM",
+      "Sembol": "GMTAS",
       "Periyod": "Gün",
       "Birim": "TL"
     }
@@ -23,12 +23,12 @@
       "Birim"
     ],
     [
-      "GMTAS",
+      "ENJSA",
       "Gün",
       "TL"
     ],
     [
-      "SOKM",
+      "GMTAS",
       "Gün",
       "TL"
     ]
@@ -42,7 +42,68 @@
       ],
       "rows": [
         {
+          "Sembol": "ENJSA",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
           "Sembol": "GMTAS",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        }
+      ],
+      "rawRows": [
+        [
+          "Sembol",
+          "Periyod",
+          "Birim"
+        ],
+        [
+          "ENJSA",
+          "Gün",
+          "TL"
+        ],
+        [
+          "GMTAS",
+          "Gün",
+          "TL"
+        ]
+      ]
+    },
+    "Filtrelenenler": {
+      "columns": [
+        "Sembol",
+        "Periyod",
+        "Birim"
+      ],
+      "rows": [
+        {
+          "Sembol": "AHGAZ",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "DURDO",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "ENERY",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "ETILR",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "GLYHO",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "INDES",
           "Periyod": "Gün",
           "Birim": "TL"
         },
@@ -59,7 +120,32 @@
           "Birim"
         ],
         [
-          "GMTAS",
+          "AHGAZ",
+          "Gün",
+          "TL"
+        ],
+        [
+          "DURDO",
+          "Gün",
+          "TL"
+        ],
+        [
+          "ENERY",
+          "Gün",
+          "TL"
+        ],
+        [
+          "ETILR",
+          "Gün",
+          "TL"
+        ],
+        [
+          "GLYHO",
+          "Gün",
+          "TL"
+        ],
+        [
+          "INDES",
           "Gün",
           "TL"
         ],
@@ -69,18 +155,7 @@
           "TL"
         ]
       ]
-    },
-    "Filtrelenenler": {
-      "columns": [],
-      "rows": [],
-      "rawRows": [
-        [
-          "Sembol",
-          "Periyod",
-          "Birim"
-        ]
-      ]
     }
   },
-  "guncellemeTarihi": "19.10.2026"
+  "guncellemeTarihi": "20.10.2026"
 }
