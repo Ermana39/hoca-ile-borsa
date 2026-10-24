@@ -231,8 +231,12 @@ runChecks();
 
 const preparedPlan = readPreparedPlan();
 const detectedFiles = commitFiles();
-const detectionFailed = detectedFiles === null;
-let groups = preparedPlan?.groups ?? classify(detectedFiles ?? [], detectionFailed);
+if (detectedFiles === null && !preparedPlan) {
+  console.warn(
+    "[build] Git gecmisi build ortaminda yok; yerelde hazirlanip commit edilen veri ciktilari kullaniliyor.",
+  );
+}
+let groups = preparedPlan?.groups ?? classify(detectedFiles ?? []);
 const alreadyPrepared = Boolean(preparedPlan);
 
 console.log(

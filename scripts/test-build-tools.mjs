@@ -75,3 +75,13 @@ test("build and publish tooling changes do not trigger full data preparation", (
   assert.match(output, /yalniz uygulama build'i/);
   assert.doesNotMatch(output, /excel|funds|news|companySync|company|ipo|pageUpdates/);
 });
+
+test("missing Git history does not force production data regeneration", () => {
+  const smartBuildSource = spawnSync(
+    process.execPath,
+    ["-e", "const fs=require('node:fs');process.stdout.write(fs.readFileSync('scripts/smart-build.mjs','utf8'))"],
+    { cwd: root, encoding: "utf8", shell: false },
+  ).stdout;
+  assert.match(smartBuildSource, /classify\(detectedFiles \?\? \[\]\)/);
+  assert.doesNotMatch(smartBuildSource, /classify\(detectedFiles \?\? \[\],\s*detectionFailed\)/);
+});
