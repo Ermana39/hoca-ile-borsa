@@ -1,6 +1,10 @@
 import assert from "node:assert/strict";
+import { spawnSync } from "node:child_process";
 import test from "node:test";
+import { fileURLToPath } from "node:url";
 import { writeFileWithRetry } from "./lib/retry-file-write.mjs";
+
+const root = fileURLToPath(new URL("../", import.meta.url));
 
 test("build plan write retries transient Windows file locks", () => {
   let writeAttempts = 0;
@@ -41,4 +45,33 @@ test("build plan write does not hide permanent file errors", () => {
     { code: "ENOENT" },
   );
   assert.equal(writeAttempts, 1);
+});
+
+function showPlanFor(files) {
+  const result = spawnSync(
+    process.execPath,
+    ["scripts/smart-build.mjs", `--show-plan-for=${files.join(",")}`],
+    { cwd: root, encoding: "utf8", shell: false },
+  );
+  assert.equal(result.status, 0, result.stderr);
+  return result.stdout;
+}
+
+test("news-only updates do not regenerate fund or company data", () => {
+  const output = showPlanFor([
+    "data/haberler/ornek-haber.json",
+    "public/ornek-haber.webp",
+  ]);
+  assert.match(output, /news, pageUpdates/);
+  assert.doesNotMatch(output, /excel|funds|companySync|company|ipo/);
+});
+
+test("build and publish tooling changes do not trigger full data preparation", () => {
+  const output = showPlanFor([
+    "scripts/smart-build.mjs",
+    "scripts/publish.mjs",
+    "scripts/lib/retry-file-write.mjs",
+  ]);
+  assert.match(output, /yalniz uygulama build'i/);
+  assert.doesNotMatch(output, /excel|funds|news|companySync|company|ipo|pageUpdates/);
 });

@@ -75,45 +75,51 @@ function classify(files, forceFull = false) {
     "app/fonlar/tarihsel-veriler/menkul-kiymet-yatirim-fonlari/data/menkul-kiymet-yatirim-fonlari-tarihsel.xlsx",
     "app/fonlar/data/tefas_fon_kurucu_yonetici_eslesmeleri.xlsx",
   ];
-  const buildInfrastructureChanged = has((file) =>
-    file === "scripts/smart-build.mjs" ||
-    file === "scripts/build-static-export.mjs" ||
-    file.startsWith("scripts/lib/") ||
+  const full = forceFull;
+  const excel = full || excelFiles.length > 0 || has((file) =>
+    file === "scripts/excel-to-json.mjs" ||
+    file === "scripts/lib/xlsx.mjs"
+  );
+  const funds = full || fundExcel.some((file) => changed.includes(file)) || has((file) =>
     [
-      "scripts/excel-to-json.mjs",
       "scripts/update-funds.mjs",
       "scripts/test-fund-platform.mjs",
+      "scripts/lib/bist-islem-takvimi.mjs",
+      "scripts/lib/xlsx.mjs",
+    ].includes(file)
+  );
+  const companySync = full || has((file) =>
+    (/\.(xlsx|xls|xlsm)$/i.test(file) &&
+      (file.startsWith("app/borsa/") || file.includes("oran-analizi"))) ||
+    [
+      "scripts/excel-to-json.mjs",
       "scripts/sync-bist-company-profiles.mjs",
       "scripts/sync-hisse-hak-kullanimlari.mjs",
       "scripts/check-temel-oranlar.mjs",
-      "scripts/generate-news-dates.mjs",
-      "scripts/generate-hisse-profile-metadata.mjs",
-      "scripts/generate-page-updates.mjs",
-      "scripts/check-hisse-quality.mjs",
-      "scripts/archive-ipo-draft.mjs",
+      "scripts/lib/xlsx.mjs",
     ].includes(file)
-  );
-  const full = forceFull || buildInfrastructureChanged;
-  const excel = full || excelFiles.length > 0;
-  const funds = full || fundExcel.some((file) => changed.includes(file));
-  const companySync = full || has((file) =>
-    /\.(xlsx|xls|xlsm)$/i.test(file) &&
-    (file.startsWith("app/borsa/") || file.includes("oran-analizi"))
   );
   const news = full || has((file) =>
     file === "app/data/news.ts" ||
     file.startsWith("data/haberler/") ||
-    file.startsWith("app/haber/")
+    file.startsWith("app/haber/") ||
+    file === "scripts/generate-news-dates.mjs"
   );
-  const company = full || companySync || has((file) => file.startsWith("data/hisseler/"));
+  const company = full || companySync || has((file) =>
+    file.startsWith("data/hisseler/") ||
+    file === "scripts/generate-hisse-profile-metadata.mjs" ||
+    file === "scripts/check-hisse-quality.mjs"
+  );
   const ipo = full || has((file) =>
     file.startsWith("data/halka-arz/") ||
-    file.startsWith("app/halka-arz/")
+    file.startsWith("app/halka-arz/") ||
+    file === "scripts/archive-ipo-draft.mjs"
   );
   const pageUpdates = full || has((file) =>
     file.startsWith("app/") ||
     file.startsWith("data/") ||
-    file.startsWith("public/data/")
+    file.startsWith("public/data/") ||
+    file === "scripts/generate-page-updates.mjs"
   );
 
   return {
@@ -198,12 +204,15 @@ function runChecks() {
 
 const prepareOnly = process.argv.includes("--prepare-only");
 const showPlanOnly = process.argv.includes("--show-plan");
+const showPlanFor = process.argv.find((argument) => argument.startsWith("--show-plan-for="));
 
-if (prepareOnly || showPlanOnly) {
-  const files = workingTreeFiles();
+if (prepareOnly || showPlanOnly || showPlanFor) {
+  const files = showPlanFor
+    ? showPlanFor.slice("--show-plan-for=".length).split(",").filter(Boolean)
+    : workingTreeFiles();
   let groups = classify(files, files.length === 0 && !showPlanOnly);
   console.log(`[build] ${files.length} degisen dosya algilandi: ${describe(groups)}.`);
-  if (showPlanOnly) process.exit(0);
+  if (showPlanOnly || showPlanFor) process.exit(0);
 
   try {
     prepare(groups);
