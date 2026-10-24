@@ -31,6 +31,46 @@ test("deployed static pages receive production security headers", async () => {
   }
 });
 
+test("Vercel production deploy uses the stable Webpack static export path", async () => {
+  const { config } = await import("../vercel.mjs");
+  assert.equal(config.buildCommand, "npm run build");
+  assert.equal(config.outputDirectory, "out");
+
+  const smartBuild = fs.readFileSync(path.join(root, "scripts", "smart-build.mjs"), "utf8");
+  const staticBuild = fs.readFileSync(
+    path.join(root, "scripts", "build-static-export.mjs"),
+    "utf8",
+  );
+  assert.match(smartBuild, /scripts\/build-static-export\.mjs/);
+  assert.match(staticBuild, /nextBin,\s*["']build["'],\s*["']--webpack["']/);
+  assert.match(staticBuild, /cleanProductionBuildOutput\(\)/);
+});
+
+test("publish waits for transient Git processes before recovering a stale index lock", () => {
+  const publishSource = fs.readFileSync(path.join(root, "scripts", "publish.mjs"), "utf8");
+  assert.match(publishSource, /const deadline = Date\.now\(\) \+ 15_000/);
+  assert.match(publishSource, /gitRunning === true \|\| quietFor < requiredQuietTime/);
+  assert.match(publishSource, /--recover-git-lock-only/);
+  assert.match(
+    publishSource,
+    /if \(process\.argv\.includes\("--recover-git-lock-only"\)\) \{\s*recoverStaleGitIndexLock\(\);[\s\S]*?process\.exit\(0\);\s*\}/,
+  );
+});
+
+test("publish preflight uses a temporary index and cannot reach deployment", () => {
+  const publishSource = fs.readFileSync(path.join(root, "scripts", "publish.mjs"), "utf8");
+  assert.match(publishSource, /function runPublishPreflight\(\)/);
+  assert.match(publishSource, /process\.env\.GIT_INDEX_FILE = temporaryIndex/);
+  assert.match(publishSource, /Commit, push ve deploy yapilmadi/);
+  const preflightExit = publishSource.indexOf('process.argv.includes("--preflight")');
+  const deployCall = publishSource.lastIndexOf("deployCurrentCommit();");
+  assert.ok(preflightExit >= 0 && preflightExit < deployCall);
+  assert.match(
+    publishSource.slice(preflightExit, deployCall),
+    /runPublishPreflight\(\);\s*process\.exit\(0\)/,
+  );
+});
+
 test("private API responses bypass every CDN cache while static search remains cacheable", async () => {
   const { config } = await import("../vercel.mjs");
   const rule = config.headers.find((item) => item.source.startsWith("/api/:endpoint("));

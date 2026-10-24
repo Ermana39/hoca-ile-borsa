@@ -38,9 +38,12 @@
     "halka-arz:ortaklik-yapisi": "node scripts/sync-ipo-ownership-structure.mjs",
     "build": "node scripts/smart-build.mjs",
     "yayinla": "node scripts/publish.mjs",
+    "yayinla:kontrol": "node scripts/publish.mjs --preflight",
     "start": "next start",
     "lint": "eslint",
-    "test:security": "node --test scripts/test-api-security.mjs scripts/test-rendering-security.mjs scripts/test-security-config.mjs"
+    "test:security": "node --test scripts/test-api-security.mjs scripts/test-rendering-security.mjs scripts/test-security-config.mjs",
+    "test:ad-blocking-recovery": "node scripts/test-ad-blocking-recovery.mjs",
+    "test:build-tools": "node --test scripts/test-build-tools.mjs"
   },
   "dependencies": {
     "@upstash/redis": "^1.37.0",

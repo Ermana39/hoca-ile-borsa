@@ -47,26 +47,42 @@ function recoverStaleGitIndexLock() {
   const lockPath = path.join(root, ".git", "index.lock");
   if (!fs.existsSync(lockPath)) return;
 
-  const gitRunning = hasRunningGitProcess();
-  if (gitRunning === null) {
-    const first = fs.statSync(lockPath);
-    wait(1_500);
+  // Codex, editör veya antivirüs kısa süreli bir `git.exe` işlemi açabilir.
+  // Bilgisayardaki herhangi bir Git sürecini bu repodaki kilidin sahibi sayıp
+  // hemen hata vermek yanlış pozitife yol açar. Önce sürecin bitmesini ve kilit
+  // dosyasının sabit kalmasını bekle; yalnızca sessiz kalan kilidi temizle.
+  const deadline = Date.now() + 15_000;
+  let stableSince = Date.now();
+  let previous = fs.statSync(lockPath);
+
+  while (Date.now() < deadline) {
+    wait(500);
     if (!fs.existsSync(lockPath)) return;
-    const second = fs.statSync(lockPath);
-    if (first.size !== second.size || first.mtimeMs !== second.mtimeMs) {
-      throw new Error(
-        "Git index kilidi halen degisiyor. Aktif Git islemi tamamlandiktan sonra yayin komutunu yeniden calistirin.",
-      );
+
+    const current = fs.statSync(lockPath);
+    if (current.size !== previous.size || current.mtimeMs !== previous.mtimeMs) {
+      previous = current;
+      stableSince = Date.now();
+      continue;
+    }
+
+    const gitRunning = hasRunningGitProcess();
+    const quietFor = Date.now() - stableSince;
+    const requiredQuietTime = gitRunning === null ? 5_000 : 1_500;
+    if (gitRunning === true || quietFor < requiredQuietTime) continue;
+
+    try {
+      fs.rmSync(lockPath);
+      console.log("Yarim kalan Git isleminden kalan index kilidi otomatik temizlendi.");
+      return;
+    } catch (error) {
+      if (!error || !["EPERM", "EACCES", "EBUSY"].includes(error.code)) throw error;
     }
   }
-  if (gitRunning) {
-    throw new Error(
-      "Git index kilidi bulundu ve bir Git islemi calisiyor. Islem tamamlandiktan sonra yayin komutunu yeniden calistirin.",
-    );
-  }
 
-  fs.rmSync(lockPath);
-  console.log("Yarim kalan Git isleminden kalan index kilidi otomatik temizlendi.");
+  throw new Error(
+    "Git index kilidi 15 saniye boyunca aktif kaldi. Acik Git islemi tamamlandiktan sonra yayin komutunu yeniden calistirin.",
+  );
 }
 
 function outputLines(value) {
@@ -312,8 +328,7 @@ function verifyNothingWasLeftOut() {
   }
 }
 
-const initialStatus = run("git", ["status", "--porcelain"], { capture: true }).stdout.trim();
-if (initialStatus) {
+function preparePublishChanges() {
   run(process.execPath, ["scripts/smart-build.mjs", "--prepare-only"]);
   stageStableChanges();
   verifyNothingWasLeftOut();
@@ -326,8 +341,61 @@ if (initialStatus) {
   if (staged.status !== 0 && staged.status !== 1) {
     throw new Error("Hazirlanan degisiklikler kontrol edilemedi.");
   }
+  return staged.status === 1;
+}
 
-  if (staged.status === 1) {
+function runPublishPreflight() {
+  const temporaryRoot = path.join(root, ".codex-tmp");
+  const sourceIndex = path.join(root, ".git", "index");
+  const temporaryIndex = path.join(temporaryRoot, `publish-preflight-${process.pid}.index`);
+  const temporaryLock = `${temporaryIndex}.lock`;
+  const previousIndex = process.env.GIT_INDEX_FILE;
+
+  fs.mkdirSync(temporaryRoot, { recursive: true });
+  fs.copyFileSync(sourceIndex, temporaryIndex);
+  process.env.GIT_INDEX_FILE = temporaryIndex;
+
+  try {
+    const initialStatus = run("git", ["status", "--porcelain"], { capture: true }).stdout.trim();
+    if (!initialStatus) {
+      console.log("On kontrolde hazirlanacak dosya degisikligi bulunmadi.");
+      return;
+    }
+
+    const hasStagedChanges = preparePublishChanges();
+    if (!hasStagedChanges) {
+      console.log("On kontrolde commit gerektiren degisiklik bulunmadi.");
+      return;
+    }
+
+    const stagedCount = outputLines(
+      run("git", ["diff", "--cached", "--name-only"], { capture: true }).stdout,
+    ).length;
+    console.log(
+      `Yayin on kontrolu basarili: ${stagedCount} dosya gecici Git indexinde dogrulandi. Commit, push ve deploy yapilmadi.`,
+    );
+  } finally {
+    if (previousIndex === undefined) delete process.env.GIT_INDEX_FILE;
+    else process.env.GIT_INDEX_FILE = previousIndex;
+    fs.rmSync(temporaryIndex, { force: true });
+    fs.rmSync(temporaryLock, { force: true });
+  }
+}
+
+if (process.argv.includes("--recover-git-lock-only")) {
+  recoverStaleGitIndexLock();
+  console.log("Git index kilidi kontrolu tamamlandi; yayin baslatilmadi.");
+  process.exit(0);
+}
+
+if (process.argv.includes("--preflight")) {
+  runPublishPreflight();
+  process.exit(0);
+}
+
+const initialStatus = run("git", ["status", "--porcelain"], { capture: true }).stdout.trim();
+if (initialStatus) {
+  if (preparePublishChanges()) {
     const now = new Intl.DateTimeFormat("tr-TR", {
       timeZone: "Europe/Istanbul",
       year: "numeric",

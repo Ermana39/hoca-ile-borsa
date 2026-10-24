@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
+import { writeFileWithRetry } from "./lib/retry-file-write.mjs";
 
 const root = process.cwd();
 const planPath = path.join(root, ".hib-build-plan.json");
@@ -187,7 +188,7 @@ function writePlan(groups) {
     createdAt: new Date().toISOString(),
     groups,
   };
-  fs.writeFileSync(planPath, `${JSON.stringify(plan, null, 2)}\n`, "utf8");
+  writeFileWithRetry(planPath, `${JSON.stringify(plan, null, 2)}\n`);
 }
 
 function runChecks() {

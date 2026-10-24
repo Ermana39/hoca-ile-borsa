@@ -92,6 +92,25 @@ function restoreInterruptedBackup() {
   }
 }
 
+function cleanProductionBuildOutput() {
+  const nextRoot = path.join(root, ".next");
+  if (!fs.existsSync(nextRoot)) return;
+
+  // Derleme onbellegini ve ayri tutulan development ciktisini koru; onceki
+  // yarim kalan production build'inden kalabilecek diger ciktıları temizle.
+  // Windows'ta antivirus taramasi kisa sureli kilit olusturabildigi icin
+  // fs.rmSync'in yerlesik yeniden deneme destegini kullan.
+  for (const entry of fs.readdirSync(nextRoot, { withFileTypes: true })) {
+    if (entry.name === "cache" || entry.name === "dev") continue;
+    fs.rmSync(path.join(nextRoot, entry.name), {
+      recursive: true,
+      force: true,
+      maxRetries: 12,
+      retryDelay: 125,
+    });
+  }
+}
+
 function isPublicTxtFile(outRoot, filePath) {
   const relative = path.relative(outRoot, filePath);
   const publicPath = path.join(root, "public", relative);
@@ -212,7 +231,10 @@ try {
   fs.rmSync(path.join(root, ".next", "dev"), {
     recursive: true,
     force: true,
+    maxRetries: 12,
+    retryDelay: 125,
   });
+  cleanProductionBuildOutput();
 
   const nextBin = path.join(
     root,
@@ -222,7 +244,11 @@ try {
     "bin",
     "next",
   );
-  const result = spawnSync(process.execPath, [nextBin, "build"], {
+  // Next 16 varsayilan olarak Turbopack kullanir. Bu projenin binlerce sayfalik
+  // statik export'unda Turbopack, PostCSS yardimci sureci baslatilirken ic hata
+  // verebiliyor. Next'in resmi production alternatifi olan Webpack ayni kaynak
+  // agacini kararlı bicimde derliyor; yerel ve Vercel build'lerini ayni yolda tut.
+  const result = spawnSync(process.execPath, [nextBin, "build", "--webpack"], {
     cwd: root,
     env: { ...process.env, HIB_STATIC_EXPORT_BUILD: "1" },
     stdio: "inherit",

@@ -6,6 +6,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import HeaderAdUnit from "@/components/HeaderAdUnit";
 import Footer from "@/components/Footer";
+import AdBlockingRecoveryTag from "@/components/AdBlockingRecoveryTag";
 import { THEME_INITIALIZATION_SCRIPT } from "@/lib/theme";
 
 export const metadata: Metadata = {
@@ -118,6 +119,7 @@ export default function RootLayout({
             `,
           }}
         />
+        <AdBlockingRecoveryTag />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9613627671991162"

@@ -46,6 +46,18 @@ if (!fs.existsSync(vercelConfigPath)) {
   }
 }
 
+const staticBuildScriptPath = path.join(root, "scripts", "build-static-export.mjs");
+if (!fs.existsSync(staticBuildScriptPath)) {
+  violations.push("scripts/build-static-export.mjs: statik build sarmalayicisi eksik");
+} else {
+  const staticBuildScriptSource = fs.readFileSync(staticBuildScriptPath, "utf8");
+  if (!/nextBin,\s*["']build["'],\s*["']--webpack["']/.test(staticBuildScriptSource)) {
+    violations.push(
+      "scripts/build-static-export.mjs: production build Next.js --webpack kullanmali",
+    );
+  }
+}
+
 function walk(directory) {
   for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
     const fullPath = path.join(directory, entry.name);
