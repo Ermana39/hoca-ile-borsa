@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-26T08:54:05.378Z",
+  "generatedAt": "2026-10-27T06:41:37.648Z",
   "duplicateKontrolu": {
-    "added": 1980,
+    "added": 1888,
     "updated": 0,
-    "skipped": 1980
+    "skipped": 1888
   },
   "islenenFonSayisi": 1071,
-  "islenenSnapshotSayisi": 2017,
-  "kaliciSnapshotSayisi": 1756646,
-  "temizlenenGecersizSnapshotSayisi": 37,
-  "yoneticiyleEslesenFonSayisi": 1955,
-  "bilinmeyenYoneticiSayisi": 25,
+  "islenenSnapshotSayisi": 2020,
+  "kaliciSnapshotSayisi": 1758534,
+  "temizlenenGecersizSnapshotSayisi": 132,
+  "yoneticiyleEslesenFonSayisi": 1860,
+  "bilinmeyenYoneticiSayisi": 28,
   "bilinmeyenYoneticiFonlari": [
     {
       "fonKodu": "OPU",
@@ -112,13 +112,25 @@
     {
       "fonKodu": "ICO",
       "fonAdi": "İNCİR PORTFÖY BİRİNCİ FON SEPETİ FONU"
+    },
+    {
+      "fonKodu": "NCV",
+      "fonAdi": "NUROL PORTFÖY ÜÇÜNCÜ SERBEST FON"
+    },
+    {
+      "fonKodu": "NNS",
+      "fonAdi": "NUROL PORTFÖY EKSEN HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)"
+    },
+    {
+      "fonKodu": "SFR",
+      "fonAdi": "NUROL PORTFÖY SAFİR HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)"
     }
   ],
   "kaynakDogrulama": {
-    "sonKaynakTarihi": "2026-10-26",
-    "sonKaynakKayitSayisi": 2017,
-    "sonKaynakGecerliKayitSayisi": 1980,
-    "gitGecmisindeIncelenenSurumSayisi": 143,
+    "sonKaynakTarihi": "2026-10-27",
+    "sonKaynakKayitSayisi": 2020,
+    "sonKaynakGecerliKayitSayisi": 1888,
+    "gitGecmisindeIncelenenSurumSayisi": 144,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
     "manuelGecmisIceAktarimlari": [],
@@ -139,28 +151,28 @@
       }
     ],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 37,
+      "sayi": 132,
       "ornekler": [
-        "ABG:2026-10-26",
-        "BDI:2026-10-26",
-        "DFI:2026-10-26",
-        "DOH:2026-10-26",
-        "EME:2026-10-26",
-        "FNN:2026-10-26",
-        "GKM:2026-10-26",
-        "GKO:2026-10-26",
-        "GMV:2026-10-26",
-        "GP3:2026-10-26",
-        "GSU:2026-10-26",
-        "HAG:2026-10-26",
-        "HGJ:2026-10-26",
-        "HMV:2026-10-26",
-        "HPF:2026-10-26",
-        "IMG:2026-10-26",
-        "KPB:2026-10-26",
-        "MP2:2026-10-26",
-        "MP4:2026-10-26",
-        "MTU:2026-10-26"
+        "ABG:2026-10-27",
+        "AES:2026-10-27",
+        "APJ:2026-10-27",
+        "ARL:2026-10-27",
+        "ARM:2026-10-27",
+        "BDI:2026-10-27",
+        "DFI:2026-10-27",
+        "DOH:2026-10-27",
+        "EME:2026-10-27",
+        "FNN:2026-10-27",
+        "FSU:2026-10-27",
+        "GAH:2026-10-27",
+        "GAJ:2026-10-27",
+        "GAV:2026-10-27",
+        "GBP:2026-10-27",
+        "GBV:2026-10-27",
+        "GCA:2026-10-27",
+        "GCC:2026-10-27",
+        "GCZ:2026-10-27",
+        "GDJ:2026-10-27"
       ]
     }
   },
@@ -172,8 +184,38 @@
     "senkronizeEdildi": false,
     "neden": "Fon açılış tahmin dosyası bulunamadı."
   },
-  "veriUyarisiSayisi": 119,
+  "veriUyarisiSayisi": 121,
   "veriUyarilari": [
+    {
+      "tur": "gunluk-kaynakta-eksik-finansal-veri",
+      "tarih": "2026-10-27",
+      "toplamKayitSayisi": 2020,
+      "gecerliKayitSayisi": 1888,
+      "gecersizKayitSayisi": 132,
+      "gecerliOran": 0.93465347,
+      "ornekFonKodlari": [
+        "ABG",
+        "AES",
+        "APJ",
+        "ARL",
+        "ARM",
+        "BDI",
+        "DFI",
+        "DOH",
+        "EME",
+        "FNN",
+        "FSU",
+        "GAH",
+        "GAJ",
+        "GAV",
+        "GBP",
+        "GBV",
+        "GCA",
+        "GCC",
+        "GCZ",
+        "GDJ"
+      ]
+    },
     {
       "fonKodu": "GAN",
       "tarih": "2026-10-16",
@@ -913,6 +955,14 @@
       "kaynakFonToplamDeger": 212939.28,
       "hesaplananFonToplamDeger": 221980.83,
       "farkOrani": 0.0424607
+    },
+    {
+      "fonKodu": "MT8",
+      "tarih": "2026-10-27",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 2045252.66,
+      "hesaplananFonToplamDeger": 1958242.8,
+      "farkOrani": 0.04254235
     },
     {
       "fonKodu": "YLZ",
