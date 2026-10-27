@@ -6,12 +6,12 @@
   ],
   "rows": [
     {
-      "Sembol": "DOCO",
+      "Sembol": "GMTAS",
       "Periyod": "Gün",
       "Birim": "TL"
     },
     {
-      "Sembol": "GMTAS",
+      "Sembol": "RYGYO",
       "Periyod": "Gün",
       "Birim": "TL"
     }
@@ -23,12 +23,12 @@
       "Birim"
     ],
     [
-      "DOCO",
+      "GMTAS",
       "Gün",
       "TL"
     ],
     [
-      "GMTAS",
+      "RYGYO",
       "Gün",
       "TL"
     ]
@@ -42,48 +42,7 @@
       ],
       "rows": [
         {
-          "Sembol": "DOCO",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        },
-        {
           "Sembol": "GMTAS",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        }
-      ],
-      "rawRows": [
-        [
-          "Sembol",
-          "Periyod",
-          "Birim"
-        ],
-        [
-          "DOCO",
-          "Gün",
-          "TL"
-        ],
-        [
-          "GMTAS",
-          "Gün",
-          "TL"
-        ]
-      ]
-    },
-    "Filtrelenenler": {
-      "columns": [
-        "Sembol",
-        "Periyod",
-        "Birim"
-      ],
-      "rows": [
-        {
-          "Sembol": "DURDO",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        },
-        {
-          "Sembol": "KLSYN",
           "Periyod": "Gün",
           "Birim": "TL"
         },
@@ -100,12 +59,7 @@
           "Birim"
         ],
         [
-          "DURDO",
-          "Gün",
-          "TL"
-        ],
-        [
-          "KLSYN",
+          "GMTAS",
           "Gün",
           "TL"
         ],
@@ -115,7 +69,18 @@
           "TL"
         ]
       ]
+    },
+    "Filtrelenenler": {
+      "columns": [],
+      "rows": [],
+      "rawRows": [
+        [
+          "Sembol",
+          "Periyod",
+          "Birim"
+        ]
+      ]
     }
   },
-  "guncellemeTarihi": "23.10.2026"
+  "guncellemeTarihi": "27.10.2026"
 }
