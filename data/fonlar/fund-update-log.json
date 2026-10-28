@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-27T06:41:37.648Z",
+  "generatedAt": "2026-10-28T06:53:01.793Z",
   "duplicateKontrolu": {
-    "added": 1888,
+    "added": 1976,
     "updated": 0,
-    "skipped": 1888
+    "skipped": 1976
   },
   "islenenFonSayisi": 1071,
   "islenenSnapshotSayisi": 2020,
-  "kaliciSnapshotSayisi": 1758534,
-  "temizlenenGecersizSnapshotSayisi": 132,
-  "yoneticiyleEslesenFonSayisi": 1860,
+  "kaliciSnapshotSayisi": 1760510,
+  "temizlenenGecersizSnapshotSayisi": 44,
+  "yoneticiyleEslesenFonSayisi": 1948,
   "bilinmeyenYoneticiSayisi": 28,
   "bilinmeyenYoneticiFonlari": [
     {
@@ -127,10 +127,10 @@
     }
   ],
   "kaynakDogrulama": {
-    "sonKaynakTarihi": "2026-10-27",
+    "sonKaynakTarihi": "2026-10-28",
     "sonKaynakKayitSayisi": 2020,
-    "sonKaynakGecerliKayitSayisi": 1888,
-    "gitGecmisindeIncelenenSurumSayisi": 144,
+    "sonKaynakGecerliKayitSayisi": 1976,
+    "gitGecmisindeIncelenenSurumSayisi": 145,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
     "manuelGecmisIceAktarimlari": [],
@@ -151,28 +151,28 @@
       }
     ],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 132,
+      "sayi": 44,
       "ornekler": [
-        "ABG:2026-10-27",
-        "AES:2026-10-27",
-        "APJ:2026-10-27",
-        "ARL:2026-10-27",
-        "ARM:2026-10-27",
-        "BDI:2026-10-27",
-        "DFI:2026-10-27",
-        "DOH:2026-10-27",
-        "EME:2026-10-27",
-        "FNN:2026-10-27",
-        "FSU:2026-10-27",
-        "GAH:2026-10-27",
-        "GAJ:2026-10-27",
-        "GAV:2026-10-27",
-        "GBP:2026-10-27",
-        "GBV:2026-10-27",
-        "GCA:2026-10-27",
-        "GCC:2026-10-27",
-        "GCZ:2026-10-27",
-        "GDJ:2026-10-27"
+        "BDI:2026-10-28",
+        "DOH:2026-10-28",
+        "EME:2026-10-28",
+        "FNN:2026-10-28",
+        "FSU:2026-10-28",
+        "GCC:2026-10-28",
+        "GFL:2026-10-28",
+        "GKM:2026-10-28",
+        "GKO:2026-10-28",
+        "GMV:2026-10-28",
+        "GSU:2026-10-28",
+        "GVI:2026-10-28",
+        "GZV:2026-10-28",
+        "HAG:2026-10-28",
+        "HGJ:2026-10-28",
+        "HMV:2026-10-28",
+        "HPF:2026-10-28",
+        "IMG:2026-10-28",
+        "KPB:2026-10-28",
+        "MP2:2026-10-28"
       ]
     }
   },
@@ -184,38 +184,8 @@
     "senkronizeEdildi": false,
     "neden": "Fon açılış tahmin dosyası bulunamadı."
   },
-  "veriUyarisiSayisi": 121,
+  "veriUyarisiSayisi": 123,
   "veriUyarilari": [
-    {
-      "tur": "gunluk-kaynakta-eksik-finansal-veri",
-      "tarih": "2026-10-27",
-      "toplamKayitSayisi": 2020,
-      "gecerliKayitSayisi": 1888,
-      "gecersizKayitSayisi": 132,
-      "gecerliOran": 0.93465347,
-      "ornekFonKodlari": [
-        "ABG",
-        "AES",
-        "APJ",
-        "ARL",
-        "ARM",
-        "BDI",
-        "DFI",
-        "DOH",
-        "EME",
-        "FNN",
-        "FSU",
-        "GAH",
-        "GAJ",
-        "GAV",
-        "GBP",
-        "GBV",
-        "GCA",
-        "GCC",
-        "GCZ",
-        "GDJ"
-      ]
-    },
     {
       "fonKodu": "GAN",
       "tarih": "2026-10-16",
@@ -263,6 +233,12 @@
       "tarih": "2025-09-01",
       "tur": "gunluk-getiri-fiyat-kopmasi",
       "hamGetiri": 13.8543865
+    },
+    {
+      "fonKodu": "PYL",
+      "tarih": "2026-10-28",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 24.26671092
     },
     {
       "fonKodu": "UPS",
@@ -965,10 +941,24 @@
       "farkOrani": 0.04254235
     },
     {
+      "fonKodu": "MT8",
+      "tarih": "2026-10-28",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 1180738.34,
+      "hesaplananFonToplamDeger": 1319414.27,
+      "farkOrani": 0.11744849
+    },
+    {
       "fonKodu": "YLZ",
       "tarih": "2026-09-08",
       "tur": "gunluk-getiri-fiyat-kopmasi",
       "hamGetiri": 1.41693071
+    },
+    {
+      "fonKodu": "BHO",
+      "tarih": "2026-10-28",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 4.12066979
     },
     {
       "fonKodu": "DUC",
