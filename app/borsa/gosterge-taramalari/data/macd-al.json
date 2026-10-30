@@ -1,36 +1,42 @@
 {
-  "columns": [
-    "Sembol",
-    "Periyod",
-    "Birim"
-  ],
-  "rows": [
-    {
-      "Sembol": "GMTAS",
-      "Periyod": "Gün",
-      "Birim": "TL"
-    }
-  ],
+  "columns": [],
+  "rows": [],
   "rawRows": [
     [
       "Sembol",
       "Periyod",
       "Birim"
-    ],
-    [
-      "GMTAS",
-      "Gün",
-      "TL"
     ]
   ],
   "sheets": {
     "Sonuçlar": {
+      "columns": [],
+      "rows": [],
+      "rawRows": [
+        [
+          "Sembol",
+          "Periyod",
+          "Birim"
+        ]
+      ]
+    },
+    "Filtrelenenler": {
       "columns": [
         "Sembol",
         "Periyod",
         "Birim"
       ],
       "rows": [
+        {
+          "Sembol": "AHGAZ",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
+        {
+          "Sembol": "DOCO",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        },
         {
           "Sembol": "GMTAS",
           "Periyod": "Gün",
@@ -44,38 +50,22 @@
           "Birim"
         ],
         [
-          "GMTAS",
+          "AHGAZ",
           "Gün",
           "TL"
-        ]
-      ]
-    },
-    "Filtrelenenler": {
-      "columns": [
-        "Sembol",
-        "Periyod",
-        "Birim"
-      ],
-      "rows": [
-        {
-          "Sembol": "RYGYO",
-          "Periyod": "Gün",
-          "Birim": "TL"
-        }
-      ],
-      "rawRows": [
-        [
-          "Sembol",
-          "Periyod",
-          "Birim"
         ],
         [
-          "RYGYO",
+          "DOCO",
+          "Gün",
+          "TL"
+        ],
+        [
+          "GMTAS",
           "Gün",
           "TL"
         ]
       ]
     }
   },
-  "guncellemeTarihi": "27.10.2026"
+  "guncellemeTarihi": "30.10.2026"
 }

@@ -6,12 +6,12 @@
   ],
   "rows": [
     {
-      "Sembol": "GMTAS",
+      "Sembol": "DOCO",
       "Periyod": "Gün",
       "Birim": "TL"
     },
     {
-      "Sembol": "RYGYO",
+      "Sembol": "GMTAS",
       "Periyod": "Gün",
       "Birim": "TL"
     }
@@ -23,12 +23,12 @@
       "Birim"
     ],
     [
-      "GMTAS",
+      "DOCO",
       "Gün",
       "TL"
     ],
     [
-      "RYGYO",
+      "GMTAS",
       "Gün",
       "TL"
     ]
@@ -42,12 +42,12 @@
       ],
       "rows": [
         {
-          "Sembol": "GMTAS",
+          "Sembol": "DOCO",
           "Periyod": "Gün",
           "Birim": "TL"
         },
         {
-          "Sembol": "RYGYO",
+          "Sembol": "GMTAS",
           "Periyod": "Gün",
           "Birim": "TL"
         }
@@ -59,28 +59,43 @@
           "Birim"
         ],
         [
-          "GMTAS",
+          "DOCO",
           "Gün",
           "TL"
         ],
         [
-          "RYGYO",
+          "GMTAS",
           "Gün",
           "TL"
         ]
       ]
     },
     "Filtrelenenler": {
-      "columns": [],
-      "rows": [],
+      "columns": [
+        "Sembol",
+        "Periyod",
+        "Birim"
+      ],
+      "rows": [
+        {
+          "Sembol": "AHGAZ",
+          "Periyod": "Gün",
+          "Birim": "TL"
+        }
+      ],
       "rawRows": [
         [
           "Sembol",
           "Periyod",
           "Birim"
+        ],
+        [
+          "AHGAZ",
+          "Gün",
+          "TL"
         ]
       ]
     }
   },
-  "guncellemeTarihi": "27.10.2026"
+  "guncellemeTarihi": "30.10.2026"
 }
