@@ -52,6 +52,7 @@ export function halkaArzSurecHaberiYoluMu(route: string): boolean {
 }
 
 export function dizinDisiYolMu(route: string): boolean {
+  if (/^\/borsa(?:\/|$)/.test(route) || ["/halka-arz/takvim", "/halka-arz/tavan-serisi"].includes(route)) return true;
   if (NOINDEX_STATIK_YOLLAR.has(route)) return true;
   if (HALKA_ARZ_TASLAK_DETAY_DESENI.test(route)) return true;
   if (halkaArzSurecHaberiYoluMu(route)) return true;

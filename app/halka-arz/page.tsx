@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Halka Arz Rehberi 2026: Şirketler, İzahnameler ve Araçlar",
   description:
-    "Onaylı ve taslak izahnameleri, halka arz şirketlerini, lot ve kazanç araçlarını inceleyin; güncel takvime, analizlere ve halka arz sonuçlarına ulaşın.",
+    "Onaylı ve taslak izahnameleri, halka arz şirketlerini, lot ve kazanç araçlarını inceleyin; halka arz haberlerine ve sonuçlarına ulaşın.",
   alternates: { canonical: "https://www.hocaileborsa.com/halka-arz" },
 };
 
@@ -46,35 +46,7 @@ export default function HalkaArzPage() {
 
         </div>
 
-        <section className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-          <Link
-            href="/halka-arz/takvim"
-            prefetch={false}
-            aria-label="2026 Halka Arz Takvimi"
-            className="group relative flex min-h-[240px] flex-col rounded-2xl border border-blue-300 bg-blue-50 p-3 shadow-sm transition hover:border-blue-400 hover:bg-blue-100"
-          >
-            <span className="absolute right-5 top-5 z-10 rounded-full bg-blue-700 px-3 py-1 text-xs font-bold text-white">
-              Güncel
-            </span>
-            <div className="relative mb-4 flex aspect-[16/10] items-center justify-center overflow-hidden rounded-2xl bg-white">
-              <IconTile
-                name="temettu-takvim"
-                className="h-28 w-28 transition duration-300 group-hover:bg-blue-100"
-              />
-            </div>
-
-            <div className="flex flex-1 items-center justify-center px-2 pb-2 text-center">
-              <div>
-                <h2 className="text-2xl font-semibold leading-tight text-zinc-900 md:text-3xl">
-                  2026 Halka Arz Takvimi
-                </h2>
-                <p className="mt-2 text-sm leading-6 text-slate-600">
-                  Talep, dağıtım ve işlem tarihlerini takip et
-                </p>
-              </div>
-            </div>
-          </Link>
-
+        <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <Link
             href="/halka-arz/onayli-izahnameler"
             prefetch={false}
@@ -115,25 +87,6 @@ export default function HalkaArzPage() {
             </div>
           </Link>
 
-          <Link
-            href="/halka-arz/tavan-serisi"
-            prefetch={false}
-            aria-label="Halka Arz Tavan Serisi"
-            className="group flex min-h-[240px] flex-col rounded-2xl border border-zinc-200 bg-zinc-50 p-3 transition hover:bg-zinc-100"
-          >
-            <div className="relative mb-4 flex aspect-[16/10] items-center justify-center overflow-hidden rounded-2xl bg-white">
-              <IconTile
-                name="tavan-serisi"
-                className="h-28 w-28 transition duration-300 group-hover:bg-blue-100"
-              />
-            </div>
-
-            <div className="flex flex-1 items-center justify-center px-2 pb-2 text-center">
-              <h2 className="text-2xl font-semibold leading-tight text-zinc-900 md:text-3xl">
-                Halka Arz Tavan Serisi
-              </h2>
-            </div>
-          </Link>
         </section>
 
         {/* SEO Açıklama Bölümü */}

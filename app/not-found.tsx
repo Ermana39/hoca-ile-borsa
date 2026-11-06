@@ -27,7 +27,7 @@ const baglantilar = [
     aciklama: "Borsa ve şirketlere dair en güncel haber akışı.",
   },
   {
-    href: "/borsa/gunluk-borsa-ozeti",
+    href: "/haberler/gunluk-borsa-ozeti",
     baslik: "Günlük Borsa Özeti",
     aciklama: "BIST kapanışı, yükselen-düşenler ve para akışı.",
   },

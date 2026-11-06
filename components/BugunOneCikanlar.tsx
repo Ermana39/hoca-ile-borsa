@@ -55,7 +55,7 @@ export default function BugunOneCikanlar() {
     kartlar.push({
       etiket: "Günlük Borsa Özeti",
       baslik: ozet.baslik,
-      href: `/borsa/gunluk-borsa-ozeti/${ozet.slug}`,
+      href: `/haber/gunluk-borsa-ozeti/${ozet.slug}`,
       tarih: ozet.isoTarih,
       gorsel: ozet.gorsel,
       alt: ozet.baslik,

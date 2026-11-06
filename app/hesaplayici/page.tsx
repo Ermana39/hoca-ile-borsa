@@ -64,19 +64,19 @@ const gruplar: Grup[] = [
     kutular: [
       {
         title: "Hisse Kâr / Zarar Hesaplama",
-        href: "/borsa/kar-zarar-hesaplama",
+        href: "/hesaplayici/kar-zarar-hesaplama",
         description: "Alış-satış fiyatına, komisyon ve stopaja göre net kâr/zarar ve getiri oranınızı bulun.",
         icon: "kar-zarar",
       },
       {
         title: "Ortalama Maliyet Hesaplama",
-        href: "/borsa/ortalama-maliyet",
+        href: "/hesaplayici/ortalama-maliyet",
         description: "Birden çok alımdan ağırlıklı ortalama hisse maliyetinizi hesaplayın.",
         icon: "ortalama-maliyet",
       },
       {
         title: "Sermaye Artırımı Hesaplama",
-        href: "/borsa/sermaye-artirimi",
+        href: "/hesaplayici/sermaye-artirimi",
         description: "Bedelli ve bedelsiz sermaye artırımı sonrası lot ve maliyetinizi hesaplayın.",
         icon: "sermaye-artirimi",
       },

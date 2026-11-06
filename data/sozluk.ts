@@ -106,9 +106,9 @@ export const sozlukTerimleri: SozlukTerimi[] = [
     iliskiliTerimler: ["lot-nedir", "halka-aciklik-orani-nedir"],
     iliskiliSayfalar: [
       {
-        title: "2026 Halka Arz Tavan Serisi Takibi",
-        href: "/halka-arz/tavan-serisi",
-        description: "Güncel arzların tavan performansı, katılımcı ve getiri tablosu.",
+        title: "Halka Arz Şirketleri",
+        href: "/halka-arz",
+        description: "Halka arz şirketleri ve izahname bilgileri.",
       },
       {
         title: "Halka Arz Tavan Bozarsa Ne Olur?",
@@ -178,7 +178,7 @@ export const sozlukTerimleri: SozlukTerimi[] = [
     iliskiliSayfalar: [
       {
         title: "Halka Arz Takvimi",
-        href: "/halka-arz/takvim",
+        href: "/halka-arz",
         description: "Yaklaşan arzlarda fiyat istikrarı bilgisi izahname özetlerinde yer alır.",
       },
     ],
@@ -413,7 +413,7 @@ export const sozlukTerimleri: SozlukTerimi[] = [
     iliskiliSayfalar: [
       {
         title: "Halka Arz Takvimi",
-        href: "/halka-arz/takvim",
+        href: "/halka-arz",
         description: "Yaklaşan arzların hedef pazar bilgileri.",
       },
     ],
@@ -445,7 +445,7 @@ export const sozlukTerimleri: SozlukTerimi[] = [
     iliskiliSayfalar: [
       {
         title: "Tavan Serisi Takibi",
-        href: "/halka-arz/tavan-serisi",
+        href: "/halka-arz",
         description: "2026 arzlarının konsorsiyum bilgileriyle performans tablosu.",
       },
     ],
@@ -552,7 +552,7 @@ export const sozlukTerimleri: SozlukTerimi[] = [
     kisaTanim: "Şirketin sermayesini nakit, iç kaynak veya belirli yatırımcılara satışla artırması.",
     eslesmeler: ["bedelsiz sermaye", "bedelli sermaye", "tahsisli sermaye", "sermaye artırımı", "sermaye tavanı"],
     harici: "/rehberler/sermaye-artirimlari",
-    arac: { title: "Sermaye Artırımı Hesaplayıcı", href: "/borsa/sermaye-artirimi" },
+    arac: { title: "Sermaye Artırımı Hesaplayıcı", href: "/hesaplayici/sermaye-artirimi" },
   },
   {
     slug: "ruchan-hakki",

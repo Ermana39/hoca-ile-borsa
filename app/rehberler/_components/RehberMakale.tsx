@@ -55,7 +55,7 @@ const rehberIlgiliBaglantilari: Record<string, RehberIlgiliBaglanti[]> = {
       text: "Halka arz talep ve kişi başı lot senaryosu hesaplama aracı.",
     },
     {
-      href: "/halka-arz/takvim",
+      href: "/halka-arz",
       label: "Güncel takvimi aç",
       text: "Talep, dağıtım ve işlem başlangıcı açıklanan halka arzlar.",
     },
@@ -81,21 +81,21 @@ const rehberIlgiliBaglantilari: Record<string, RehberIlgiliBaglanti[]> = {
   ],
   "/rehberler/halka-arz-tavan-bozarsa-ne-olur": [
     {
-      href: "/halka-arz/tavan-serisi",
+      href: "/halka-arz",
       label: "Tavan serilerini incele",
       text: "Son halka arzlarda tavan serisi ve işlem sonrası performans.",
     },
   ],
   "/rehberler/halka-arzdan-sonra-hisse-ne-zaman-satilir": [
     {
-      href: "/halka-arz/tavan-serisi",
+      href: "/halka-arz",
       label: "Tavan performansına bak",
       text: "Halka arz sonrası tavan serisi ve kapanış verileri.",
     },
   ],
   "/rehberler/bist-islem-kodu-nedir": [
     {
-      href: "/halka-arz/takvim",
+      href: "/halka-arz",
       label: "İşlem kodlarını gör",
       text: "Güncel halka arzların BIST kodu ve işlem başlangıç bilgileri.",
     },

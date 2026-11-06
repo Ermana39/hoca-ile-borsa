@@ -102,7 +102,7 @@ export default function SozlukPage() {
               Tüm Rehberler <span aria-hidden>→</span>
             </Link>
             <Link
-              href="/halka-arz/takvim"
+              href="/halka-arz"
               prefetch={false}
               className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-700 hover:bg-blue-50 md:text-sm"
             >

@@ -1,6 +1,6 @@
 // 2026 halka arzlarının sonuç ve performans verileri.
-// Kaynak: tavan-serisi sayfasından ortak veriye taşındı; /halka-arz/takvim ve
-// /halka-arz/tavan-serisi bu tek kaynaktan beslenir.
+// Kaynak: tavan-serisi sayfasından ortak veriye taşındı; /halka-arz ve
+// /halka-arz bu tek kaynaktan beslenir.
 // Yeni halka arz sonuçlandığında kaydı listenin BAŞINA ekleyin.
 
 export type HalkaArzDagitimSonucu = {

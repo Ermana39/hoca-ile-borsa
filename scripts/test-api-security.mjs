@@ -314,17 +314,19 @@ test("Next development handlers delegate to the same secured production handlers
   });
 });
 
-test("production membership router preserves every public membership URL", async () => {
-  await withEnv(localEnv, async () => {
-    const load = app({ redis: fakeAuthRedis() });
-    const router = load("api/auth.ts").default;
-    const session = await router.fetch(request("auth?hib_handler=session", undefined, {}, "GET"));
-    assert.equal(session.status, 200);
-    assert.equal((await session.json()).authenticated, false);
-    const missing = await router.fetch(request("auth?hib_handler=unknown", undefined, {}, "GET"));
-    assert.equal(missing.status, 404);
-    assert.match(missing.headers.get("cache-control"), /no-store/);
-  });
+test("removed membership endpoints reject all operations without accessing storage", async () => {
+  let accessed = false;
+  const load = app({ redis: new Proxy({}, { get() { accessed = true; throw new Error("Storage must stay untouched"); } }) });
+  const router = load("api/auth.ts").default;
+  for (const action of ["register", "login", "session", "verify", "reset", "unknown"]) {
+    for (const method of ["GET", "POST", "PUT", "DELETE"]) {
+      const response = await router.fetch(request("auth?hib_handler=" + action, undefined, {}, method));
+      assert.equal(response.status, 410);
+      assert.match(response.headers.get("cache-control"), /no-store/);
+      assert.equal(response.headers.get("set-cookie"), null);
+    }
+  }
+  assert.equal(accessed, false);
 });
 
 test("member registration, verification, reset, session and deletion flows are server-authorized", async () => {
@@ -442,119 +444,17 @@ test("member registration, verification, reset, session and deletion flows are s
   });
 });
 
-test("portfolio records and shared market prices require a verified member", async () => {
-  await withEnv(localEnv, async () => {
-    const redis = fakeAuthRedis();
-    const load = app({
-      redis,
-      portfolioPrices: async () => ({
-        fetchedAt: "2026-09-11T09:00:00.000Z",
-        prices: {
-          USD: {
-            code: "USD",
-            label: "Dolar",
-            price: 42.5,
-            date: "2026-09-11",
-            dailyReturn: 0.25,
-            source: "TCMB",
-            sourceDetail: "Test",
-            frequency: "workday",
-          },
-        },
-        warnings: [],
-      }),
-    });
-    const memberAuth = load("lib/member-auth.ts");
-    const member = await memberAuth.createMember({
-      email: "portfolio@example.com",
-      displayName: "Portföy Üyesi",
-      password: "Guclu!Sifre2026",
-      userAgent: "test",
-    });
-    await memberAuth.activateMember(member);
-    const sessionToken = await memberAuth.createMemberSession(member.user_id);
-    const cookie = `hib_session=${sessionToken}`;
-    const portfolio = load("api/portfolio.ts").default;
-
-    const unauthorized = await portfolio.fetch(request("portfolio", undefined, {}, "GET"));
-    assert.equal(unauthorized.status, 401);
-    assert.match(unauthorized.headers.get("cache-control"), /no-store/);
-
-    const crossOrigin = await portfolio.fetch(request("portfolio", {
-      assetType: "fund", assetCode: "TLY", quantity: 10, buyPrice: 2.5,
-    }, { cookie, origin: "https://attacker.example" }));
-    assert.equal(crossOrigin.status, 403);
-
-    const created = await portfolio.fetch(request("portfolio", {
-      assetType: "fund",
-      assetCode: "tly",
-      quantity: 10,
-      buyPrice: 2.5,
-      buyDate: "2020-01-01",
-    }, { cookie }));
-    assert.equal(created.status, 201);
-    const createdBody = await created.json();
-    assert.equal(createdBody.holding.asset_code, "TLY");
-    assert.equal(createdBody.holding.quantity, 10);
-
-    const duplicate = await portfolio.fetch(request("portfolio", {
-      assetType: "fund", assetCode: "TLY", quantity: 5, buyPrice: 3,
-    }, { cookie }));
-    assert.equal(duplicate.status, 409);
-
-    const listed = await portfolio.fetch(request("portfolio", undefined, { cookie }, "GET"));
-    assert.equal(listed.status, 200);
-    assert.equal((await listed.json()).holdings.length, 1);
-
-    const updated = await portfolio.fetch(request("portfolio", {
-      holdingId: createdBody.holding.holding_id,
-      assetType: "fund",
-      assetCode: "TLY",
-      quantity: 12.5,
-      buyPrice: 2.75,
-    }, { cookie }, "PUT"));
-    assert.equal(updated.status, 200);
-    assert.equal((await updated.json()).holding.quantity, 12.5);
-
-    const prices = await portfolio.fetch(request(
-      "portfolio?hib_handler=market-prices",
-      undefined,
-      { cookie },
-      "GET",
-    ));
-    assert.equal(prices.status, 200);
-    assert.equal((await prices.json()).prices.USD.price, 42.5);
-
-    const invalidRoute = await portfolio.fetch(request(
-      "portfolio?hib_handler=unknown",
-      undefined,
-      { cookie },
-      "GET",
-    ));
-    assert.equal(invalidRoute.status, 404);
-
-    const deleted = await portfolio.fetch(request("portfolio", {
-      holdingId: createdBody.holding.holding_id,
-    }, { cookie }, "DELETE"));
-    assert.equal(deleted.status, 200);
-    const empty = await portfolio.fetch(request("portfolio", undefined, { cookie }, "GET"));
-    assert.deepEqual((await empty.json()).holdings, []);
-
-    // No gold quote exists: recording purchase quantity/cost must still succeed.
-    const gold = await portfolio.fetch(request("portfolio", {
-      assetType: "gold", assetCode: "XAU_GR", quantity: 10, buyPrice: 6858.74,
-    }, { cookie }));
-    assert.equal(gold.status, 201);
-    const goldBody = await gold.json();
-    assert.equal(goldBody.holding.quantity, 10);
-    assert.equal(goldBody.holding.buy_price, 6858.74);
-    const goldListed = await portfolio.fetch(request("portfolio", undefined, { cookie }, "GET"));
-    assert.equal((await goldListed.json()).holdings[0].asset_code, "XAU_GR");
-
-    await memberAuth.deleteMember(member);
-    assert.equal(
-      await redis.hgetall(`hib:portfolio:user:${member.user_id}:holdings`),
-      null,
-    );
-  });
+test("removed portfolio endpoints reject all operations without accessing storage", async () => {
+  let accessed = false;
+  const load = app({ redis: new Proxy({}, { get() { accessed = true; throw new Error("Storage must stay untouched"); } }) });
+  const router = load("api/portfolio.ts").default;
+  for (const action of ["", "market-prices", "unknown"]) {
+    for (const method of ["GET", "POST", "PUT", "DELETE"]) {
+      const response = await router.fetch(request("portfolio?hib_handler=" + action, undefined, {}, method));
+      assert.equal(response.status, 410);
+      assert.match(response.headers.get("cache-control"), /no-store/);
+      assert.equal(response.headers.get("set-cookie"), null);
+    }
+  }
+  assert.equal(accessed, false);
 });

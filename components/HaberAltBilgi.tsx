@@ -91,7 +91,7 @@ function enGuncelGunlukOzetLinki(): RelatedContentItem | null {
   if (!ozet) return null;
   return {
     title: `${ozet.tarihGosterim} borsa gündemi ve günlük piyasa özeti`,
-    href: `/borsa/gunluk-borsa-ozeti/${ozet.slug}`,
+    href: `/haber/gunluk-borsa-ozeti/${ozet.slug}`,
     description: "Endeks, yükselenler, düşenler ve para girişi olan hisseler.",
     type: "Günlük özet",
   };
@@ -270,9 +270,9 @@ function ctaMetni(kategori?: string, href?: string) {
 
   if (kategori === "halka-arz" || href?.includes("halka-arz")) {
     return {
-      text: "Bu hafta talep toplayacak, dağıtım sonucu beklenen ve işleme başlayacak şirketleri güncel halka arz takviminden takip edebilirsiniz.",
-      href: "/halka-arz/takvim",
-      label: "Güncel halka arz takvimine git",
+      text: "Halka arz şirketlerini, onaylı ve taslak izahnameleri Halka Arz bölümünde inceleyebilirsiniz.",
+      href: "/halka-arz",
+      label: "Halka arz şirketlerini incele",
     };
   }
 

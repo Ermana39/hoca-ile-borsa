@@ -30,7 +30,7 @@ export default function GostergeTaramaSayfasi({
           </Link>
 
           <Link
-            href="/borsa/gosterge-taramalari"
+            href="/haberler"
             prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >

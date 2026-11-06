@@ -455,7 +455,7 @@ className="object-cover"
                     SOHOE dağıtım sonuçları
                   </Link>
                   <Link
-                    href="/halka-arz/takvim"
+                    href="/halka-arz"
                     className="font-medium text-slate-700 underline underline-offset-2"
                   >
                     Güncel halka arz takvimi

@@ -79,8 +79,8 @@ const ANAHTAR_MAP: { keywords: string[]; links: IlgiliLink[] }[] = [
   {
     keywords: ["sermaye artir", "sermaye artırı", "bedelli", "bedelsiz"],
     links: [
-      { label: "Sermaye Artırımı Hesapla", href: "/borsa/sermaye-artirimi" },
-      { label: "Ortalama Maliyet Hesapla", href: "/borsa/ortalama-maliyet" },
+      { label: "Sermaye Artırımı Hesapla", href: "/hesaplayici/sermaye-artirimi" },
+      { label: "Ortalama Maliyet Hesapla", href: "/hesaplayici/ortalama-maliyet" },
     ],
   },
   {
@@ -93,8 +93,8 @@ const ANAHTAR_MAP: { keywords: string[]; links: IlgiliLink[] }[] = [
   {
     keywords: ["sigorta", "prim", "hasar", "poliçe"],
     links: [
-      { label: "Borsa Analiz", href: "/borsa" },
-      { label: "Kâr/Zarar Hesaplama", href: "/borsa/kar-zarar-hesaplama" },
+      { label: "Haberler", href: "/haberler" },
+      { label: "Kâr/Zarar Hesaplama", href: "/hesaplayici/kar-zarar-hesaplama" },
       { label: "Tüm Hesaplayıcılar", href: "/hesaplayici" },
     ],
   },
@@ -102,42 +102,42 @@ const ANAHTAR_MAP: { keywords: string[]; links: IlgiliLink[] }[] = [
     keywords: ["ihracat", "ithalat", "gana", "afrika"],
     links: [
       { label: "Döviz Bazlı Getiri", href: "/hesaplayici/doviz-getiri" },
-      { label: "Kâr/Zarar Hesaplama", href: "/borsa/kar-zarar-hesaplama" },
+      { label: "Kâr/Zarar Hesaplama", href: "/hesaplayici/kar-zarar-hesaplama" },
     ],
   },
   {
     keywords: ["enerji", "güneş", "solar", "lisans", "rüzgar"],
     links: [
-      { label: "Borsa Analiz", href: "/borsa" },
-      { label: "Kâr/Zarar Hesaplama", href: "/borsa/kar-zarar-hesaplama" },
+      { label: "Haberler", href: "/haberler" },
+      { label: "Kâr/Zarar Hesaplama", href: "/hesaplayici/kar-zarar-hesaplama" },
     ],
   },
   {
     keywords: ["perakende", "mağaza", "e-ticaret", "satış adedi"],
     links: [
-      { label: "Kâr/Zarar Hesaplama", href: "/borsa/kar-zarar-hesaplama" },
+      { label: "Kâr/Zarar Hesaplama", href: "/hesaplayici/kar-zarar-hesaplama" },
       { label: "Tüm Hesaplayıcılar", href: "/hesaplayici" },
     ],
   },
   {
     keywords: ["geri alım", "geri alim", "pay geri"],
     links: [
-      { label: "Geri Alım Programları", href: "/borsa/geri-alim-programlari" },
-      { label: "Ortalama Maliyet Hesapla", href: "/borsa/ortalama-maliyet" },
+      { label: "Geri Alım Programları", href: "/haberler" },
+      { label: "Ortalama Maliyet Hesapla", href: "/hesaplayici/ortalama-maliyet" },
     ],
   },
   {
     keywords: ["vbts", "tedbir", "açığa satış", "kredili işlem", "volatilite"],
     links: [
-      { label: "Borsa Analiz", href: "/borsa" },
-      { label: "Tedbirli Hisseler", href: "/borsa/tedbirli-hisseler" },
+      { label: "Haberler", href: "/haberler" },
+      { label: "Tedbirli Hisseler", href: "/haberler" },
     ],
   },
   {
     keywords: ["bilanço", "bilanco", "çeyrek", "favök", "net satış", "gelir tablosu", "finansal sonuç"],
     links: [
-      { label: "Kâr/Zarar Hesaplama", href: "/borsa/kar-zarar-hesaplama" },
-      { label: "Borsa Analiz", href: "/borsa" },
+      { label: "Kâr/Zarar Hesaplama", href: "/hesaplayici/kar-zarar-hesaplama" },
+      { label: "Haberler", href: "/haberler" },
       { label: "Tüm Hesaplayıcılar", href: "/hesaplayici" },
     ],
   },
@@ -145,7 +145,7 @@ const ANAHTAR_MAP: { keywords: string[]; links: IlgiliLink[] }[] = [
 
 const VARSAYILAN: IlgiliLink[] = [
   { label: "Tüm Hesaplayıcılar", href: "/hesaplayici" },
-  { label: "Borsa Analiz", href: "/borsa" },
+  { label: "Haberler", href: "/haberler" },
   { label: "Fonlar", href: "/fonlar" },
 ];
 

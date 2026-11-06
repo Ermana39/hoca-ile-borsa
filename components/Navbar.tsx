@@ -2,13 +2,12 @@
 
 import Link from "@/components/NoPrefetchLink";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SiteSearch from "@/components/SiteSearch";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const navLinks = [
   { label: "Ana Sayfa", href: "/" },
-  { label: "Borsa Analiz", href: "/borsa" },
   { label: "Hisseler", href: "/hisseler" },
   { label: "Halka Arz", href: "/halka-arz" },
   { label: "Temettü", href: "/temettu" },
@@ -22,20 +21,6 @@ const mobileNavLinks = navLinks;
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [memberSession, setMemberSession] = useState(false);
-
-  useEffect(() => {
-    const refreshMemberState = () => {
-      setMemberSession(
-        document.cookie
-          .split(";")
-          .some((cookie) => cookie.trim().startsWith("hib_member=1")),
-      );
-    };
-    refreshMemberState();
-    window.addEventListener("hib-auth-changed", refreshMemberState);
-    return () => window.removeEventListener("hib-auth-changed", refreshMemberState);
-  }, []);
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-800/90 bg-slate-950/95 shadow-[0_8px_30px_rgba(2,6,23,0.28)] backdrop-blur-xl">
@@ -71,17 +56,6 @@ export default function Navbar() {
         </nav>
 
         <div className="flex shrink-0 items-center gap-2">
-          <Link
-            href={memberSession ? "/hesabim" : "/giris"}
-            prefetch={false}
-            className="group hidden h-10 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 px-4 text-sm font-extrabold text-white shadow-[0_6px_20px_rgba(37,99,235,0.34)] ring-1 ring-inset ring-white/20 transition duration-200 hover:-translate-y-0.5 hover:from-blue-500 hover:to-cyan-400 hover:shadow-[0_9px_26px_rgba(37,99,235,0.45)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 sm:inline-flex"
-          >
-            <svg className="h-4 w-4 transition-transform group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-              <path d="M20 21a8 8 0 0 0-16 0" strokeLinecap="round" />
-              <circle cx="12" cy="7" r="4" />
-            </svg>
-            {memberSession ? "Hesabım" : "Giriş Yap"}
-          </Link>
           <SiteSearch onOpen={() => setOpen(false)} />
           <ThemeToggle />
           <button
@@ -116,14 +90,6 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href={memberSession ? "/hesabim" : "/giris"}
-            prefetch={false}
-            onClick={() => setOpen(false)}
-            className="mt-3 block rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 px-3 py-3 text-center text-sm font-extrabold text-white shadow-lg ring-1 ring-inset ring-white/20 transition hover:from-blue-500 hover:to-cyan-400 sm:hidden"
-          >
-            {memberSession ? "Hesabım" : "Giriş Yap"}
-          </Link>
         </nav>
       )}
     </header>

@@ -53,9 +53,9 @@ function getRouteSettings(route: string): {
   }
 
   if (
-    route === "/borsa" ||
+    route === "/haberler" ||
     route === "/halka-arz" ||
-    route === "/halka-arz/takvim" ||
+    route === "/halka-arz" ||
     route === "/temettu" ||
     route === "/fonlar"
   ) {
@@ -82,7 +82,7 @@ function getRouteSettings(route: string): {
     return { priority: 0.6, changeFrequency: "daily" };
   }
 
-  if (route.startsWith("/borsa/gunluk-borsa-ozeti/")) {
+  if (route.startsWith("/haber/gunluk-borsa-ozeti/")) {
     return { priority: 0.7, changeFrequency: "monthly" };
   }
 
@@ -162,7 +162,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
 
   const gunlukOzetEntries = getTumGunlukOzetler().map((ozet) => ({
-    route: `/borsa/gunluk-borsa-ozeti/${ozet.slug}`,
+    route: `/haber/gunluk-borsa-ozeti/${ozet.slug}`,
     lastModified: ozet.isoTarih,
   }));
 

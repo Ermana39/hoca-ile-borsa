@@ -66,11 +66,7 @@ const SON_GUNCELLEME_HARIC_ROUTES = new Set([
 ]);
 
 const kategoriKutulari = [
-  {
-    title: "Borsa Analiz",
-    href: "/borsa",
-    icon: "borsa-analiz" as CategoryIconName,
-  },
+
   {
     title: "Hisseler",
     href: "/hisseler",
@@ -100,40 +96,12 @@ const kategoriKutulari = [
 
 const sayfaBasliklari: Record<string, string> = {
   "/": "Ana Sayfa",
-  "/borsa": "Borsa Analiz",
+  "/haberler": "Haberler",
   "/fonlar": "Fonlar",
   "/halka-arz": "Halka Arz",
   "/temettu": "Temettü",
   "/hesaplayici": "Hesaplayıcılar",
-
-  "/borsa/dip-zirve-analizi": "Dip Zirve Analizi",
-  "/borsa/egitim-videolari": "Eğitim Videoları",
-  "/borsa/formasyonlar": "Formasyonlar",
-  "/borsa/formasyonlar/quagr-ikili-dip-formasyonu": "QUAGR İkili Dip Formasyonu",
-  "/borsa/formasyonlar/huner-dusen-genisleyen-takoz-formasyonu":
-    "HUNER Düşen Genişleyen Takoz Formasyonu",
-  "/borsa/geri-alim-programlari": "Geri Alım Programları",
-  "/borsa/gosterge-taramalari": "Gösterge Taramaları",
-  "/borsa/gosterge-taramalari/dusus-trendinde-olanlar":
-    "Düşüş Trendinde Olan Hisseler",
-  "/borsa/gosterge-taramalari/guclu-trend-momentum":
-    "Güçlü Trend ve Momentum Taraması",
-  "/borsa/gosterge-taramalari/macd-al": "MACD Al Veren Hisseler",
-  "/borsa/gosterge-taramalari/macd-sat": "MACD Sat Veren Hisseler",
-  "/borsa/gosterge-taramalari/rsi30-alti": "RSI 30 Altı Hisseler",
-  "/borsa/gosterge-taramalari/rsi70-ustu": "RSI 70 Üstü Hisseler",
-  "/borsa/gosterge-taramalari/yukselis-trendinde-olanlar":
-    "Yükseliş Trendinde Olan Hisseler",
-  "/borsa/gunluk-borsa-ozeti": "Günlük Borsa Özeti",
-  "/borsa/hacim-artisi-analizi": "Hacim Artışı Analizi",
-  "/borsa/hacim-artisi-analizi/aylik-hacim-artisi-olanlar":
-    "Aylık Hacim Artışı Olan Hisseler",
-  "/borsa/hacim-artisi-analizi/haftalik-hacim-artisi-olanlar":
-    "Haftalık Hacim Artışı Olan Hisseler",
-  "/borsa/hacim-artisi-analizi/yillik-hacim-artisi-olanlar":
-    "Yıllık Hacim Artışı Olan Hisseler",
-  "/borsa/tedbirli-hisseler": "Tedbirli Hisseler",
-  "/borsa/yeni-is-anlasmalari": "Yeni İş Anlaşmaları",
+  "/haberler/gunluk-borsa-ozeti": "Günlük Borsa Özeti",
 
   "/fonlar/getiri": "Fon Getiri Analizi",
   "/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler":
@@ -141,7 +109,6 @@ const sayfaBasliklari: Record<string, string> = {
   "/fonlar/tarihsel-veriler": "Fon Tarihsel Veriler",
 
   "/halka-arz/kazanc-hesapla": "Halka Arz Kazanç Hesaplama",
-  "/halka-arz/takvim": "Güncel Halka Arz Takvimi",
   "/halka-arz/onayli-izahnameler": "Onaylı İzahnameler",
   "/halka-arz/onayli-izahnameler/onayli-1": "Onaylı İzahname Detayı",
   "/halka-arz/talep-hesapla": "Halka Arz Talep Hesaplama",
@@ -246,16 +213,8 @@ function getGuncellemeAnaRoute(route: string) {
 
   const anaRouteEslesmeleri: { prefix: string; target: string }[] = [
     {
-      prefix: "/borsa/formasyonlar/",
-      target: "/borsa/formasyonlar",
-    },
-    {
-      prefix: "/borsa/gosterge-taramalari/",
-      target: "/borsa/gosterge-taramalari",
-    },
-    {
-      prefix: "/borsa/hacim-artisi-analizi/",
-      target: "/borsa/hacim-artisi-analizi",
+      prefix: "/haberler/",
+      target: "/haberler",
     },
     {
       prefix: "/fonlar/getiri/",
@@ -643,10 +602,10 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-2 gap-3 p-4 md:grid-cols-4 md:p-5">
               {[
-                { label: "Halka Arz Takvimi", href: "/halka-arz/takvim" },
+                { label: "Halka Arz Takvimi", href: "/halka-arz" },
                 { label: "Mevduat Faizi Hesapla", href: "/hesaplayici/mevduat-faizi" },
                 { label: "Temettü Hesaplama", href: "/temettu/temettu-hesaplama-araci" },
-                { label: "Hisse Kâr / Zarar", href: "/borsa/kar-zarar-hesaplama" },
+                { label: "Hisse Kâr / Zarar", href: "/hesaplayici/kar-zarar-hesaplama" },
               ].map((t) => (
                 <Link
                   key={t.href}

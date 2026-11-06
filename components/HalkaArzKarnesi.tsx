@@ -462,7 +462,7 @@ export default function HalkaArzKarnesi({
             sonuc.guncelFiyat
           )}. Tavan serisi ve marj verisi performans tablosundan izlenir.`
         : "İlk tavan serisi ve halka arz fiyatına göre getiri işlem başladıktan sonra izlenecek.",
-      href: "/halka-arz/tavan-serisi",
+      href: "/halka-arz",
       linkEtiketi: "Tavan serisi tablosunu aç",
     },
   ];
@@ -769,7 +769,7 @@ export default function HalkaArzKarnesi({
                 BIST 100 başlangıcı, ilk işlem gününden önceki son seans kapanışıdır: {" "}
                 {bistKarsilastirmasi.baslangicSlug ? (
                   <Link
-                    href={`/borsa/gunluk-borsa-ozeti/${bistKarsilastirmasi.baslangicSlug}`}
+                    href={`/haber/gunluk-borsa-ozeti/${bistKarsilastirmasi.baslangicSlug}`}
                     prefetch={false}
                     className="font-semibold underline underline-offset-2"
                   >
@@ -785,7 +785,7 @@ export default function HalkaArzKarnesi({
                 )}
                 . Bitiş değeri {" "}
                 <Link
-                  href={`/borsa/gunluk-borsa-ozeti/${bistKarsilastirmasi.bitisSlug}`}
+                  href={`/haber/gunluk-borsa-ozeti/${bistKarsilastirmasi.bitisSlug}`}
                   prefetch={false}
                   className="font-semibold underline underline-offset-2"
                 >
@@ -840,11 +840,11 @@ export default function HalkaArzKarnesi({
           </div>
 
           <Link
-            href="/halka-arz/tavan-serisi"
+            href="/halka-arz"
             prefetch={false}
             className="inline-flex items-center justify-center rounded-xl border border-blue-600 bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
           >
-            Tüm halka arz performansları
+            Halka arz şirketlerini incele
           </Link>
         </div>
 

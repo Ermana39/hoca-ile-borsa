@@ -17,7 +17,7 @@ type PageUpdatesData = {
 
 const GUNCELLEME_GIZLENECEK_SAYFALAR = new Set([
   "/",
-  "/borsa",
+  "/haberler",
   "/fonlar",
   "/halka-arz",
   "/temettu",

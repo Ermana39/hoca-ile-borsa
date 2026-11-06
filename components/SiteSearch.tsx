@@ -47,8 +47,8 @@ const QUICK_LINKS = [
   { label: "Fonlar", href: "/fonlar", type: "fon" as const },
   { label: "Haberler", href: "/haberler", type: "haber" as const },
   {
-    label: "Halka Arz Takvimi",
-    href: "/halka-arz/takvim",
+    label: "Halka Arz",
+    href: "/halka-arz",
     type: "halka-arz" as const,
   },
   { label: "Rehberler", href: "/rehberler", type: "rehber" as const },

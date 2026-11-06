@@ -96,10 +96,8 @@ export default function Footer() {
             links={[
               { label: "Ana Sayfa", href: "/" },
               { label: "Halka Arz", href: "/halka-arz" },
-              { label: "Halka Arz Takvimi", href: "/halka-arz/takvim" },
               { label: "Fonlar", href: "/fonlar" },
               { label: "Temettü", href: "/temettu" },
-              { label: "Borsa Analiz", href: "/borsa" },
               { label: "Rehberler", href: "/rehberler" },
               { label: "Borsa Sözlüğü", href: "/sozluk" },
             ]}
@@ -116,7 +114,7 @@ export default function Footer() {
                 label: "Temettü Hesaplama",
                 href: "/temettu/temettu-hesaplama-araci",
               },
-              { label: "Hisse Kâr / Zarar", href: "/borsa/kar-zarar-hesaplama" },
+              { label: "Hisse Kâr / Zarar", href: "/hesaplayici/kar-zarar-hesaplama" },
               { label: "Kira Artış Hesapla", href: "/hesaplayici/kira-artis" },
             ]}
           />

@@ -549,6 +549,9 @@ for (const row of getiriTable.rows) {
   if (!code) continue;
   assert(!returnCodes.has(code), `Getiri Excel'de tekrarlanan fon kodu: ${code}`);
   returnCodes.add(code);
+  // Uyarı kapsamı üretilen/arşivden korunan fonlar değil, updater'ın
+  // validateSourceData kontrolündeki en güncel tarihsel Excel satırlarıdır.
+  if (!latestSourceByCode.has(code)) orphanReturnCodes.push(code);
   const fund = currentByCode.get(code);
   if (!fund) {
     const latestSourceRow = latestSourceByCode.get(code);
@@ -557,8 +560,6 @@ for (const row of getiriTable.rows) {
         hasDataWarning("gunluk-kaynakta-eksik-finansal-veri"),
         `${code} güncel kaynakta eksik finansal veriyle var ancak uyarı kaydına alınmamış.`
       );
-    } else {
-      orphanReturnCodes.push(code);
     }
     continue;
   }
@@ -573,17 +574,17 @@ const orphanReturnWarning = updateLog.veriUyarilari?.find(
 );
 assert(
   orphanReturnCodes.length === 0 || orphanReturnWarning,
-  "Getiri kaynağında olup güncel fon listesinde bulunmayan fonlar uyarı kaydına alınmamış."
+  "Getiri kaynağında olup en güncel tarihsel Excel kaynağında bulunmayan fonlar uyarı kaydına alınmamış."
 );
 if (orphanReturnWarning) {
   assert(
     orphanReturnWarning.kodSayisi === orphanReturnCodes.length,
-    "Getiri kaynağında olup güncel fon listesinde bulunmayan fon sayısı uyarı kaydıyla uyuşmuyor."
+    "Getiri kaynağında olup en güncel tarihsel Excel kaynağında bulunmayan fon sayısı uyarı kaydıyla uyuşmuyor."
   );
   assert(
     JSON.stringify(orphanReturnWarning.ornekFonKodlari) ===
       JSON.stringify(orphanReturnCodes.slice(0, 20)),
-    "Güncel fon listesinde bulunmayan fonların örnek uyarı kodları kaynakla uyuşmuyor."
+    "En güncel tarihsel Excel kaynağında bulunmayan fonların örnek uyarı kodları kaynakla uyuşmuyor."
   );
 }
 assert(updateLog.islenenFonSayisi === returnCodes.size, "İşlenen getiri fonu sayısı kaynakla uyuşmuyor.");

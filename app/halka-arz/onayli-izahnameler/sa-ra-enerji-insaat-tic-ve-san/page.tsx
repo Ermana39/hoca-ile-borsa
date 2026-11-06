@@ -773,7 +773,7 @@ export default function SaRaEnerjiPage() {
           className="mt-6"
           items={[
             {
-              title: "Güncel halka arz takvimi",
+              title: "Halka arz şirketleri",
               href: "/halka-arz",
               description: "Talep toplama tarihleri, halka arz araçları ve güncel gündem.",
               type: "Halka arz",

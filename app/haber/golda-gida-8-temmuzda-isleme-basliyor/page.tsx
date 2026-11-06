@@ -474,7 +474,7 @@ className="object-cover"
                     Golda Gıda SPK onayı haberi
                   </Link>
                   <Link
-                    href="/halka-arz/takvim"
+                    href="/halka-arz"
                     className="font-medium text-slate-700 underline underline-offset-2"
                   >
                     Güncel halka arz takvimi

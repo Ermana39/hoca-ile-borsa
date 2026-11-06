@@ -344,7 +344,7 @@ export default function HaftalikHalkaArzTakvimiPage() {
               <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-7 text-slate-600">
                 <div className="font-semibold text-slate-800">İlgili Sayfa</div>
                 <Link
-                  href="/halka-arz/takvim"
+                  href="/halka-arz"
                   className="mt-2 inline-block font-medium text-slate-700 underline underline-offset-2"
                 >
                   Güncel Halka Arz Takvimi

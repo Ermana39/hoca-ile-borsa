@@ -517,7 +517,7 @@ className="object-cover"
                   ve kapanış verileri için güncel tabloyu inceleyebilirsiniz.
                 </p>
                 <Link
-                  href="/halka-arz/tavan-serisi"
+                  href="/halka-arz"
                   className="mt-4 inline-flex rounded-lg bg-emerald-600 px-4 py-2 text-sm font-bold text-white transition hover:bg-emerald-700"
                 >
                   Halka arz tavan serisi sayfasına git

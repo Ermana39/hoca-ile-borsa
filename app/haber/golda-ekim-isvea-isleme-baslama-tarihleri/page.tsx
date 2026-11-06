@@ -550,13 +550,13 @@ className="object-cover"
                 </div>
                 <div className="mt-2 flex flex-wrap gap-3">
                   <Link
-                    href="/halka-arz/takvim"
+                    href="/halka-arz"
                     className="font-medium text-slate-700 underline underline-offset-2"
                   >
                     Güncel halka arz takvimi
                   </Link>
                   <Link
-                    href="/halka-arz/tavan-serisi"
+                    href="/halka-arz"
                     className="font-medium text-slate-700 underline underline-offset-2"
                   >
                     Halka arz tavan serisi takibi

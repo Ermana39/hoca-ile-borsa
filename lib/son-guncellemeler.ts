@@ -7,17 +7,17 @@ export type SonGuncellemeItem = {
 export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Günlük Borsa Özeti",
-    href: "/borsa/gunluk-borsa-ozeti",
+    href: "/haberler/gunluk-borsa-ozeti",
     updatedAt: ",30.04.2026 18:30",
   },
   {
     title: "Dip Zirve Analizi",
-    href: "/borsa/dip-zirve-analizi",
+    href: "/haberler",
     updatedAt: "30.04.2026 18:30",
   },
   {
     title: "Eğitim Videoları",
-    href: "/borsa/egitim-videolari",
+    href: "/haberler",
     updatedAt: "14.04.2026 12:50",
   },
   {
@@ -27,22 +27,22 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   },
   {
     title: "Geri Alım Programları",
-    href: "/borsa/geri-alim-programlari",
+    href: "/haberler",
     updatedAt: "30.04.2026 18:30",
   },
   {
     title: "Gösterge Taramaları",
-    href: "/borsa/gosterge-taramalari",
+    href: "/haberler",
     updatedAt: "30.04.2026 18:30",
   },
   {
     title: "Hacim Artışı Analizi",
-    href: "/borsa/hacim-artisi-analizi",
+    href: "/haberler",
     updatedAt: "24.04.2026 19:33",
   },
   {
     title: "Tedbirli Hisseler",
-    href: "/borsa/tedbirli-hisseler",
+    href: "/haberler",
     updatedAt: "30.04.2026 18:30",
   },
   {
@@ -80,4 +80,4 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
     href: "/temettu",
     updatedAt: "29.04.2026 19:05",
   },
-];
+].filter((item) => item.href !== "/haberler" && !item.href.startsWith("/borsa/"));

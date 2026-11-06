@@ -274,6 +274,13 @@ const nextConfig = {
   ...(process.env.HIB_STATIC_EXPORT_BUILD === "1" ? {} : {
   async redirects() {
     return [
+      {"source":"/borsa/kar-zarar-hesaplama","destination":"/hesaplayici/kar-zarar-hesaplama","permanent":true},
+      {"source":"/borsa/ortalama-maliyet","destination":"/hesaplayici/ortalama-maliyet","permanent":true},
+      {"source":"/borsa/sermaye-artirimi","destination":"/hesaplayici/sermaye-artirimi","permanent":true},
+      {"source":"/borsa/gunluk-borsa-ozeti/:tarih","destination":"/haber/gunluk-borsa-ozeti/:tarih","permanent":true},
+      {"source":"/borsa/gunluk-borsa-ozeti","destination":"/haberler/gunluk-borsa-ozeti","permanent":true},
+      { source: "/halka-arz/takvim", destination: "/halka-arz", permanent: true },
+      { source: "/halka-arz/tavan-serisi", destination: "/halka-arz", permanent: true },
       {
         source: "/:path*/",
         has: [
@@ -456,6 +463,7 @@ const nextConfig = {
         destination: "/fonlar/getiri",
         permanent: true,
       },
+      { source: "/borsa/:path*", destination: "/haberler", permanent: true },
     ];
   },
 

@@ -4,7 +4,7 @@
 //  Her gün için AYRI ve KALICI bir veri dosyası: data/gunluk-ozet/<ISO>.json
 //  (örn. data/gunluk-ozet/2026-06-12.json). Yeni bir gün eklemek = yeni bir
 //  JSON dosyası eklemek; eski günler hiç silinmez, kendi URL'lerinde kalır:
-//      /borsa/gunluk-borsa-ozeti/<slug>   (örn. .../12-haziran-2026)
+//      /haber/gunluk-borsa-ozeti/<slug>   (örn. .../12-haziran-2026)
 //
 //  Bu özetler ayrıca otomatik olarak haber akışına da katılır (lib/haberler.ts
 //  içindeki getAllNews bunları NewsItem'a çevirip ekler), böylece ana sayfa ve
@@ -146,7 +146,7 @@ export function getGunlukOzetHaberKayitlari(): GunlukOzetHaberKaydi[] {
     // (örn. "2026-06-12" -> 20260612). Haber id'leri ~1000 aralığında.
     id: Number(o.isoTarih.replace(/-/g, "")) || 0,
     title: o.baslik,
-    href: `/borsa/gunluk-borsa-ozeti/${o.slug}`,
+    href: `/haber/gunluk-borsa-ozeti/${o.slug}`,
     image: o.gorsel || "/gunluk-ozet-discover.webp",
     alt: o.baslik,
     publishedAt: o.isoTarih,

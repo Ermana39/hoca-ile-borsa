@@ -6,7 +6,7 @@ export type PopulerAramaItem = {
 };
 
 const defaultItems: PopulerAramaItem[] = [
-  { label: "Halka arz takvimi", href: "/halka-arz" },
+  { label: "Halka arz şirketleri", href: "/halka-arz" },
   { label: "Onaylı izahnameler", href: "/halka-arz/onayli-izahnameler" },
   { label: "Taslak izahnameler", href: "/halka-arz/taslak-izahnameler" },
   {
@@ -16,7 +16,7 @@ const defaultItems: PopulerAramaItem[] = [
   { label: "Halka arz kaç lot verir?", href: "/rehberler/halka-arz-nedir" },
   { label: "Katılım endeksi", href: "/rehberler/katilim-endeksi" },
   { label: "Temettü takvimi", href: "/temettu" },
-  { label: "Günlük borsa özeti", href: "/borsa/gunluk-borsa-ozeti" },
+  { label: "Günlük borsa özeti", href: "/haberler/gunluk-borsa-ozeti" },
   { label: "Önemli KAP haberleri", href: "/haberler" },
 ];
 

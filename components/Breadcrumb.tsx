@@ -14,7 +14,7 @@ const SEGMENT_LABELS: Record<string, { label: string; href?: string }> = {
   haber: { label: "Haberler", href: "/haberler" },
   haberler: { label: "Haberler", href: "/haberler" },
   "halka-arz": { label: "Halka Arz", href: "/halka-arz" },
-  borsa: { label: "Borsa", href: "/borsa" },
+  borsa: { label: "Borsa", href: "/haberler" },
   rehberler: { label: "Rehberler", href: "/rehberler" },
   temettu: { label: "Temettü", href: "/temettu" },
   "onayli-izahnameler": { label: "Onaylı İzahnameler" },

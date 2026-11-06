@@ -90,7 +90,7 @@ export default function KazancHesaplaClient() {
           Bu araç teorik yüzde 10 tavan senaryosu üretir. Gerçekleşen kapanışları ve
           halka arz performanslarını görmek için{" "}
           <Link
-            href="/halka-arz/tavan-serisi"
+            href="/halka-arz"
             className="font-bold text-blue-800 underline underline-offset-2"
           >
             tavan serisi takip tablosunu

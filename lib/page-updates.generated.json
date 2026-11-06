@@ -1,11 +1,11 @@
 {
   "version": 10,
-  "generatedAt": "2026-10-30T16:32:08.798Z",
+  "generatedAt": "2026-11-06T15:20:45.247Z",
   "pages": [
     {
       "route": "/",
-      "updatedAt": "2026-10-14T07:17:44.138Z",
-      "signature": "b5f2e293c86a106c2002cfddec28139936513e2b5452d4ef2f7d8d5fffc45919",
+      "updatedAt": "2026-11-06T12:57:48.769Z",
+      "signature": "24f97fd91961f580da434859ec78353383f87f9fd0bfaecd1472405e5582ad51",
       "file": "app/page.tsx",
       "trackedFiles": [
         "app/page.tsx",
@@ -19,293 +19,6 @@
         "lib/fon-platform.ts",
         "lib/haberler.ts",
         "lib/indexleme-politikasi.ts"
-      ]
-    },
-    {
-      "route": "/borsa",
-      "updatedAt": "2026-09-17T15:22:47.203Z",
-      "signature": "d1bae05a502b29274c1d13665b56ded54e4b4f1309398a1149b6cdbf93a52420",
-      "file": "app/borsa/page.tsx",
-      "trackedFiles": [
-        "app/borsa/page.tsx",
-        "lib/seo-metadata.ts"
-      ]
-    },
-    {
-      "route": "/borsa/dip-zirve-analizi",
-      "updatedAt": "2026-10-30T16:01:45.960Z",
-      "signature": "318b71b409abbdc61deda16d8ae58dfe40d20aa53caaba9e090c9604b6a34c06",
-      "file": "app/borsa/dip-zirve-analizi/page.tsx",
-      "trackedFiles": [
-        "app/borsa/dip-zirve-analizi/page.tsx",
-        "app/borsa/dip-zirve-analizi/data/dip-zirve.xlsx",
-        "lib/seo-metadata.ts"
-      ]
-    },
-    {
-      "route": "/borsa/egitim-videolari",
-      "updatedAt": "2026-08-18T11:56:05.439Z",
-      "signature": "66c8ade41b9bbe1997a421820f50376dc2f2efa14633c23d989aa9c9fc509ea8",
-      "file": "app/borsa/egitim-videolari/page.tsx",
-      "trackedFiles": [
-        "app/borsa/egitim-videolari/page.tsx",
-        "lib/seo-metadata.ts"
-      ]
-    },
-    {
-      "route": "/borsa/geri-alim-programlari",
-      "updatedAt": "2026-10-30T16:02:08.004Z",
-      "signature": "937c16c080e990554a0ff105831da311d92af0debf1de00164849acf0fd863f0",
-      "file": "app/borsa/geri-alim-programlari/page.tsx",
-      "trackedFiles": [
-        "app/borsa/geri-alim-programlari/page.tsx",
-        "app/borsa/geri-alim-programlari/data/geri-alim.xlsx",
-        "lib/seo-metadata.ts"
-      ]
-    },
-    {
-      "route": "/borsa/gosterge-taramalari",
-      "updatedAt": "2026-10-30T16:06:22.300Z",
-      "signature": "ef6609cdfbb3d1033b0f0cb773cdd9a37a38628b494e725c0cc6f8c6087f7770",
-      "file": "app/borsa/gosterge-taramalari/page.tsx",
-      "trackedFiles": [
-        "app/borsa/gosterge-taramalari/page.tsx",
-        "app/borsa/gosterge-taramalari/data/düsüs-trendi.xlsx",
-        "app/borsa/gosterge-taramalari/data/guclu-trend-momentum.xlsx",
-        "app/borsa/gosterge-taramalari/data/macd-al.xlsx",
-        "app/borsa/gosterge-taramalari/data/macd-sat.xlsx",
-        "app/borsa/gosterge-taramalari/data/rsi40-alti.xlsx",
-        "app/borsa/gosterge-taramalari/data/rsi70-ustu.xlsx",
-        "app/borsa/gosterge-taramalari/data/yükselis-hacim.xlsx",
-        "app/borsa/gosterge-taramalari/data/Yükselis-trendi.xlsx",
-        "lib/seo-metadata.ts"
-      ]
-    },
-    {
-      "route": "/borsa/gosterge-taramalari/dusus-trendinde-olanlar",
-      "updatedAt": "2026-10-30T16:05:24.589Z",
-      "signature": "a4bccc2cdd480c10c3797b1ef4d516fb065657939216dd020939b3e010858f9d",
-      "file": "app/borsa/gosterge-taramalari/dusus-trendinde-olanlar/page.tsx",
-      "trackedFiles": [
-        "app/borsa/gosterge-taramalari/dusus-trendinde-olanlar/page.tsx",
-        "lib/seo-metadata.ts",
-        "lib/gosterge-taramalari.ts",
-        "lib/gosterge-tarama-seo.ts",
-        "app/borsa/gosterge-taramalari/data/düsüs-trendi.xlsx"
-      ]
-    },
-    {
-      "route": "/borsa/gosterge-taramalari/guclu-trend-momentum",
-      "updatedAt": "2026-10-30T16:06:12.978Z",
-      "signature": "457391695ede9da3ec1df1f9f9668431c0283a69a9da01e5e3b2ef3b30d329c6",
-      "file": "app/borsa/gosterge-taramalari/guclu-trend-momentum/page.tsx",
-      "trackedFiles": [
-        "app/borsa/gosterge-taramalari/guclu-trend-momentum/page.tsx",
-        "lib/seo-metadata.ts",
-        "lib/gosterge-taramalari.ts",
-        "app/borsa/gosterge-taramalari/data/guclu-trend-momentum.xlsx"
-      ]
-    },
-    {
-      "route": "/borsa/gosterge-taramalari/macd-al",
-      "updatedAt": "2026-10-30T16:06:03.391Z",
-      "signature": "80c2318229c22f28ec5f716b06591234e7684355c3389cb4897b35b560bf81c7",
-      "file": "app/borsa/gosterge-taramalari/macd-al/page.tsx",
-      "trackedFiles": [
-        "app/borsa/gosterge-taramalari/macd-al/page.tsx",
-        "lib/seo-metadata.ts",
-        "lib/gosterge-taramalari.ts",
-        "lib/gosterge-tarama-seo.ts",
-        "app/borsa/gosterge-taramalari/data/macd-al.xlsx"
-      ]
-    },
-    {
-      "route": "/borsa/gosterge-taramalari/macd-sat",
-      "updatedAt": "2026-10-30T16:05:08.605Z",
-      "signature": "88750ae904f52846687fba286dc7851931b87e254ed6025779bd0d6608b0d5a0",
-      "file": "app/borsa/gosterge-taramalari/macd-sat/page.tsx",
-      "trackedFiles": [
-        "app/borsa/gosterge-taramalari/macd-sat/page.tsx",
-        "lib/seo-metadata.ts",
-        "lib/gosterge-taramalari.ts",
-        "lib/gosterge-tarama-seo.ts",
-        "app/borsa/gosterge-taramalari/data/macd-sat.xlsx"
-      ]
-    },
-    {
-      "route": "/borsa/gosterge-taramalari/rsi40-alti",
-      "updatedAt": "2026-10-30T16:04:54.652Z",
-      "signature": "55db7be1750856f5737af0be03af19035a1c2775add64e70dafeccb3fc05ee02",
-      "file": "app/borsa/gosterge-taramalari/rsi40-alti/page.tsx",
-      "trackedFiles": [
-        "app/borsa/gosterge-taramalari/rsi40-alti/page.tsx",
-        "lib/seo-metadata.ts",
-        "lib/gosterge-taramalari.ts",
-        "app/borsa/gosterge-taramalari/data/rsi40-alti.xlsx"
-      ]
-    },
-    {
-      "route": "/borsa/gosterge-taramalari/rsi70-ustu",
-      "updatedAt": "2026-10-30T16:06:22.300Z",
-      "signature": "21efb4241039fde1548bf3d6a3647fc91b1446189709310eccf590c8451f739c",
-      "file": "app/borsa/gosterge-taramalari/rsi70-ustu/page.tsx",
-      "trackedFiles": [
-        "app/borsa/gosterge-taramalari/rsi70-ustu/page.tsx",
-        "lib/seo-metadata.ts",
-        "lib/gosterge-taramalari.ts",
-        "app/borsa/gosterge-taramalari/data/rsi70-ustu.xlsx"
-      ]
-    },
-    {
-      "route": "/borsa/gosterge-taramalari/yukselis-hacim",
-      "updatedAt": "2026-10-30T16:05:51.376Z",
-      "signature": "26e3227898037f1d56f6dfe7ffda2e6bb01f9348f772ca260c4b7fe8f28d093e",
-      "file": "app/borsa/gosterge-taramalari/yukselis-hacim/page.tsx",
-      "trackedFiles": [
-        "app/borsa/gosterge-taramalari/yukselis-hacim/page.tsx",
-        "lib/seo-metadata.ts",
-        "lib/gosterge-taramalari.ts",
-        "app/borsa/gosterge-taramalari/data/yükselis-hacim.xlsx"
-      ]
-    },
-    {
-      "route": "/borsa/gosterge-taramalari/yukselis-trendinde-olanlar",
-      "updatedAt": "2026-10-30T16:05:39.308Z",
-      "signature": "26eec0614eea31330f91cc406f69074050c7aee410a0564f60e1777bfd828d4c",
-      "file": "app/borsa/gosterge-taramalari/yukselis-trendinde-olanlar/page.tsx",
-      "trackedFiles": [
-        "app/borsa/gosterge-taramalari/yukselis-trendinde-olanlar/page.tsx",
-        "lib/seo-metadata.ts",
-        "lib/gosterge-taramalari.ts",
-        "lib/gosterge-tarama-seo.ts",
-        "app/borsa/gosterge-taramalari/data/Yükselis-trendi.xlsx"
-      ]
-    },
-    {
-      "route": "/borsa/gunluk-borsa-ozeti",
-      "updatedAt": "2026-09-05T10:05:17.287Z",
-      "signature": "cc178199c254043423ed9376e376b84997593716af16fcac250fea47ffa354fd",
-      "file": "app/borsa/gunluk-borsa-ozeti/page.tsx",
-      "trackedFiles": [
-        "app/borsa/gunluk-borsa-ozeti/page.tsx",
-        "lib/json-ld.ts",
-        "lib/seo-metadata.ts",
-        "lib/gunluk-ozet.ts"
-      ]
-    },
-    {
-      "route": "/borsa/gunluk-borsa-ozeti/[tarih]",
-      "updatedAt": "2026-09-17T15:22:48.178Z",
-      "signature": "d2410a92a278676862e45efe6853c0b289551cf51d105a60fe321a771dfec66a",
-      "file": "app/borsa/gunluk-borsa-ozeti/[tarih]/page.tsx",
-      "trackedFiles": [
-        "app/borsa/gunluk-borsa-ozeti/[tarih]/page.tsx",
-        "lib/json-ld.ts",
-        "lib/gunluk-ozet.ts",
-        "lib/seo-metadata.ts"
-      ]
-    },
-    {
-      "route": "/borsa/hacim-artisi-analizi",
-      "updatedAt": "2026-08-12T14:21:29.076Z",
-      "signature": "2df5d3a4145cea05444a019fd83014c25c482bc03c333187881dfc8c2eacb614",
-      "file": "app/borsa/hacim-artisi-analizi/page.tsx",
-      "trackedFiles": [
-        "app/borsa/hacim-artisi-analizi/page.tsx",
-        "lib/seo-metadata.ts"
-      ]
-    },
-    {
-      "route": "/borsa/hacim-artisi-analizi/aylik-hacim-artisi-olanlar",
-      "updatedAt": "2026-10-23T15:44:01.283Z",
-      "signature": "9493b21b3c4913ec288383465e9e18bfe58db7341e71aa3335fd69474ccf6ef4",
-      "file": "app/borsa/hacim-artisi-analizi/aylik-hacim-artisi-olanlar/page.tsx",
-      "trackedFiles": [
-        "app/borsa/hacim-artisi-analizi/aylik-hacim-artisi-olanlar/page.tsx",
-        "lib/seo-metadata.ts"
-      ]
-    },
-    {
-      "route": "/borsa/hacim-artisi-analizi/haftalik-hacim-artisi-olanlar",
-      "updatedAt": "2026-10-23T15:55:09.069Z",
-      "signature": "8086131362d7d7e6e08cc8f2159f4112f1bf9da21279719434d768c9e2752493",
-      "file": "app/borsa/hacim-artisi-analizi/haftalik-hacim-artisi-olanlar/page.tsx",
-      "trackedFiles": [
-        "app/borsa/hacim-artisi-analizi/haftalik-hacim-artisi-olanlar/page.tsx",
-        "lib/seo-metadata.ts"
-      ]
-    },
-    {
-      "route": "/borsa/hacim-artisi-analizi/yillik-hacim-artisi-olanlar",
-      "updatedAt": "2026-10-23T15:38:15.267Z",
-      "signature": "751b7e712245c9c753042d4e06d5f18b0bcee61eb182115c1ccefd353248db25",
-      "file": "app/borsa/hacim-artisi-analizi/yillik-hacim-artisi-olanlar/page.tsx",
-      "trackedFiles": [
-        "app/borsa/hacim-artisi-analizi/yillik-hacim-artisi-olanlar/page.tsx",
-        "lib/seo-metadata.ts"
-      ]
-    },
-    {
-      "route": "/borsa/hisse-karsilastirma",
-      "updatedAt": "2026-09-17T15:18:34.978Z",
-      "signature": "7348a456ceb4223b1351ea481f40656191860767d891de0c86699df2d7d59b1f",
-      "file": "app/borsa/hisse-karsilastirma/page.tsx",
-      "trackedFiles": [
-        "app/borsa/hisse-karsilastirma/page.tsx",
-        "lib/seo-metadata.ts",
-        "lib/hisse-karsilastirma.ts"
-      ]
-    },
-    {
-      "route": "/borsa/kar-zarar-hesaplama",
-      "updatedAt": "2026-08-12T14:21:29.082Z",
-      "signature": "cec909562e703c866fddf981dc598e703f0a5b6f2e28c46e6e0464454c758a8b",
-      "file": "app/borsa/kar-zarar-hesaplama/page.tsx",
-      "trackedFiles": [
-        "app/borsa/kar-zarar-hesaplama/page.tsx",
-        "lib/seo-metadata.ts"
-      ]
-    },
-    {
-      "route": "/borsa/ortalama-maliyet",
-      "updatedAt": "2026-08-12T14:21:29.085Z",
-      "signature": "414e44e030377d26dd5a5068a721acc9860b13fe1c0509b0ce351057e0716714",
-      "file": "app/borsa/ortalama-maliyet/page.tsx",
-      "trackedFiles": [
-        "app/borsa/ortalama-maliyet/page.tsx",
-        "lib/seo-metadata.ts"
-      ]
-    },
-    {
-      "route": "/borsa/sermaye-artirimi",
-      "updatedAt": "2026-08-12T14:21:29.091Z",
-      "signature": "7ee3d621229f4880f2bad1dfb114cb3424318a5aadd6e79b064b0c8a6bd3884f",
-      "file": "app/borsa/sermaye-artirimi/page.tsx",
-      "trackedFiles": [
-        "app/borsa/sermaye-artirimi/page.tsx",
-        "lib/seo-metadata.ts"
-      ]
-    },
-    {
-      "route": "/borsa/tedbirli-hisseler",
-      "updatedAt": "2026-10-30T16:02:51.922Z",
-      "signature": "bf2721f2aa93b334b0a90c953de331a97ae0bb65af5b75c736618e63a63e6d43",
-      "file": "app/borsa/tedbirli-hisseler/page.tsx",
-      "trackedFiles": [
-        "app/borsa/tedbirli-hisseler/page.tsx",
-        "app/borsa/tedbirli-hisseler/data/tedbir.xlsx",
-        "lib/seo-metadata.ts"
-      ]
-    },
-    {
-      "route": "/borsa/yeni-is-anlasmalari",
-      "updatedAt": "2026-10-30T16:03:09.861Z",
-      "signature": "6cf061301dd1d25c944ef93ad17014cd4d4db507de3161125b50829f856e560b",
-      "file": "app/borsa/yeni-is-anlasmalari/page.tsx",
-      "trackedFiles": [
-        "app/borsa/yeni-is-anlasmalari/page.tsx",
-        "app/borsa/yeni-is-anlasmalari/data/yeni-is-anlasmalari.xlsx",
-        "lib/seo-metadata.ts"
       ]
     },
     {
@@ -465,15 +178,6 @@
       ]
     },
     {
-      "route": "/giris",
-      "updatedAt": "2026-09-09T11:09:52.760Z",
-      "signature": "5cc4934a0d76fd8cf44c2cc767afc197b17946a813a372599adcd658bb151b0e",
-      "file": "app/giris/page.tsx",
-      "trackedFiles": [
-        "app/giris/page.tsx"
-      ]
-    },
-    {
       "route": "/gizlilik-politikasi",
       "updatedAt": "2026-08-06T14:17:28.048Z",
       "signature": "5ba6e238245d37e1d8bf3b5a9e2372e21e1694a9f84713e6df8d890a47c1cf2c",
@@ -518,8 +222,8 @@
     },
     {
       "route": "/haber/10-temmuz-2026-halka-arzlar-gun-sonu-kapanis-degerlendirmesi",
-      "updatedAt": "2026-09-05T10:05:17.399Z",
-      "signature": "506a638088acf18982a69b4d0398ddc2c9e4fde127f7affcd979e4a4bbb47d2e",
+      "updatedAt": "2026-11-06T12:52:56.731Z",
+      "signature": "d3c62c3763d73f851721ad4e6b7626211daa522cd5d210d28791319b6d9c4ae7",
       "file": "app/haber/10-temmuz-2026-halka-arzlar-gun-sonu-kapanis-degerlendirmesi/page.tsx",
       "trackedFiles": [
         "app/haber/10-temmuz-2026-halka-arzlar-gun-sonu-kapanis-degerlendirmesi/page.tsx",
@@ -612,8 +316,8 @@
     },
     {
       "route": "/haber/14-temmuz-2026-son-halka-arzlar-gun-sonu-degerlendirmesi",
-      "updatedAt": "2026-08-12T14:21:28.521Z",
-      "signature": "2c39cdadb12252bd2bf26f4d888094d123359814cc452c358756453fa1f52091",
+      "updatedAt": "2026-11-06T12:52:56.954Z",
+      "signature": "39722b4e411fe17c50adfe33a1cb61642e3e2cd773f50f51107d5acfd9177677",
       "file": "app/haber/14-temmuz-2026-son-halka-arzlar-gun-sonu-degerlendirmesi/page.tsx",
       "trackedFiles": [
         "app/haber/14-temmuz-2026-son-halka-arzlar-gun-sonu-degerlendirmesi/page.tsx",
@@ -750,8 +454,8 @@
     },
     {
       "route": "/haber/20-26-temmuz-2026-haftalik-halka-arz-takvimi",
-      "updatedAt": "2026-09-05T10:05:17.431Z",
-      "signature": "375135618313a17c991c5259e3c58d4689aef33f28c448c0a57aee558b1f687a",
+      "updatedAt": "2026-11-06T12:52:57.159Z",
+      "signature": "226ee8d1ff9687d3a11234149cee385d7c71ca5a434236f9cbff5c7eee190b0c",
       "file": "app/haber/20-26-temmuz-2026-haftalik-halka-arz-takvimi/page.tsx",
       "trackedFiles": [
         "app/haber/20-26-temmuz-2026-haftalik-halka-arz-takvimi/page.tsx",
@@ -1702,8 +1406,8 @@
     },
     {
       "route": "/haber/golda-ekim-isvea-isleme-baslama-tarihleri",
-      "updatedAt": "2026-09-05T10:05:17.543Z",
-      "signature": "e56b3ec737005498d4d29b4883f3414da317a29f0101971a220c3b0851ebfb94",
+      "updatedAt": "2026-11-06T12:52:57.355Z",
+      "signature": "96c7b49d80725c03bf31635b6a0b1ef9a190795e5b517d2f00404e1623b9132c",
       "file": "app/haber/golda-ekim-isvea-isleme-baslama-tarihleri/page.tsx",
       "trackedFiles": [
         "app/haber/golda-ekim-isvea-isleme-baslama-tarihleri/page.tsx",
@@ -1714,8 +1418,8 @@
     },
     {
       "route": "/haber/golda-gida-8-temmuzda-isleme-basliyor",
-      "updatedAt": "2026-09-05T10:05:17.544Z",
-      "signature": "ab6f1755fc31b93b1168b88b3953617d2e5dc3d9396657e4735ba37f11e34559",
+      "updatedAt": "2026-11-06T12:52:57.587Z",
+      "signature": "8cdf1b410e415db48b77c0e40f0d5e4184fc159b2e652a97de2e3ffdf9ba1eb9",
       "file": "app/haber/golda-gida-8-temmuzda-isleme-basliyor/page.tsx",
       "trackedFiles": [
         "app/haber/golda-gida-8-temmuzda-isleme-basliyor/page.tsx",
@@ -1757,6 +1461,18 @@
         "lib/json-ld.ts",
         "lib/seo-metadata.ts",
         "lib/haber-tarih.ts"
+      ]
+    },
+    {
+      "route": "/haber/gunluk-borsa-ozeti/[tarih]",
+      "updatedAt": "2026-11-06T12:53:03.078Z",
+      "signature": "9052a9e250c3ace8a6f6c2548b69db103112e8f59038aa7f903faa81546d4857",
+      "file": "app/haber/gunluk-borsa-ozeti/[tarih]/page.tsx",
+      "trackedFiles": [
+        "app/haber/gunluk-borsa-ozeti/[tarih]/page.tsx",
+        "lib/json-ld.ts",
+        "lib/gunluk-ozet.ts",
+        "lib/seo-metadata.ts"
       ]
     },
     {
@@ -2195,8 +1911,8 @@
     },
     {
       "route": "/haber/onumuzdeki-hafta-halka-arz-takvimi-6-12-temmuz-2026",
-      "updatedAt": "2026-09-05T10:05:17.590Z",
-      "signature": "b618f09f478c8b9def1179bf0e51521f14d241c4e2a54038a5098517e02c1aeb",
+      "updatedAt": "2026-11-06T12:52:57.785Z",
+      "signature": "b72ce82558b9cd7e5545a77b044be9cdf3795beedf2fc202e6715b84ea3cd58d",
       "file": "app/haber/onumuzdeki-hafta-halka-arz-takvimi-6-12-temmuz-2026/page.tsx",
       "trackedFiles": [
         "app/haber/onumuzdeki-hafta-halka-arz-takvimi-6-12-temmuz-2026/page.tsx",
@@ -2487,8 +2203,8 @@
     },
     {
       "route": "/haber/sohoe-hissesi-6-temmuzda-isleme-basliyor",
-      "updatedAt": "2026-09-05T10:05:17.618Z",
-      "signature": "18ddc105895129ef65c5e0a0d067b215d602ebe349cffb545d3dc27b12803ade",
+      "updatedAt": "2026-11-06T12:52:58.004Z",
+      "signature": "c267ba8601e3371e1b8cf747302b3e6398cad9b455b4690deedab7de6f72bcb9",
       "file": "app/haber/sohoe-hissesi-6-temmuzda-isleme-basliyor/page.tsx",
       "trackedFiles": [
         "app/haber/sohoe-hissesi-6-temmuzda-isleme-basliyor/page.tsx",
@@ -2883,6 +2599,18 @@
       ]
     },
     {
+      "route": "/haberler/gunluk-borsa-ozeti",
+      "updatedAt": "2026-11-06T12:53:03.078Z",
+      "signature": "a9e4c71dc2a4883c9cb7526650fbcd5422b746ff213c14bb29f7fae100cc95d7",
+      "file": "app/haberler/gunluk-borsa-ozeti/page.tsx",
+      "trackedFiles": [
+        "app/haberler/gunluk-borsa-ozeti/page.tsx",
+        "lib/json-ld.ts",
+        "lib/seo-metadata.ts",
+        "lib/gunluk-ozet.ts"
+      ]
+    },
+    {
       "route": "/haberler/kategori/[kategori]",
       "updatedAt": "2026-08-30T14:21:53.653Z",
       "signature": "66d9638c08a78042bd8f5cf94f5a8e91c596a03e7816fc2f6b8a13bf7aebb68a",
@@ -2927,8 +2655,8 @@
     },
     {
       "route": "/halka-arz",
-      "updatedAt": "2026-08-18T17:14:19.434Z",
-      "signature": "9bd9d10348856a475fcdcfa3e36b4f874449f772ed17c1aa243e29cde6383aa9",
+      "updatedAt": "2026-11-06T13:16:37.786Z",
+      "signature": "24275d2483fa03cf464973fdf364ee945f36c3c6643c486587fbdafa7bf54272",
       "file": "app/halka-arz/page.tsx",
       "trackedFiles": [
         "app/halka-arz/page.tsx"
@@ -3001,8 +2729,8 @@
     },
     {
       "route": "/halka-arz/onayli-izahnameler/ekim-turizm-tic-ve-san",
-      "updatedAt": "2026-09-06T08:37:15.087Z",
-      "signature": "eadd72e9985ba6b8d024d3ed6946b14617ea7ca0b7c0726969730e4e05c9b509",
+      "updatedAt": "2026-11-06T13:01:11.295Z",
+      "signature": "2a808bb4d6d5d3fc4373165ab5c03891101ad85a2eeb39a89dfd71be32188d9d",
       "file": "app/halka-arz/onayli-izahnameler/ekim-turizm-tic-ve-san/page.tsx",
       "trackedFiles": [
         "app/halka-arz/onayli-izahnameler/ekim-turizm-tic-ve-san/page.tsx",
@@ -3021,8 +2749,8 @@
     },
     {
       "route": "/halka-arz/onayli-izahnameler/golda-gida-san-ve-tic",
-      "updatedAt": "2026-09-06T08:37:15.087Z",
-      "signature": "05b1714cdf79e4153d6e5f53d339882be64d451cd3c6611d912f818cffeca230",
+      "updatedAt": "2026-11-06T13:01:11.927Z",
+      "signature": "7a550be2b678131276c7a8916a69ed861cc7df5ca51f737e7b013aae0fbf10cb",
       "file": "app/halka-arz/onayli-izahnameler/golda-gida-san-ve-tic/page.tsx",
       "trackedFiles": [
         "app/halka-arz/onayli-izahnameler/golda-gida-san-ve-tic/page.tsx",
@@ -3041,8 +2769,8 @@
     },
     {
       "route": "/halka-arz/onayli-izahnameler/isvea-seramik-ve-banyo-urunleri-sanayi",
-      "updatedAt": "2026-09-06T08:37:15.087Z",
-      "signature": "7f8c631b909aca936b6b2cfed6f613d76dde669c1eb558eb7f3bbb9a14fe7758",
+      "updatedAt": "2026-11-06T13:01:12.248Z",
+      "signature": "dccbcc982a5b6e399eaeb80f4af80e18a8b8e659bd6c07f9b8d9eafbb55840cc",
       "file": "app/halka-arz/onayli-izahnameler/isvea-seramik-ve-banyo-urunleri-sanayi/page.tsx",
       "trackedFiles": [
         "app/halka-arz/onayli-izahnameler/isvea-seramik-ve-banyo-urunleri-sanayi/page.tsx",
@@ -3097,8 +2825,8 @@
     },
     {
       "route": "/halka-arz/onayli-izahnameler/orzaks-ilac-ve-kimya-san-tic",
-      "updatedAt": "2026-09-06T08:37:15.087Z",
-      "signature": "9c8961cdc3af345ac4bc05e4c45463cd9a1f3017618b035a91657b386c2f6196",
+      "updatedAt": "2026-11-06T13:01:12.808Z",
+      "signature": "9041634dd1f211e8302ab3e69a0d3898f62442e2dbd6c2911adeb6cc86babab2",
       "file": "app/halka-arz/onayli-izahnameler/orzaks-ilac-ve-kimya-san-tic/page.tsx",
       "trackedFiles": [
         "app/halka-arz/onayli-izahnameler/orzaks-ilac-ve-kimya-san-tic/page.tsx",
@@ -3117,8 +2845,8 @@
     },
     {
       "route": "/halka-arz/onayli-izahnameler/sa-ra-enerji-insaat-tic-ve-san",
-      "updatedAt": "2026-09-06T08:37:15.087Z",
-      "signature": "1d259f42b867bc475fa032993b36b573b7efe6f376fd262eb898992894bdfc6d",
+      "updatedAt": "2026-11-06T13:01:13.099Z",
+      "signature": "774e4dae68da31867df0d0f7dba23b02f884ce070b7ded4aa4ed5a9bfabbb51a",
       "file": "app/halka-arz/onayli-izahnameler/sa-ra-enerji-insaat-tic-ve-san/page.tsx",
       "trackedFiles": [
         "app/halka-arz/onayli-izahnameler/sa-ra-enerji-insaat-tic-ve-san/page.tsx",
@@ -3128,8 +2856,8 @@
     },
     {
       "route": "/halka-arz/onayli-izahnameler/saat-ve-saat-san-ve-tic",
-      "updatedAt": "2026-09-06T08:37:15.087Z",
-      "signature": "b5f76f18fad78ea91970b6cb140c6f482dcb8ac6cf03cdaf6b78c1ed9298c90f",
+      "updatedAt": "2026-11-06T13:01:13.393Z",
+      "signature": "7bbf94025f92a54213f354ea19db2035dfc7ef717142a3e9100405075320c29d",
       "file": "app/halka-arz/onayli-izahnameler/saat-ve-saat-san-ve-tic/page.tsx",
       "trackedFiles": [
         "app/halka-arz/onayli-izahnameler/saat-ve-saat-san-ve-tic/page.tsx",
@@ -3139,8 +2867,8 @@
     },
     {
       "route": "/halka-arz/onayli-izahnameler/soho-giyim-ve-enerji",
-      "updatedAt": "2026-09-06T08:37:15.087Z",
-      "signature": "c7e1696deec24aeaa5ba2bfef8743bd4eff8991b923f56fc74db4581cad76892",
+      "updatedAt": "2026-11-06T13:01:13.721Z",
+      "signature": "3b609224ae284ea430ee24de24bf4609886372e4d9d9afc84160cc1f2f476cb8",
       "file": "app/halka-arz/onayli-izahnameler/soho-giyim-ve-enerji/page.tsx",
       "trackedFiles": [
         "app/halka-arz/onayli-izahnameler/soho-giyim-ve-enerji/page.tsx",
@@ -3167,20 +2895,6 @@
       ]
     },
     {
-      "route": "/halka-arz/takvim",
-      "updatedAt": "2026-09-15T15:57:03.010Z",
-      "signature": "99ee573b3ca83b7688d6d4e24ff264712d57783d519d1424c106b5cc88eefbe2",
-      "file": "app/halka-arz/takvim/page.tsx",
-      "trackedFiles": [
-        "app/halka-arz/takvim/page.tsx",
-        "lib/json-ld.ts",
-        "data/halka-arz-sonuclari.ts",
-        "lib/hisse-icerik-hedefi.ts",
-        "lib/halka-arz.ts",
-        "lib/seo-metadata.ts"
-      ]
-    },
-    {
       "route": "/halka-arz/talep-hesapla",
       "updatedAt": "2026-09-06T08:36:42.717Z",
       "signature": "86e5211d89db71716ac5882688b5f7b8b8a937904d2ce6d25cee3f9180b4b17d",
@@ -3203,8 +2917,8 @@
     },
     {
       "route": "/halka-arz/taslak-izahnameler/[slug]",
-      "updatedAt": "2026-09-06T08:37:15.087Z",
-      "signature": "811f6f69f25f6331aa1ba23ce861613ceb3e3fa2c0449baf8dbb63e6b288ac9e",
+      "updatedAt": "2026-11-06T13:01:11.617Z",
+      "signature": "e1380515ec7480fad6ae9257e5cef62d6cea416fc821ea30c919f9c1a8e2c0b7",
       "file": "app/halka-arz/taslak-izahnameler/[slug]/page.tsx",
       "trackedFiles": [
         "app/halka-arz/taslak-izahnameler/[slug]/page.tsx",
@@ -3225,31 +2939,9 @@
       ]
     },
     {
-      "route": "/halka-arz/tavan-serisi",
-      "updatedAt": "2026-10-30T16:31:53.273Z",
-      "signature": "5577675eec581e8bf2d9deedd7071f82935c6863fdb3f668ab456c6746c75ff9",
-      "file": "app/halka-arz/tavan-serisi/page.tsx",
-      "trackedFiles": [
-        "app/halka-arz/tavan-serisi/page.tsx",
-        "data/halka-arz-sonuclari.ts",
-        "lib/halka-arz-performans.ts",
-        "lib/halka-arz.ts",
-        "lib/hisse-icerik-hedefi.ts"
-      ]
-    },
-    {
-      "route": "/hesabim",
-      "updatedAt": "2026-09-09T11:10:01.443Z",
-      "signature": "f4ce4003ecf0436986ef2a1218d0b3a5c714dbff53b6cc845091a25021cee2a8",
-      "file": "app/hesabim/page.tsx",
-      "trackedFiles": [
-        "app/hesabim/page.tsx"
-      ]
-    },
-    {
       "route": "/hesaplayici",
-      "updatedAt": "2026-10-14T07:13:23.277Z",
-      "signature": "64c6b3bec785a4302639c56386bf2e5c9e4a60b6c7a353ed947d2b3a3cb8d507",
+      "updatedAt": "2026-11-06T12:52:58.461Z",
+      "signature": "a32fc966d5383f3989d34d3f736dbfcc8827f49a60c982cea861013ea6c1418c",
       "file": "app/hesaplayici/page.tsx",
       "trackedFiles": [
         "app/hesaplayici/page.tsx"
@@ -3319,6 +3011,16 @@
       ]
     },
     {
+      "route": "/hesaplayici/kar-zarar-hesaplama",
+      "updatedAt": "2026-11-06T12:52:52.193Z",
+      "signature": "2705dd8eab25903d1d36fded6cc2e9368d940e6eb75ca5cc79079f6c7ddf166e",
+      "file": "app/hesaplayici/kar-zarar-hesaplama/page.tsx",
+      "trackedFiles": [
+        "app/hesaplayici/kar-zarar-hesaplama/page.tsx",
+        "lib/seo-metadata.ts"
+      ]
+    },
+    {
       "route": "/hesaplayici/kidem-tazminati",
       "updatedAt": "2026-09-05T10:05:17.731Z",
       "signature": "40fd145688cfbd309c227b0fa77b7200fdde380993378a396133e34607f87a64",
@@ -3353,6 +3055,26 @@
       "file": "app/hesaplayici/mevduat-faizi/page.tsx",
       "trackedFiles": [
         "app/hesaplayici/mevduat-faizi/page.tsx"
+      ]
+    },
+    {
+      "route": "/hesaplayici/ortalama-maliyet",
+      "updatedAt": "2026-11-06T12:52:53.380Z",
+      "signature": "af010777c13772bdc06b8a1c498f2361b7d077e28ba85c16f1ebb1ae6810686c",
+      "file": "app/hesaplayici/ortalama-maliyet/page.tsx",
+      "trackedFiles": [
+        "app/hesaplayici/ortalama-maliyet/page.tsx",
+        "lib/seo-metadata.ts"
+      ]
+    },
+    {
+      "route": "/hesaplayici/sermaye-artirimi",
+      "updatedAt": "2026-11-06T12:52:54.154Z",
+      "signature": "f09ab50427271436037cd1e7e2d763a64dd616d9b43dc7312a296655843bc4d8",
+      "file": "app/hesaplayici/sermaye-artirimi/page.tsx",
+      "trackedFiles": [
+        "app/hesaplayici/sermaye-artirimi/page.tsx",
+        "lib/seo-metadata.ts"
       ]
     },
     {
@@ -3421,15 +3143,6 @@
       ]
     },
     {
-      "route": "/kayit",
-      "updatedAt": "2026-09-09T17:55:32.530Z",
-      "signature": "07060bd7e3370fa6fe5db90d03f3fe796a7c8de71e260dba2541fc174bac98ff",
-      "file": "app/kayit/page.tsx",
-      "trackedFiles": [
-        "app/kayit/page.tsx"
-      ]
-    },
-    {
       "route": "/kontrol-paneli-4827",
       "updatedAt": "2026-08-18T11:34:26.930Z",
       "signature": "c5c010b8ce7aa2b23f3efcecc623db389e7aff5fd505c684545214e802df6dec",
@@ -3459,21 +3172,11 @@
     },
     {
       "route": "/kvkk-aydinlatma-metni",
-      "updatedAt": "2026-09-09T11:10:08.527Z",
-      "signature": "5cb30d3abfe82816504d581203ee79e2a4c45091f90cae3976af8939b8668ce4",
+      "updatedAt": "2026-11-06T12:56:05.856Z",
+      "signature": "7d6f27b0644674ddef983044ae8405f16eae5c8f17555469d29a171aec1a0654",
       "file": "app/kvkk-aydinlatma-metni/page.tsx",
       "trackedFiles": [
         "app/kvkk-aydinlatma-metni/page.tsx"
-      ]
-    },
-    {
-      "route": "/portfoyum",
-      "updatedAt": "2026-10-13T18:58:25.065Z",
-      "signature": "f6a5d894c0a02d2999edeec2e8597cd37af7238300459e016f94b3ad206f353c",
-      "file": "app/portfoyum/page.tsx",
-      "trackedFiles": [
-        "app/portfoyum/page.tsx",
-        "lib/fon-platform.ts"
       ]
     },
     {
@@ -3696,27 +3399,9 @@
       ]
     },
     {
-      "route": "/sifre-yenile",
-      "updatedAt": "2026-09-09T11:09:59.279Z",
-      "signature": "8884898cf3f1b4b5737be89714f5e0b7f783929be0a89682561e1433c5404edd",
-      "file": "app/sifre-yenile/page.tsx",
-      "trackedFiles": [
-        "app/sifre-yenile/page.tsx"
-      ]
-    },
-    {
-      "route": "/sifremi-unuttum",
-      "updatedAt": "2026-09-09T11:09:57.068Z",
-      "signature": "67a842603f6dbccabbea21373e5b73fade6df1c980ea843a903c44a96c39389c",
-      "file": "app/sifremi-unuttum/page.tsx",
-      "trackedFiles": [
-        "app/sifremi-unuttum/page.tsx"
-      ]
-    },
-    {
       "route": "/sozluk",
-      "updatedAt": "2026-09-05T10:05:17.792Z",
-      "signature": "ef7905bddee2d434251c6a81bf772c433646e69c8d825c234afebe153d7ce511",
+      "updatedAt": "2026-11-06T13:10:34.775Z",
+      "signature": "e4e98838c8dc357ca518c5ed939ac026f4592087c7201e142fbf0dd404147807",
       "file": "app/sozluk/page.tsx",
       "trackedFiles": [
         "app/sozluk/page.tsx",
@@ -3726,8 +3411,8 @@
     },
     {
       "route": "/sozluk/[slug]",
-      "updatedAt": "2026-09-05T10:05:17.794Z",
-      "signature": "d218fe0b492266cff6f4962408c2a4dcbb8bc9568d24252810cd580d9509ba11",
+      "updatedAt": "2026-11-06T13:10:34.775Z",
+      "signature": "a813a109d6db3d5502ca9328a11e4b952c87ad00f3271ca837cde23887e60cad",
       "file": "app/sozluk/[slug]/page.tsx",
       "trackedFiles": [
         "app/sozluk/[slug]/page.tsx",
@@ -3752,26 +3437,6 @@
       "file": "app/temettu/aralik-ayi-temettu-takvimi/page.tsx",
       "trackedFiles": [
         "app/temettu/aralik-ayi-temettu-takvimi/page.tsx",
-        "lib/temettuler.ts"
-      ]
-    },
-    {
-      "route": "/temettu/ekim-ayi-temettu-takvimi",
-      "updatedAt": "2026-08-06T14:17:28.529Z",
-      "signature": "688a88bc4c2c165387e848086967b60b5e6f5bc5ce164d57d60581751b8b07bc",
-      "file": "app/temettu/ekim-ayi-temettu-takvimi/page.tsx",
-      "trackedFiles": [
-        "app/temettu/ekim-ayi-temettu-takvimi/page.tsx",
-        "lib/temettuler.ts"
-      ]
-    },
-    {
-      "route": "/temettu/eylul-ayi-temettu-takvimi",
-      "updatedAt": "2026-08-06T14:17:28.533Z",
-      "signature": "c45f0bd5f0f80ba96403dbbf1408abcad1aa8d3cd491518079c95341c35ca1e3",
-      "file": "app/temettu/eylul-ayi-temettu-takvimi/page.tsx",
-      "trackedFiles": [
-        "app/temettu/eylul-ayi-temettu-takvimi/page.tsx",
         "lib/temettuler.ts"
       ]
     },
@@ -3827,24 +3492,6 @@
       "file": "app/temettu/temettu-verimi-hesaplama/page.tsx",
       "trackedFiles": [
         "app/temettu/temettu-verimi-hesaplama/page.tsx"
-      ]
-    },
-    {
-      "route": "/uyelik-sozlesmesi",
-      "updatedAt": "2026-09-09T12:03:28.986Z",
-      "signature": "5d4e6f8087f05dbbb493492b610c8754e96a4a19f7077f79c7af628f1acf5262",
-      "file": "app/uyelik-sozlesmesi/page.tsx",
-      "trackedFiles": [
-        "app/uyelik-sozlesmesi/page.tsx"
-      ]
-    },
-    {
-      "route": "/uyelik/dogrula",
-      "updatedAt": "2026-09-09T11:10:03.915Z",
-      "signature": "2260068e68f65eb5ae7ffd42ea3f5a2e9009590d5f2c0da0bd0e513fcd56c7db",
-      "file": "app/uyelik/dogrula/page.tsx",
-      "trackedFiles": [
-        "app/uyelik/dogrula/page.tsx"
       ]
     },
     {

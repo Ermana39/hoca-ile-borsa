@@ -272,7 +272,7 @@ className="object-cover"
                 <div className="mt-4 rounded-xl border border-blue-200 bg-blue-50 p-4 text-sm leading-7 text-blue-900 md:text-base">
                   Güncel halka arz takvimine ve tarih değişikliklerine{" "}
                   <Link
-                    href="/halka-arz/takvim"
+                    href="/halka-arz"
                     className="font-bold underline underline-offset-4"
                   >
                     Halka Arz Takvimi
@@ -478,7 +478,7 @@ className="object-cover"
                   İlgili Sayfa
                 </div>
                 <Link
-                  href="/halka-arz/takvim"
+                  href="/halka-arz"
                   className="mt-2 inline-block font-medium text-slate-700 underline underline-offset-2"
                 >
                   Güncel Halka Arz Takvimi
