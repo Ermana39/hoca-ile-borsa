@@ -1,5 +1,5 @@
-import { readFileSync } from "node:fs";
-import { pathToFileURL } from "node:url";
+projectId: "prj_Mav2Hjo1h0RZ4Sk32Ous6jBAqgWy",
+teamId: "team_4azx2QMVhWE56jAXDI04W1Hp",
 
 export const POLICY = Object.freeze({
   projectId: "prj_yTcoMzIYcrOYf99oGIwa2lzS8QiP",
