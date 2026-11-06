@@ -1,9 +1,9 @@
-projectId: "prj_Mav2Hjo1h0RZ4Sk32Ous6jBAqgWy",
-teamId: "team_4azx2QMVhWE56jAXDI04W1Hp",
+import { readFileSync } from "node:fs";
+import { pathToFileURL } from "node:url";
 
 export const POLICY = Object.freeze({
-  projectId: "prj_yTcoMzIYcrOYf99oGIwa2lzS8QiP",
-  teamId: "team_7rKxGL54A2iKpsexQzJt1A4P",
+  projectId: "prj_Mav2Hjo1h0RZ4Sk32Ous6jBAqgWy",
+  teamId: "team_4azx2QMVhWE56jAXDI04W1Hp",
   projectName: "hoca-ile-borsa",
   repository: "Ermana39/hoca-ile-borsa",
   hostname: "www.hocaileborsa.com",
