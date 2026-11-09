@@ -1,14 +1,16 @@
 import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
+import { homedir } from "node:os";
 
 const root = process.cwd();
 const publicRoot = path.join(root, "public");
 const supportedNewsVersions = new Set([1, 2]);
 
-function run(command, args, { capture = false, allowFailure = false } = {}) {
+function run(command, args, { capture = false, allowFailure = false, env = process.env } = {}) {
   const result = spawnSync(command, args, {
     cwd: root,
+    env,
     encoding: capture ? "utf8" : undefined,
     stdio: capture ? ["ignore", "pipe", "pipe"] : "inherit",
     shell: false,
@@ -183,20 +185,34 @@ function resolveNpxCli() {
 }
 
 function runVercel(args, options) {
-  return run(process.execPath, [resolveNpxCli(), "vercel", ...args], options);
+  const env = { ...process.env };
+  for (const key of ["VERCEL_TOKEN", "VERCEL_ORG_ID", "VERCEL_PROJECT_ID"]) delete env[key];
+  return run(process.execPath, [resolveNpxCli(), "vercel", "--global-config", path.join(homedir(), ".vercel-hesaplar", "hocaileborsa-hobby"), "--scope", "hoca-ile-borsa", ...args], { ...options, env });
+}
+
+function linkedProject() {
+  const projectFile = path.join(root, ".vercel", "project.json");
+  let project;
+  if (fs.existsSync(projectFile)) {
+    project = JSON.parse(fs.readFileSync(projectFile, "utf8"));
+  } else {
+    const repoFile = path.join(root, ".vercel", "repo.json");
+    if (!fs.existsSync(repoFile)) throw new Error("Vercel proje baglantisi bulunamadi.");
+    const repo = JSON.parse(fs.readFileSync(repoFile, "utf8"));
+    const links = (repo.projects ?? []).filter((p) => p.name === "hoca-ile-borsa" && p.directory === ".");
+    if (links.length !== 1) throw new Error("Vercel proje baglantisi belirsiz.");
+    project = { projectName: links[0].name, projectId: links[0].id, orgId: links[0].orgId };
+  }
+  if (project.projectName !== "hoca-ile-borsa" || !project.projectId || !project.orgId) {
+    throw new Error("Yanlis veya eksik Vercel proje baglantisi.");
+  }
+  const config = JSON.parse(fs.readFileSync(path.join(homedir(), ".vercel-hesaplar", "hocaileborsa-hobby", "config.json"), "utf8"));
+  if (config.currentTeam !== project.orgId) throw new Error("Vercel oturumu ve proje hesabi uyusmuyor.");
+  return project;
 }
 
 function linkedProjectName() {
-  const projectFile = path.join(root, ".vercel", "project.json");
-  if (!fs.existsSync(projectFile)) {
-    throw new Error("Vercel proje baglantisi bulunamadi. Once `npx vercel link` calistirilmali.");
-  }
-
-  const project = JSON.parse(fs.readFileSync(projectFile, "utf8"));
-  if (typeof project?.projectName !== "string" || !project.projectName.trim()) {
-    throw new Error(".vercel/project.json icinde projectName bulunamadi.");
-  }
-  return project.projectName.trim();
+  return linkedProject().projectName;
 }
 
 function deploymentsForCommit(projectName, commitSha) {
@@ -380,6 +396,15 @@ function runPublishPreflight() {
     fs.rmSync(temporaryIndex, { force: true });
     fs.rmSync(temporaryLock, { force: true });
   }
+}
+
+if (process.argv.includes("--vercel-kontrol")) {
+  const project = linkedProject();
+  const result = runVercel(["project", "inspect", project.projectName, "--json"], { capture: true });
+  const remote = JSON.parse(result.stdout);
+  if (remote.id !== project.projectId || remote.name !== project.projectName) throw new Error("Vercel proje kimligi uyusmuyor.");
+  console.log("Hoca ile Borsa: dogru oturum ve proje baglantisi dogrulandi.");
+  process.exit(0);
 }
 
 if (process.argv.includes("--recover-git-lock-only")) {
