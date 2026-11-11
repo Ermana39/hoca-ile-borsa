@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-10T08:00:33.941Z",
+  "generatedAt": "2026-11-11T15:30:15.828Z",
   "duplicateKontrolu": {
-    "added": 1959,
+    "added": 1980,
     "updated": 0,
-    "skipped": 1959
+    "skipped": 1980
   },
   "islenenFonSayisi": 1073,
-  "islenenSnapshotSayisi": 2013,
-  "kaliciSnapshotSayisi": 1776348,
-  "temizlenenGecersizSnapshotSayisi": 54,
-  "yoneticiyleEslesenFonSayisi": 1930,
-  "bilinmeyenYoneticiSayisi": 29,
+  "islenenSnapshotSayisi": 2014,
+  "kaliciSnapshotSayisi": 1778328,
+  "temizlenenGecersizSnapshotSayisi": 34,
+  "yoneticiyleEslesenFonSayisi": 1950,
+  "bilinmeyenYoneticiSayisi": 30,
   "bilinmeyenYoneticiFonlari": [
     {
       "fonKodu": "OPU",
@@ -128,13 +128,17 @@
     {
       "fonKodu": "ABS",
       "fonAdi": "AK PORTFÖY ÖPY MUTLAK GETİRİ HEDEFLİ SERBEST ÖZEL FON"
+    },
+    {
+      "fonKodu": "KLK",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY ELEKTRİFİKASYON KATILIM FONU"
     }
   ],
   "kaynakDogrulama": {
-    "sonKaynakTarihi": "2026-11-10",
-    "sonKaynakKayitSayisi": 2013,
-    "sonKaynakGecerliKayitSayisi": 1959,
-    "gitGecmisindeIncelenenSurumSayisi": 149,
+    "sonKaynakTarihi": "2026-11-11",
+    "sonKaynakKayitSayisi": 2014,
+    "sonKaynakGecerliKayitSayisi": 1980,
+    "gitGecmisindeIncelenenSurumSayisi": 150,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
     "manuelGecmisIceAktarimlari": [],
@@ -169,28 +173,28 @@
       }
     ],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 54,
+      "sayi": 34,
       "ornekler": [
-        "AES:2026-11-10",
-        "APJ:2026-11-10",
-        "ARL:2026-11-10",
-        "ARM:2026-11-10",
-        "BDI:2026-11-10",
-        "DOH:2026-11-10",
-        "EES:2026-11-10",
-        "EME:2026-11-10",
-        "FNN:2026-11-10",
-        "GFL:2026-11-10",
-        "GKM:2026-11-10",
-        "GKO:2026-11-10",
-        "GMC:2026-11-10",
-        "GMV:2026-11-10",
-        "GNZ:2026-11-10",
-        "GSU:2026-11-10",
-        "GUM:2026-11-10",
-        "HAG:2026-11-10",
-        "HGJ:2026-11-10",
-        "HMV:2026-11-10"
+        "BDI:2026-11-11",
+        "DOH:2026-11-11",
+        "EES:2026-11-11",
+        "EME:2026-11-11",
+        "FNN:2026-11-11",
+        "GKM:2026-11-11",
+        "GKO:2026-11-11",
+        "GMV:2026-11-11",
+        "GSU:2026-11-11",
+        "HAG:2026-11-11",
+        "HGJ:2026-11-11",
+        "HMV:2026-11-11",
+        "HPF:2026-11-11",
+        "IMG:2026-11-11",
+        "KPB:2026-11-11",
+        "MP4:2026-11-11",
+        "MT8:2026-11-11",
+        "OZC:2026-11-11",
+        "PBE:2026-11-11",
+        "PBR:2026-11-11"
       ]
     }
   },
@@ -202,14 +206,13 @@
     "senkronizeEdildi": false,
     "neden": "Fon açılış tahmin dosyası bulunamadı."
   },
-  "veriUyarisiSayisi": 147,
+  "veriUyarisiSayisi": 149,
   "veriUyarilari": [
     {
       "tur": "getiri-kaynaginda-guncel-listede-yok",
-      "tarih": "2026-11-10",
-      "kodSayisi": 2,
+      "tarih": "2026-11-11",
+      "kodSayisi": 1,
       "ornekFonKodlari": [
-        "KLK",
         "SHU"
       ]
     },
@@ -756,6 +759,14 @@
       "hamGetiri": 7.99090909
     },
     {
+      "fonKodu": "RKH",
+      "tarih": "2026-11-11",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 796228.17,
+      "hesaplananFonToplamDeger": 1169452.5,
+      "farkOrani": 0.46874042
+    },
+    {
       "fonKodu": "RBP",
       "tarih": "2026-08-21",
       "tur": "fon-toplam-degeri-duzeltildi",
@@ -1052,6 +1063,14 @@
       "kaynakFonToplamDeger": 998263.44,
       "hesaplananFonToplamDeger": 992667.91,
       "farkOrani": 0.00560526
+    },
+    {
+      "fonKodu": "CBD",
+      "tarih": "2026-11-11",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 1021462.05,
+      "hesaplananFonToplamDeger": 1026897.84,
+      "farkOrani": 0.00532158
     },
     {
       "fonKodu": "PDS",
