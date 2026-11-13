@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-12T07:07:03.983Z",
+  "generatedAt": "2026-11-13T15:22:16.622Z",
   "duplicateKontrolu": {
-    "added": 1929,
+    "added": 1982,
     "updated": 0,
-    "skipped": 1929
+    "skipped": 1982
   },
-  "islenenFonSayisi": 1074,
-  "islenenSnapshotSayisi": 2014,
-  "kaliciSnapshotSayisi": 1780257,
-  "temizlenenGecersizSnapshotSayisi": 85,
-  "yoneticiyleEslesenFonSayisi": 1903,
-  "bilinmeyenYoneticiSayisi": 26,
+  "islenenFonSayisi": 1075,
+  "islenenSnapshotSayisi": 2015,
+  "kaliciSnapshotSayisi": 1782239,
+  "temizlenenGecersizSnapshotSayisi": 33,
+  "yoneticiyleEslesenFonSayisi": 1951,
+  "bilinmeyenYoneticiSayisi": 31,
   "bilinmeyenYoneticiFonlari": [
     {
       "fonKodu": "OPU",
@@ -70,6 +70,22 @@
       "fonAdi": "GOLDEN GLOBAL PORTFÖY KISA VADELİ KİRA SERTİFİKALARI KATILIM FONU"
     },
     {
+      "fonKodu": "VHK",
+      "fonAdi": "V PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)"
+    },
+    {
+      "fonKodu": "VPH",
+      "fonAdi": "V PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)"
+    },
+    {
+      "fonKodu": "VPD",
+      "fonAdi": "V PORTFÖY BİRİNCİ DEĞİŞKEN FON"
+    },
+    {
+      "fonKodu": "VPE",
+      "fonAdi": "V PORTFÖY İKİNCİ DEĞİŞKEN FON"
+    },
+    {
       "fonKodu": "ICM",
       "fonAdi": "İNCİR PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU"
     },
@@ -116,13 +132,17 @@
     {
       "fonKodu": "KLK",
       "fonAdi": "KUVEYT TÜRK PORTFÖY ELEKTRİFİKASYON KATILIM FONU"
+    },
+    {
+      "fonKodu": "YZE",
+      "fonAdi": "BTCTURK PORTFÖY YAPAY ZEKA TEKNOLOJİLERİ ŞİRKETLERİ DEĞİŞKEN FON"
     }
   ],
   "kaynakDogrulama": {
-    "sonKaynakTarihi": "2026-11-12",
-    "sonKaynakKayitSayisi": 2014,
-    "sonKaynakGecerliKayitSayisi": 1929,
-    "gitGecmisindeIncelenenSurumSayisi": 151,
+    "sonKaynakTarihi": "2026-11-13",
+    "sonKaynakKayitSayisi": 2015,
+    "sonKaynakGecerliKayitSayisi": 1982,
+    "gitGecmisindeIncelenenSurumSayisi": 152,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
     "manuelGecmisIceAktarimlari": [],
@@ -157,28 +177,28 @@
       }
     ],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 85,
+      "sayi": 33,
       "ornekler": [
-        "AES:2026-11-12",
-        "APJ:2026-11-12",
-        "ARL:2026-11-12",
-        "ARM:2026-11-12",
-        "BDI:2026-11-12",
-        "DOH:2026-11-12",
-        "EES:2026-11-12",
-        "EME:2026-11-12",
-        "FNN:2026-11-12",
-        "FSU:2026-11-12",
-        "GEC:2026-11-12",
-        "GFI:2026-11-12",
-        "GFY:2026-11-12",
-        "GGA:2026-11-12",
-        "GGR:2026-11-12",
-        "GKM:2026-11-12",
-        "GKO:2026-11-12",
-        "GMC:2026-11-12",
-        "GMV:2026-11-12",
-        "GNZ:2026-11-12"
+        "BDI:2026-11-13",
+        "DOH:2026-11-13",
+        "EES:2026-11-13",
+        "EME:2026-11-13",
+        "FNN:2026-11-13",
+        "GKM:2026-11-13",
+        "GKO:2026-11-13",
+        "GMV:2026-11-13",
+        "GSU:2026-11-13",
+        "HAG:2026-11-13",
+        "HGJ:2026-11-13",
+        "HMV:2026-11-13",
+        "HPF:2026-11-13",
+        "IMG:2026-11-13",
+        "KPB:2026-11-13",
+        "MP4:2026-11-13",
+        "OZC:2026-11-13",
+        "PBE:2026-11-13",
+        "PBR:2026-11-13",
+        "PCS:2026-11-13"
       ]
     }
   },
@@ -190,11 +210,11 @@
     "senkronizeEdildi": false,
     "neden": "Fon açılış tahmin dosyası bulunamadı."
   },
-  "veriUyarisiSayisi": 152,
+  "veriUyarisiSayisi": 155,
   "veriUyarilari": [
     {
       "tur": "getiri-kaynaginda-guncel-listede-yok",
-      "tarih": "2026-11-12",
+      "tarih": "2026-11-13",
       "kodSayisi": 2,
       "ornekFonKodlari": [
         "NEE",
@@ -500,6 +520,14 @@
       "kaynakFonToplamDeger": 7643.34,
       "hesaplananFonToplamDeger": 7688.22,
       "farkOrani": 0.00587178
+    },
+    {
+      "fonKodu": "HEH",
+      "tarih": "2026-11-13",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 8190.94,
+      "hesaplananFonToplamDeger": 8237.38,
+      "farkOrani": 0.00566968
     },
     {
       "fonKodu": "ION",
@@ -882,6 +910,12 @@
       "hamGetiri": 3.69922309
     },
     {
+      "fonKodu": "BPD",
+      "tarih": "2026-11-13",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 2.33296337
+    },
+    {
       "fonKodu": "BUC",
       "tarih": "2026-09-03",
       "tur": "fon-toplam-degeri-duzeltildi",
@@ -1164,6 +1198,14 @@
       "kaynakFonToplamDeger": 12383580.19,
       "hesaplananFonToplamDeger": 23697414.26,
       "farkOrani": 0.91361576
+    },
+    {
+      "fonKodu": "MT8",
+      "tarih": "2026-11-13",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 8154306.27,
+      "hesaplananFonToplamDeger": 23697414.26,
+      "farkOrani": 1.90612266
     },
     {
       "fonKodu": "YLZ",
