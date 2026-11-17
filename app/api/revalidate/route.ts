@@ -22,9 +22,6 @@ const VALID_SCOPES = new Set(["borsa", "fonlar", "haberler", "data", "all"]);
 const BORSA_PATHS = [
   "/borsa",
   "/borsa/dip-zirve-analizi",
-  "/borsa/geri-alim-programlari",
-  "/borsa/tedbirli-hisseler",
-  "/borsa/yeni-is-anlasmalari",
   "/borsa/gosterge-taramalari",
   "/borsa/gosterge-taramalari/macd-al",
   "/borsa/gosterge-taramalari/macd-sat",
