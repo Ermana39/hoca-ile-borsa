@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import styles from "./HeaderAdUnit.module.css";
+import { ADS_ENABLED } from "@/lib/ads-config";
 
 const ADSENSE_CLIENT = "ca-pub-9613627671991162";
 const HEADER_AD_SLOT = "7730442435";
@@ -18,6 +19,8 @@ export default function HeaderAdUnit() {
   const [reklamBos, setReklamBos] = useState(false);
 
   useEffect(() => {
+    if (!ADS_ENABLED) return;
+
     const reklam = reklamRef.current;
     if (!reklam) return;
 
@@ -43,6 +46,8 @@ export default function HeaderAdUnit() {
 
     return () => gozlemci.disconnect();
   }, []);
+
+  if (!ADS_ENABLED) return null;
 
   return (
     <aside

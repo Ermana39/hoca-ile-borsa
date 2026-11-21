@@ -8,6 +8,7 @@ import HeaderAdUnit from "@/components/HeaderAdUnit";
 import Footer from "@/components/Footer";
 import AdBlockingRecoveryTag from "@/components/AdBlockingRecoveryTag";
 import { THEME_INITIALIZATION_SCRIPT } from "@/lib/theme";
+import { ADS_ENABLED } from "@/lib/ads-config";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.hocaileborsa.com"),
@@ -119,12 +120,16 @@ export default function RootLayout({
             `,
           }}
         />
-        <AdBlockingRecoveryTag />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9613627671991162"
-          crossOrigin="anonymous"
-        />
+        {ADS_ENABLED && (
+          <>
+            <AdBlockingRecoveryTag />
+            <script
+              async
+              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9613627671991162"
+              crossOrigin="anonymous"
+            />
+          </>
+        )}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: serializeJsonLd(organizationJsonLd) }}

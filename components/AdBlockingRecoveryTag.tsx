@@ -1,3 +1,5 @@
+import { ADS_ENABLED } from "@/lib/ads-config";
+
 const AD_BLOCKING_RECOVERY_SCRIPT_SRC =
   "https://fundingchoicesmessages.google.com/i/pub-9613627671991162?ers=1";
 
@@ -11,6 +13,8 @@ const GOOGLE_FC_PRESENT_SCRIPT =
  * AdSense panelinden yönetilir; burada ikinci bir tespit sistemi çalıştırılmaz.
  */
 export default function AdBlockingRecoveryTag() {
+  if (!ADS_ENABLED) return null;
+
   return (
     <>
       <script async src={AD_BLOCKING_RECOVERY_SCRIPT_SRC} />

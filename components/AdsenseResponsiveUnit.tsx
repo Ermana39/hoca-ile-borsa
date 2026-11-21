@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { ADS_ENABLED } from "@/lib/ads-config";
 
 const ADSENSE_CLIENT = "ca-pub-9613627671991162";
 
@@ -28,7 +29,7 @@ export default function AdsenseResponsiveUnit({
   const gecerliSlot = Boolean(temizSlot && /^\d+$/.test(temizSlot));
 
   useEffect(() => {
-    if (!gecerliSlot) return;
+    if (!ADS_ENABLED || !gecerliSlot) return;
 
     const reklam = reklamRef.current;
     if (!reklam) return;
@@ -59,7 +60,7 @@ export default function AdsenseResponsiveUnit({
     return () => gozlemci.disconnect();
   }, [gecerliSlot]);
 
-  if (!gecerliSlot) return null;
+  if (!ADS_ENABLED || !gecerliSlot) return null;
 
   return (
     <aside
