@@ -83,6 +83,8 @@ function classify(files, forceFull = false) {
   const funds = full || fundExcel.some((file) => changed.includes(file)) || has((file) =>
     [
       "scripts/update-funds.mjs",
+      "scripts/prepare-funds.mjs",
+      "scripts/import-tefas-official-history.mjs",
       "scripts/test-fund-platform.mjs",
       "scripts/lib/bist-islem-takvimi.mjs",
       "scripts/lib/xlsx.mjs",
@@ -168,7 +170,7 @@ function prepare(groups) {
     run(process.execPath, ["scripts/check-temel-oranlar.mjs"], "Temel oranlari dogrula");
   }
   if (groups.funds) {
-    run(process.execPath, ["scripts/update-funds.mjs"], "Fon verilerini guncelle");
+    run(process.execPath, ["scripts/prepare-funds.mjs"], "Fon verilerini guncelle");
     run(process.execPath, ["scripts/test-fund-platform.mjs"], "Fon verilerini dogrula");
   }
   if (groups.news) run(process.execPath, ["scripts/generate-news-dates.mjs"], "Haber tarihlerini guncelle");

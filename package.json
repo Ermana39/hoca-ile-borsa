@@ -6,7 +6,7 @@
   "scripts": {
     "data:prepare": "npm run excel-to-json && npm run update-funds",
     "dev": "next dev",
-    "update-funds": "node scripts/update-funds.mjs && node scripts/test-fund-platform.mjs",
+    "update-funds": "node scripts/prepare-funds.mjs && node scripts/test-fund-platform.mjs",
     "test-funds": "node scripts/test-fund-platform.mjs",
     "excel-to-json": "node scripts/excel-to-json.mjs && node scripts/sync-bist-company-profiles.mjs --from-ratio-analysis --missing-only --write && node scripts/sync-hisse-hak-kullanimlari.mjs --from-ratio-analysis --missing-only --write && node scripts/check-temel-oranlar.mjs",
     "fonlar:gecmis-aktar": "node scripts/import-fund-history.mjs",
@@ -39,11 +39,14 @@
     "build": "node scripts/smart-build.mjs",
     "yayinla": "node scripts/publish.mjs",
     "yayinla:kontrol": "node scripts/publish.mjs --preflight",
+    "deployments:check": "node scripts/cleanup-deployments.mjs",
+    "deployments:cleanup": "node scripts/cleanup-deployments.mjs --apply",
+    "test:deployment-retention": "node --test scripts/test-deployment-retention.mjs",
     "start": "next start",
     "lint": "eslint",
     "test:security": "node --test scripts/test-api-security.mjs scripts/test-rendering-security.mjs scripts/test-security-config.mjs",
     "test:ad-blocking-recovery": "node scripts/test-ad-blocking-recovery.mjs",
-    "test:build-tools": "node --test scripts/test-build-tools.mjs"
+    "test:build-tools": "node --test scripts/test-build-tools.mjs scripts/test-prepare-funds.mjs"
   },
   "dependencies": {
     "@upstash/redis": "^1.37.0",

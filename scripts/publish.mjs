@@ -438,4 +438,15 @@ if (initialStatus) {
   console.log("Yeni dosya degisikligi yok; mevcut commit'in production durumu kontrol ediliyor.");
 }
 
-deployCurrentCommit();
+try {
+  deployCurrentCommit();
+} finally {
+  // Başarılı/başarısız yayın tamamlandığında yalnızca son üç başarılı
+  // production sürümünü tut. Temizlik hatası başarılı yayını başarısız göstermez.
+  try {
+    const cleanup = run(process.execPath, ["scripts/cleanup-deployments.mjs", "--apply"], { allowFailure: true });
+    if (cleanup.status !== 0) console.warn("Dağıtım temizliği tamamlanamadı. node scripts/cleanup-deployments.mjs --apply ile tekrar deneyin.");
+  } catch (error) {
+    console.warn(`Dağıtım temizliği başlatılamadı: ${error.message}`);
+  }
+}

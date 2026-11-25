@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-19T15:24:49.997Z",
+  "generatedAt": "2026-11-25T10:58:18.472Z",
   "duplicateKontrolu": {
     "added": 0,
     "updated": 0,
-    "skipped": 3962
+    "skipped": 3958
   },
   "islenenFonSayisi": 1076,
-  "islenenSnapshotSayisi": 2014,
-  "kaliciSnapshotSayisi": 1790144,
+  "islenenSnapshotSayisi": 2012,
+  "kaliciSnapshotSayisi": 1798058,
   "temizlenenGecersizSnapshotSayisi": 33,
-  "yoneticiyleEslesenFonSayisi": 1949,
-  "bilinmeyenYoneticiSayisi": 32,
+  "yoneticiyleEslesenFonSayisi": 1946,
+  "bilinmeyenYoneticiSayisi": 33,
   "bilinmeyenYoneticiFonlari": [
     {
       "fonKodu": "OPU",
@@ -140,13 +140,17 @@
     {
       "fonKodu": "NEE",
       "fonAdi": "NEO PORTFÖY ENERJİ VE EMTİA ŞİRKETLERİ DEĞİŞKEN FON"
+    },
+    {
+      "fonKodu": "EKH",
+      "fonAdi": "EMLAK KATILIM PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)"
     }
   ],
   "kaynakDogrulama": {
-    "sonKaynakTarihi": "2026-11-19",
-    "sonKaynakKayitSayisi": 2014,
-    "sonKaynakGecerliKayitSayisi": 1981,
-    "gitGecmisindeIncelenenSurumSayisi": 154,
+    "sonKaynakTarihi": "2026-11-25",
+    "sonKaynakKayitSayisi": 2012,
+    "sonKaynakGecerliKayitSayisi": 1979,
+    "gitGecmisindeIncelenenSurumSayisi": 155,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
     "manuelGecmisIceAktarimlari": [],
@@ -206,31 +210,45 @@
         "eklenenSnapshotSayisi": 1981,
         "guncellenenSnapshotSayisi": 0,
         "atlananSnapshotSayisi": 0
+      },
+      {
+        "tarih": "2026-11-25T10:54:52.492Z",
+        "kaynak": "https://www.tefas.gov.tr/tr/fon-verileri",
+        "ilkTarih": "2026-11-20",
+        "sonTarih": "2026-11-24",
+        "kaynakTarihSayisi": 3,
+        "fonSayisi": 1980,
+        "kaynakKayitSayisi": 6036,
+        "gecerliSnapshotSayisi": 5935,
+        "gecersizKayitSayisi": 101,
+        "eklenenSnapshotSayisi": 5935,
+        "guncellenenSnapshotSayisi": 0,
+        "atlananSnapshotSayisi": 0
       }
     ],
     "temizlenenGecersizSnapshotlar": {
       "sayi": 33,
       "ornekler": [
-        "BDI:2026-11-19",
-        "DOH:2026-11-19",
-        "EES:2026-11-19",
-        "EME:2026-11-19",
-        "FNN:2026-11-19",
-        "GKM:2026-11-19",
-        "GKO:2026-11-19",
-        "GMV:2026-11-19",
-        "GSU:2026-11-19",
-        "HAG:2026-11-19",
-        "HGJ:2026-11-19",
-        "HMV:2026-11-19",
-        "HPF:2026-11-19",
-        "IMG:2026-11-19",
-        "KPB:2026-11-19",
-        "MP4:2026-11-19",
-        "OZC:2026-11-19",
-        "PBE:2026-11-19",
-        "PBR:2026-11-19",
-        "PCS:2026-11-19"
+        "BDI:2026-11-25",
+        "DOH:2026-11-25",
+        "EES:2026-11-25",
+        "EME:2026-11-25",
+        "FNN:2026-11-25",
+        "GKM:2026-11-25",
+        "GKO:2026-11-25",
+        "GMV:2026-11-25",
+        "GSU:2026-11-25",
+        "HAG:2026-11-25",
+        "HGJ:2026-11-25",
+        "HMV:2026-11-25",
+        "HPF:2026-11-25",
+        "HUS:2026-11-25",
+        "IMG:2026-11-25",
+        "KPB:2026-11-25",
+        "MP4:2026-11-25",
+        "OZC:2026-11-25",
+        "PBE:2026-11-25",
+        "PBR:2026-11-25"
       ]
     }
   },
@@ -242,14 +260,14 @@
     "senkronizeEdildi": false,
     "neden": "Fon açılış tahmin dosyası bulunamadı."
   },
-  "veriUyarisiSayisi": 162,
+  "veriUyarisiSayisi": 169,
   "veriUyarilari": [
     {
       "tur": "getiri-kaynaginda-guncel-listede-yok",
-      "tarih": "2026-11-19",
+      "tarih": "2026-11-25",
       "kodSayisi": 2,
       "ornekFonKodlari": [
-        "EKH",
+        "EPJ",
         "SHU"
       ]
     },
@@ -578,6 +596,14 @@
       "farkOrani": 0.00630812
     },
     {
+      "fonKodu": "HEH",
+      "tarih": "2026-11-24",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 7965.45,
+      "hesaplananFonToplamDeger": 8017.72,
+      "farkOrani": 0.00656209
+    },
+    {
       "fonKodu": "ION",
       "tarih": "2026-11-02",
       "tur": "gunluk-getiri-fiyat-kopmasi",
@@ -750,6 +776,14 @@
       "farkOrani": 0.01889786
     },
     {
+      "fonKodu": "RKV",
+      "tarih": "2026-11-24",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 74668755.96,
+      "hesaplananFonToplamDeger": 77961889.03,
+      "farkOrani": 0.04410323
+    },
+    {
       "fonKodu": "NMG",
       "tarih": "2025-09-08",
       "tur": "gunluk-getiri-fiyat-kopmasi",
@@ -902,6 +936,12 @@
       "tarih": "2025-05-12",
       "tur": "gunluk-getiri-fiyat-kopmasi",
       "hamGetiri": 99.39848216
+    },
+    {
+      "fonKodu": "PKZ",
+      "tarih": "2026-11-24",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.1396126
     },
     {
       "fonKodu": "KSP",
@@ -1294,6 +1334,38 @@
       "kaynakFonToplamDeger": 11550362.8,
       "hesaplananFonToplamDeger": 23697414.26,
       "farkOrani": 1.05165973
+    },
+    {
+      "fonKodu": "MT8",
+      "tarih": "2026-11-20",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 12688013.61,
+      "hesaplananFonToplamDeger": 23697414.26,
+      "farkOrani": 0.86770089
+    },
+    {
+      "fonKodu": "MT8",
+      "tarih": "2026-11-23",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 13940654.05,
+      "hesaplananFonToplamDeger": 23697414.26,
+      "farkOrani": 0.69987822
+    },
+    {
+      "fonKodu": "MT8",
+      "tarih": "2026-11-24",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 12558579.89,
+      "hesaplananFonToplamDeger": 23697414.26,
+      "farkOrani": 0.88695015
+    },
+    {
+      "fonKodu": "MT8",
+      "tarih": "2026-11-25",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 11316238.62,
+      "hesaplananFonToplamDeger": 23697414.26,
+      "farkOrani": 1.09410698
     },
     {
       "fonKodu": "YLZ",
