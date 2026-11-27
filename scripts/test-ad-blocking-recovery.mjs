@@ -80,6 +80,7 @@ for (const enabled of [false, true]) {
     ...overrides,
     "./globals.css": {},
     "@/components/HeaderAdUnit": headerComponent,
+    "@/components/AracRadariBanner": () => null,
     "@/components/AdBlockingRecoveryTag": recoveryComponent,
     "@/components/Navbar": () => createElement("nav", null, "Navigation"),
     "@/components/Footer": () => createElement("footer", null, "Footer"),

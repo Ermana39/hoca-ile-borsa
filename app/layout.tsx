@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import AracRadariBanner from "@/components/AracRadariBanner";
 import HeaderAdUnit from "@/components/HeaderAdUnit";
 import Footer from "@/components/Footer";
 import AdBlockingRecoveryTag from "@/components/AdBlockingRecoveryTag";
@@ -144,6 +145,7 @@ export default function RootLayout({
 
       <body className="site-background">
         <Navbar />
+        <AracRadariBanner />
         <HeaderAdUnit />
         {children}
         <Footer />
